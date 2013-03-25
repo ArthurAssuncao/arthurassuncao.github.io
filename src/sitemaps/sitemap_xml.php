@@ -1,0 +1,1 @@
+﻿<?php include "gwsitemap_xml.php"; ?>

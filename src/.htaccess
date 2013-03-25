@@ -1,0 +1,188 @@
+
+#Paginas de Erro
+ErrorDocument 404 /erro/404.php
+ErrorDocument 400 /erro/400.html
+ErrorDocument 401 /erro/401.html
+
+# DO NOT REMOVE THIS LINE AND THE LINES BELOW REDIRECTID:ySydeTaraT
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^arthurassuncao.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www.arthurassuncao.com$
+RewriteRule ^blog$ http://blog.arthurassuncao.com [R=301,L]
+# DO NOT REMOVE THIS LINE AND THE LINES ABOVE ySydeTaraT:REDIRECTID
+
+
+# DO NOT REMOVE THIS LINE AND THE LINES BELOW REDIRECTID:aQuGuneMys
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^arthurassuncao.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www.arthurassuncao.com$
+RewriteRule ^bitbucket$ http://bitbucket.arthurassuncao.com [R=301,L]
+# DO NOT REMOVE THIS LINE AND THE LINES ABOVE aQuGuneMys:REDIRECTID
+
+
+# DO NOT REMOVE THIS LINE AND THE LINES BELOW REDIRECTID:uhyJuQaMaP
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^arthurassuncao.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www.arthurassuncao.com$
+RewriteRule ^github$ http://github.arthurassuncao.com [R=301,L]
+# DO NOT REMOVE THIS LINE AND THE LINES ABOVE uhyJuQaMaP:REDIRECTID
+
+
+# Do not remove this line or mod_rewrite rules and search engine friendly URLs will stop working
+RewriteBase /
+
+#redireciona index.php e index.html para a raiz /
+RewriteEngine On
+RewriteRule ^index\.(php|html?)$ http://arthurassuncao.com/ [R=301,L]
+
+#redireciona de www para sem www
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.(.*) [NC]
+RewriteRule ^(.*) http://%1/$1 [R=301,L]
+
+##redireciona tudo com .html para sem html
+RewriteCond %{THE_REQUEST} ^[A-Z]+\ /([^/]+/)*[^.#?\ ]+\.html([#?][^\ ]*)?\ HTTP/ 
+RewriteRule ^(([^/]+/)*[^.]+)\.html http://arthurassuncao.com/$1 [R=301,L]
+#remove o html das urls (aceita sem o html)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [L,NC,QSA]
+
+##redireciona tudo com .php para sem php
+RewriteCond %{THE_REQUEST} ^[A-Z]+\ /([^/]+/)*[^.#?\ ]+\.php([#?][^\ ]*)?\ HTTP/ 
+RewriteRule ^(([^/]+/)*[^.]+)\.php http://arthurassuncao.com/$1 [R=301,L]
+#remove o php das urls (aceita sem o php)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [L,NC,QSA]
+
+#retirando barra no fim
+RewriteCond %{REQUEST_URI} (.*)$
+RewriteRule ^(.+)/$  /$1 [R=301,L]
+
+# Corrigindo erro de digitacao, barras multiplas (//)
+RewriteCond %{REQUEST_URI} ^(.*)//(.*)$
+RewriteRule . %1/%2 [R=301,L]
+
+# Rescrevendo url do sitemap
+RewriteRule ^((?!sitemaps/)sitemap_simple.xml)$ sitemaps/sitemap_simple_xml [NC,L]
+RewriteRule ^((?!sitemaps/)sitemap)$ sitemaps/sitemap [NC,L]
+RewriteRule ^((?!sitemaps/)sitemap.xml)$ sitemaps/sitemap_xml [NC,L]
+
+# Bloqueando o acesso ao cabecalho_obrigatorio.php
+#<files cabecalho_obrigatorio.php>
+#	order allow,deny
+#	deny from all
+#</files>
+
+#Desativando o case sensitive, agora a url PAGINA.HTML é igualmente acessada por pagina.html
+<IfModule mod_speling.c>
+	CheckSpelling On
+</IfModule>
+
+# Especificar um cabeçalho "Vary: Accept-Encoding"
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|xml|gz)$">
+    Header append Vary: Accept-Encoding
+  </FilesMatch>
+</IfModule>
+
+#ATIVA A COMPRESSAO DE ARQUIVOS HTML, CSS, JS, XML, TXT
+#AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/javascript text/css application/x-javascript application/rss+xml application/json
+<IfModule mod_deflate.c>
+	# force deflate for mangled headers
+	# developer.yahoo.com/blogs/ydn/posts/2010/12/pushing-beyond-gzipping/
+	<IfModule mod_setenvif.c>
+	<IfModule mod_headers.c>
+		SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s*,?\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
+		RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
+	</IfModule>
+	</IfModule>
+	<IfModule filter_module>
+		FilterDeclare COMPRESS
+		FilterProvider COMPRESS DEFLATE resp=Content-Type $text/html
+		FilterProvider COMPRESS DEFLATE resp=Content-Type $text/css
+		FilterProvider COMPRESS DEFLATE resp=Content-Type $text/plain
+		FilterProvider COMPRESS DEFLATE resp=Content-Type $text/xml
+		FilterProvider COMPRESS DEFLATE resp=Content-Type $text/x-component
+		FilterProvider COMPRESS DEFLATE resp=Content-Type $application/javascript
+		FilterProvider COMPRESS DEFLATE resp=Content-Type $application/json
+		FilterProvider COMPRESS DEFLATE resp=Content-Type $application/xml
+		FilterProvider COMPRESS DEFLATE resp=Content-Type $application/xhtml+xml
+		FilterProvider COMPRESS DEFLATE resp=Content-Type $application/rss+xml
+		FilterProvider COMPRESS DEFLATE resp=Content-Type $application/atom+xml
+		FilterProvider COMPRESS DEFLATE resp=Content-Type $application/vnd.ms-fontobject
+		FilterProvider COMPRESS DEFLATE resp=Content-Type $image/svg+xml
+		FilterProvider COMPRESS DEFLATE resp=Content-Type $image/x-icon
+		FilterProvider COMPRESS DEFLATE resp=Content-Type $application/x-font-ttf
+		FilterProvider COMPRESS DEFLATE resp=Content-Type $font/opentype
+		FilterChain COMPRESS
+		FilterProtocol COMPRESS DEFLATE change=yes;byteranges=no
+	</IfModule>
+	<IfModule !mod_filter.c>
+		# Legacy versions of Apache
+		AddOutputFilterByType DEFLATE text/html text/plain text/css application/json
+		AddOutputFilterByType DEFLATE application/javascript
+		AddOutputFilterByType DEFLATE text/xml application/xml text/x-component
+		AddOutputFilterByType DEFLATE application/xhtml+xml application/rss+xml application/atom+xml
+		AddOutputFilterByType DEFLATE image/x-icon image/svg+xml application/vnd.ms-fontobject application/x-font-ttf font/opentype
+		
+		#The following lines are to avoid bugs with some browsers
+		BrowserMatch ^Mozilla/4 gzip-only-text/html
+		BrowserMatch ^Mozilla/4\.0[678] no-gzip
+		BrowserMatch \bMSIE !no-gzip !gzip-only-text/html 
+	</IfModule>
+</IfModule>
+
+# especificar tempo de expiracao para alguns tipos de arquivo
+<IfModule mod_expires.c>
+    ExpiresActive On
+	# deafult
+    ExpiresDefault "access plus 1 seconds"
+	# Your document html
+	ExpiresByType text/html "access plus 0 seconds"
+	ExpiresByType application/xhtml+xml "access plus 0 seconds"
+	# Data
+	ExpiresByType text/xml "access plus 0 seconds"
+	ExpiresByType application/xml "access plus 0 seconds"
+	ExpiresByType application/json "access plus 0 seconds"
+	# RSS feed
+	ExpiresByType application/rss+xml "access plus 1 hour"
+	# Favicon
+	ExpiresByType image/vnd.microsoft.icon "access plus 1 week"
+    ExpiresByType image/x-icon "access plus 1 week"
+	# Media: images, video, audio
+	ExpiresByType image/png "access plus 1 month"
+	ExpiresByType image/jpg "access plus 1 month"
+	ExpiresByType image/jpeg "access plus 1 month"
+	ExpiresByType video/ogg "access plus 1 month"
+	ExpiresByType audio/ogg "access plus 1 month"
+	ExpiresByType video/mp4 "access plus 1 month"
+	ExpiresByType video/webm "access plus 1 month"
+	ExpiresByType application/x-shockwave-flash "access plus 1 month"
+	# HTC files  (css3pie)
+	ExpiresByType text/x-component "access plus 1 month"
+	# Webfonts
+	ExpiresByType font/truetype "access plus 1 month"
+	ExpiresByType font/opentype "access plus 1 month"
+	ExpiresByType application/x-font-woff   "access plus 1 month"
+	ExpiresByType image/svg+xml "access plus 1 month"
+	ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
+	# CSS and JavaScript
+	ExpiresByType text/css "access plus 3 month"
+	ExpiresByType application/javascript "access plus 3 month"
+	ExpiresByType text/javascript "access plus 3 month"
+	ExpiresByType application/x-javascript "access plus 3 month"
+    
+</IfModule>
+<IfModule mod_headers.c>
+    <FilesMatch "\\.(ico|pdf|flv|jpe?g|png|gif|swf|css|js)$">
+        #Header set Cache-Control "max-age=2692000, public"
+		Header append Cache-Control "public"
+    </FilesMatch>
+    <FilesMatch "\\.(x?html?|php)$">
+        Header set Cache-Control "max-age=600, private, must-revalidate"
+    </FilesMatch>
+    Header unset ETag
+    Header unset Last-Modified
+</IfModule>

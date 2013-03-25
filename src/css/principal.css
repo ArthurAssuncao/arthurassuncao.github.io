@@ -1,0 +1,149 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+body{
+}
+/* css sticky footer */
+/* http://css-tricks.com/snippets/css/sticky-footer/ */
+* {
+	margin:0;
+	padding:0;
+} 
+html, body, #wrapper {
+	height: 99%;
+}
+#principal{
+	/*margin: 0 8px 0 8px;*/
+}
+body > #wrapper {
+	height: auto; 
+	min-height: 99%;
+}
+.navbar{
+	opacity: 0.9;
+}
+.navbar li{
+	opacity: 1;
+}
+#principal {
+	padding-bottom: 155px;
+}  /* must be same height as the footer */
+
+footer#footer { 
+    position: relative;
+    margin-top: -155px; /* negative value of footer height */
+    height: 155px;
+    clear: both;
+}
+.btn-info{
+	background-color: #99ddff;
+}
+.selected{
+	font-weight: bold;
+}
+legend.legenda_imagem{
+    font-size: 95%;
+}
+form input[required] label:after, form input[required=required] label:after, form label.required:after{
+    color: #e32;
+    content: ' *';
+}
+.botao_busca{
+    padding-top: 5px;
+    padding-bottom: 3px;
+}
+
+/* CLEAR FIX*/
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clearfix {
+	display: inline-block;
+}
+/* Hides from IE-mac \*/
+* html .clearfix {
+	height: 1%;
+}
+.clearfix {
+	display: block;
+}
+/* End hide from IE-mac */
+/* fim do css sticky footer */
+#copyright{
+	float: left;
+}
+#menu_footer{
+	float: right;
+}
+.form-search{
+    margin: 5px 0 0 0;
+}
+/*.form-search .search-query {
+    padding-left: 26px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJ5JREFUeNpi+P//PwMQMANxERCfAeI/UBrEZwbJQ9WAFR0A4u1AbAnEbFB6O1ScGaawGoi3wHQiYyBYDZKHKbwHxLo4FOqC5GEKf4Ksw6EQ5IyfIDYTkPEUiNUZsAOQ+F9GRkYJEKcFiDficSOIcRjE4QTiY0C8DuRbqAJLKP8/FP9kQArHUiA+jySJjA8w4LAS5KZd0MAHhaccQIABALsMiBZy4YLtAAAAAElFTkSuQmCC);
+    background-repeat: no-repeat;
+    background-position: 13px 9px;
+}
+
+.form-search .search-query:focus, .form-search .search-query.focused {
+    padding-left: 26px;
+    background-position: 13px 9px;
+}*/
+
+.form-search {
+    float: right;
+}
+.nao_selecionavel{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: default;
+}
+/* Barra de rolagem do Google */
+::-webkit-scrollbar {
+	background: transparent;
+	overflow: visible;
+	width: 10px;
+	height: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    background-clip: padding-box;
+	-webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+    border: solid whiteSmoke 4px;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+::-webkit-scrollbar-thumb:horizontal {
+	border-width: 1px 0px;
+	min-width: 40px;
+}
+::-webkit-scrollbar-thumb:vertical {
+	border-width: 0px 1px;
+	min-height: 40px;
+}
+::-webkit-scrollbar-track-piece{ 
+	background-color: rgba(222,222,222,0.8);
+}
+::-webkit-scrollbar-track-piece:hover{ 
+	background-color: rgba(222,222,222,0.5);
+}
+::-webkit-scrollbar-corner {
+	background: transparent;
+}
+::-webkit-scrollbar-track {
+	border-left: 6px solid transparent;
+	border-right: 1px solid transparent;
+	background-clip: padding-box;
+	position: absolute;
+}

@@ -1,0 +1,51 @@
+.py_interpreter{
+    color: #333;
+    font-weight: bold;
+}
+.py_comment{
+    color: #333;
+    font-style: italic;
+}
+.py_import{
+    color: #ff00ff;
+}
+.py_command{
+    color: #005cb8;
+    font-weight: bold;
+}
+.py_string{
+    color: #ff4d4d;
+}
+.py_type{
+    color: #4da6ff;
+}
+.py_number{
+    color: #ffb366;
+}
+.py_identation_0{
+    margin-left: 0px;
+}
+.py_identation_1{
+    margin-left: 15px;
+}
+.py_identation_2{
+    margin-left: 30px;
+}
+.py_identation_3{
+    margin-left: 45px;
+}
+.py_identation_4{
+    margin-left: 60px;
+}
+.py_identation_5{
+    margin-left: 75px;
+}
+.py_identation_6{
+    margin-left: 90px;
+}
+.py_identation_7{
+    margin-left: 105px;
+}
+.py_identation_8{
+    margin-left: 120px;
+}

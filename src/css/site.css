@@ -1,0 +1,112 @@
+#conteudo{
+  padding-top: 30px;
+}
+a{
+	color: #cc5200;
+}
+a:hover{
+	color: #f60;
+}
+.navbar .nav > li > a:focus, .navbar .nav > li > a:hover{
+    color: #f60;
+}
+.navbar .brand:hover{
+    color: #f60;
+}
+.pagina{
+  min-height: 50%;
+}
+.pagina:not(#pagina_home){
+  display: none;
+}
+#repositorios{
+  width: 630px;
+}
+.selected a{
+  color: #ff6600 !important;
+}
+.gsib_a input{
+  color: #2f2f2f;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+  border-color: rgba(255, 102, 0, 0.8);
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 102, 0, 0.6);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 102, 0, 0.6);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 102, 0, 0.6);
+}
+*::-moz-selection {
+	background: rgba(255, 102, 0, 0.8);
+}
+*::selection {
+	background: rgba(255, 102, 0, 0.8);
+}
+
+/* Spinner CSS3 base: http://www.alessioatzeni.com/blog/css3-loading-animation-loop/*/
+.circle {
+  background-color: rgba(0,0,0,0);
+  border:5px solid rgba(255, 102, 0,0.9);
+  opacity:.9;
+  border-right:5px solid rgba(0,0,0,0);
+  border-left:5px solid rgba(0,0,0,0);
+  border-radius:50px;
+  box-shadow: 0 0 35px #ff8533;
+  width:50px;
+  height:50px;
+  margin:0 auto;
+  -moz-animation:spinPulse 1s infinite ease-in-out;
+  -webkit-animation:spinPulse 1s infinite linear;
+}
+.circle1 {
+  background-color: rgba(0,0,0,0);
+  border:5px solid rgba(255, 102, 0,0.9);
+  opacity:.9;
+  border-left:5px solid rgba(0,0,0,0);
+  border-right:5px solid rgba(0,0,0,0);
+  border-radius:50px;
+  box-shadow: 0 0 15px #ff8533; 
+  width:30px;
+  height:30px;
+  margin:0 auto;
+  position:relative;
+  top:-50px;
+  -moz-animation:spinoffPulse 1s infinite linear;
+  -webkit-animation:spinoffPulse 1s infinite linear;
+}
+@-moz-keyframes spinPulse {
+  0% { -moz-transform:rotate(160deg); opacity:0; box-shadow:0 0 1px #ff8533;}
+  50% { -moz-transform:rotate(145deg); opacity:1; }
+  100% { -moz-transform:rotate(-320deg); opacity:0; }
+}
+@-moz-keyframes spinoffPulse {
+  0% { -moz-transform:rotate(0deg); }
+  100% { -moz-transform:rotate(360deg);  }
+}
+@-webkit-keyframes spinPulse {
+  0% { -webkit-transform:rotate(160deg); opacity:0; box-shadow:0 0 1px #ff8533; }
+  50% { -webkit-transform:rotate(145deg); opacity:1;}
+  100% { -webkit-transform:rotate(-320deg); opacity:0; }
+}
+@-webkit-keyframes spinoffPulse {
+  0% { -webkit-transform:rotate(0deg); }
+  100% { -webkit-transform:rotate(360deg); }
+}

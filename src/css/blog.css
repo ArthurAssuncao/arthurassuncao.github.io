@@ -1,0 +1,46 @@
+body{
+padding-top: 60px;
+}
+.post-body{
+    text-align: justify;
+    margin-bottom: 30px;
+}
+.widget h2{
+  border-bottom: 1px #dedede solid;
+  margin: 0 0 5px 0;
+  font-size: 16px;
+  line-height: 25px;
+}
+p, dd{
+  text-align: justify;
+}
+a:hover img{
+  text-decoration: none !important;
+  opacity: 0.7;
+}
+.gs-no-results-result, .gs-error-result{
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #eed3d7;
+}
+.jump-link{
+    margin-bottom: 10px;
+}
+/* comment */
+.comments{
+margin-top: 30px;
+}
+/* comment date*/
+.datetime.secondary-text{
+float: right;
+font-size: 85%;
+}
+/* responder - reply*/
+.comment-actions.secondary-text{
+}
+.comment-block{
+padding-bottom: 5px;
+}
+.comment .continue a{
+display: inline;
+}
