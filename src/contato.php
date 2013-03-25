@@ -20,7 +20,6 @@
 	$title = 'Arthur Assunção';
 	$description = 'Arthur Assunção';
 	$keywords = 'Arthur Assunção, Instituto Federal do Sudeste de Minas Gerais, Barbacena, Sistemas para Internet, Programação, github';
-	$is_pagina_contato = True;
 	
 	require_once('template/header.php');
 	

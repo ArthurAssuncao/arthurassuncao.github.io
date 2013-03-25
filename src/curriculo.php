@@ -2,7 +2,6 @@
 	$title = 'Arthur Assunção - Curriculo';
 	$description = 'Curriculo de Arthur Assunção';
 	$keywords = 'Curriculo, Arthur Assunção, Instituto Federal do Sudeste de Minas Gerais, Barbacena, Sistemas para Internet, Programação, github';
-	$is_pagina_curriculo = True;
 	
 	require_once('template/header.php');
 	

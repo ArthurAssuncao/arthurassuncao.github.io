@@ -53,12 +53,15 @@
 	if (strcmp($canonical, 'http://arthurassuncao.com') == 0){
 		$is_pagina_home = True;
 	}
+	else if(strcmp($canonical, 'http://arthurassuncao.com/repositorios') == 0){
+		$is_pagina_repositorios = True;
+	}
 	else if(strcmp($canonical, 'http://arthurassuncao.com/curriculo') == 0){
 		$is_pagina_curriculo = True;
 	}
 	else if(strcmp($canonical, 'http://arthurassuncao.com/contato') == 0){
 		$is_pagina_contato = True;
-	}	
+	}
 	
 ?><!DOCTYPE html>
 <html lang="<?php echo $lang ?>" prefix='og: http://ogp.me/ns#'>

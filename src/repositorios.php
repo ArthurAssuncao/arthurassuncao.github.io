@@ -3,7 +3,6 @@
 	$description = 'Pagina com os repositorios dos meus projetos';
 	$keywords = 'repositorios, git, github, projetos';
 	$canonical = 'http://arthurassuncao.com/busca';
-	$is_pagina_repositorios = True;
 	
 	$links_js = ['js/gitview/gitview.pt.js'];
 

@@ -2,7 +2,7 @@
   padding-top: 30px;
 }
 a{
-	color: #cc5200;
+	color: #ff931e; /*cc5200*/
 }
 a:hover{
 	color: #f60;
@@ -55,10 +55,10 @@ input[type="color"]:focus,
           box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 102, 0, 0.6);
 }
 *::-moz-selection {
-	background: rgba(255, 102, 0, 0.8);
+	background: rgba(255, 147, 30, 0.8);
 }
 *::selection {
-	background: rgba(255, 102, 0, 0.8);
+	background: rgba(255, 147, 30, 0.8);
 }
 
 /* Spinner CSS3 base: http://www.alessioatzeni.com/blog/css3-loading-animation-loop/*/

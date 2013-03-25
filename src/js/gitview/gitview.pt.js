@@ -257,7 +257,7 @@ var Gitview = (function (args) {
 			var repoName = document.createElement("a");
 			repoName.innerHTML = obj.name;
 			repoName.href = 'https://github.com/'+this.user+'/'+obj.name;
-			repoName.style.cssText = 'color:#4183C4;font-size:20px;font-weight:bold;Helvetica, arial, freesans, clean, sans-serif;letter-spacing:-1px;position:absolute;'
+			repoName.style.cssText = 'font-size:20px;font-weight:bold;Helvetica, arial, freesans, clean, sans-serif;letter-spacing:-1px;position:absolute;'
 				+'left:35px;text-decoration:none';
 			top.appendChild(repoName);
 			//container for watchers & forks
