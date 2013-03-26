@@ -29,7 +29,7 @@
 	require_once('util/formulario.php');
 	
 ?>
-    <h1>Contato</h1>
+    <h3>Contato</h3>
 	<span>
 	Entre em contato através do formulário, você pode tirar suas dúvidas, fornecer sugestões, reclamar ou simplemente falar comigo.
 	<br>

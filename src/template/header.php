@@ -50,10 +50,10 @@
 	$body_onload = (isset($body_onload)) ? $body_onload : '';
 	$embedded_js = (isset($embedded_js)) ? $embedded_js : '';
 	
-	if (strcmp($canonical, 'http://arthurassuncao.com') == 0){
+	/*if (strcmp($canonical, 'http://arthurassuncao.com') == 0){
 		$is_pagina_home = True;
-	}
-	else if(strcmp($canonical, 'http://arthurassuncao.com/repositorios') == 0){
+	}*/
+	if(strcmp($canonical, 'http://arthurassuncao.com/repositorios') == 0){
 		$is_pagina_repositorios = True;
 	}
 	else if(strcmp($canonical, 'http://arthurassuncao.com/curriculo') == 0){

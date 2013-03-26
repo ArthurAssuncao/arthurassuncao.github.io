@@ -32,7 +32,7 @@
 	<footer id="footer" class="well">
 		<div class="container">
 			<div class="row">
-				<div class="span2 offset1">
+				<div class="span3 offset1">
 					<h4>Links</h4>
 					<ul class="unstyled justify">
 						<li><a href="http://github.com/arthurassuncao">Repositórios no Github</a></li>

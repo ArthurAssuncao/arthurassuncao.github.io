@@ -6,7 +6,7 @@
 	require_once('template/header.php');
 	
 ?>
-    <h1>Currículo</h1>
+    <h3>Currículo</h3>
 <?php 
 	require_once('template/footer.php');
 ?>

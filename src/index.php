@@ -7,7 +7,9 @@
 	$links_js = ['js/gitview/gitview.pt.js'];
 	require_once('template/header.php');
 ?>
-    <div id="pagina_home" class="pagina"><h1>Em breve...</h1></div>
+    <div id="pagina_home" class="pagina">
+    	<h3>Em breve...</h3>
+    </div>
 	<div id="pagina_repositorios" class="pagina"></div>
     <div id="pagina_curriculo" class="pagina"></div>
     <div id="pagina_contato" class="pagina"></div>

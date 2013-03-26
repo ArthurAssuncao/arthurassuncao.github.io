@@ -8,7 +8,7 @@
 
 	require_once('template/header.php');
 ?>
-	<h1>Repositórios</h1>
+	<h3>Repositórios</h3>
 	<div id="repositorios"></div>
 <?php 
 	$footer_embedded_js = "new Gitview({".

@@ -23,7 +23,8 @@ function single_page(){
                 $('html, body').animate({scrollTop: $hash.offset().top - 40}, 1000);
                 if(!$hash.html()){
                   $hash.html('<div class="circle"></div><div class="circle1"></div>');
-                  $hash.load(endereco + " #conteudo > *", function() {
+                  $hash.delay(500).queue(function(){
+                    $(this).load(endereco + " #conteudo > *", function(){
                       //repositorios
                       if(endereco == "repositorios"){
                         var gitviewArthurAssuncao = new Gitview({ 
@@ -36,6 +37,7 @@ function single_page(){
                             compact    : true           // (optional) compact mode or full mode?
                         });
                       }
+                    });
                   });
                 }
                return false;
