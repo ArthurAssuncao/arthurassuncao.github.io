@@ -17,7 +17,7 @@
 			"count      : 10,".
 			"showForks  : true,".
 			"width      : '630px',".
-			"theme 	   : 'dark',".
+			"theme 	   : 'light',".
 			"compact    : true,".
 		"});";
 	require_once('template/footer.php');

@@ -33,7 +33,7 @@ function single_page(){
                             count      : 10,              // (optional) number of repos per widget page
                             showForks  : true,           // (optional) show forked repos, true by default
                             width      : '630px',        // (optional) width of widget / repos
-                            theme      : "dark",         // (optional) light or dark theme
+                            theme      : "light",         // (optional) light or dark theme
                             compact    : true           // (optional) compact mode or full mode?
                         });
                       }

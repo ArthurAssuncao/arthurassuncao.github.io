@@ -71,8 +71,8 @@
 	<link rel="stylesheet" type="text/css" href="/css/reset.css" />
 <?php //<link rel="stylesheet" type="text/css" href="/css/bootstrap/bootstrap.min.css" />?>
 <?php //<link rel="stylesheet" type="text/css" href="/css/bootstrap/bootstrap-responsive.min.css" />?>
-	<link rel="stylesheet" type="text/css" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" />
-    <link rel="stylesheet" id="darkstrap-link" type="text/css" href="/css/bootstrap/darkstrap.css" />
+<?php //<link rel="stylesheet" type="text/css" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" />?>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap/bootstrap_united.min.css" />
 	<link rel="stylesheet" type="text/css" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" />
 <?php echo $links_css ?>
 <?php echo $embedded_css ?>
