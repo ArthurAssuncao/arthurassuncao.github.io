@@ -27,7 +27,7 @@ function single_page(){
                     $(this).load(endereco + " #conteudo > *", function(){
                       //repositorios
                       if(endereco == "repositorios"){
-                        var gitviewArthurAssuncao = new Gitview({ 
+                        /*var gitviewArthurAssuncao = new Gitview({ 
                             user       : 'arthurassuncao',         // any github username
                             domNode    : document.getElementById('repositorios'),  // (optional) domNode to attach to
                             count      : 10,              // (optional) number of repos per widget page
@@ -35,6 +35,14 @@ function single_page(){
                             width      : '630px',        // (optional) width of widget / repos
                             theme      : "light",         // (optional) light or dark theme
                             compact    : true           // (optional) compact mode or full mode?
+                        });*/
+                        $("#repositorios").github({
+                          user: "arthurassuncao",
+                          show_extended_info: true,
+                          show_follows: true,
+                          width: "630px",
+                          show_repos: 10,
+                          oldest_first: false
                         });
                       }
                     });

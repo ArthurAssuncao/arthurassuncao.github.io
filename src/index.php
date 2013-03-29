@@ -4,7 +4,7 @@
 	$keywords = 'Arthur Assunção, Instituto Federal do Sudeste de Minas Gerais, Barbacena, Sistemas para Internet, Programação, github';
 	//$is_pagina_home = True;
 	
-	$links_js = ['js/gitview/gitview.pt.js'];
+	$links_css = ['css/jquery_github/github.css'];
 	require_once('template/header.php');
 ?>
     <div id="pagina_home" class="pagina">
@@ -15,5 +15,6 @@
     <div id="pagina_contato" class="pagina"></div>
     <br>
 <?php
+	$footer_links_js = ['js/jquery_github/jquery.github.js'];
 	require_once('template/footer.php');
 ?>
