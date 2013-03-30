@@ -1,10 +1,11 @@
 <?php
 	/* Topo do html de todas as paginas
 	/* Tags da tag HEAD que serao usadas em todas as paginas do site */
-	require_once('cabecalho_obrigatorio.php');
+	include('cabecalho_obrigatorio.php');
 	$protocol = strtolower(preg_replace('/[^a-zA-Z]/','',$_SERVER['SERVER_PROTOCOL'])); //pegando só o que for letra
 	$location = $protocol.'://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 	$location = $location[strlen($location)-1] == '/' ? substr($location,0,-1) : $location;
+	unset($protocol);
 	/*
 		Variaveis que podem ser usadas
 		$body_onload = permite adicionar funcoes ao onload da tag body
@@ -118,11 +119,27 @@
 	//if( !( (isset($compressao_zlib) && $compressao_zlib == true) || (isset($compressao_gzip) && $compressao_gzip == true) )){
 		flush();
 	//}
+	unset($compressao_zlib);
+	unset($compressao_gzip);
 ?>
 	<body <?php echo $body_onload != '' ? 'onload="'.$body_onload.'"' : '' ?>>
 	<div id="wrapper" class="container">
 	<div id="principal" class="clearfix">
 <?php 
-	require_once('menu.php');
+	//destruindo variaveis
+	unset($location);
+	unset($lang);
+	unset($robots_noindex_follow);
+	unset($links_css);
+	unset($embedded_css);
+	unset($links_js);
+	unset($title);
+	unset($description);
+	unset($keywords);
+	unset($canonical);
+	unset($tags_head_extra);
+	unset($body_onload);
+	unset($embedded_js);
+	include('menu.php');
  ?>
 	<div id="conteudo" class="container">

@@ -59,6 +59,9 @@
 	<script type="text/javascript" src="/min/?f=/js/bootstrap/bootstrap.min.js,/js/site.js"></script>
 <?php echo $footer_links_js ?>
 <?php
-echo $footer_embedded_js;
+	echo $footer_embedded_js;
+	//destruindo variaveis
+	unset($footer_links_js);
+	unset($footer_embedded_js);
 ?>
 </html>
