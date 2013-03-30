@@ -55,7 +55,8 @@
 	<!-- Scripts rodam mais rapidos e de forma melhor estando no fim da pagina -->
 	<?php //<script type="text/javascript" src="/js/jquery/jquery-1.8.3.min.js"></script> ?>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script type="text/javascript" src="/min/?f=/js/bootstrap/bootstrap.min.js,/js/site.js"></script>
+	<?php //<script type="text/javascript" src="/min/?f=/js/bootstrap/bootstrap.min.js,/js/site.js"></script> ?>
+	<script type="text/javascript" src="/min/?f=/js/site.js"></script>
 <?php echo $footer_links_js ?>
 <?php
 	echo $footer_embedded_js;
