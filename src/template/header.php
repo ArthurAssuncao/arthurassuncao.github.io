@@ -19,6 +19,18 @@
 		$canonical = link canonical da pagina, link canonical é o link correto, se houver alguma pagina q redirecione para uma outra o canonical é a segunda, ou seja, a original
 		$tags_head_extra = permite adicionar tags extra ao head
 	*/
+
+	function getLinksCSSMin($vetor_links){
+		$links = join(',', $vetor_links);
+		$tag = "\t".'<link rel="stylesheet" type="text/css" href="/min/?f='.$links.'" />'."\n";
+		return $tag;
+	}
+
+	function getLinksJSMin($vetor_links){
+		$links = join(',', $vetor_links);
+		$tag .= "\t".'<script type="text/javascript" src="/min/?f='.$links.'"></script>'."\n";
+		return $tag;
+	}
 	
 	function getLinksCSS($vetor_links){
 		$tags = '';
@@ -39,9 +51,9 @@
 	//seta os valores nas variaveis, assim nenhum fica como nao definida e passam a ter os valores padrao
 	$lang = (isset($lang)) ? $lang : 'pt-br'; // idioma da pagina
 	$robots_noindex_follow = (isset($robots_noindex_follow)) ? '<meta name="robots" content="noindex,follow">' : '';
-	$links_css = (isset($links_css)) ? getLinksCSS($links_css) : ''; // permite adicionar mais arquivos css
+	$links_css = (isset($links_css)) ? getLinksCSSMin($links_css) : ''; // permite adicionar mais arquivos css
 	$embedded_css = (isset($embedded_css)) ? '<style type="text/css">'."\n".$embedded_css."\n\t</style>\n" : ''; //permite adicionar mais css
-	$links_js = (isset($links_js)) ? getLinksJS($links_js) : ''; //permite adicionar mais arquivos js
+	$links_js = (isset($links_js)) ? getLinksJSMin($links_js) : ''; //permite adicionar mais arquivos js
 	$title = (isset($title)) ? $title : 'Arthur Assunção'; // titulo da pagina
 	$description = (isset($description)) ? $description : 'Arthur Assunção'; // descricao da pagina
 	$keywords = (isset($keywords)) ? $keywords : 'Arthur Assunção, Instituto Federal do Sudeste de Minas Gerais, Barbacena, Sistemas para Internet, Programação'; /* keywords da pagina */
@@ -68,16 +80,14 @@
   <head>
 	<meta charset="utf-8" />
 <?php echo $robots_noindex_follow ?>
-	<link rel="stylesheet" type="text/css" href="/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="/min/?f=/css/reset.css,/css/bootstrap/bootstrap_united.min.css" />
 <?php //<link rel="stylesheet" type="text/css" href="/css/bootstrap/bootstrap.min.css" />?>
 <?php //<link rel="stylesheet" type="text/css" href="/css/bootstrap/bootstrap-responsive.min.css" />?>
 <?php //<link rel="stylesheet" type="text/css" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" />?>
-    <link rel="stylesheet" type="text/css" href="/css/bootstrap/bootstrap_united.min.css" />
-	<link rel="stylesheet" type="text/css" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" />
+	<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" />
 <?php echo $links_css ?>
 <?php echo $embedded_css ?>
-	<link rel="stylesheet" type="text/css" href="/css/principal.css" />
-	<link rel="stylesheet" type="text/css" href="/css/site.css" />
+	<link rel="stylesheet" type="text/css" href="/min/?f=/css/principal.css,/css/site.css" />
 <?php echo $links_js ?>
 	<link rel="shortcut icon" href="/favicon.ico" /> 
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -100,19 +110,19 @@
 	<?php echo $embedded_js; ?>
 	
 	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-		<!--[if lt IE 9]>
-			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 	</head>
 <?php 
-	if(isset($compressao_gzip) && !$compressao_gzip){
+	//if( !( (isset($compressao_zlib) && $compressao_zlib == true) || (isset($compressao_gzip) && $compressao_gzip == true) )){
 		flush();
-	}
+	//}
 ?>
-	<body <?php echo 'onload="'.$body_onload.'"' ?>>
+	<body <?php echo $body_onload != '' ? 'onload="'.$body_onload.'"' : '' ?>>
 	<div id="wrapper" class="container">
 	<div id="principal" class="clearfix">
 <?php 
-require_once('menu.php');
+	require_once('menu.php');
  ?>
 	<div id="conteudo" class="container">

@@ -7,18 +7,8 @@
 	*/
 	require_once('cabecalho_obrigatorio.php');
 	
-	if(!function_exists('getLinksJS')){
-		function getLinksJS($vetor_links){
-			$tags = '';
-			foreach ($vetor_links as $link) {
-				$tags .= "\t".'<script type="text/javascript" src="'.$link.'"></script>'."\n";
-			}
-			return $tags;
-		}
-	}
-	
 	//seta os valores nas variaveis, assim nenhum fica como nao definida e passam a ter os valores padrao
-	$footer_links_js = (isset($footer_links_js)) ? getLinksJS($footer_links_js) : ''; /*permite adicionar mais js nos arquivos */
+	$footer_links_js = (isset($footer_links_js)) ? getLinksJSMin($footer_links_js) : ''; /*permite adicionar mais js nos arquivos */
 	$footer_embedded_js = (isset($footer_embedded_js)) ? '<script type="text/javascript">'."\n".$footer_embedded_js."\n\t</script>\n" : ''; //permite adicionar mais js
 ?>
 <br>
@@ -62,14 +52,13 @@
 			</div>
 		</div>
 	</footer>
+	</body>
 	<!-- Scripts rodam mais rapidos e de forma melhor estando no fim da pagina -->
 	<?php //<script type="text/javascript" src="/js/jquery/jquery-1.8.3.min.js"></script> ?>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script type="text/javascript" src="/js/bootstrap/bootstrap.min.js"></script>
-	<script type="text/javascript" src="/js/site.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="/min/?f=/js/bootstrap/bootstrap.min.js,/js/site.js"></script>
 <?php echo $footer_links_js ?>
 <?php
 echo $footer_embedded_js;
 ?>
-	</body>
 </html>
