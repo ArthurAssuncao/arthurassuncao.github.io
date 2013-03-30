@@ -2,18 +2,28 @@
 	// verifica requisicao post
 	$envia = isset($_POST["envia"]) ? $_POST["envia"] : '';
 	if(strcmp($envia, 'true') == 0){
-		$nome_completo = $_POST["nome_completo"];
+		$nome_completo = ucwords($_POST["nome_completo"]);
 		$email = $_POST["email"];
 		$assunto = $_POST["assunto"];
 		$mensagem = $_POST["mensagem"];
 		
-		require_once ('util/email/formulario_contato.php');
+		include('util/email/email.php');
 		
+		$erro_email = false;
+		$msg_email = '';
 		if(empty($nome_completo) || empty($email) || empty($assunto) || empty($mensagem)){
-			$msg_erro = 'Preencha todos os campos';
+			$erro_email = true;
+			$msg_email = 'Preencha todos os campos';
 		}
 		else{
-			//enviaEmail($email, $nome_completo, $mensagem, $assunto);
+			$resultado = enviarEmail($nome_completo, $email, $mensagem, $assunto);
+			if (strcmp($resultado, "") == 0){
+				$msg_email = "Email enviado com sucesso";
+			}
+			else{
+				$erro_email = true;
+				$msg_email = $resultado;
+			}
 		}
 	}
 
@@ -21,12 +31,12 @@
 	$description = 'Arthur Assunção';
 	$keywords = 'Arthur Assunção, Instituto Federal do Sudeste de Minas Gerais, Barbacena, Sistemas para Internet, Programação, github';
 	
-	require_once('template/header.php');
+	include('template/header.php');
 	
 	$regex_email = "[a-zA-Z0-9.!#$%&'*+-/=?\^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*";
 	$regex_nome = "^[A-Z][a-zA-Z '&-]*[A-Za-z]$";
 	
-	require_once('util/formulario.php');
+	include('util/formulario.php');
 	
 ?>
     <h3>Contato</h3>
@@ -37,7 +47,7 @@
 	</span>
 	<br><br>
 	<div class="row">
-        <form class="form-horizontal well span10" action="contato" method="post" onsubmit="valida_campos()">
+        <form name="form_contato" id="form_contato" class="form-horizontal well span10" action="contato" method="post" onsubmit="valida_campos()">
           <fieldset>
             <div class="control-group">
               <?php
@@ -52,9 +62,14 @@
               </div>
             </div>
               <?php 
-                if(isset($msg_erro)){
-                    echo '<div class="alert alert-error">';
-                    echo $msg_erro;
+                if(isset($erro_email)){
+                	if($erro_email == true){
+                		echo '<div class="alert alert-error">';
+                	}
+                	else{
+                		echo '<div class="alert alert-info">';
+                	}
+                    echo $msg_email;
                     echo '</div>';
                 }
                 ?>
@@ -67,5 +82,5 @@
 			
 		}
 	";
-	require_once('template/footer.php');
+	include('template/footer.php');
 ?>
