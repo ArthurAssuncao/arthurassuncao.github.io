@@ -63,10 +63,10 @@
 	$body_onload = (isset($body_onload)) ? $body_onload : '';
 	$embedded_js = (isset($embedded_js)) ? $embedded_js : '';
 	
-	/*if (strcmp($canonical, 'http://arthurassuncao.com') == 0){
-		$is_pagina_home = True;
-	}*/
-	if(strcmp($canonical, 'http://arthurassuncao.com/repositorios') == 0){
+	if (strcmp($canonical, 'http://arthurassuncao.com') == 0){
+		//$is_pagina_home = True;
+	}
+	else if(strcmp($canonical, 'http://arthurassuncao.com/repositorios') == 0){
 		$is_pagina_repositorios = True;
 	}
 	else if(strcmp($canonical, 'http://arthurassuncao.com/curriculo') == 0){
@@ -81,14 +81,14 @@
   <head>
 	<meta charset="utf-8" />
 <?php echo $robots_noindex_follow ?>
-	<link rel="stylesheet" type="text/css" href="/min/?f=/css/reset.css,/css/bootstrap/bootstrap_united.min.css" />
+	<link rel="stylesheet" type="text/css" href="/css/reset.css" />
 <?php //<link rel="stylesheet" type="text/css" href="/css/bootstrap/bootstrap.min.css" />?>
 <?php //<link rel="stylesheet" type="text/css" href="/css/bootstrap/bootstrap-responsive.min.css" />?>
 <?php //<link rel="stylesheet" type="text/css" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" />?>
+	<link rel="stylesheet" type="text/css" href="/min/?f=/css/bootstrap/bootstrap_united.min.css,/css/principal.css,/css/site.css" />
+	<?php echo $links_css ?>
+	<?php echo $embedded_css ?>
 	<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" />
-<?php echo $links_css ?>
-<?php echo $embedded_css ?>
-	<link rel="stylesheet" type="text/css" href="/min/?f=/css/principal.css,/css/site.css" />
 <?php echo $links_js ?>
 	<link rel="shortcut icon" href="/favicon.ico" /> 
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -119,8 +119,6 @@
 	//if( !( (isset($compressao_zlib) && $compressao_zlib == true) || (isset($compressao_gzip) && $compressao_gzip == true) )){
 		flush();
 	//}
-	unset($compressao_zlib);
-	unset($compressao_gzip);
 ?>
 	<body <?php echo $body_onload != '' ? 'onload="'.$body_onload.'"' : '' ?>>
 	<div id="wrapper" class="container">
