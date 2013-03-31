@@ -15,6 +15,6 @@
     <div id="pagina_contato" class="pagina"></div>
     <br>
 <?php
-	$footer_links_js = ['js/jquery_github/jquery.github.js'];
+	$footer_links_js = ['js/jquery_github/jquery.github.js','js/index.js'];
 	require_once('template/footer.php');
 ?>

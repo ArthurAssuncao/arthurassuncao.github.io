@@ -33,7 +33,7 @@
 	
 	include('template/header.php');
 	
-	$regex_email = "[a-zA-Z0-9.!#$%&'*+-/=?\^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*";
+	$regex_email = "\S+@\S+\.\S+";
 	$regex_nome = "^[A-Z][a-zA-Z '&-]*[A-Za-z]$";
 	
 	include('util/formulario.php');
@@ -47,7 +47,7 @@
 	</span>
 	<br><br>
 	<div class="row">
-        <form name="form_contato" id="form_contato" class="form-horizontal well span10" action="contato" method="post" onsubmit="valida_campos()">
+        <form name="form_contato" id="form_contato" class="form-horizontal well span10" action="contato" method="post" onsubmit="return valida_campos()">
           <fieldset>
             <div class="control-group">
               <?php
@@ -56,7 +56,7 @@
                 cria_input('Assunto', 'assunto', 'text', true, 'Qual o assunto?', 'Digite o assunto', ''); echo '<br>';
                 cria_textarea('Deixe sua Mensagem', 'mensagem', '6', '50', true, 'Digite sua mensagem', 'Digite sua mensagem'); echo '<br>';
               ?>
-              <input type="hidden" name="envia" value="true" />
+              <input type="hidden" name="envia" />
               <div class="controls">
                 <input type="submit" class="btn btn-info" value="Enviar">
               </div>
@@ -79,8 +79,11 @@
 <?php 
 	$footer_embedded_js = "
 		function valida_campos(){
-			
+			return true;
 		}
+		$(document).ready(function() {
+		  document.form_contato.envia.value = 'true';
+		});
 	";
 	include('template/footer.php');
 ?>
