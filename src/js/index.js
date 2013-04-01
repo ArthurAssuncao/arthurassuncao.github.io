@@ -21,23 +21,43 @@ function single_page(){
                 $('html, body').animate({scrollTop: $hash.offset().top - 40}, 1000);
                 if(!$hash.html()){
                   $hash.html('<div class="circle"></div><div class="circle1"></div>');
+                  var $pagina_temp = $('<div id="pagina_temp" style="display: none"></div>');
+                  $pagina_temp.appendTo("#conteudo");
+                  var terminou_delay = false;
+                  var terminou_ajax = false;
+                  $pagina_temp.load(endereco, {exibir_header: false, exibir_footer: false}, function(){
+                    //repositorios
+                    if(endereco == "repositorios"){
+                      $("#repositorios").github({
+                        user: "arthurassuncao",
+                        show_extended_info: true,
+                        show_follows: true,
+                        width: "630px",
+                        show_repos: 10,
+                        oldest_first: false
+                      });
+                    }
+                    else if(endereco == "contato"){
+                      document.form_contato.envia.value = 'true';
+                    }
+                    terminou_ajax = true;
+                    if(terminou_delay == true){
+                      $hash.html("");
+                      $pagina_temp.children().each(function () {
+                          $(this).appendTo($hash);
+                      });
+                      $pagina_temp.remove();
+                    }
+                  });
                   $hash.delay(500).queue(function(){
-                    $(this).load(endereco, {exibir_header: false, exibir_footer: false}, function(){
-                      //repositorios
-                      if(endereco == "repositorios"){
-                        $("#repositorios").github({
-                          user: "arthurassuncao",
-                          show_extended_info: true,
-                          show_follows: true,
-                          width: "630px",
-                          show_repos: 10,
-                          oldest_first: false
-                        });
-                      }
-                      else if(endereco == "contato"){
-                        document.form_contato.envia.value = 'true';
-                      }
-                    });
+                    terminou_delay = true;
+                    if(terminou_ajax == true){
+                      $hash.html("");
+                      $pagina_temp.children().each(function () {
+                          $(this).appendTo($hash);
+                      });
+                      $pagina_temp.remove();
+                    }
                   });
                 }
                return false;
