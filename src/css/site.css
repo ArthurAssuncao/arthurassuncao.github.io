@@ -23,10 +23,13 @@ a:hover{
   width: 630px;
 }
 .selected a{
-  color: #ff6600 !important;
+  color: #f60 !important;
 }
 .gsib_a input{
   color: #2f2f2f;
+}
+#conteudo h3{
+  color: #f60;
 }
 
 textarea:focus,
