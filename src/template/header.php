@@ -87,7 +87,8 @@
   <head>
 	<meta charset="utf-8" />
 <?php echo $robots_noindex_follow ?>
-	<link rel="stylesheet" type="text/css" href="/min/?f=/css/reset.css,/css/bootstrap/bootstrap_united.min.css,/css/principal.css,/css/site.css" />
+	<link rel="stylesheet" type="text/css" href="/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="/min/?f=/css/bootstrap/bootstrap_united.min.css,/css/principal.css,/css/site.css" />
 	<?php echo $links_css ?>
 	<?php echo $embedded_css ?>
 	<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" />
