@@ -6,6 +6,22 @@
 		$footer_embedded_js = texto com js para adicionar
 	*/
 	require_once('cabecalho_obrigatorio.php');
+
+	function fecha_gzip(){
+		if($compressao_gzip == true){
+			if(extension_loaded('zlib')){
+				ob_end_flush();
+			}
+		}
+		unset($compressao_zlib);
+		unset($compressao_gzip);
+	}
+
+	if(isset($_POST["exibir_footer"]) && $_POST["exibir_footer"] == 'false'){
+		fecha_gzip();
+		//termina a execucao do arquivo
+		return;
+	}
 	
 	//seta os valores nas variaveis, assim nenhum fica como nao definida e passam a ter os valores padrao
 	$footer_links_js = (isset($footer_links_js)) ? getLinksJSMin($footer_links_js) : ''; /*permite adicionar mais js nos arquivos */
@@ -66,11 +82,5 @@
 	</body>
 </html>
 <?php
-	if($compressao_gzip == true){
-		if(extension_loaded('zlib')){
-			ob_end_flush();
-		}
-	}
-	unset($compressao_zlib);
-	unset($compressao_gzip);
+	fecha_gzip();
 ?>

@@ -2,6 +2,12 @@
 	/* Topo do html de todas as paginas
 	/* Tags da tag HEAD que serao usadas em todas as paginas do site */
 	include('cabecalho_obrigatorio.php');
+
+	if(isset($_POST["exibir_header"]) && $_POST["exibir_header"] == 'false'){
+		//termina a execucao do arquivo
+		return;
+	}
+
 	$protocol = strtolower(preg_replace('/[^a-zA-Z]/','',$_SERVER['SERVER_PROTOCOL'])); //pegando só o que for letra
 	$location = $protocol.'://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 	$location = $location[strlen($location)-1] == '/' ? substr($location,0,-1) : $location;

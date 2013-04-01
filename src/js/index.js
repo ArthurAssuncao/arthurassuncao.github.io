@@ -22,7 +22,7 @@ function single_page(){
                 if(!$hash.html()){
                   $hash.html('<div class="circle"></div><div class="circle1"></div>');
                   $hash.delay(500).queue(function(){
-                    $(this).load(endereco + " #conteudo > *", function(){
+                    $(this).load(endereco, {exibir_header: false, exibir_footer: false}, function(){
                       //repositorios
                       if(endereco == "repositorios"){
                         $("#repositorios").github({
