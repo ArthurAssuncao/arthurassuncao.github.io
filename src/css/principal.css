@@ -11,14 +11,14 @@ body{
 	padding:0;
 } 
 html, body, #wrapper {
-	height: 99%;
+	height: 98%;
 }
 #principal{
 	/*margin: 0 8px 0 8px;*/
 }
 body > #wrapper {
 	height: auto; 
-	min-height: 99%;
+	min-height: 97%;
 }
 .navbar{
 	opacity: 0.9;
@@ -27,14 +27,17 @@ body > #wrapper {
 	opacity: 1;
 }
 #principal {
-	padding-bottom: 155px;
+	padding-bottom: 150px;
 }  /* must be same height as the footer */
 
 footer#footer { 
     position: relative;
-    margin-top: -155px; /* negative value of footer height */
-    height: 155px;
+    margin-top: -145px; /* negative value of footer height */
+    height: 150px;
     clear: both;
+}
+footer h4{
+	margin-top: 0;
 }
 .btn-info{
 	background-color: #99ddff;
