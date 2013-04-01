@@ -33,32 +33,32 @@ RewriteRule ^github$ http://github.arthurassuncao.com [R=301,L]
 # Do not remove this line or mod_rewrite rules and search engine friendly URLs will stop working
 RewriteBase /
 
-#redireciona index.php e index.html para a raiz /
+# Redireciona index.php e index.html para a raiz /
 RewriteEngine On
 RewriteRule ^index\.(php|html?)$ http://arthurassuncao.com/ [R=301,L]
 
-#redireciona de www para sem www
+# Redireciona de www para sem www
 RewriteEngine On
 RewriteCond %{HTTP_HOST} ^www.(.*) [NC]
 RewriteRule ^(.*) http://%1/$1 [R=301,L]
 
-##redireciona tudo com .html para sem html
+## Redireciona tudo com .html para sem html
 RewriteCond %{THE_REQUEST} ^[A-Z]+\ /([^/]+/)*[^.#?\ ]+\.html([#?][^\ ]*)?\ HTTP/ 
 RewriteRule ^(([^/]+/)*[^.]+)\.html http://arthurassuncao.com/$1 [R=301,L]
-#remove o html das urls (aceita sem o html)
+# Remove o html das urls (aceita sem o html)
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html [L,NC,QSA]
 
-##redireciona tudo com .php para sem php
+## Redireciona tudo com .php para sem php
 RewriteCond %{THE_REQUEST} ^[A-Z]+\ /([^/]+/)*[^.#?\ ]+\.php([#?][^\ ]*)?\ HTTP/ 
 RewriteRule ^(([^/]+/)*[^.]+)\.php http://arthurassuncao.com/$1 [R=301,L]
-#remove o php das urls (aceita sem o php)
+# Remove o php das urls (aceita sem o php)
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^(.*)$ $1.php [L,NC,QSA]
 
-#retirando barra no fim
+# Retirando barra no fim
 RewriteCond %{REQUEST_URI} (.*)$
 RewriteRule ^(.+)/$  /$1 [R=301,L]
 
@@ -71,8 +71,8 @@ RewriteRule ^((?!sitemaps/)sitemap_simple.xml)$ sitemaps/sitemap_simple_xml [NC,
 RewriteRule ^((?!sitemaps/)sitemap)$ sitemaps/sitemap [NC,L]
 RewriteRule ^((?!sitemaps/)sitemap.xml)$ sitemaps/sitemap_xml [NC,L]
 
-# Bloqueando o acesso ao cabecalho_obrigatorio.php
-#<files cabecalho_obrigatorio.php>
+# Bloqueando o acesso aos arquivos do diretorio template
+#<files template/*.php>
 #	order allow,deny
 #	deny from all
 #</files>

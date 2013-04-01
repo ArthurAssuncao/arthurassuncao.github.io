@@ -3,7 +3,7 @@
 	/* Tags da tag HEAD que serao usadas em todas as paginas do site */
 	include('cabecalho_obrigatorio.php');
 
-	if(isset($_POST["exibir_header"]) && $_POST["exibir_header"] == 'false'){
+	if(isset($_POST['exibir_header']) && $_POST['exibir_header'] == 'false'){
 		//termina a execucao do arquivo
 		return;
 	}

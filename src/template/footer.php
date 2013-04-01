@@ -9,15 +9,13 @@
 
 	function fecha_gzip(){
 		if($compressao_gzip == true){
-			if(extension_loaded('zlib')){
-				ob_end_flush();
-			}
+			ob_end_flush();
 		}
 		unset($compressao_zlib);
 		unset($compressao_gzip);
 	}
 
-	if(isset($_POST["exibir_footer"]) && $_POST["exibir_footer"] == 'false'){
+	if(isset($_POST['exibir_footer']) && $_POST['exibir_footer'] == 'false'){
 		fecha_gzip();
 		//termina a execucao do arquivo
 		return;
@@ -54,7 +52,7 @@
 				</div>
 				<div class="span4">
 					<small>
-						<span id="copyright">© Arthur Assunção 2012 - <?php echo date("Y"); ?></span>
+						<span id="copyright">© Arthur Assunção 2012 - <?php echo date('Y'); ?></span>
 					</small>
 				</div>
 				<div id="menu_footer" class="span3">

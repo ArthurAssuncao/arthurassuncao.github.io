@@ -1,11 +1,11 @@
 <?php 
 	// verifica requisicao post
-	$envia = isset($_POST["envia"]) ? $_POST["envia"] : '';
+	$envia = isset($_POST['envia']) ? $_POST['envia'] : '';
 	if(strcmp($envia, 'true') == 0){
-		$nome_completo = ucwords($_POST["nome_completo"]);
-		$email = $_POST["email"];
-		$assunto = $_POST["assunto"];
-		$mensagem = $_POST["mensagem"];
+		$nome_completo = ucwords($_POST['nome_completo']);
+		$email = $_POST['email'];
+		$assunto = $_POST['assunto'];
+		$mensagem = $_POST['mensagem'];
 		
 		include('util/email/email.php');
 		
@@ -17,8 +17,8 @@
 		}
 		else{
 			$resultado = enviarEmail($nome_completo, $email, $mensagem, $assunto);
-			if (strcmp($resultado, "") == 0){
-				$msg_email = "Email enviado com sucesso";
+			if (strcmp($resultado, '') == 0){
+				$msg_email = 'Email enviado com sucesso';
 			}
 			else{
 				$erro_email = true;
@@ -33,8 +33,8 @@
 	
 	include('template/header.php');
 	
-	$regex_email = "\S+@\S+\.\S+";
-	$regex_nome = "^[A-Z][a-zA-Z '&-]*[A-Za-z]$";
+	$regex_email = '\S+@\S+\.\S+';
+	$regex_nome = '^[A-Z][a-zA-Z \'&-]*[A-Za-z]$';
 	
 	include('util/formulario.php');
 	
@@ -63,27 +63,21 @@
             </div>
               <?php 
                 if(isset($erro_email)){
-                	if($erro_email == true){
-                		echo '<div class="alert alert-error">';
-                	}
-                	else{
-                		echo '<div class="alert alert-info">';
-                	}
-                    echo $msg_email;
-                    echo '</div>';
+                	echo $erro_email == true ? '<div class="alert alert-error">' : '<div class="alert alert-info">';
+                    echo $msg_email, '\n\t</div>';
                 }
                 ?>
           </fieldset>
         </form>
 	</div>
 <?php 
-	$footer_embedded_js = "
+	$footer_embedded_js = '
 		function valida_campos(){
 			return true;
 		}
 		$(document).ready(function() {
-		  document.form_contato.envia.value = 'true';
+		  document.form_contato.envia.value = "true";
 		});
-	";
+	';
 	include('template/footer.php');
 ?>

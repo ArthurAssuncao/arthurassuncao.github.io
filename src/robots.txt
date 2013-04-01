@@ -10,3 +10,4 @@ Disallow: /erro/
 Disallow: /template/
 Disallow: /teste/
 Disallow: /util/
+Disallow: /min/
