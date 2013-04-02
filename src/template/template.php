@@ -1,13 +1,9 @@
 <?php
 	include('header.php');
 ?>
-	<body <?php echo $body_onload != '' ? 'onload="'.$body_onload.'"' : '' ?>>
+	<body <?php echo $this->body_onload != '' ? 'onload="'.$this->body_onload.'"' : '' ?>>
 		<div id="wrapper" class="container">
 			<div id="principal" class="clearfix">
-<?php
-	//destruindo variaveis
-	unset($body_onload);
-?>
 <?php
 	include('menu.php');
 ?>

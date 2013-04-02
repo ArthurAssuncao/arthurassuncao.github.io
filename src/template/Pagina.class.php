@@ -9,10 +9,8 @@ class Pagina {
 	public $tags_head_extra;
 	public $body_onload;
 
-	private $links_css_interno = array();
-	private $links_css_externo = array();
-	private $links_js_interno = array();
-	private $links_js_externo = array();
+	private $links_css = array();
+	private $links_css = array();
 
 	private $exibir_so_conteudo;
 
@@ -28,7 +26,7 @@ class Pagina {
 		$this->iniciaValoresPadrao();
 	}
 
-	private iniciaValoresPadrao(){
+	private function iniciaValoresPadrao(){
 		$this->lang = 'pt-br'; // idioma da pagina
 		$this->robots_noindex_follow = false;
 		$this->title = 'Arthur Assunção'; // titulo da pagina
@@ -40,7 +38,7 @@ class Pagina {
 		$this->exibir_so_conteudo = false;
 	}
 
-	public createCanonicalLink(){
+	public function createCanonicalLink(){
 		$protocolo = strtolower(preg_replace('/[^a-zA-Z]/','',$_SERVER['SERVER_PROTOCOL'])); //pegando só o que for letra
 		$localizacao = $protocolo.'://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 		$localizacao = $localizacao[strlen($localizacao)-1] == '/' ? substr($localizacao,0,-1) : $localizacao;
@@ -79,7 +77,9 @@ class Pagina {
 		$this->exibir_so_conteudo = $exibir;
 	}
 
-	public function addCSS($endereco) {
+	private function createLinkMinify(){
+		for($i)
+
 		if(stripos($endereco, 'http', 0) === 0){
 		    $this->links_css_externo = $endereco;
 		}
@@ -88,13 +88,12 @@ class Pagina {
 		}
 	}
 
+	public function addCSS($endereco) {
+		$this->links_css[] = $endereco;
+	}
+
 	public function addJavascript($endereco) {
-	    if(stripos($endereco, 'http', 0) === 0){
-		    $this->links_js_externo = $endereco;
-		}
-		else{
-			$this->links_js_interno[] = $endereco;
-		}
+		$this->links_js[] = $endereco;
 	}
 
 	private function iniciaBuffer(){
