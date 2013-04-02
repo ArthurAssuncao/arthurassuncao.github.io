@@ -25,13 +25,6 @@
 	$footer_links_js = (isset($footer_links_js)) ? getLinksJSMin($footer_links_js) : ''; /*permite adicionar mais js nos arquivos */
 	$footer_embedded_js = (isset($footer_embedded_js)) ? '<script type="text/javascript">'."\n".$footer_embedded_js."\n\t</script>\n" : ''; //permite adicionar mais js
 ?>
-<br>
-<!-- /div container -->
-</div>
-<!-- /div principal -->
-</div>
-<!-- /div wrapper -->
-</div>
 <!-- RODAPÉ -->
 	<footer id="footer" class="well">
 		<div class="container">

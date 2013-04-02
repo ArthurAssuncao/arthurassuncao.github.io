@@ -7,11 +7,6 @@
 		//termina a execucao do arquivo
 		return;
 	}
-
-	$protocol = strtolower(preg_replace('/[^a-zA-Z]/','',$_SERVER['SERVER_PROTOCOL'])); //pegando só o que for letra
-	$location = $protocol.'://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-	$location = $location[strlen($location)-1] == '/' ? substr($location,0,-1) : $location;
-	unset($protocol);
 	/*
 		Variaveis que podem ser usadas
 		$body_onload = permite adicionar funcoes ao onload da tag body
@@ -56,20 +51,12 @@
 	}
 	
 	//seta os valores nas variaveis, assim nenhum fica como nao definida e passam a ter os valores padrao
-	$lang = (isset($lang)) ? $lang : 'pt-br'; // idioma da pagina
-	$robots_noindex_follow = (isset($robots_noindex_follow)) ? '<meta name="robots" content="noindex,follow">' : '';
 	$links_css = (isset($links_css)) ? getLinksCSSMin($links_css) : ''; // permite adicionar mais arquivos css
 	$embedded_css = (isset($embedded_css)) ? '<style type="text/css">'."\n".$embedded_css."\n\t</style>\n" : ''; //permite adicionar mais css
 	$links_js = (isset($links_js)) ? getLinksJSMin($links_js) : ''; //permite adicionar mais arquivos js
-	$title = (isset($title)) ? $title : 'Arthur Assunção'; // titulo da pagina
-	$description = (isset($description)) ? $description : 'Arthur Assunção'; // descricao da pagina
-	$keywords = (isset($keywords)) ? $keywords : 'Arthur Assunção, Instituto Federal do Sudeste de Minas Gerais, Barbacena, Sistemas para Internet, Programação'; /* keywords da pagina */
-	$canonical = (isset($canonical)) ? $canonical : $location; /* link canonial da pagina */
-	$tags_head_extra = (isset($tags_head_extra)) ? $tags_head_extra : ''; /*permite adicionar outras tags no head */
-	$body_onload = (isset($body_onload)) ? $body_onload : '';
 	$embedded_js = (isset($embedded_js)) ? $embedded_js : '';
 	
-	if (strcmp($canonical, 'http://arthurassuncao.com') == 0){
+	if (strcmp($this->canonical, 'http://arthurassuncao.com') == 0){
 		//$is_pagina_home = True;
 	}
 	else if(strcmp($canonical, 'http://arthurassuncao.com/repositorios') == 0){
@@ -83,10 +70,10 @@
 	}
 	
 ?><!DOCTYPE html>
-<html lang="<?php echo $lang ?>" prefix='og: http://ogp.me/ns#'>
+<html lang="<?php echo $this->lang ?>" prefix='og: http://ogp.me/ns#'>
   <head>
 	<meta charset="utf-8" />
-<?php echo $robots_noindex_follow ?>
+<?php echo $this->robots_noindex_follow ? '<meta name="robots" content="noindex,follow">' : '' ?>
 	<link rel="stylesheet" type="text/css" href="/css/reset.css" />
 	<link rel="stylesheet" type="text/css" href="/min/?f=/css/bootstrap/bootstrap_united.min.css,/css/principal.css,/css/site.css" />
 	<?php echo $links_css ?>
@@ -99,18 +86,18 @@
 	<meta name="author" content="Arthur Assunção" />
 	<meta name="dcterms.rightsHolder" content="Arthur Assunção" />
 	<meta name="dcterms.dateCopyrighted" content="2012" />
-	<title><?php echo $title ?></title>
-    <meta name="description" content="<?php echo $description ?>" />
-    <meta name="keywords" content="<?php echo $keywords ?>" />
-	<link rel="canonical" href="<?php echo $canonical ?>" />
+	<title><?php echo $this->title ?></title>
+    <meta name="description" content="<?php echo $this->description ?>" />
+    <meta name="keywords" content="<?php echo $this->keywords ?>" />
+	<link rel="canonical" href="<?php echo $this->canonical ?>" />
     <!-- OpenGraph -->
-    <meta content="<?php echo $title ?>" property="og:title"/>
+    <meta content="<?php echo $this->title ?>" property="og:title"/>
     <meta content="website" property="og:type"/>
-    <meta content="<?php echo $canonical ?>" property="og:url"/>
+    <meta content="<?php echo $this->canonical ?>" property="og:url"/>
     <!--<meta property="og:image" content="image.jpg" />-->
     <meta content="Arthur Assuncao" property="og:site_name"/>
-    <meta content="<?php echo $description ?>" property="og:description"/>
-	<?php echo $tags_head_extra ?>
+    <meta content="<?php echo $this->description ?>" property="og:description"/>
+	<?php echo $this->tags_head_extra ?>
 	<?php echo $embedded_js; ?>
 	
 	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -119,28 +106,9 @@
 	<![endif]-->
 	</head>
 <?php 
-	//if( !( (isset($compressao_zlib) && $compressao_zlib == true) || (isset($compressao_gzip) && $compressao_gzip == true) )){
-		flush();
-	//}
-?>
-	<body <?php echo $body_onload != '' ? 'onload="'.$body_onload.'"' : '' ?>>
-	<div id="wrapper" class="container">
-	<div id="principal" class="clearfix">
-<?php 
 	//destruindo variaveis
-	unset($location);
-	unset($lang);
-	unset($robots_noindex_follow);
 	unset($links_css);
 	unset($embedded_css);
 	unset($links_js);
-	unset($title);
-	unset($description);
-	unset($keywords);
-	unset($canonical);
-	unset($tags_head_extra);
-	unset($body_onload);
 	unset($embedded_js);
-	include('menu.php');
  ?>
-	<div id="conteudo" class="container">
