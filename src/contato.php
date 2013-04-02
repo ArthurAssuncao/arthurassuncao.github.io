@@ -16,7 +16,8 @@
 			$msg_email = 'Preencha todos os campos';
 		}
 		else{
-			$resultado = enviarEmail($nome_completo, $email, $mensagem, $assunto);
+			$email_obj = new Email($nome_completo, $email, $mensagem, $assunto);
+			$resultado = $email_obj->envia();
 			if (strcmp($resultado, '') == 0){
 				$msg_email = 'Email enviado com sucesso';
 			}
@@ -64,7 +65,7 @@
               <?php 
                 if(isset($erro_email)){
                 	echo $erro_email == true ? '<div class="alert alert-error">' : '<div class="alert alert-info">';
-                    echo $msg_email, '\n\t</div>';
+                    echo $msg_email, '</div>';
                 }
                 ?>
           </fieldset>

@@ -22,7 +22,7 @@
 				  <li data-slide="2" <?php echo $is_pagina_repositorios ? 'class="selected"' : ''?>><a href="/repositorios" data-hash="#pagina_repositorios">Repositórios</a></li>
 				  <li data-slide="3" <?php echo $is_pagina_curriculo ? 'class="selected"' : ''?>><a href="/curriculo" data-hash="#pagina_curriculo">Currículo</a></li>
 				  <li data-slide="4" <?php echo $is_pagina_contato ? 'class="selected"' : ''?>><a href="/contato" data-hash="#pagina_contato">Contato</a></li>
-				  <li class="dropdown"><a id="drop_projetos" href="#projetos" data-hash="#projetos" role="button" class="dropdown-toggle" data-toggle="dropdown">Projetos <b class="caret"></b></a>
+				  <li class="dropdown"><a id="drop_projetos" data-target="#" href="#projetos" data-hash="#projetos" role="button" class="dropdown-toggle" data-toggle="dropdown">Projetos <b class="caret"></b></a>
 					<ul class="dropdown-menu" role="menu" aria-labelledby="drop_projetos">
 						<li><a href="https://github.com/ArthurAssuncao/Android-CepView">Android CepView</a></li>
 						<li><a href="https://github.com/ArthurAssuncao/bootstrap4blogger">Bootstrap for Blogger</a></li>

@@ -1,3 +1,6 @@
+body{
+  background: url('/img/snow.png') repeat 0 0; /*credits http://subtlepatterns.com*/
+}
 #conteudo{
   padding-top: 30px;
 }
