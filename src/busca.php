@@ -1,10 +1,11 @@
-<?php 
-	$title = 'Busca - Arthur Assunção';
-	$description = 'Pagina de busca para buscar no site arthurassuncao.com';
-	$keywords = 'Pagina de busca, busca, arthur assuncao, encontra, search';
-	$canonical = 'http://arthurassuncao.com/busca';
-	
-	require_once('template/header.php');
+<?php
+	require('template/Pagina.class.php');
+	$pagina = new Pagina();
+	$pagina->setTitle('Busca - Arthur Assunção');
+	$pagina->setDescription('Pagina de busca para buscar no site arthurassuncao.com');
+	$pagina->setKeywords('Pagina de busca, busca, arthur assuncao, encontra, search');
+	$pagina->setCanonical($pagina->createCanonicalLink());
+	$pagina->iniciaConteudo();
 ?>
 	<br>
 	<script>
@@ -17,7 +18,7 @@
 		})();
 	</script>
 	<gcse:search queryParameterName="search" enableAutoComplete="true" ></gcse:search>
-
-<?php 
-	require_once('template/footer.php');
+<?php
+	$pagina->finalizaConteudo();
+	echo $pagina->renderizar();
 ?>
