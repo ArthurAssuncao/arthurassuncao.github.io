@@ -9,25 +9,36 @@ class Pagina {
 	public $tags_head_extra;
 	public $body_onload;
 
-	private $links_css = array();
 	public $embedded_css;
-	private $links_js_footer = array();
-	private $links_js_header = array();
 	public $embedded_js_footer;
 	public $embedded_js_header;
 
-	private $exibir_so_conteudo;
-
 	public $conteudo;
 	public $compressao = NULL;
+
 	public static $GZIP = 'gzip';
+
+	private $links_css = array();
+	private $links_js_footer = array();
+	private $links_js_header = array();
+
+	private $exibir_so_conteudo;
 
 	protected function Pagina() {
 	}
 
 	public function Pagina() {
 		$this->iniciaValoresPadrao();
+		$this->verificaPost();
+		//$this->verificaGet();
 		$this->addCSS('css/main.css');
+	}
+
+	private function verificaPost(){
+		//ARRUMAR ISSO
+		if((isset($_POST['exibir_header']) && $_POST['exibir_header'] == 'false') && (isset($_POST['exibir_footer']) && $_POST['exibir_footer'] == 'false')){
+			exibir_so_conteudo = true;
+		}
 	}
 
 	private function iniciaValoresPadrao(){
@@ -106,38 +117,36 @@ class Pagina {
 		return $array_dividido;
 	}
 
-	public function createTagsCSS($useMinify=true){
-		$linksDivididos = Pagina::divideArrayLinks($this->links_css);
-		if(useMinify){
+	public function createTagsCSS($array_links, $useMinify=true){
+		$linksDivididos = Pagina::divideArrayLinks($array_links);
+		$tags = array();
+		if($useMinify){
 			for($linksDivididos as $links){
 				if(strlen($links) > 1 || (stripos($links[0], 'http', 0) != 0)){
-					$links_csv = join(',', $links);
-					$tags[] = "\t".'<link rel="stylesheet" type="text/css" href="/min/?f='.$links_csv.'" />'."\n";
+					$tags[] = Pagina::getLinksCSSMin($links);
 				}
 				else{
-					for($links as $link){
-						$tags[] = "\t".'<link rel="stylesheet" type="text/css" href="'.$link.'" />'."\n";
-					}
+					$tags[] = Pagina::getLinksCSS($links);
 				}
 			}
 		}
+		return join("\n", $tags);
 	}
 
-	public function createTagsJS($useMinify=true){
-		$linksDivididos = Pagina::divideArrayLinks($this->links_js);
-		if(useMinify){
+	public function createTagsJS($array_links, $useMinify=true){
+		$linksDivididos = Pagina::divideArrayLinks($array_links);
+		$tags = array();
+		if($useMinify){
 			for($linksDivididos as $links){
 				if(strlen($links) > 1 || (stripos($links[0], 'http', 0) != 0)){
-					$links_csv = join(',', $links);
-					$tags[] = "\t".'<script type="text/javascript" src="/min/?f='.$links.'"></script>'."\n";
+					$tags[] = Pagina::getLinksJSMin($links);
 				}
 				else{
-					for($links as $link){
-						$tags[] = "\t".'<script type="text/javascript" src="'.$link.'"></script>'."\n";
-					}
+					$tags[] = Pagina::getLinksJS($links);
 				}
 			}
 		}
+		return join("\n", $tags);
 	}
 
 	private function iniciaBuffer(){
@@ -172,6 +181,34 @@ class Pagina {
 			echo $this->conteudo;
 		}
 		return $this->finalizaBuffer();
+	}
+
+	private static function getLinksCSSMin($vetor_links){
+		$links_csv = join(',', $vetor_links);
+		$tag = "\t".'<link rel="stylesheet" type="text/css" href="/min/?f='.$links_csv.'" />'."\n";
+		return $tag;
+	}
+
+	private static function getLinksJSMin($vetor_links){
+		$links_csv = join(',', $vetor_links);
+		$tag .= "\t".'<script type="text/javascript" src="/min/?f='.$links_csv.'"></script>'."\n";
+		return $tag;
+	}
+	
+	private static function getLinksCSS($vetor_links){
+		$tags = '';
+		foreach ($vetor_links as $link) {
+			$tags .= "\t".'<link rel="stylesheet" type="text/css" href="'.$link.'" />'."\n";
+		}
+		return $tags;
+	}
+
+	private static function getLinksJS($vetor_links){
+		$tags = '';
+		foreach ($vetor_links as $link) {
+			$tags .= "\t".'<script type="text/javascript" src="'.$link.'"></script>'."\n";
+		}
+		return $tags;
 	}
 
 }

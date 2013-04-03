@@ -1,12 +1,12 @@
 <?php
 	require('Template.class.php');
 	$pagina = new Pagina();
-	$pagina->setTitle('Home');
+	$pagina->setTitle('Exemplo');
 	$pagina->iniciaConteudo();
 ?>
 	<h2>Home</h2>
 	<p>Lorem ipsum dolor sit amet, consectetur...</p>
 <?php
 	$pagina->finalizaConteudo();
-	echo $pagina->render('inc/template.php');
+	echo $pagina->renderizar('template.php');
 ?>
