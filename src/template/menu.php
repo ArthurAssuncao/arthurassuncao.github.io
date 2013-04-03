@@ -1,9 +1,22 @@
 <?php
 	/* menu de todas as paginas */
-	$is_pagina_home = (isset($is_pagina_home) && $is_pagina_home) ? $is_pagina_home : False;
-	$is_pagina_repositorios = (isset($is_pagina_repositorios) && $is_pagina_repositorios) ? $is_pagina_repositorios : False;
-	$is_pagina_curriculo = (isset($is_pagina_curriculo) && $is_pagina_curriculo) ? $is_pagina_curriculo : False;
-	$is_pagina_contato = (isset($is_pagina_contato) && $is_pagina_contato) ? $is_pagina_contato : False;
+	$is_pagina_home = false;
+	$is_pagina_repositorios = false;
+	$is_pagina_curriculo = false;
+	$is_pagina_contato = false;
+
+	if (strcmp($this->canonical, 'http://arthurassuncao.com') == 0){
+		//$is_pagina_home = true;
+	}
+	else if(strcmp($this->canonical, 'http://arthurassuncao.com/repositorios') == 0){
+		$is_pagina_repositorios = true;
+	}
+	else if(strcmp($this->canonical, 'http://arthurassuncao.com/curriculo') == 0){
+		$is_pagina_curriculo = true;
+	}
+	else if(strcmp($this->canonical, 'http://arthurassuncao.com/contato') == 0){
+		$is_pagina_contato = true;
+	}
 ?>
 <!-- MENU SUPERIOR-->
 <div class="navbar navbar-fixed-top">
@@ -36,7 +49,6 @@
                 <button class="btn botao_busca" type="submit"><i class="icon-search"></i></button>
                 <input name="search" id="barra_busca" type="search" class="search-query input-medium" placeholder="procure no arthurassuncao.com" />
             </div>
-            <!--<a id="muda_tema" href="#" class="btn btn-small" style="background-color: #e6e6e6">&nbsp;</a>-->
 		</form>
     </div>
   </div>

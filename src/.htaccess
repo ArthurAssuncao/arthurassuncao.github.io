@@ -71,12 +71,6 @@ RewriteRule ^((?!sitemaps/)sitemap_simple.xml)$ sitemaps/sitemap_simple_xml [NC,
 RewriteRule ^((?!sitemaps/)sitemap)$ sitemaps/sitemap [NC,L]
 RewriteRule ^((?!sitemaps/)sitemap.xml)$ sitemaps/sitemap_xml [NC,L]
 
-# Bloqueando o acesso aos arquivos do diretorio template
-#<files template/*.php>
-#	order allow,deny
-#	deny from all
-#</files>
-
 #Desativando o case sensitive, agora a url PAGINA.HTML é igualmente acessada por pagina.html
 <IfModule mod_speling.c>
 	CheckSpelling On
