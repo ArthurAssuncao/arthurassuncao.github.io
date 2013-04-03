@@ -1,17 +1,19 @@
-<?php 
-	$title = 'Repositorios - Arthur Assunção';
-	$description = 'Pagina com os repositorios dos meus projetos';
-	$keywords = 'repositorios, git, github, projetos';
-	$canonical = 'http://arthurassuncao.com/busca';
-	
-	$links_js = ['js/gitview/gitview.pt.js'];
-
-	require_once('template/header.php');
+<?php
+	require('template/Pagina.class.php');
+	$pagina = new Pagina();
+	$pagina->setTitle('Repositorios - Arthur Assunção');
+	$pagina->setDescription('Pagina com os repositorios dos projetos de Arthur Assunção');
+	$pagina->setKeywords('repositorios, git, github, projetos, bitbucket, controle de versao');
+	$pagina->setCanonical($pagina->createCanonicalLink());
+	$pagina->addJavascript('js/gitview/gitview.pt.js');
+	$pagina->iniciaConteudo();
 ?>
 	<h3>Repositórios</h3>
 	<div id="repositorios"></div>
-<?php 
-	$footer_embedded_js = "new Gitview({".
+	<br>
+<?php
+	$pagina->finalizaConteudo();
+	$pagina->embedded_js_footer = "new Gitview({".
 			"user       : 'arthurassuncao',".
 			"domNode    : document.getElementById('repositorios'),".
 			"count      : 10,".
@@ -20,5 +22,5 @@
 			"theme 	   : 'light',".
 			"compact    : true,".
 		"});";
-	require_once('template/footer.php');
+	echo $pagina->renderizar();
 ?>
