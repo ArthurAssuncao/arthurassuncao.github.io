@@ -1,13 +1,13 @@
-<?php 
-	$title = 'Arthur Assunção';
-	$description = 'Arthur Assunção';
-	$keywords = 'Arthur Assunção, Instituto Federal do Sudeste de Minas Gerais, Barbacena, Sistemas para Internet, Programação, github';
-	//$is_pagina_home = True;
-	
-	$links_css = ['css/jquery_github/github.css'];
-	require_once('template/header.php');
+<?php
+	require('template/Pagina.class.php');
+	$pagina = new Pagina();
+	$pagina->setTitle('Arthur Assunção - Home');
+	$pagina->setDescription('Arthur Assunção - Home');
+	$pagina->setKeywords('Arthur Assunção, Instituto Federal do Sudeste de Minas Gerais, Barbacena, Sistemas para Internet, Programação, github');
+	$pagina->addCSS('css/jquery_github/github.css');
+	$pagina->iniciaConteudo();
 ?>
-    <div id="pagina_home" class="pagina">
+	<div id="pagina_home" class="pagina">
     	<h3>Em breve...</h3>
     </div>
 	<div id="pagina_repositorios" class="pagina"></div>
@@ -15,6 +15,8 @@
     <div id="pagina_contato" class="pagina"></div>
     <br>
 <?php
-	$footer_links_js = ['js/jquery_github/jquery.github.js','js/index.js'];
-	require_once('template/footer.php');
+	$pagina->finalizaConteudo();
+	$pagina->addJavascript('js/jquery_github/jquery.github.js');
+	$pagina->addJavascript('js/index.js');
+	echo $pagina->renderizar();
 ?>
