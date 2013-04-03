@@ -1,5 +1,5 @@
-<?
-class Pagina {
+<?php
+class Pagina{
 	public $lang;
 	public $robots_noindex_follow;
 	public $title;
@@ -24,9 +24,6 @@ class Pagina {
 
 	private $exibir_so_conteudo;
 
-	protected function Pagina() {
-	}
-
 	public function Pagina() {
 		$this->iniciaValoresPadrao();
 		$this->verificaPost();
@@ -37,7 +34,7 @@ class Pagina {
 	private function verificaPost(){
 		//ARRUMAR ISSO
 		if((isset($_POST['exibir_header']) && $_POST['exibir_header'] == 'false') && (isset($_POST['exibir_footer']) && $_POST['exibir_footer'] == 'false')){
-			exibir_so_conteudo = true;
+			$this->exibir_so_conteudo = true;
 		}
 	}
 
@@ -107,11 +104,16 @@ class Pagina {
 
 	private static function divideArrayLinks($array){
 		$array_dividido = array();
-		for($array as $link){
-			$novo_array = array();
-			while(stripos($link, 'http', 0) != 0){
-				$novo_array[] = $link;
+		$novo_array = array();
+		foreach($array as $link){
+			$novo_array[] = $link;
+			if(!(stripos($link, 'http://', 0) === 0)){
+				continue;
 			}
+			$array_dividido[] = $novo_array;
+			$novo_array = array();
+		}
+		if(count($novo_array) != 0){
 			$array_dividido[] = $novo_array;
 		}
 		return $array_dividido;
@@ -121,8 +123,8 @@ class Pagina {
 		$linksDivididos = Pagina::divideArrayLinks($array_links);
 		$tags = array();
 		if($useMinify){
-			for($linksDivididos as $links){
-				if(strlen($links) > 1 || (stripos($links[0], 'http', 0) != 0)){
+			foreach($linksDivididos as $links){
+				if(count($links) > 1 || !(stripos($link, 'http://', 0) === 0)){
 					$tags[] = Pagina::getLinksCSSMin($links);
 				}
 				else{
@@ -137,8 +139,8 @@ class Pagina {
 		$linksDivididos = Pagina::divideArrayLinks($array_links);
 		$tags = array();
 		if($useMinify){
-			for($linksDivididos as $links){
-				if(strlen($links) > 1 || (stripos($links[0], 'http', 0) != 0)){
+			foreach($linksDivididos as $links){
+				if(count($links) > 1 || !(stripos($link, 'http://', 0) === 0)){
 					$tags[] = Pagina::getLinksJSMin($links);
 				}
 				else{
@@ -191,7 +193,7 @@ class Pagina {
 
 	private static function getLinksJSMin($vetor_links){
 		$links_csv = join(',', $vetor_links);
-		$tag .= "\t".'<script type="text/javascript" src="/min/?f='.$links_csv.'"></script>'."\n";
+		$tag = "\t".'<script type="text/javascript" src="/min/?f='.$links_csv.'"></script>'."\n";
 		return $tag;
 	}
 	

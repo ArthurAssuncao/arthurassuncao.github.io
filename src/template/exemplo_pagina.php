@@ -1,5 +1,5 @@
 <?php
-	require('Template.class.php');
+	require('Pagina.class.php');
 	$pagina = new Pagina();
 	$pagina->setTitle('Exemplo');
 	$pagina->iniciaConteudo();
