@@ -21,7 +21,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/reset.css" />
 	<link rel="stylesheet" type="text/css" href="/min/?f=/css/bootstrap/bootstrap_united.min.css,/css/principal.css,/css/site.css" />
 	<?php echo $this->createTagsCSS($this->links_css) ?>
-	<?php echo $this->embedded_css ?>
+	<?php echo "<script type='text/javascript'>$this->embedded_css</script>" ?>
 	<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" />
 <?php echo $this->createTagsJS($this->links_js_header) ?>
 	<link rel="shortcut icon" href="/favicon.ico" /> 

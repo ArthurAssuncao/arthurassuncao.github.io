@@ -28,7 +28,6 @@ class Pagina{
 		$this->iniciaValoresPadrao();
 		$this->verificaPost();
 		//$this->verificaGet();
-		$this->addCSS('css/main.css');
 	}
 
 	private function verificaPost(){
@@ -124,7 +123,7 @@ class Pagina{
 		$tags = array();
 		if($useMinify){
 			foreach($linksDivididos as $links){
-				if(count($links) > 1 || !(stripos($link, 'http://', 0) === 0)){
+				if(count($links) > 0 && !(stripos($links[0], 'http://', 0) === 0)){
 					$tags[] = Pagina::getLinksCSSMin($links);
 				}
 				else{
@@ -140,7 +139,7 @@ class Pagina{
 		$tags = array();
 		if($useMinify){
 			foreach($linksDivididos as $links){
-				if(count($links) > 1 || !(stripos($link, 'http://', 0) === 0)){
+				if(count($links) > 0 && !(stripos($links[0], 'http://', 0) === 0)){
 					$tags[] = Pagina::getLinksJSMin($links);
 				}
 				else{
