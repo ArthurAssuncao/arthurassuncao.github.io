@@ -1,4 +1,4 @@
-<?php 
+<?php
 	// verifica requisicao post
 	$envia = isset($_POST['envia']) ? $_POST['envia'] : '';
 	if(strcmp($envia, 'true') == 0){
@@ -28,19 +28,21 @@
 		}
 	}
 
-	$title = 'Arthur Assunção';
-	$description = 'Arthur Assunção';
-	$keywords = 'Arthur Assunção, Instituto Federal do Sudeste de Minas Gerais, Barbacena, Sistemas para Internet, Programação, github';
-	
-	include('template/header.php');
-	
+	require('template/Pagina.class.php');
+	$pagina = new Pagina();
+	$pagina->setTitle('Contato - Arthur Assunção');
+	$pagina->setDescription('Pagina de contato com o site arthurassuncao.com');
+	$pagina->setKeywords('Pagina de contato, contato, arthur assuncao, email, duvidas, sugestoes');
+	$pagina->setCanonical($pagina->createCanonicalLink());
+
 	$regex_email = '\S+@\S+\.\S+';
 	$regex_nome = '^[A-Z][a-zA-Z \'&-]*[A-Za-z]$';
 	
 	include('util/formulario.php');
-	
+
+	$pagina->iniciaConteudo();
 ?>
-    <h3>Contato</h3>
+	<h3>Contato</h3>
 	<span>
 	Entre em contato através do formulário, você pode tirar suas dúvidas, fornecer sugestões, reclamar ou simplemente falar comigo.
 	<br>
@@ -71,8 +73,9 @@
           </fieldset>
         </form>
 	</div>
-<?php 
-	$footer_embedded_js = '
+<?php
+	$pagina->finalizaConteudo();
+	$pagina->embedded_js_footer = '
 		function valida_campos(){
 			return true;
 		}
@@ -80,5 +83,5 @@
 		  document.form_contato.envia.value = "true";
 		});
 	';
-	include('template/footer.php');
+	echo $pagina->renderizar();
 ?>
