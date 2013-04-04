@@ -1,10 +1,14 @@
-<?php 
-	$title = 'Página não encontrada - Arthur Assunção';
-	$description = 'Erro 404 - Pagina não encontrada';
-	$keywords = 'Pagina não encontrada';
-	$canonical = 'http://arthurassuncao.com/erro/404';
+<?php
+	require('/template/Pagina.class.php');
+	$pagina = new Pagina();
+	$pagina->setTitle('Página não encontrada - Arthur Assunção');
+	$pagina->setDescription('Erro 404 - Pagina não encontrada');
+	$pagina->setKeywords('Pagina não encontrada, 404');
+	$pagina->setCanonical('http://arthurassuncao.com/erro/404');
+	$pagina->addCSS('/css/prettify/prettify.css');
+	$pagina->setBodyOnload('prettyPrint()');
 
-	$embedded_css = "	#principal{
+	$pagina->embedded_css = "#principal{
 		margin-right: auto;
 		margin-left: auto;
 		width: 100%;
@@ -23,13 +27,10 @@
 		margin-left: auto;
 		margin-right: auto;
 	}";
-	
-	$links_css = array('../css/prettify/prettify.css');
-	$body_onload = 'prettyPrint()';
-	
-	require_once('../template/header.php');
+
+	$pagina->iniciaConteudo();
 ?>
-		<span id="fundo" class="nao_selecionavel" >
+	<span id="fundo" class="nao_selecionavel" >
 		404
 		</span>
 		<pre class="prettyprint lang-py">
@@ -48,8 +49,8 @@
 
 </code>
 		</pre>
-
-<?php 
-	$footer_links_js = array('../js/prettify/prettify.js');
-	require_once('../template/footer.php');
+<?php
+	$pagina->addJavascript('/js/prettify/prettify.js');
+	$pagina->finalizaConteudo();
+	echo $pagina->renderizar();
 ?>
