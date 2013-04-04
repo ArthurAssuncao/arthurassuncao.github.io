@@ -1,8 +1,4 @@
 <?php
-require('/min/lib/Minify/HTML.php');
-require('/min/lib/Minify/CSS.php');
-require('/min/lib/JSMin.php');
-
 class Pagina{
 	public $lang;
 	public $robots_noindex_follow;
@@ -28,7 +24,12 @@ class Pagina{
 
 	private $exibir_so_conteudo;
 
-	public function Pagina() {
+	public function Pagina() { //__FILE__
+		$fileDirToRoot = $_SERVER['DOCUMENT_ROOT'];
+		require($fileDirToRoot.'/min/lib/Minify/HTML.php');
+		require($fileDirToRoot.'/min/lib/Minify/CSS.php');
+		require($fileDirToRoot.'/min/lib/JSMin.php');
+		require($fileDirToRoot.'/min/lib/Minify/CommentPreserver.php');
 		$this->iniciaValoresPadrao();
 		$this->verificaPost();
 		//$this->verificaGet();

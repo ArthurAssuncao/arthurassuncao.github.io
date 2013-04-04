@@ -21,7 +21,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/reset.css" />
 	<link rel="stylesheet" type="text/css" href="/min/?f=/css/bootstrap/bootstrap_united.min.css,/css/principal.css,/css/site.css" />
 	<?php echo $this->createTagsCSS($this->links_css) ?>
-	<?php echo "<script type='text/javascript'>$this->embedded_css</script>" ?>
+	<?php echo "<style type='text/css'>$this->embedded_css</style>" ?>
 	<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" />
 <?php echo $this->createTagsJS($this->links_js_header) ?>
 	<link rel="shortcut icon" href="/favicon.ico" /> 
@@ -42,7 +42,7 @@
     <meta content="Arthur Assuncao" property="og:site_name"/>
     <meta content="<?php echo $this->description ?>" property="og:description"/>
 	<?php echo $this->tags_head_extra ?>
-	<?php echo $this->embedded_js_header ?>
+	<?php echo "<script type='text/javascript'>$this->embedded_js_header</script>" ?>
 	
 	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]>

@@ -1,5 +1,5 @@
 <?php
-	require('/template/Pagina.class.php');
+	require($_SERVER['DOCUMENT_ROOT'].'/template/Pagina.class.php');
 	$pagina = new Pagina();
 	$pagina->setTitle('Página não encontrada - Arthur Assunção');
 	$pagina->setDescription('Erro 404 - Pagina não encontrada');
