@@ -7,7 +7,7 @@
 	$pagina->setCanonical($pagina->createCanonicalLink());
 	$pagina->iniciaConteudo();
 ?>
-	<br>
+	<br />
 	<script>
 		(function() {
 		var cx = '000108721877074523459:0ygmxanhm8y';

@@ -45,10 +45,10 @@
 	<h3>Contato</h3>
 	<span>
 	Entre em contato através do formulário, você pode tirar suas dúvidas, fornecer sugestões, reclamar ou simplemente falar comigo.
-	<br>
+	<br />
 	(*) Campos Obrigatórios
 	</span>
-	<br><br>
+	<br /><br />
 	<div class="row">
         <form name="form_contato" id="form_contato" class="form-horizontal well span10" action="contato" method="post" onsubmit="return valida_campos()">
           <fieldset>
