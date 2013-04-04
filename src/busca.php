@@ -17,8 +17,15 @@
 		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
 		})();
 	</script>
-	<gcse:search queryParameterName="search" enableAutoComplete="true" ></gcse:search>
+	<div class="gcse-search" data-queryParameterName="search" data-enableAutoComplete="true" />
+
 <?php
+	$pagina->embedded_js_footer = "
+		var parametros = window.location.search.substr(1);
+		termo_busca = parametros.split('=')[1];
+		termo_busca = decodeURIComponent(termo_busca);
+		$('#barra_busca').val(termo_busca);
+	";
 	$pagina->finalizaConteudo();
 	echo $pagina->renderizar();
 ?>
