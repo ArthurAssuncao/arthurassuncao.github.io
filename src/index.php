@@ -1,8 +1,8 @@
 <?php
 	require('template/Pagina.class.php');
 	$pagina = new Pagina();
-	$pagina->setTitle('Arthur Assunção - Home');
-	$pagina->setDescription('Arthur Assunção - Home');
+	$pagina->setTitle('Arthur Assunção');
+	$pagina->setDescription('Arthur Assunção - Home Page');
 	$pagina->setKeywords('Arthur Assunção, Instituto Federal do Sudeste de Minas Gerais, Barbacena, Sistemas para Internet, Programação, github');
 	$pagina->addCSS('css/jquery_github/github.css');
 	$pagina->setCanonical($pagina->createCanonicalLink());
