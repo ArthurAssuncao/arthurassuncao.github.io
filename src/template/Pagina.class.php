@@ -1,4 +1,8 @@
 <?php
+require('/min/lib/Minify/HTML.php');
+require('/min/lib/Minify/CSS.php');
+require('/min/lib/JSMin.php');
+
 class Pagina{
 	public $lang;
 	public $robots_noindex_follow;
@@ -16,7 +20,7 @@ class Pagina{
 	public $conteudo;
 	public $compressao = NULL;
 
-	public static $GZIP = 'gzip';
+	public static $COMPRESS_GZIP = 'gzip';
 
 	private $links_css = array();
 	private $links_js_footer = array();
@@ -151,9 +155,9 @@ class Pagina{
 	}
 
 	private function iniciaBuffer(){
-		if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], Pagina::$GZIP)){
+		if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], Pagina::$COMPRESS_GZIP)){
 			ob_start('ob_gzhandler');
-			return Pagina::$GZIP;
+			return Pagina::$COMPRESS_GZIP;
 		}
 		else{
 			ob_start();
@@ -173,15 +177,26 @@ class Pagina{
 		$this->conteudo = $this->finalizaBuffer();
 	}
 
-	public function renderizar($endereco='template.php') {
+	public static function comprimeHTML($conteudo) {
+		$conteudo = Minify_HTML::minify($conteudo, array(
+			'cssMinifier' => array('Minify_CSS', 'minify'),
+			'jsMinifier' => array('JSMin', 'minify'),
+			'xhtml' => array(false)
+		));
+
+		return $conteudo;
+	}
+
+	public function renderizar($template='template.php') {
 		$this->iniciaBuffer();
 		if($this->exibir_so_conteudo == false){
-			include($endereco); //template html/php
+			include($template); //template html/php
 		}
 		else{
 			echo $this->conteudo;
 		}
-		return $this->finalizaBuffer();
+		$html = $this->finalizaBuffer();
+		return Pagina::comprimeHTML($html);
 	}
 
 	private static function getLinksCSSMin($vetor_links){
