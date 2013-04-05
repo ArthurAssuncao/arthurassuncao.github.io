@@ -7,7 +7,11 @@
 	<body <?php echo $this->body_onload != '' ? "onload='{$this->body_onload}'" : '' ?>>
 		<div id="wrapper" class="container">
 			<div id="principal" class="clearfix">
-				<a href="https://github.com/ArthurAssuncao"><img style="position: fixed; top: 0; right: 0; border: 0; z-index: 9999;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
+				<div class="github-fork-ribbon-wrapper right">
+			        <div class="github-fork-ribbon">
+			            <a href="https://github.com/ArthurAssuncao">Fork me on GitHub</a>
+			        </div>
+			    </div>
 <?php
 	// Menu
 	require('menu.php');
