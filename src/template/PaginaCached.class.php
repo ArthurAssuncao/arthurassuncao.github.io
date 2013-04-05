@@ -90,6 +90,7 @@ class PaginaCached extends Pagina {
      * @return string com o MD5 do arquivo da pagina
      */
 	public function geraCacheMd5(){
+		$formatoData = "Y/m/d H:i:s"; //2013/12/31 23:50:00
 		$md5Arquivo = md5(date($formatoData, filemtime($this->caminhoArquivo)));
         return $md5Arquivo;
 	}
