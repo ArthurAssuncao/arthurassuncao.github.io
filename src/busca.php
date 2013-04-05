@@ -1,6 +1,6 @@
 <?php
-	require('template/Pagina.class.php');
-	$pagina = new Pagina();
+	require('template/PaginaCached.class.php');
+	$pagina = new PaginaCached(__FILE__);
 	$pagina->setTitle('Busca - Arthur Assunção');
 	$pagina->setDescription('Pagina de busca para buscar no site arthurassuncao.com');
 	$pagina->setKeywords('Pagina de busca, busca, arthur assuncao, encontra, search');

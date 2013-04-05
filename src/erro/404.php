@@ -1,6 +1,6 @@
 <?php
-	require($_SERVER['DOCUMENT_ROOT'].'/template/Pagina.class.php');
-	$pagina = new Pagina();
+	require($_SERVER['DOCUMENT_ROOT'].'/template/PaginaCached.class.php');
+	$pagina = new PaginaCached(__FILE__);
 	$pagina->setTitle('Página não encontrada - Arthur Assunção');
 	$pagina->setDescription('Erro 404 - Pagina não encontrada');
 	$pagina->setKeywords('Pagina não encontrada, 404');

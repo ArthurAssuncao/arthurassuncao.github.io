@@ -28,8 +28,8 @@
 		}
 	}
 
-	require('template/Pagina.class.php');
-	$pagina = new Pagina();
+	require('template/PaginaCached.class.php');
+	$pagina = new PaginaCached(__FILE__);
 	$pagina->setTitle('Contato - Arthur Assunção');
 	$pagina->setDescription('Pagina de contato com o site arthurassuncao.com');
 	$pagina->setKeywords('Pagina de contato, contato, arthur assuncao, email, duvidas, sugestoes');
