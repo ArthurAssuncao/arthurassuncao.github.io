@@ -1,4 +1,11 @@
-@import url(//fonts.googleapis.com/css?family=Ubuntu);/*!
+/*@import url(//fonts.googleapis.com/css?family=Ubuntu);*/
+/*@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Ubuntu'), url(http://themes.googleusercontent.com/static/fonts/ubuntu/v4/_xyN3apAT_yRRDeqB3sPRg.woff) format('woff');
+}*/
+/*!
  * Bootstrap v2.3.1
  *
  * Copyright 2012 Twitter, Inc
