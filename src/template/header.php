@@ -1,8 +1,8 @@
 <head>
 	<meta charset="utf-8" />
 <?php echo $this->robots_noindex_follow ? '<meta name="robots" content="noindex,follow">' : '' ?>
-	<link rel="stylesheet" type="text/css" href="/css/reset.css" />
-	<link rel="stylesheet" type="text/css" href="/min/?f=/css/gh_fork_ribbon/gh-fork-ribbon.css,/css/bootstrap/bootstrap_united.min.css,/css/principal.css,/css/site.css" />
+	<link rel="stylesheet" type="text/css" href="/min/?f=/css/reset.css,/css/gh_fork_ribbon/gh-fork-ribbon.css" />
+	<link rel="stylesheet" type="text/css" href="/min/?f=/css/bootstrap/bootstrap_united.min.css,/css/principal.css,/css/site.css" />
 <?php 
 	echo $this->createTagsCSS($this->links_css);
  	echo $this->embedded_css ? "<style type='text/css'>{$this->embedded_css}</style>" : '';
