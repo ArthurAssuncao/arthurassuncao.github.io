@@ -26,6 +26,7 @@ class PaginaCached extends Pagina {
 	public function PaginaCached($caminhoArquivo) {
 		parent::__construct();
 		require($_SERVER['DOCUMENT_ROOT'].'/min/lib/Minify/Cache/File.php');
+		require($_SERVER['DOCUMENT_ROOT'].'/min/lib/Minify/Logger.php');
 
 		$this->caminhoArquivo = $caminhoArquivo;
 	}
