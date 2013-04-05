@@ -22,7 +22,7 @@
 <?php
 	$pagina->embedded_js_footer = "
 		var parametros = window.location.search.substr(1);
-		termo_busca = parametros.split('=')[1];
+		var termo_busca = parametros.split('=')[1];
 		termo_busca = decodeURIComponent(termo_busca);
 		$('#barra_busca').val(termo_busca);
 	";
