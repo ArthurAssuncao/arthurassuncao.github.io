@@ -110,6 +110,18 @@ form input[required] label:after, form input[required=required] label:after, for
 	user-select: none;
 	cursor: default;
 }
+.tooltip_text {
+	display: none;
+	position: absolute;
+	border: 1px solid #333;
+	background-color: #161616;
+	border-radius: 5px;
+	padding: 5px;
+	color: #fff;
+	font-size: 10px;
+	z-index: 9999;
+}
+
 /* Barra de rolagem do Google */
 ::-webkit-scrollbar {
 	background: transparent;
