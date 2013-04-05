@@ -1,6 +1,6 @@
 <?php
-	require('template/Pagina.class.php');
-	$pagina = new Pagina();
+	require('template/PaginaCached.class.php');
+	$pagina = new PaginaCached(__FILE__);
 	$pagina->setTitle('Arthur Assunção');
 	$pagina->setDescription('Arthur Assunção - Home Page');
 	$pagina->setKeywords('Arthur Assunção, Instituto Federal do Sudeste de Minas Gerais, Barbacena, Sistemas para Internet, Programação, github');
@@ -14,7 +14,7 @@
 	<div id="pagina_repositorios" class="pagina"></div>
     <div id="pagina_curriculo" class="pagina"></div>
     <div id="pagina_contato" class="pagina"></div>
-    <br>
+    <br />
 <?php
 	$pagina->finalizaConteudo();
 	$pagina->addJavascript('js/jquery_github/jquery.github.js');
