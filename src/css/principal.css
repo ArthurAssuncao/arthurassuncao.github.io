@@ -18,7 +18,7 @@ html, body, #wrapper {
 }
 body > #wrapper {
 	height: auto; 
-	min-height: 97%;
+	min-height: 98%;
 }
 .navbar{
 	opacity: 0.9;
