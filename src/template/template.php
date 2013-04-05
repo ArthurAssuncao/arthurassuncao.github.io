@@ -32,7 +32,7 @@
 	<script type="text/javascript" src="/min/?f=/js/bootstrap/bootstrap.min.js,/js/site.js"></script>
 <?php 
 	echo $this->createTagsJS($this->links_js_footer);
-	echo "<script type='text/javascript'>$this->embedded_js_footer</script>";
+	echo $this->embedded_js_footer != '' ? "<script type='text/javascript'>$this->embedded_js_footer</script>" : '';
  ?>
 	</body>
 </html>
