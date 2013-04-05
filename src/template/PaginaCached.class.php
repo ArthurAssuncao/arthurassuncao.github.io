@@ -1,19 +1,40 @@
 <?php
 require('Pagina.class.php');
 
-// classe Pagina com a funcao de Cache
+/**
+ * PaginaCached - uma extensao da classe Pagina com a funcao de cache.
+ *
+ * Requires PHP 5.1.0.
+ * Tested on PHP 5.4.2.
+ *
+ * @package Template
+ * @author ArthurAssuncao <contato@arthurassuncao.com>
+ * @copyright 2013 Arthur Assuncao. All rights reserved.
+ * license not defined
+ * @link https://bitbucket.org/arthurassuncao/arthurassuncao.com
+ */
 class PaginaCached extends Pagina {
 	private $arquivoCache;
 	private $arquivoCacheId;
 	private $caminhoArquivo;
 
-	public function PaginaCached($caminhoArquivo) { //__FILE__
+	/**
+     * Construtor para iniciar a pagina
+     * 
+     * @param string $caminhoArquivo valor para indicar o caminho do arquivo, normalmente passado como __FILE__
+     */
+	public function PaginaCached($caminhoArquivo) {
 		parent::__construct();
 		require($_SERVER['DOCUMENT_ROOT'].'/min/lib/Minify/Cache/File.php');
 
 		$this->caminhoArquivo = $caminhoArquivo;
 	}
 
+	/**
+     * Renderiza a pagina HTML, comprime e ainda cria o cache da pagina, caso $exibir_so_conteudo seja true, a pagina com o conteudo eh apenas renderizada
+     * @param string $template com o template que sera usado na renderizacao, valor padrao é template.php
+     * @return string com a pagina renderizada, comprimida e em cache
+     */
 	public function renderizar($template='template.php') {
 		if($this->exibir_so_conteudo == false){
 			$htmlRenderizado = $this->criaCache($template);
@@ -24,6 +45,13 @@ class PaginaCached extends Pagina {
 		return $htmlRenderizado;
 	}
 
+	/**
+     * Cria o cache da pagina, caso ja exista eh retornado ao usuario
+     * O cache eh criado com o seguinte formato prefixo+nome_arquivo+md5_arquivo_pagina+md5("$md5Template+$md5Header+$md5Menu+$md5Footer),
+     * desta forma qualquer modificacao em arquivos que mudam o conteudo da pagina exige um novo arquivo de cache e o antigo eh apagado
+     * @param string $template com o template que sera usado na renderizacao, valor padrao é template.php
+     * @return string com a pagina renderizada que estava em cache ou que acabou de ir para o cache
+     */
 	public function criaCache($template='template.php'){
 		$this->arquivoCache = new Minify_Cache_File($_SERVER['DOCUMENT_ROOT'].'/min/cache/');
 		$md5Arquivo = $this->geraCacheMd5();
@@ -48,11 +76,19 @@ class PaginaCached extends Pagina {
 		return $htmlRenderizado;
 	}
 
+	/**
+     * Gera o MD5 do arquivo da pagina
+     * @return string com o MD5 do arquivo da pagina
+     */
 	public function geraCacheMd5(){
 		$md5Arquivo = md5_file($this->caminhoArquivo);
         return $md5Arquivo;
 	}
 
+	/**
+     * Gera o MD5 do template, ou seja, do arquivo template.php, header.php, menu.php e footer.php
+     * @return string com o MD5 do template
+     */
 	public function geraTemplateMd5(){
         $md5Template = md5_file($_SERVER['DOCUMENT_ROOT'].'/template/template.php');
         $md5Header = md5_file($_SERVER['DOCUMENT_ROOT'].'/template/header.php');
@@ -61,14 +97,22 @@ class PaginaCached extends Pagina {
         return md5("{$md5Template}{$md5Header}{$md5Menu}{$md5Footer}");
 	}
 
+	/**
+     * Gera o nome do cache
+     * @return string com o nome do cache
+     */
 	public function geraNomeCache($prefixo='pagina'){
 		//$nome = preg_replace('/[^a-zA-Z0-9\\.=_,]/', '', self::$_controller->selectionId);
         //$nome = preg_replace('/\\.+/', '.', $nome);
-        $nome = basename($this->caminhoArquivo, ".php");
+        $nome = basename($this->caminhoArquivo);
         $nome = substr($nome, 0, 200 - 34 - strlen($prefixo));
         return "{$prefixo}_{$nome}";
 	}
 
+	/**
+     * Gera o id do cache, essa funcao usa o nome do cache e adiciona o md5 do arquivo com o md5 do template, este ultimo eh o md5 do arquivo template.php, header.php, menu.php e footer.php
+     * @return string com o id do cache
+     */
 	public function geraCacheId($md5Arquivo, $md5Template, $nome=''){
 		if(!$nome){
 	        $nome = $this->geraNomeCache();

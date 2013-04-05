@@ -1,13 +1,3 @@
-<?php
-	/* Footer das paginas do site */
-	/*
-		Variaveis que podem ser usadas
-		$footer_links_js = linhas com tags script para js
-		$footer_embedded_js = texto com js para adicionar
-	*/
-	
-	//seta os valores nas variaveis, assim nenhum fica como nao definida e passam a ter os valores padrao
-?>
 <!-- RODAPÉ -->
 	<footer id="footer" class="well">
 		<div class="container">
