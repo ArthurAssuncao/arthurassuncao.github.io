@@ -20,12 +20,13 @@
 	<div class="gcse-search" data-queryParameterName="search" data-enableAutoComplete="true" />
 
 <?php
-	$pagina->embedded_js_footer = "
+	$pagina->finalizaConteudo();
+	$embedded_js_footer = "
 		var parametros = window.location.search.substr(1);
 		var termo_busca = parametros.split('=')[1];
 		termo_busca = decodeURIComponent(termo_busca);
 		$('#barra_busca').val(termo_busca);
 	";
-	$pagina->finalizaConteudo();
+	$pagina->addEmbeddedJavascript($embedded_js_footer);
 	echo $pagina->renderizar();
 ?>

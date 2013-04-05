@@ -1,6 +1,6 @@
 <?php
 	require($_SERVER['DOCUMENT_ROOT'].'/template/PaginaCached.class.php');
-	$pagina = new PaginaCached(__FILE__);
+	$pagina = new PaginaCached($_SERVER['DOCUMENT_ROOT'].'/erro/404.php');
 	$pagina->setTitle('Página não encontrada - Arthur Assunção');
 	$pagina->setDescription('Erro 404 - Pagina não encontrada');
 	$pagina->setKeywords('Pagina não encontrada, 404');
@@ -8,7 +8,7 @@
 	$pagina->addCSS('/css/prettify/prettify.css');
 	$pagina->setBodyOnload('prettyPrint()');
 
-	$pagina->embedded_css = "#principal{
+	$embedded_css = "#principal{
 		margin-right: auto;
 		margin-left: auto;
 		width: 100%;
@@ -27,10 +27,10 @@
 		margin-left: auto;
 		margin-right: auto;
 	}";
-
+	$pagina->addEmbeddedCSS($embedded_css);
 	$pagina->iniciaConteudo();
 ?>
-	<span id="fundo" class="nao_selecionavel" >
+	<span id="fundo" class="nao_selecionavel">
 		404
 		</span>
 		<pre class="prettyprint lang-py">
@@ -50,7 +50,7 @@
 </code>
 		</pre>
 <?php
-	$pagina->addJavascript('/js/prettify/prettify.js');
 	$pagina->finalizaConteudo();
+	$pagina->addJavascript('/js/prettify/prettify.js');
 	echo $pagina->renderizar();
 ?>

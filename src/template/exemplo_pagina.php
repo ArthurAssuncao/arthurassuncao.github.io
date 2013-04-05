@@ -1,6 +1,8 @@
 <?php
-	require('Pagina.class.php');
-	$pagina = new Pagina();
+	//require('Pagina.class.php');
+	require('PaginaCached.class.php');
+	//$pagina = new Pagina();
+	$pagina = new PaginaCached();
 	$pagina->setTitle('Exemplo');
 	$pagina->iniciaConteudo();
 ?>

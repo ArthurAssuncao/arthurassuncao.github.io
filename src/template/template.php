@@ -2,14 +2,14 @@
 <html lang="<?php echo $this->lang ?>" prefix="og: http://ogp.me/ns#">
 <?php
 	// Header
-	include('header.php');
+	require('header.php');
 ?>
-	<body <?php echo $this->body_onload != '' ? "onload='$this->body_onload'" : '' ?>>
+	<body <?php echo $this->body_onload != '' ? "onload='{$this->body_onload}'" : '' ?>>
 		<div id="wrapper" class="container">
 			<div id="principal" class="clearfix">
 <?php
 	// Menu
-	include('menu.php');
+	require('menu.php');
 ?>
 	<div id="conteudo" class="container">
 <?php
@@ -24,7 +24,7 @@
 	</div>
 <?php
 	// Footer
-	include('footer.php');
+	require('footer.php');
 ?>
 	<!-- Scripts rodam mais rapidos e de forma melhor estando no fim da pagina -->
 	<?php //<script type="text/javascript" src="/js/jquery/jquery-1.8.3.min.js"></script> ?>
@@ -32,7 +32,7 @@
 	<script type="text/javascript" src="/min/?f=/js/bootstrap/bootstrap.min.js,/js/site.js"></script>
 <?php 
 	echo $this->createTagsJS($this->links_js_footer);
-	echo $this->embedded_js_footer != '' ? "<script type='text/javascript'>$this->embedded_js_footer</script>" : '';
+	echo $this->embedded_js_footer ? "<script type='text/javascript'>{$this->embedded_js_footer}</script>" : '';
  ?>
 	</body>
 </html>

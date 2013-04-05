@@ -75,7 +75,7 @@
 	</div>
 <?php
 	$pagina->finalizaConteudo();
-	$pagina->embedded_js_footer = '
+	$embedded_js_footer = '
 		function valida_campos(){
 			return true;
 		}
@@ -83,5 +83,6 @@
 		  document.form_contato.envia.value = "true";
 		});
 	';
+	$pagina->addEmbeddedJavascript($embedded_js_footer);
 	echo $pagina->renderizar();
 ?>

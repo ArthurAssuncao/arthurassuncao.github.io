@@ -13,7 +13,7 @@
 	<br />
 <?php
 	$pagina->finalizaConteudo();
-	$pagina->embedded_js_footer = "new Gitview({".
+	$embedded_js_footer = "new Gitview({".
 			"user       : 'arthurassuncao',".
 			"domNode    : document.getElementById('repositorios'),".
 			"count      : 10,".
@@ -22,5 +22,6 @@
 			"theme 	   : 'light',".
 			"compact    : true,".
 		"});";
+	$pagina->addEmbeddedJavascript($embedded_js_footer);
 	echo $pagina->renderizar();
 ?>

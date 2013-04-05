@@ -25,11 +25,6 @@ class Pagina{
 	protected $exibir_so_conteudo;
 
 	public function Pagina() {
-		$fileDirToRoot = $_SERVER['DOCUMENT_ROOT'];
-		require($fileDirToRoot.'/min/lib/Minify/HTML.php');
-		require($fileDirToRoot.'/min/lib/Minify/CSS.php');
-		require($fileDirToRoot.'/min/lib/JSMin.php');
-		require($fileDirToRoot.'/min/lib/Minify/CommentPreserver.php');
 		$this->iniciaValoresPadrao();
 		$this->verificaPost();
 		//$this->verificaGet();
@@ -52,6 +47,10 @@ class Pagina{
 		$this->tags_head_extra = (isset($tags_head_extra)) ? $tags_head_extra : ''; // permite adicionar outras tags no head
 		$this->body_onload = '';
 		$this->exibir_so_conteudo = false;
+
+		$this->embedded_css = '';
+		$this->embedded_js_footer = '';
+		$this->embedded_js_header = '';
 	}
 
 	public function createCanonicalLink(){
@@ -103,6 +102,23 @@ class Pagina{
 		}
 		else{
 			$this->links_js_header[] = $link;
+		}
+	}
+
+	public function addEmbeddedCSS($embeddedCSS){
+		if($embeddedCSS){
+			$this->embedded_css .= "\n$embeddedCSS";
+		}
+	}
+
+	public function addEmbeddedJavascript($embeddedJS, $footer=true) {
+		if($embeddedJS){
+			if($footer == true){
+				$this->embedded_js_footer .= "\n$embeddedJS";
+			}
+			else{
+				$this->embedded_js_header .= "\n$embeddedJS";
+			}
 		}
 	}
 
@@ -179,6 +195,14 @@ class Pagina{
 	}
 
 	public static function comprimeHTML($conteudo) {
+		$fileDirToRoot = $_SERVER['DOCUMENT_ROOT'];
+		require($fileDirToRoot.'/min/lib/Minify/HTML.php');
+		require($fileDirToRoot.'/min/lib/Minify/CommentPreserver.php');
+		require($fileDirToRoot.'/min/lib/Minify/CSS/Compressor.php');
+		require($fileDirToRoot.'/min/lib/Minify/CSS/UriRewriter.php');
+		require($fileDirToRoot.'/min/lib/Minify/CSS.php');
+		require($fileDirToRoot.'/min/lib/JSMin.php');
+
 		$conteudo = Minify_HTML::minify($conteudo, array(
 			'cssMinifier' => array('Minify_CSS', 'minify'),
 			'jsMinifier' => array('JSMin', 'minify'),

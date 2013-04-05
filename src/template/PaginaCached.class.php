@@ -55,7 +55,10 @@ class PaginaCached extends Pagina {
 
 	public function geraTemplateMd5(){
         $md5Template = md5_file($_SERVER['DOCUMENT_ROOT'].'/template/template.php');
-        return $md5Template;
+        $md5Header = md5_file($_SERVER['DOCUMENT_ROOT'].'/template/header.php');
+        $md5Menu = md5_file($_SERVER['DOCUMENT_ROOT'].'/template/menu.php');
+        $md5Footer = md5_file($_SERVER['DOCUMENT_ROOT'].'/template/footer.php');
+        return md5("{$md5Template}{$md5Header}{$md5Menu}{$md5Footer}");
 	}
 
 	public function geraNomeCache($prefixo='pagina'){

@@ -19,7 +19,7 @@
 	$pagina->finalizaConteudo();
 	$pagina->addJavascript('js/jquery_github/jquery.github.js');
 	$pagina->addJavascript('js/index.js');
-	$pagina->embedded_js_footer = "
+	$embedded_js_footer = "
 		$(document).ready(function() {
 			var hash = window.location.hash;
 			if(hash != ''){
@@ -27,5 +27,6 @@
 			}
 		});
 	";
+	$pagina->addEmbeddedJavascript($embedded_js_footer);
 	echo $pagina->renderizar();
 ?>
