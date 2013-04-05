@@ -19,5 +19,13 @@
 	$pagina->finalizaConteudo();
 	$pagina->addJavascript('js/jquery_github/jquery.github.js');
 	$pagina->addJavascript('js/index.js');
+	$pagina->embedded_js_footer = "
+		$(document).ready(function() {
+			var hash = window.location.hash;
+			if(hash != ''){
+			  	$('a[data-hash*='+'#pagina_' + hash.replace(/#/,'')+']').click();
+			}
+		});
+	";
 	echo $pagina->renderizar();
 ?>
