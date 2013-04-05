@@ -8,7 +8,11 @@
 	$pagina->addCSS('/css/prettify/prettify.css');
 	$pagina->setBodyOnload('prettyPrint()');
 
-	$embedded_css = "#principal{
+	$embedded_css = "
+	#conteudo{
+		margin-top: 10px;
+	}
+	#principal{
 		margin-right: auto;
 		margin-left: auto;
 		width: 100%;
