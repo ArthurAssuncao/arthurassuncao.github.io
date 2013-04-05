@@ -22,9 +22,9 @@ class Pagina{
 	private $links_js_footer = array();
 	private $links_js_header = array();
 
-	private $exibir_so_conteudo;
+	protected $exibir_so_conteudo;
 
-	public function Pagina() { //__FILE__
+	public function Pagina() {
 		$fileDirToRoot = $_SERVER['DOCUMENT_ROOT'];
 		require($fileDirToRoot.'/min/lib/Minify/HTML.php');
 		require($fileDirToRoot.'/min/lib/Minify/CSS.php');
