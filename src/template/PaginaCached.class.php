@@ -80,8 +80,17 @@ class PaginaCached extends Pagina {
      * Gera o MD5 do arquivo da pagina
      * @return string com o MD5 do arquivo da pagina
      */
-	public function geraCacheMd5(){
+	public function geraCacheFileMd5(){
 		$md5Arquivo = md5_file($this->caminhoArquivo);
+        return $md5Arquivo;
+	}
+
+	/**
+     * Gera o MD5 da data de modificacao do arquivo da pagina
+     * @return string com o MD5 do arquivo da pagina
+     */
+	public function geraCacheMd5(){
+		$md5Arquivo = md5(date($formatoData, filemtime($this->caminhoArquivo)));
         return $md5Arquivo;
 	}
 
@@ -89,11 +98,24 @@ class PaginaCached extends Pagina {
      * Gera o MD5 do template, ou seja, do arquivo template.php, header.php, menu.php e footer.php
      * @return string com o MD5 do template
      */
-	public function geraTemplateMd5(){
+	public function geraTemplateFilesMd5(){
         $md5Template = md5_file($_SERVER['DOCUMENT_ROOT'].'/template/template.php');
         $md5Header = md5_file($_SERVER['DOCUMENT_ROOT'].'/template/header.php');
         $md5Menu = md5_file($_SERVER['DOCUMENT_ROOT'].'/template/menu.php');
-        $md5Footer = md5_file($_SERVER['DOCUMENT_ROOT'].'/template/footer.php');
+        $md5Footer = md5_file($_SERVER['DOCUMENT_ROOT'].'/template/footer.php'); //date("F d Y H:i:s.", filemtime($filename))
+        return md5("{$md5Template}{$md5Header}{$md5Menu}{$md5Footer}");
+	}
+
+	/**
+     * Gera o MD5 do template, usando a data de modificacao dos arquivos template.php, header.php, menu.php e footer.php
+     * @return string com o MD5 do template
+     */
+	public function geraTemplateMd5(){
+		$formatoData = "Y/m/d H:i:s"; //2013/12/31 23:50:00
+        $md5Template = md5(date($formatoData, filemtime($_SERVER['DOCUMENT_ROOT'].'/template/template.php')));
+        $md5Header = md5(date($formatoData, filemtime($_SERVER['DOCUMENT_ROOT'].'/template/header.php')));
+        $md5Menu = md5(date($formatoData, filemtime($_SERVER['DOCUMENT_ROOT'].'/template/menu.php')));
+        $md5Footer = md5(date($formatoData, filemtime($_SERVER['DOCUMENT_ROOT'].'/template/footer.php')));
         return md5("{$md5Template}{$md5Header}{$md5Menu}{$md5Footer}");
 	}
 
