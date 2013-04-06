@@ -29,7 +29,9 @@ body > #wrapper {
 #principal {
 	padding-bottom: 150px;
 }  /* must be same height as the footer */
-
+.justify{
+	text-align: justify;
+}
 footer#footer { 
     position: relative;
     margin-top: -145px; /* negative value of footer height */
