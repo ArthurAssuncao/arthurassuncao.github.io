@@ -32,7 +32,7 @@
 	require('template/PaginaCurriculo.class.php');
 ?>
 	<h3>Currículo</h3>
-	<div>
+	<div class="container">
 		<div id="curriculo_resumo" class="pull-left span6 offset1 justify">
 			<h4>Resumo</h4>
 			<p>Arthur Assunção é atualmente desenvolvedor de aplicações móveis para o suporte a aplicações comerciais
@@ -46,7 +46,7 @@
 			<span class="pull-right">blog.arthurassuncao.com</span><br />
 		</div>
 	</div>
-	<div class="span7 justify">
+	<div class="container span7 justify">
 		<div id="curriculo_experiencia">
 			<h4>Experiência</h4>
 			<ul id="lista_experiencia" class="unstyled">

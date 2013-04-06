@@ -8,12 +8,12 @@
 	$pagina->setCanonical($pagina->createCanonicalLink());
 	$pagina->iniciaConteudo();
 ?>
-	<div id="pagina_home" class="pagina">
+	<div id="pagina_home" class="container pagina">
     	<h3>Em breve...</h3>
     </div>
-	<div id="pagina_repositorios" class="pagina"></div>
-    <div id="pagina_curriculo" class="pagina"></div>
-    <div id="pagina_contato" class="pagina"></div>
+	<div id="pagina_repositorios" class="container pagina"></div>
+    <div id="pagina_curriculo" class="container pagina"></div>
+    <div id="pagina_contato" class="container pagina"></div>
     <br />
 <?php
 	$pagina->finalizaConteudo();
