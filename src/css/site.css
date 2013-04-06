@@ -66,6 +66,14 @@ input[type="color"]:focus,
 *::selection {
 	background: rgba(255, 147, 30, 0.8);
 }
+/* curriculo */
+li.curriculo_item{
+  margin-top: 10px;
+}
+.curriculo_instituicao, .curriculo_periodo{
+  padding-bottom: 5px;
+  color: gray;
+}
 
 /* Spinner CSS3 base: http://www.alessioatzeni.com/blog/css3-loading-animation-loop/*/
 .circle {

@@ -7,28 +7,6 @@
 	$pagina->setCanonical($pagina->createCanonicalLink());
 	$pagina->iniciaConteudo();
 
-	$embeddedCss = "
-		li.curriculo_item{
-			margin-top: 10px;
-		}
-		.curriculo_instituicao, curriculo_periodo{
-			padding-bottom: 5px;
-			color: gray;
-		}
-	";
-	$pagina->addEmbeddedCSS($embeddedCss);
-	//decodeURIComponent
-	$embeddedJS = "
-		$(document).ready(function() {
-			$('[data-email]').each(function(){
-				var email = $(this).data('email');
-				var email_decodificado = decodeURIComponent(email);
-				$(this).html(email_decodificado);
-			});
-		});
-	";
-	$pagina->addEmbeddedJavascript($embeddedJS);
-
 	require('template/PaginaCurriculo.class.php');
 ?>
 	<h3>Currículo</h3>

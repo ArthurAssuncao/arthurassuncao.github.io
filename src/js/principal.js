@@ -1,5 +1,6 @@
 $(document).ready(function() {
-  criaToolTip();
+    decodificaEmail();
+    criaToolTip();
 });
 
 // Tooltip only Text
@@ -24,5 +25,13 @@ function criaToolTip(){
             $('.tooltip_text')
                 .css({ top: mousey, left: mousex })
         });
+    });
+}
+
+function decodificaEmail(){ //email em uriEncode
+    $('[data-email]').each(function(){
+        var email = $(this).data('email');
+        var email_decodificado = decodeURIComponent(email);
+        $(this).html(email_decodificado);
     });
 }

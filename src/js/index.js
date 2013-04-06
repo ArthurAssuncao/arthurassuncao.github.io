@@ -40,6 +40,9 @@ function single_page(){
                     else if(endereco == "contato"){
                       document.form_contato.envia.value = 'true';
                     }
+                    else if(endereco == "curriculo"){
+                      decodificaEmail();
+                    }
                     terminou_ajax = true;
                     if(terminou_delay == true){
                       $hash.html("");
