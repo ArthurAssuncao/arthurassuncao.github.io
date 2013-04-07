@@ -44,6 +44,7 @@ function single_page(){
                       decodificaEmail();
                       eventoCurriculo();
                     }
+                    criaToolTip(); //cria o tooltip das novas tags
                     terminou_ajax = true;
                     if(terminou_delay == true){
                       $hash.html("");

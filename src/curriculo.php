@@ -229,6 +229,40 @@
 					</li>
 				</ul>
 			</div>
+			<hr />
+			<div id="curriculo_projetos_opensource">
+				<h4>Projetos Open Source</h4>
+				<ul id="lista_projetos_opensource" class="unstyled">
+					<li class='curriculo_item'>
+						<?php
+							echo PaginaCurriculo::createProjeto(
+								"Android CepView", 
+								"https://github.com/ArthurAssuncao/Android-CepView",
+								"Android Cep View é um Android UI widget com os principais campos relacionados a endereço (CEP, endereço, número, complemento, bairro, cidade, estado), 
+								fornece preenchimento automático dos dados com base no CEP (Código de Endereçamento Postal) informado."
+							);
+						?>
+					</li>
+					<li class='curriculo_item'>
+						<?php
+							echo PaginaCurriculo::createProjeto(
+								"Bootstrap for Blogger", 
+								"https://github.com/ArthurAssuncao/bootstrap4blogger",
+								"Template para o Blogger usando o framework Twitter Bootstrap"
+							);
+						?>
+					</li>
+					<li class='curriculo_item'>
+						<?php
+							echo PaginaCurriculo::createProjeto(
+								"SRWare Iron Updater", 
+								"https://github.com/ArthurAssuncao/SRWare_Iron_Updater",
+								"Extensão para o navegador SRWare Iron para verificar se há novas atualizações."
+							);
+						?>
+					</li>
+				</ul>
+			</div>
 		</div>
 		<div class="span3 offset2 pull-right">
 			<div id="curriculo_habilidades">
@@ -251,22 +285,7 @@
 					</li>
 					<li>
 						<?php
-						echo PaginaCurriculo::createHabilidade("PHP", "60");
-						?>
-					</li>
-					<li>
-						<?php
 							echo PaginaCurriculo::createHabilidade("Django", "70");
-						?>
-					</li>
-					<li>
-						<?php
-							echo PaginaCurriculo::createHabilidade("JSF", "50");
-						?>
-					</li>
-					<li>
-						<?php
-							echo PaginaCurriculo::createHabilidade("Javascript", "70");
 						?>
 					</li>
 					<li>
@@ -289,6 +308,22 @@
 							echo PaginaCurriculo::createHabilidade("SQL", "80");
 						?>
 					</li>
+					<li>
+						<?php
+						echo PaginaCurriculo::createHabilidade("PHP", "60");
+						?>
+					</li>
+					<li>
+						<?php
+							echo PaginaCurriculo::createHabilidade("JSF", "50");
+						?>
+					</li>
+					<li>
+						<?php
+							echo PaginaCurriculo::createHabilidade("Javascript", "70");
+						?>
+					</li>
+					
 				</ul>
 			</div>
 		</div>

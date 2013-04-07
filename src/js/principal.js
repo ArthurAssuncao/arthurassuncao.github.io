@@ -5,7 +5,7 @@ $(document).ready(function() {
 
 // Tooltip only Text
 function criaToolTip(){
-    $('a[data-tooltip]').each(function() {
+    $('*[data-tooltip]').each(function() {
         $(this).hover(function(){
             // Hover over code
             var title_bak = $(this).attr('title');

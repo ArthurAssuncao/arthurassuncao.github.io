@@ -31,7 +31,7 @@ class PaginaCurriculo extends Pagina{
 		return PaginaCurriculo::createFormacao($curso, $instituicao, $descricao, $periodo, $cargaHoraria);
 	}
 
-	public static function createSeminiarioEvento($nome, $local, $cidadeEstado, $data){
+	public static function createSeminiarioEvento($nome, $local, $cidadeEstado, $data, $tipoParticipacao=''){
 		$evento = "<span class='curriculo_titulo'><strong>{$nome}</strong></span><br />\n";
 		$evento .= "<span class='curriculo_instituicao'>{$local}</span><br />\n";
 		$evento .= "{$cidadeEstado} - {$data}";
@@ -39,8 +39,15 @@ class PaginaCurriculo extends Pagina{
 	}
 
 	public static function createHabilidade($habilidade, $valor){
-		$skill = "<span class='skill_habilidade'>{$habilidade}</span><br /><span class='span3 skill'><span data-skillbar='{$valor}' class='skill_bar'></span></span>";
+		$skill = "<span class='skill_habilidade'>{$habilidade}</span><br /><span class='span3 skill' data-tooltip='{$habilidade}'><span data-skillbar='{$valor}' class='skill_bar'></span></span>";
 		return $skill;
+	}
+
+	public static function createProjeto($nome, $link, $descricao){
+		$projeto = "<span class='curriculo_titulo'><strong>{$nome}</strong></span><br />\n";
+		$projeto .= "<a href='{$link}' title='{$nome}'>{$link}</a><br />\n";
+		$projeto .= "{$descricao}\n";
+		return $projeto;
 	}
 }
 ?>
