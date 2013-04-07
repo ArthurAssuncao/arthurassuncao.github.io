@@ -236,17 +236,17 @@
 				<ul class="unstyled">
 					<li>
 						<?php
-						echo PaginaCurriculo::createHabilidade("Java", "70");
+							echo PaginaCurriculo::createHabilidade("Java", "70");
 						?>
 					</li>
 					<li>
 						<?php
-						echo PaginaCurriculo::createHabilidade("Python", "70");
+							echo PaginaCurriculo::createHabilidade("Python", "70");
 						?>
 					</li>
 					<li>
 						<?php
-						echo PaginaCurriculo::createHabilidade("Android", "80");
+							echo PaginaCurriculo::createHabilidade("Android", "80");
 						?>
 					</li>
 					<li>
@@ -256,32 +256,37 @@
 					</li>
 					<li>
 						<?php
-						echo PaginaCurriculo::createHabilidade("Django", "70");
+							echo PaginaCurriculo::createHabilidade("Django", "70");
 						?>
 					</li>
 					<li>
 						<?php
-						echo PaginaCurriculo::createHabilidade("JSF", "50");
+							echo PaginaCurriculo::createHabilidade("JSF", "50");
 						?>
 					</li>
 					<li>
 						<?php
-						echo PaginaCurriculo::createHabilidade("Javascript", "70");
+							echo PaginaCurriculo::createHabilidade("Javascript", "70");
 						?>
 					</li>
 					<li>
 						<?php
-						echo PaginaCurriculo::createHabilidade("xHTML/HTML5", "60");
+							echo PaginaCurriculo::createHabilidade("Jquery", "80");
 						?>
 					</li>
 					<li>
 						<?php
-						echo PaginaCurriculo::createHabilidade("Git (Controle de Versão)", "90");
+							echo PaginaCurriculo::createHabilidade("xHTML/HTML5", "60");
 						?>
 					</li>
 					<li>
 						<?php
-						echo PaginaCurriculo::createHabilidade("SQL", "80");
+							echo PaginaCurriculo::createHabilidade("Git (Controle de Versão)", "90");
+						?>
+					</li>
+					<li>
+						<?php
+							echo PaginaCurriculo::createHabilidade("SQL", "80");
 						?>
 					</li>
 				</ul>
