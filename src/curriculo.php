@@ -276,7 +276,7 @@
 					</li>
 					<li>
 						<?php
-							echo PaginaCurriculo::createHabilidade("xHTML/HTML5", "60");
+							echo PaginaCurriculo::createHabilidade("xHTML/HTML5", "80");
 						?>
 					</li>
 					<li>
