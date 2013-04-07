@@ -42,6 +42,7 @@ function single_page(){
                     }
                     else if(endereco == "curriculo"){
                       decodificaEmail();
+                      eventoCurriculo();
                     }
                     terminou_ajax = true;
                     if(terminou_delay == true){
@@ -78,5 +79,14 @@ function single_page(){
         $(this).removeClass('selected');
       }
     );
+  });
+}
+
+function eventoCurriculo(){
+  $('.skill_bar').each(function(){
+    var tamanho = $(this).data('skillbar');
+    $(this).animate({
+      width: tamanho+'%'
+    }, 1500);
   });
 }

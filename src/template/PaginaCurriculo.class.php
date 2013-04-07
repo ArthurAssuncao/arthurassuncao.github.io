@@ -37,5 +37,10 @@ class PaginaCurriculo extends Pagina{
 		$evento .= "{$cidadeEstado} - {$data}";
 		return $evento;
 	}
+
+	public static function createHabilidade($habilidade, $valor){
+		$skill = "<span class='skill_habilidade'>{$habilidade}</span><br /><span class='span3 skill'><span data-skillbar='{$valor}' class='skill_bar'></span></span>";
+		return $skill;
+	}
 }
 ?>

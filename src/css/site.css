@@ -74,6 +74,32 @@ li.curriculo_item{
   padding-bottom: 5px;
   color: gray;
 }
+/* Skills do curriculo */
+li .skill{
+  margin-bottom: 10px;
+}
+.skill_habilidade{
+  font-style: italic;
+}
+.skill{
+  position: relative;
+  background: #d4d4d4;
+  height: 6px;
+  border-radius: 5px;
+  border-left: 1px solid #e0e0e0;
+  border-top: 1px solid #e0e0e0;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  margin-left: 0px !important;
+}
+.skill_bar{
+  height: 2px;
+  margin: 2px 1px;
+  border-radius: 2px;
+  background: #ff6600;
+  position: absolute;
+  box-shadow: 0px 0px 10px 1px rgba(255,140,30,0.4);
+}
 
 /* Spinner CSS3 base: http://www.alessioatzeni.com/blog/css3-loading-animation-loop/*/
 .circle {
