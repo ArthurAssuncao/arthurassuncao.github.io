@@ -11,3 +11,4 @@ Disallow: /template/
 Disallow: /teste/
 Disallow: /util/
 Disallow: /min/
+Disallow: /config/
