@@ -7,7 +7,7 @@
 		$assunto = $_POST['assunto'];
 		$mensagem = $_POST['mensagem'];
 		
-		include('util/email/email.php');
+		include('util/email/Email.class.php');
 		
 		$erro_email = false;
 		$msg_email = '';
