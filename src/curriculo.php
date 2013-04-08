@@ -315,7 +315,7 @@
 					</li>
 					<li>
 						<?php
-							echo PaginaCurriculo::createHabilidade("JSF", "50");
+							echo PaginaCurriculo::createHabilidade("JSF (Java Server Faces)", "50");
 						?>
 					</li>
 					<li>
