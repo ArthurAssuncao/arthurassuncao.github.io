@@ -53,7 +53,7 @@
 }
 
 .github-fork-ribbon-wrapper {
-  width: 150px;
+  /*width: 150px;*/
   height: 150px;
   position: absolute;
   overflow: hidden;
