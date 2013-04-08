@@ -8,7 +8,7 @@ require('Pagina.class.php');
  * Tested on PHP 5.4.2.
  *
  * @package Template
- * @author ArthurAssuncao <contato@arthurassuncao.com>
+ * @author ArthurAssuncao <contato[at]arthurassuncao[dot]com>
  * @copyright 2013 Arthur Assuncao. All rights reserved.
  * license not defined
  * @link https://bitbucket.org/arthurassuncao/arthurassuncao.com

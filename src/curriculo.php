@@ -93,7 +93,7 @@
 							"Superior de Tecnologia em Sistemas para Internet", 
 							"Instituto Federal de Educação, Ciência e Tecnologia do Sudeste de Minas Gerais",
 							"",
-							"2011 - em andamento",
+							"2011 - (Em andamento)",
 							"" 
 						);
 						?>
@@ -323,7 +323,11 @@
 							echo PaginaCurriculo::createHabilidade("Javascript", "70");
 						?>
 					</li>
-					
+					<li>
+						<?php
+							echo PaginaCurriculo::createHabilidade("JSON", "70");
+						?>
+					</li>
 				</ul>
 			</div>
 		</div>
