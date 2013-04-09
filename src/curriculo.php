@@ -236,6 +236,16 @@
 					<li class='curriculo_item'>
 						<?php
 							echo PaginaCurriculo::createProjeto(
+								"ArthurAssuncao.com", 
+								"https://github.com/ArthurAssuncao/ArthurAssuncao.com",
+								"Meu Site pessoal, utiliza HTML5, CSS3, Jquery, Bootstrap e um layout responsivo, usa Ajax para carregar o conteúdo da Home que segue o padrão single page. 
+								Utiliza PHP e a biblioteca Minify para reduzir os arquivos JS e CSS e faz Cache das páginas e arquivos."
+							);
+						?>
+					</li>
+					<li class='curriculo_item'>
+						<?php
+							echo PaginaCurriculo::createProjeto(
 								"Android CepView", 
 								"https://github.com/ArthurAssuncao/Android-CepView",
 								"Android Cep View é um Android UI widget com os principais campos relacionados a endereço (CEP, endereço, número, complemento, bairro, cidade, estado), 
