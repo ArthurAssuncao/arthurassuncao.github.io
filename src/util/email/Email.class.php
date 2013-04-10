@@ -6,6 +6,11 @@ class Email{
 	public function __construct($nome, $email, $mensagem, $assunto){
 		require($_SERVER['DOCUMENT_ROOT'].'/config/configs.php');
 
+		$nome = strip_tags($nome);
+		$email = strip_tags($email);
+		$mensagem = strip_tags($mensagem, '<p><h1><h2><h3><h4><h5><h6><b><i><br>'); //remove tags exceto <p><h1><h2><h3><h4><h5><h6><b><i><br>
+		$assunto = strip_tags($assunto);
+
 		//instancia a objetos
 		$this->phpMailer = new PHPMailer();
 		// define a linguagem
@@ -32,19 +37,20 @@ class Email{
 		$this->phpMailer->WordWrap = 50; 
 		//anexando arquivos no email
 		//$this->phpMailer->AddAttachment("anexo/arquivo.zip"); 
-		$this->phpMailer->IsHTML(false); //enviar em HTML
+		$this->phpMailer->IsHTML(true); //enviar em HTML
 
 	    // informando a quem devemos responder 
 		//ou seja para o mail inserido no formulario
 		$this->phpMailer->AddReplyTo("$email", "$nome");
 
 		//criando o codigo html para enviar no email
-		$msg = "<b> Nome:</b> $nome<br>\n";
-		$msg .= "<b> E-mail:</b> $email<br>\n";
-		$msg .= "<b> Mensagem:</b> $mensagem<br>\n";
+		$msg = "<h3>Mensagem Enviada do site ArthurAssuncao.com pelo Formulario de Contato</h3><br><br>\n";
+		$msg .= "<strong> Nome:</strong> $nome<br>\n";
+		$msg .= "<strong> E-mail:</strong> $email<br>\n";
+		$msg .= "<strong> Mensagem:</strong> $mensagem<br>\n";
 
 		//adicionando o assunto do email
-		$this->phpMailer->Subject = $assunto;
+		$this->phpMailer->Subject = 'Contato via ArthurAssuncao.com: '$assunto;
 		//adicionando o html no corpo do email
 		$this->phpMailer->Body = $msg;
 	}
