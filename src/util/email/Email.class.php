@@ -8,7 +8,7 @@ class Email{
 
 		$nome = strip_tags($nome);
 		$email = strip_tags($email);
-		$mensagem = strip_tags($mensagem, '<p><h1><h2><h3><h4><h5><h6><b><i><br>'); //remove tags exceto <p><h1><h2><h3><h4><h5><h6><b><i><br>
+		$mensagem = strip_tags($mensagem);
 		$assunto = strip_tags($assunto);
 
 		//instancia a objetos
