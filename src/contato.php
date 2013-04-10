@@ -54,10 +54,10 @@
           <fieldset>
             <div class="control-group">
               <?php
-                cria_input('Nome Completo', 'nome_completo', 'text', true, 'Digite seu nome', 'Digite seu nome', $regex_nome); echo '<br>';
-                cria_input('E-mail', 'email', 'email', true, 'Digite seu email', 'Digite seu email', $regex_email); echo '<br>';
-                cria_input('Assunto', 'assunto', 'text', true, 'Qual o assunto?', 'Digite o assunto', ''); echo '<br>';
-                cria_textarea('Deixe sua Mensagem', 'mensagem', '6', '50', true, 'Digite sua mensagem', 'Digite sua mensagem'); echo '<br>';
+                echo Formulario::createInput('Nome Completo', 'nome_completo', 'text', true, 'Digite seu nome', 'Digite seu nome', $regex_nome); echo '<br>';
+                echo Formulario::createInput('E-mail', 'email', 'email', true, 'Digite seu email', 'Digite seu email', $regex_email); echo '<br>';
+                echo Formulario::createInput('Assunto', 'assunto', 'text', true, 'Qual o assunto?', 'Digite o assunto', ''); echo '<br>';
+                echo Formulario::createTextarea('Deixe sua Mensagem', 'mensagem', '6', '50', true, 'Digite sua mensagem', 'Digite sua mensagem'); echo '<br>';
               ?>
               <input type="hidden" name="envia" />
               <div class="controls">
