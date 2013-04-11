@@ -62,9 +62,9 @@
 					<li class='curriculo_item'>
 						<?php
 						echo PaginaCurriculo::createExperienciaAcademica(
-							"Acompanhamento dos Egressos utilizando Ferramenta On-Line", 
+							"Acompanhamento dos Egressos utilizando Ferramenta On-Line",
 							"Instituto Federal de Educação, Ciência e Tecnologia do Sudeste de Minas Gerais",
-							"",
+							"Bolsista",
 							"",
 							"2012 - 2013" 
 						);
@@ -73,11 +73,22 @@
 					<li class='curriculo_item'>
 						<?php
 						echo PaginaCurriculo::createExperienciaAcademica(
-							"Desenvolvedor e Tester em Java e PHP/Miolo",
-							"Instituto Federal de Educação, Ciência e Tecnologia do Sudeste de Minas Gerais",
 							"Sistema Integrado de Gestão Acadêmica – SIGA ADM - RENAPI",
+							"Instituto Federal de Educação, Ciência e Tecnologia do Sudeste de Minas Gerais",
+							"Desenvolvedor e Tester em Java e PHP/Miolo",
 							"Desenvolvimento e manutenção do projeto Sistema Integrado de Gestão Acadêmica (SIGA-ADM)", 
 							"2012 - 2012"
+						); 
+						?>
+					</li>
+					<li class='curriculo_item'>
+						<?php
+						echo PaginaCurriculo::createExperienciaAcademica(
+							"Centro Acadêmico do Curso de Tecnologia em Sistemas para Internet",
+							"Instituto Federal de Educação, Ciência e Tecnologia do Sudeste de Minas Gerais",
+							"Secretário Geral",
+							"", 
+							"2013 - (Em andamento)"
 						); 
 						?>
 					</li>
