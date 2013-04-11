@@ -11,8 +11,11 @@ class PaginaCurriculo extends Pagina{
 		return $experiencia;
 	}
 
-	public static function createExperienciaAcademica($funcao, $instituicao, $projeto, $descricao, $periodo){
-		return PaginaCurriculo::createExperiencia($funcao, $instituicao, $projeto, $descricao, $periodo);
+	public static function createExperienciaAcademica($projeto, $instituicao, $funcao, $descricao, $periodo){
+		$experiencia = "<span class='curriculo_titulo'><strong>{$projeto}</strong></span><br />\n";
+		$experiencia = "<span class='curriculo_instituicao'>{$funcao}. {$instituicao}</span> <span class='pull-right curriculo_periodo'>{$periodo}</span><br />\n";
+		$experiencia .= "<span class='item_ultima_linha'>{$descricao}</span>\n";
+		return $experiencia;
 	}
 
 	public static function createFormacao($curso, $instituicao, $descricao, $periodo, $cargaHoraria){
