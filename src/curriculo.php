@@ -78,7 +78,7 @@
 							"Desenvolvedor e Tester em Java e PHP/Miolo",
 							"Desenvolvimento e manutenção do projeto Sistema Integrado de Gestão Acadêmica (SIGA-ADM)", 
 							"2012 - 2012"
-						); 
+						);
 						?>
 					</li>
 					<li class='curriculo_item'>
@@ -88,8 +88,8 @@
 							"Instituto Federal de Educação, Ciência e Tecnologia do Sudeste de Minas Gerais",
 							"Secretário Geral",
 							"", 
-							"2013 - (Em andamento)"
-						); 
+							"Gestão 2013 - (Em andamento)"
+						);
 						?>
 					</li>
 				</ul>
