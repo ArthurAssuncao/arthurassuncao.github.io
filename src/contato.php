@@ -38,7 +38,7 @@
 	$regex_email = '\S+@\S+\.\S+';
 	$regex_nome = '^[A-Z][a-zA-Z \'&-]*[A-Za-z]$';
 	
-	include('util/formulario.php');
+	include('template/Formulario.class.php');
 
 	$pagina->iniciaConteudo();
 ?>
