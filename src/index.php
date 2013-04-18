@@ -5,15 +5,29 @@
 	$pagina->setDescription('Arthur Assunção - Home Page');
 	$pagina->setKeywords('Arthur Assunção, Instituto Federal do Sudeste de Minas Gerais, Barbacena, Sistemas para Internet, Programação, github');
 	$pagina->addCSS('css/jquery_github/github.css');
+	$pagina->addJavascript('js/feedek/FeedEk.min.js');
+	$pagina->addEmbeddedJavascript("
+	$(document).ready(function() {
+		$('#divRss').FeedEk({
+		    FeedUrl : 'http://blog.arthurassuncao.com/atom.xml',
+		    MaxCount : 3,
+		    ShowDesc : true,
+		    ShowPubDate: true,
+		    DescCharacterLimit: null,
+		    TitleLinkTarget: '_blank'
+	  	})
+	});");
 	$pagina->setCanonical($pagina->createCanonicalLink());
 	$pagina->iniciaConteudo();
 ?>
-	<div id="pagina_home" class="container pagina">
-    	<h3>Em breve...</h3>
+	<br />
+	<div id="pagina_home" class="container pagina well span10">
+    	<h3>Blog</h3>
+    	<div id="divRss"></div>
     </div>
-	<div id="pagina_repositorios" class="container pagina"></div>
-    <div id="pagina_curriculo" class="container pagina"></div>
-    <div id="pagina_contato" class="container pagina"></div>
+	<div id="pagina_repositorios" class="container pagina span10"></div>
+    <div id="pagina_curriculo" class="container pagina span12"></div>
+    <div id="pagina_contato" class="container pagina span10"></div>
     <br />
 <?php
 	$pagina->finalizaConteudo();
