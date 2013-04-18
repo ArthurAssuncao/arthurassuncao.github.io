@@ -16,17 +16,17 @@
 	// Menu
 	require('menu.php');
 ?>
-	<div id="conteudo" class="container">
+	<article id="conteudo" class="container">
 <?php
 	// Conteudo
 	echo $this->conteudo;
 ?>
-			<!-- /div container -->
+				<!-- /article container -->
+				</article>
+			<!-- /div principal -->
 			</div>
-		<!-- /div principal -->
+		<!-- /div wrapper -->
 		</div>
-	<!-- /div wrapper -->
-	</div>
 <?php
 	// Footer
 	require('footer.php');
