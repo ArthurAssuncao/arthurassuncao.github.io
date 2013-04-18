@@ -43,13 +43,15 @@
 					</ul>
 				</ul>
 			</nav>
+			<div>
+				<form class="form-search pull-right" method="get" action="/busca">
+		            <div class="input-prepend">
+		                <button class="btn botao_busca" type="submit"><i class="icon-search"></i></button>
+		                <input name="search" id="barra_busca" type="search" class="search-query input-medium" placeholder="procure no arthurassuncao.com" />
+		            </div>
+				</form>
+			</div>
 		</div>
-		<form class="form-search pull-right" method="get" action="/busca">
-            <div class="input-prepend">
-                <button class="btn botao_busca" type="submit"><i class="icon-search"></i></button>
-                <input name="search" id="barra_busca" type="search" class="search-query input-medium" placeholder="procure no arthurassuncao.com" />
-            </div>
-		</form>
     </div>
   </div>
 </div>
