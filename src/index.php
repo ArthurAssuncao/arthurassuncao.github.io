@@ -13,7 +13,7 @@
 		    MaxCount : 3,
 		    ShowDesc : true,
 		    ShowPubDate: true,
-		    DescCharacterLimit: null,
+		    DescCharacterLimit: 'auto_blogger',
 		    TitleLinkTarget: '_blank'
 	  	})
 	});");
