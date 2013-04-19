@@ -22,9 +22,9 @@
 	require('template/PaginaCurriculo.class.php');
 ?>
 	<h3>Currículo</h3>
-	<div class="container">
+	<div class="container" itemscope='itemscope' itemtype='http://schema.org/Person'>
 		<div class="pull-right span4">
-			<h4 class="pull-right"><strong>Arthur Nascimento Assunção</strong></h4><br />
+			<h4 class="pull-right"><strong><span itemprop='name'>Arthur Nascimento Assunção</span></strong></h4><br />
 			<span class="pull-right">Nasceu em 11/05/1992</span><br /><br />
 			<span class="pull-right">Barbacena / MG</span><br />
 			<span class="pull-right" data-email="%63%6f%6e%74%61%74%6f%40%61%72%74%68%75%72%61%73%73%75%6e%63%61%6f%2e%63%6f%6d"></span><br />
@@ -32,9 +32,11 @@
 		</div>
 		<div id="curriculo_resumo" class="pull-left span6 offset1 justify">
 			<h4>Resumo</h4>
-			<p>Arthur Assunção é atualmente desenvolvedor de aplicações móveis para o suporte a aplicações comerciais
-			 e desenvolvedor de Web Services para a comunicação das aplicações móveis com os sistemas comerciais.</p>
-			<p>Graduando em Tecnologia em Sistemas para Internet pelo Instituto Federal de Educação, Ciência e Tecnologia do Sudeste de Minas Gerais. Atualmente cursando o 5º período.</p>
+			<span itemprop='description'>
+				<p>Arthur Assunção é atualmente desenvolvedor de aplicações móveis para o suporte a aplicações comerciais
+				 e desenvolvedor de Web Services para a comunicação das aplicações móveis com os sistemas comerciais.</p>
+				<p>Graduando em Tecnologia em Sistemas para Internet pelo Instituto Federal de Educação, Ciência e Tecnologia do Sudeste de Minas Gerais. Atualmente cursando o 5º período.</p>
+			</span>
 		</div>
 	</div>
 	<div class="row">
