@@ -33,8 +33,8 @@
 		<div id="curriculo_resumo" class="pull-left span6 offset1 justify">
 			<h4>Resumo</h4>
 			<span itemprop='description'>
-				<p>Arthur Assunção é atualmente desenvolvedor de aplicações móveis para o suporte a aplicações comerciais
-				 e desenvolvedor de Web Services para a comunicação das aplicações móveis com os sistemas comerciais.</p>
+				<p>Arthur Assunção é atualmente <span itemprop='jobTitle'>desenvolvedor de aplicações</span> móveis para o suporte a aplicações comerciais
+				 e desenvolvedor de Web Services para a comunicação das aplicações móveis com os sistemas comerciais na <span itemprop='worksFor'>AddTI Integradora de Soluções</span>.</p>
 				<p>Graduando em Tecnologia em Sistemas para Internet pelo Instituto Federal de Educação, Ciência e Tecnologia do Sudeste de Minas Gerais. Atualmente cursando o 5º período.</p>
 			</span>
 		</div>
