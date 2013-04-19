@@ -10,7 +10,7 @@ Site pessoal de [Arthur Assunção](http://arthurassuncao.com).
 * Sistema de **Cache** para as páginas do site, combina funções do **[Minify](https://github.com/mrclay/minify)** para criar essa funcionalidade.
 * Sistema de **Cache** para arquivos JS e CSS, função feita automaticamente pelo **[Minify](https://github.com/mrclay/minify)**.
 * Site com ***responsive layout***.
-* Uso do plugin **[FeedEk](https://github.com/ArthurAssuncao/FeedEk)** para exibir as últimas postagens do meu blog, [blog.ArthurAssuncao.com](http://blog.arthurassuncao.com/), por meio das postagens Atom.
+* Usa o JQuery plugin **[FeedEk](https://github.com/ArthurAssuncao/FeedEk)** para exibir as últimas postagens do meu blog, [blog.ArthurAssuncao.com](http://blog.arthurassuncao.com/), por meio das postagens Atom.
 * Criação das páginas usando **Orientação a Objetos** em PHP.
 
 ###Tecnologias Utilizadas
