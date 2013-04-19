@@ -54,7 +54,7 @@ class Email{
 		$msg .= "<strong> Mensagem:</strong> $this->mensagem<br>\n";
 
 		//adicionando o assunto do email
-		$this->phpMailer->Subject = 'Contato via ArthurAssuncao.com: '$this->assunto;
+		$this->phpMailer->Subject = 'Contato via ArthurAssuncao.com: '.$this->assunto;
 		//adicionando o html no corpo do email
 		$this->phpMailer->Body = $msg;
 	}
