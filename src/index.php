@@ -21,7 +21,7 @@
 	$pagina->iniciaConteudo();
 ?>
 	<br />
-	<div id="pagina_home" class="container pagina well span10">
+	<div id="pagina_home" class="container pagina span10">
     	<h3>Blog</h3>
     	<div id="divRss"></div>
     </div>
