@@ -302,6 +302,15 @@
 					<li class='curriculo_item'>
 						<?php
 							echo PaginaCurriculo::createProjeto(
+								"Github Portfolio Generator", 
+								"https://github.com/ArthurAssuncao/Github_Portfolio_Generator",
+								"Gera portfólio com os projetos públicos hospedados no Github."
+							);
+						?>
+					</li>
+					<li class='curriculo_item'>
+						<?php
+							echo PaginaCurriculo::createProjeto(
 								"Bootstrap for Blogger", 
 								"https://github.com/ArthurAssuncao/bootstrap4blogger",
 								"Template para o Blogger usando o framework Twitter Bootstrap"
