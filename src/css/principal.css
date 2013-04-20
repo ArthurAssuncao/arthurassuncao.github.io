@@ -54,10 +54,6 @@ form input[required] label:after, form input[required=required] label:after, for
     color: #e32;
     content: ' *';
 }
-.botao_busca{
-    padding-top: 5px;
-    padding-bottom: 3px;
-}
 
 /* CLEAR FIX*/
 .clearfix:after {
