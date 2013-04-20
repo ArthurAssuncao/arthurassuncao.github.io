@@ -1,46 +1,128 @@
 body{
-padding-top: 60px;
+    color: #606060;
+    background: #ebebeb;
 }
+body .navbar{
+    height: auto;
+}
+html, body, #wrapper {
+    height: 100%;
+}
+#conteudo{
+    padding-top: 60px;
+}
+#principal{
+    margin: 0 8px 0 8px;
+}
+body > #wrapper {
+    height: auto; 
+    min-height: 100%;
+}
+#principal {
+    padding-bottom: 170px;
+}  /* must be same height as the footer */
 .post-body{
     text-align: justify;
     margin-bottom: 30px;
 }
 .widget h2{
-  border-bottom: 1px #dedede solid;
-  margin: 0 0 5px 0;
-  font-size: 16px;
-  line-height: 25px;
+    border-bottom: 1px #dedede solid;
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    line-height: 25px;
+}
+.widget-content ul li{
+    list-style: none;
 }
 p, dd{
-  text-align: justify;
+    text-align: justify;
 }
 a:hover img{
-  text-decoration: none !important;
-  opacity: 0.7;
+    text-decoration: none !important;
+    opacity: 0.7;
 }
 .gs-no-results-result, .gs-error-result{
-  color: #b94a48;
-  background-color: #f2dede;
-  border-color: #eed3d7;
+    color: #b94a48;
+    background-color: #f2dede;
+    border-color: #eed3d7;
 }
-.jump-link{
-    margin-bottom: 10px;
+.btn-info{
+    background-color: #99ddff;
+}
+.selected{
+    font-weight: bold;
+}
+/* footer */
+footer#footer { 
+    position: relative;
+    margin-top: -170px; /* negative value of footer height */
+    min-height: 170px;
+    height: 170px;
+    clear:both;
+    border-top: 1px solid #e5e5e5;
+    background-color: #dedede; /* era whiteSmoke */
+    width:100%;
+}
+footer#footer .container{
+    height: 170px;
+}
+#copyright{
+  float: left;
+}
+#menu_footer{
+  float: right;
+}
+.links_secundarios{
+    position: absolute;
+    bottom: 5px;
 }
 /* comment */
 .comments{
-margin-top: 30px;
+    margin-top: 30px;
 }
 /* comment date*/
 .datetime.secondary-text{
-float: right;
-font-size: 85%;
+    float: right;
+    font-size: 85%;
 }
 /* responder - reply*/
-.comment-actions.secondary-text{
+    .comment-actions.secondary-text{
 }
 .comment-block{
-padding-bottom: 5px;
+    padding-bottom: 5px;
 }
 .comment .continue a{
-display: inline;
+    display: inline;
+}
+
+#sidebar-right .widget{
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+/* CLEAR FIX*/
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix {
+    display: inline-block;
+}
+/* Hides from IE-mac \*/
+* html .clearfix {
+    height: 1%;
+}
+.clearfix {
+    display: block;
 }
