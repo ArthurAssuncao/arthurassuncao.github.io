@@ -197,6 +197,39 @@
 				</ul>
 			</div>
 			<hr />
+			<div id="curriculo_outros_conhecimentos">
+				<h4>Outros Conhecimentos</h4>
+				<ul id="lista_outros_conhecimentos">
+					<li class='curriculo_item'>
+						Linguagens de programação: Pascal, C, C++, Java, PHP, Python, Javascript.
+					</li>
+					<li class='curriculo_item'>
+						Frameworks Web: Django, MIOLO.
+					</li>
+					<li class='curriculo_item'>
+						Sistemas de controle de versão: Git, SVN.
+					</li>
+					<li class='curriculo_item'>
+						Bancos de dados relacionais: MySQL, Postgres, SQLite, HyperSQL.
+					</li>
+					<li class='curriculo_item'>
+						Versionamento Semântico (SemVer).
+					</li>
+					<li class='curriculo_item'>
+						Design responsivo e desenvolvimento de sites otimizados para dispositivos portáteis.
+					</li>
+					<li class='curriculo_item'>
+						Desenvolvimento em ambientes Unix/Linux.
+					</li>
+					<li class='curriculo_item'>
+						Search Engine Optimization (SEO).
+					</li>
+					<li class='curriculo_item'>
+						Facebook OpenGraph e HTML5 Microdata.
+					</li>
+				</ul>
+			</div>
+			<hr />
 			<div id="curriculo_seminarios_eventos">
 				<h4>Participação em Seminários e Eventos</h4>
 				<ul id="lista_seminarios_eventos" class="unstyled">
