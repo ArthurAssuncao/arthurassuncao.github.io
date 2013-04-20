@@ -1,36 +1,36 @@
 html, body {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 body{
 }
 /* css sticky footer */
 /* http://css-tricks.com/snippets/css/sticky-footer/ */
 * {
-	margin:0;
-	padding:0;
+    margin:0;
+    padding:0;
 } 
 html, body, #wrapper {
-	height: 98%;
+    height: 98%;
 }
 #principal{
-	/*margin: 0 8px 0 8px;*/
+    /*margin: 0 8px 0 8px;*/
 }
 body > #wrapper {
-	height: auto; 
-	min-height: 98%;
+    height: auto; 
+    min-height: 98%;
 }
 .navbar{
-	opacity: 0.9;
+    opacity: 0.9;
 }
 .navbar li{
-	opacity: 1;
+    opacity: 1;
 }
 #principal {
-	padding-bottom: 150px;
+    padding-bottom: 150px;
 }  /* must be same height as the footer */
 .justify{
-	text-align: justify;
+    text-align: justify;
 }
 footer#footer { 
     position: relative;
@@ -39,13 +39,13 @@ footer#footer {
     clear: both;
 }
 footer h4{
-	margin-top: 0;
+    margin-top: 0;
 }
 .btn-info{
-	background-color: #99ddff;
+    background-color: #99ddff;
 }
 .selected{
-	font-weight: bold;
+    font-weight: bold;
 }
 legend.legenda_imagem{
     font-size: 95%;
@@ -57,29 +57,29 @@ form input[required] label:after, form input[required=required] label:after, for
 
 /* CLEAR FIX*/
 .clearfix:after {
-	content: ".";
-	display: block;
-	height: 0;
-	clear: both;
-	visibility: hidden;
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
 }
 .clearfix {
-	display: inline-block;
+    display: inline-block;
 }
 /* Hides from IE-mac \*/
 * html .clearfix {
-	height: 1%;
+    height: 1%;
 }
 .clearfix {
-	display: block;
+    display: block;
 }
 /* End hide from IE-mac */
 /* fim do css sticky footer */
 #copyright{
-	float: left;
+    float: left;
 }
 #menu_footer{
-	float: right;
+    float: right;
 }
 .form-search{
     margin: 5px 0 0 0;
@@ -100,37 +100,37 @@ form input[required] label:after, form input[required=required] label:after, for
     float: right;
 }
 .nao_selecionavel{
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
 }
 .tooltip_text {
-	display: none;
-	position: absolute;
-	border: 1px solid #333;
-	background-color: #161616;
-	border-radius: 5px;
-	padding: 5px;
-	color: #fff;
-	font-size: 10px;
-	z-index: 9999;
+    display: none;
+    position: absolute;
+    border: 1px solid #333;
+    background-color: #161616;
+    border-radius: 5px;
+    padding: 5px;
+    color: #fff;
+    font-size: 10px;
+    z-index: 9999;
 }
 
 /* Barra de rolagem do Google */
 ::-webkit-scrollbar {
-	background: transparent;
-	overflow: visible;
-	width: 10px;
-	height: 10px;
+    background: transparent;
+    overflow: visible;
+    width: 10px;
+    height: 10px;
 }
 ::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.2);
     background-clip: padding-box;
-	-webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+    -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.07);
     border: solid whiteSmoke 4px;
     border-radius: 4px;
 }
@@ -138,25 +138,25 @@ form input[required] label:after, form input[required=required] label:after, for
     background-color: rgba(0, 0, 0, 0.3);
 }
 ::-webkit-scrollbar-thumb:horizontal {
-	border-width: 1px 0px;
-	min-width: 40px;
+    border-width: 1px 0px;
+    min-width: 40px;
 }
 ::-webkit-scrollbar-thumb:vertical {
-	border-width: 0px 1px;
-	min-height: 40px;
+    border-width: 0px 1px;
+    min-height: 40px;
 }
 ::-webkit-scrollbar-track-piece{ 
-	background-color: rgba(222,222,222,0.8);
+    background-color: rgba(222,222,222,0.8);
 }
 ::-webkit-scrollbar-track-piece:hover{ 
-	background-color: rgba(222,222,222,0.5);
+    background-color: rgba(222,222,222,0.5);
 }
 ::-webkit-scrollbar-corner {
-	background: transparent;
+    background: transparent;
 }
 ::-webkit-scrollbar-track {
-	border-left: 6px solid transparent;
-	border-right: 1px solid transparent;
-	background-clip: padding-box;
-	position: absolute;
+    border-left: 6px solid transparent;
+    border-right: 1px solid transparent;
+    background-clip: padding-box;
+    position: absolute;
 }

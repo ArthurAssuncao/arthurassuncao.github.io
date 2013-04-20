@@ -1,14 +1,14 @@
 body{
-  background: url('/img/snow.jpg') repeat 0 0; /*credits http://subtlepatterns.com*/
+    background: url('/img/snow.jpg') repeat 0 0; /*credits http://subtlepatterns.com*/
 }
 #conteudo{
-  padding-top: 30px;
+    padding-top: 30px;
 }
 a{
-	color: #ff931e; /*cc5200*/
+    color: #ff931e; /*cc5200*/
 }
 a:hover{
-	color: #f60;
+    color: #f60;
 }
 .navbar .nav > li > a:focus, .navbar .nav > li > a:hover{
     color: #f60;
@@ -17,22 +17,22 @@ a:hover{
     color: #f60;
 }
 .pagina{
-  min-height: 50%;
+    min-height: 50%;
 }
 .pagina:not(#pagina_home){
-  display: none;
+    display: none;
 }
 #repositorios{
-  width: 630px;
+    width: 630px;
 }
 .selected a{
-  color: #f60 !important;
+    color: #f60 !important;
 }
 .gsib_a input{
-  color: #2f2f2f;
+    color: #2f2f2f;
 }
 #conteudo h3{
-  color: #f60;
+    color: #f60;
 }
 
 textarea:focus,
@@ -61,10 +61,10 @@ input[type="color"]:focus,
           box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 102, 0, 0.6);
 }
 *::-moz-selection {
-	background: rgba(255, 147, 30, 0.8);
+  background: rgba(255, 147, 30, 0.8);
 }
 *::selection {
-	background: rgba(255, 147, 30, 0.8);
+  background: rgba(255, 147, 30, 0.8);
 }
 /* curriculo */
 li.curriculo_item{
