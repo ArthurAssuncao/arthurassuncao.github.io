@@ -38,6 +38,7 @@
                   <li class="dropdown"><a id="drop_projetos" data-target="#" href="#projetos" data-hash="#projetos" role="button" class="dropdown-toggle" data-toggle="dropdown" title="Projetos">Projetos <b class="caret"></b></a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="drop_projetos">
                         <li role="menuitem"><a href="https://github.com/ArthurAssuncao/Android-CepView" title="Android CepView">Android CepView</a></li>
+                        <li role="menuitem"><a href="https://github.com/ArthurAssuncao/Github_Portfolio_Generator" title="Github Portfolio Generator">Github Portfolio Generator</a></li>
                         <li role="menuitem"><a href="https://github.com/ArthurAssuncao/bootstrap4blogger" title="Bootstrap for Blogger">Bootstrap for Blogger</a></li>
                         <li role="menuitem"><a href="https://github.com/ArthurAssuncao/SRWare_Iron_Updater" title="SRWare Iron Updater">SRWare Iron Updater</a></li>
                     </ul>
