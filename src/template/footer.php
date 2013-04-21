@@ -5,7 +5,7 @@
                 <div class="span3 offset1">
                     <h4>Links</h4>
                     <ul class="unstyled justify">
-                        <li><a href="http://github.com/arthurassuncao">Repositórios no Github</a></li>
+                        <li><a href="http://github.arthurassuncao.com">Repositórios no Github</a></li>
                         <li><a href="http://lattes.cnpq.br/8136835668168874">Currículo Lattes</a></li>
                         <li><a href="http://blog.arthurassuncao.com">Blog</a></li>
                         <li><a href="http://www.youtube.com/arthurassuncao11">Youtube</a></li>
