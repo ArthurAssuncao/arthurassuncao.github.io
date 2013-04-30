@@ -1,5 +1,8 @@
 <head>
     <meta charset="utf-8" />
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <![endif]-->
 <?php echo $this->robots_noindex_follow ? '<meta name="robots" content="noindex,follow">' : '' ?>
     <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="/min/?f=/css/reset.css,/css/gh_fork_ribbon/gh-fork-ribbon.css,/css/bootstrap/bootstrap_united.min.css,/css/principal.css,/css/site.css" />
@@ -33,4 +36,5 @@
     <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <script type="text/javascript" src="/js/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
   </head>
