@@ -1,0 +1,14 @@
+/* TEAM */
+	Developer: Arthur Assuncao
+	Contact: contato [at] arthurassuncao.com
+	Github: @arthurassuncao
+	Website: arthurassuncao.com
+	Blog: blog.arthurassuncao.com
+	From: Minas Gerais, Brazil
+		
+
+/* SITE */
+	Last update: 2012/04/30
+	Language: Portuguese
+	Doctype: HTML5
+	IDE: Sublime Text, Notepad++, FileZilla, Photoshop
