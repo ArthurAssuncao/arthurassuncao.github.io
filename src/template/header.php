@@ -31,10 +31,9 @@
     <meta content="<?php echo $this->description ?>" property="og:description"/>
 <?php echo $this->tags_head_extra ?>
 <?php echo $this->embedded_js_header ? "<script type='text/javascript'>{$this->embedded_js_header}</script>" : ''; ?>
-    
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <script type="text/javascript" src="/js/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     <![endif]-->
-    <script type="text/javascript" src="/js/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
   </head>
