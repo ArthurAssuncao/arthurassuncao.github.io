@@ -47,10 +47,10 @@
                     <li class='curriculo_item'>
                         <?php 
                         echo PaginaCurriculo::createExperiencia(
-                            "Desenvolvedor de Aplicações Móveis Android e Aplicações Web Django", 
-                            "Add TI Integradora de Soluções LTDA",
+                            "Desenvolvedor de Aplicações Móveis Android e HTML5 e Aplicações Web Django", 
+                            "<a href='http://www.addmob.com.br' title='AddMob Integradora de Soluções'>AddMob Integradora de Soluções</a>",
                             "", 
-                            "Desenvolvimento de aplicações móveis para o suporte a outros sistemas comerciais, e desenvolvimento de um WebServices para intercâmbio dos dados com as aplicações móveis.",
+                            "Desenvolvimento de aplicações móveis para o suporte a sistemas comerciais, e desenvolvimento de um WebServices para intercâmbio dos dados com as aplicações móveis.",
                             "2012 - (Emprego atual)"
                         ); 
                         ?>
