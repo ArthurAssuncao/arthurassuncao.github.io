@@ -213,6 +213,9 @@
                         Bancos de dados relacionais: MySQL, Postgres, SQLite, HyperSQL.
                     </li>
                     <li class='curriculo_item'>
+                        Web Service RESTful.
+                    </li>
+                    <li class='curriculo_item'>
                         Versionamento Semântico (SemVer).
                     </li>
                     <li class='curriculo_item'>
