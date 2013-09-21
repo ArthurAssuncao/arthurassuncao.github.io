@@ -1,9 +1,10 @@
 $(document).ready(function() {
-    remove_data_slide();
-    //muda_tamanho_barra_busca();
+    remover_data_slide();
+    //mudar_tamanho_barra_busca();
+    add_evento_gestos_pagina();
 });
 
-function muda_tema(){
+function mudar_tema(){
     $("#muda_tema").click(function (e) {
         e.preventDefault();
 
@@ -21,7 +22,7 @@ function muda_tema(){
     });
 }
 
-function muda_tamanho_barra_busca(){
+function mudar_tamanho_barra_busca(){
     var tamanho_diferenca = 60;
     $('#barra_busca').focus(function() {
         $('#barra_busca').animate({width:($(this).width()+tamanho_diferenca)+'px'}, 'slow');
@@ -31,10 +32,70 @@ function muda_tamanho_barra_busca(){
     });
 }
 
-function remove_data_slide(){
+function remover_data_slide(){
     if (location.pathname != "/"){ //nao ta na home
         $('li[data-slide]').each(function() {
             this.removeAttribute('data-slide');
         });
     }
+}
+
+function mudar_pagina_anterior(){
+    var pagina = location.pathname;
+    var hash = window.location.hash;
+    var $hash = $(hash.replace(/#/,'#pagina_'));
+    //home
+    if(pagina == '/') {
+        var novo_local = null;
+        if(hash == '' || hash == '#home'){
+            novo_local = '#repositorios';
+        }
+        else if(hash == '#repositorios'){
+            novo_local = '#curriculo';
+        }
+        else if(hash == '#curriculo'){
+            novo_local = '#contato';
+        }
+        if(novo_local != null){
+            carregar_pagina($hash, novo_local.replace(/#/,''));
+        }
+    }
+}
+
+function mudar_pagina_posterior(){
+    var pagina = location.pathname;
+    var hash = window.location.hash;
+    var $hash = $(hash.replace(/#/,'#pagina_'));
+    //home
+    if(pagina == '/') {
+        var novo_local = null;
+        if(hash == '#repositorios'){
+            novo_local = '#home';
+        }
+        else if(hash == '#curriculo'){
+            novo_local = '#repositorios';
+        }
+        else if(hash == '#contato'){
+            novo_local = '#curriculo';
+        }
+        if(novo_local != null){
+            carregar_pagina($hash, novo_local.replace(/#/,''));
+        }
+    }
+}
+
+function add_evento_gestos_pagina(){
+    var pagina = $('body');
+    var hammer_swipe_left = Hammer(pagina).on("swipeleft", function(event) {
+        if(!has_texto_selecionado()){
+            console.log("esquerda");
+            mudar_pagina_anterior();
+        }
+    });
+    var hammer_swipe_right = Hammer(pagina).on("swiperight", function(event) {
+        if(!has_texto_selecionado()){
+            console.log("direita");
+            mudar_pagina_posterior();
+        }
+    });
 }

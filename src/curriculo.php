@@ -332,7 +332,7 @@
                 </ul>
             </div>
         </div>
-        <div class="col-md-3 col-md-offset-2 pull-right">
+        <div class="col-md-4 col-md-offset-1">
             <div id="curriculo_habilidades">
                 <h4>Habilidades</h4>
                 <ul class="list-unstyled">
@@ -343,22 +343,22 @@
                     </li>
                     <li>
                         <?php
-                            echo PaginaCurriculo::createHabilidade("Python", "70");
+                            echo PaginaCurriculo::createHabilidade("Python", "80");
                         ?>
                     </li>
                     <li>
                         <?php
-                            echo PaginaCurriculo::createHabilidade("Android", "80");
+                            echo PaginaCurriculo::createHabilidade("Android", "90");
                         ?>
                     </li>
                     <li>
                         <?php
-                            echo PaginaCurriculo::createHabilidade("Django", "70");
+                            echo PaginaCurriculo::createHabilidade("Django", "80");
                         ?>
                     </li>
                     <li>
                         <?php
-                            echo PaginaCurriculo::createHabilidade("Jquery", "80");
+                            echo PaginaCurriculo::createHabilidade("Jquery", "75");
                         ?>
                     </li>
                     <li>
@@ -368,7 +368,7 @@
                     </li>
                     <li>
                         <?php
-                            echo PaginaCurriculo::createHabilidade("Git (Controle de Versão)", "90");
+                            echo PaginaCurriculo::createHabilidade("Git(Controle de Versão)", "90");
                         ?>
                     </li>
                     <li>
@@ -393,7 +393,7 @@
                     </li>
                     <li>
                         <?php
-                            echo PaginaCurriculo::createHabilidade("JSON", "70");
+                            echo PaginaCurriculo::createHabilidade("JSON", "80");
                         ?>
                     </li>
                 </ul>
