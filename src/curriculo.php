@@ -35,7 +35,7 @@
             <span itemprop='description'>
                 <p>Arthur Assunção é atualmente <span itemprop='jobTitle'>desenvolvedor de aplicações</span> móveis para o suporte a aplicações comerciais
                  e desenvolvedor de Web Services para a comunicação das aplicações móveis com os sistemas comerciais na <span itemprop='worksFor'>AddMob Integradora de Soluções</span>.</p>
-                <p>Graduando em Tecnologia em Sistemas para Internet pelo Instituto Federal de Educação, Ciência e Tecnologia do Sudeste de Minas Gerais. Atualmente cursando o 6º período.</p>
+                <p>Graduando em <strong>Tecnologia em Sistemas para Internet</strong> pelo Instituto Federal de Educação, Ciência e Tecnologia do Sudeste de Minas Gerais. Atualmente cursando o 6º período.</p>
             </span>
         </div>
     </div>
@@ -199,38 +199,40 @@
             <hr />
             <div id="curriculo_outros_conhecimentos">
                 <h4>Outros Conhecimentos</h4>
-                <ul id="lista_outros_conhecimentos" class="list-unstyled">
-                    <li class='curriculo_item'>
-                        Linguagens de programação: Pascal, C, C++, Java, PHP, Python, Javascript.
-                    </li>
-                    <li class='curriculo_item'>
-                        Frameworks Web: Django, MIOLO.
-                    </li>
-                    <li class='curriculo_item'>
-                        Sistemas de controle de versão: Git, SVN.
-                    </li>
-                    <li class='curriculo_item'>
-                        Bancos de dados relacionais: MySQL, Postgres, SQLite, HyperSQL.
-                    </li>
-                    <li class='curriculo_item'>
-                        Web Service RESTful.
-                    </li>
-                    <li class='curriculo_item'>
-                        Versionamento Semântico (SemVer).
-                    </li>
-                    <li class='curriculo_item'>
-                        Design responsivo e desenvolvimento de sites otimizados para dispositivos portáteis.
-                    </li>
-                    <li class='curriculo_item'>
-                        Desenvolvimento em ambientes Unix/Linux.
-                    </li>
-                    <li class='curriculo_item'>
-                        Search Engine Optimization (SEO).
-                    </li>
-                    <li class='curriculo_item'>
-                        Facebook OpenGraph e HTML5 Microdata.
-                    </li>
-                </ul>
+                <div class="container">
+                    <ul id="lista_outros_conhecimentos" class="list-unstyledERRO">
+                        <li class='curriculo_item'>
+                            Linguagens de programação: Pascal, C, C++, Java, PHP, Python, Javascript.
+                        </li>
+                        <li class='curriculo_item'>
+                            Frameworks Web: Django, MIOLO.
+                        </li>
+                        <li class='curriculo_item'>
+                            Sistemas de controle de versão: Git, SVN.
+                        </li>
+                        <li class='curriculo_item'>
+                            Bancos de dados relacionais: MySQL, Postgres, SQLite, HyperSQL.
+                        </li>
+                        <li class='curriculo_item'>
+                            Web Service RESTful.
+                        </li>
+                        <li class='curriculo_item'>
+                            Versionamento Semântico (SemVer).
+                        </li>
+                        <li class='curriculo_item'>
+                            Design responsivo e desenvolvimento de sites otimizados para dispositivos portáteis.
+                        </li>
+                        <li class='curriculo_item'>
+                            Desenvolvimento em ambientes Unix/Linux.
+                        </li>
+                        <li class='curriculo_item'>
+                            Search Engine Optimization (SEO).
+                        </li>
+                        <li class='curriculo_item'>
+                            Facebook OpenGraph e HTML5 Microdata.
+                        </li>
+                    </ul>
+                </div>
             </div>
             <hr />
             <div id="curriculo_seminarios_eventos">
@@ -368,7 +370,7 @@
                     </li>
                     <li>
                         <?php
-                            echo PaginaCurriculo::createHabilidade("Git(Controle de Versão)", "90");
+                            echo PaginaCurriculo::createHabilidade("Git (Controle de Versão)", "90");
                         ?>
                     </li>
                     <li>

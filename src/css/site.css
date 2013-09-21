@@ -96,15 +96,17 @@ li .skill{
   font-style: italic;
 }
 .skill{
-  position: relative;
-  background: #d4d4d4;
-  height: 6px;
-  border-radius: 5px;
-  border-left: 1px solid #e0e0e0;
-  border-top: 1px solid #e0e0e0;
-  border-right: 2px solid #fff;
-  border-bottom: 2px solid #fff;
-  margin-left: 0px !important;
+    position: relative;
+    background: #d4d4d4;
+    height: 6px;
+    border-radius: 5px;
+    border-left: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    margin-left: 0px !important;
+    display: block;
+    width: 100%;
 }
 .skill_bar{
   height: 2px;
