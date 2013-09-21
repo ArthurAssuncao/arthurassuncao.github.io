@@ -88,13 +88,11 @@ function add_evento_gestos_pagina(){
     var pagina = $('body');
     var hammer_swipe_left = Hammer(pagina).on("swipeleft", function(event) {
         if(!has_texto_selecionado()){
-            console.log("esquerda");
             mudar_pagina_anterior();
         }
     });
     var hammer_swipe_right = Hammer(pagina).on("swiperight", function(event) {
         if(!has_texto_selecionado()){
-            console.log("direita");
             mudar_pagina_posterior();
         }
     });
