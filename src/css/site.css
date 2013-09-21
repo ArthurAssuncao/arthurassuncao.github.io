@@ -1,3 +1,17 @@
+/*
+Accent Color     RGB          Hex
+---------------------------------------
+blue             27,161,226   #ff1ba1e2
+brown            160,80,0     #ffa05000
+green            51,153,51    #ff339933
+lime             162,193,57   #ffa2c139
+magenta          216,0,115    #ffd80073
+mango (orange)   240,150,9    #fff09609
+pink             230,113,184  #ffe671b8
+purple           162,0,255    #ffa200ff
+red              229,20,0     #ffe51400
+teal (viridian)  0,171,169    #ff00aba9
+*/
 body{
     background: url('/img/snow.jpg') repeat 0 0; /*credits http://subtlepatterns.com*/
 }
@@ -5,16 +19,16 @@ body{
     padding-top: 30px;
 }
 a{
-    color: #ff931e; /*cc5200*/
+    color: #1ba1e2;
 }
 a:hover{
-    color: #f60;
+    color: #48b4ea;
 }
 .navbar .nav > li > a:focus, .navbar .nav > li > a:hover{
-    color: #f60;
+    color: #48b4ea;
 }
 .navbar .brand:hover{
-    color: #f60;
+    color: #48b4ea;
 }
 .pagina{
     min-height: 50%;
@@ -26,13 +40,13 @@ a:hover{
     width: 630px;
 }
 .selected a{
-    color: #f60 !important;
+    color: #48b4ea !important;
 }
 .gsib_a input{
     color: #2f2f2f;
 }
 #conteudo h3{
-    color: #f60;
+    color: #48b4ea;
 }
 
 textarea:focus,
@@ -61,10 +75,10 @@ input[type="color"]:focus,
           box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 102, 0, 0.6);
 }
 *::-moz-selection {
-  background: rgba(255, 147, 30, 0.8);
+  background: rgba(72, 180, 234, 0.8);
 }
 *::selection {
-  background: rgba(255, 147, 30, 0.8);
+  background: rgba(72, 180, 234, 0.8);
 }
 /* curriculo */
 li.curriculo_item{
@@ -94,22 +108,23 @@ li .skill{
 }
 .skill_bar{
   height: 2px;
-  margin: 2px 1px;
+  /*margin: 2px 1px;*/
+  margin-left: -14px;
   border-radius: 2px;
-  background: #ff6600;
+  background: #48b4ea;
   position: absolute;
-  box-shadow: 0px 0px 10px 1px rgba(255,140,30,0.4);
+  box-shadow: 0px 0px 10px 1px rgba(118, 199, 239, 0.4);
 }
 
 /* Spinner CSS3 base: http://www.alessioatzeni.com/blog/css3-loading-animation-loop/*/
 .circle {
   background-color: rgba(0,0,0,0);
-  border:5px solid rgba(255, 102, 0,0.9);
+  border:5px solid rgba(27, 161, 226, 0.9);
   opacity:.9;
   border-right:5px solid rgba(0,0,0,0);
   border-left:5px solid rgba(0,0,0,0);
   border-radius:50px;
-  box-shadow: 0 0 35px #ff8533;
+  box-shadow: 0 0 35px #44b2e9;
   width:50px;
   height:50px;
   margin:0 auto;
@@ -118,12 +133,12 @@ li .skill{
 }
 .circle1 {
   background-color: rgba(0,0,0,0);
-  border:5px solid rgba(255, 102, 0,0.9);
+  border:5px solid rgba(27, 161, 226, 0.9);
   opacity:.9;
   border-left:5px solid rgba(0,0,0,0);
   border-right:5px solid rgba(0,0,0,0);
   border-radius:50px;
-  box-shadow: 0 0 15px #ff8533; 
+  box-shadow: 0 0 15px #44b2e9; 
   width:30px;
   height:30px;
   margin:0 auto;
@@ -133,7 +148,7 @@ li .skill{
   -webkit-animation:spinoffPulse 1s infinite linear;
 }
 @-moz-keyframes spinPulse {
-  0% { -moz-transform:rotate(160deg); opacity:0; box-shadow:0 0 1px #ff8533;}
+  0% { -moz-transform:rotate(160deg); opacity:0; box-shadow:0 0 1px #44b2e9;}
   50% { -moz-transform:rotate(145deg); opacity:1; }
   100% { -moz-transform:rotate(-320deg); opacity:0; }
 }
@@ -142,7 +157,7 @@ li .skill{
   100% { -moz-transform:rotate(360deg);  }
 }
 @-webkit-keyframes spinPulse {
-  0% { -webkit-transform:rotate(160deg); opacity:0; box-shadow:0 0 1px #ff8533; }
+  0% { -webkit-transform:rotate(160deg); opacity:0; box-shadow:0 0 1px #44b2e9; }
   50% { -webkit-transform:rotate(145deg); opacity:1;}
   100% { -webkit-transform:rotate(-320deg); opacity:0; }
 }

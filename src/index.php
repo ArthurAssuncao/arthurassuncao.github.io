@@ -21,13 +21,13 @@
     $pagina->iniciaConteudo();
 ?>
     <br />
-    <div id="pagina_home" class="container pagina span10">
+    <div id="pagina_home" class="container pagina col-md-11">
         <h3>Blog</h3>
         <div id="divRss"></div>
     </div>
-    <div id="pagina_repositorios" class="container pagina span10"></div>
-    <div id="pagina_curriculo" class="container pagina span12"></div>
-    <div id="pagina_contato" class="container pagina span10"></div>
+    <div id="pagina_repositorios" class="container pagina col-md-11"></div>
+    <div id="pagina_curriculo" class="container pagina col-md-11"></div>
+    <div id="pagina_contato" class="container pagina col-md-11"></div>
     <br />
 <?php
     $pagina->finalizaConteudo();

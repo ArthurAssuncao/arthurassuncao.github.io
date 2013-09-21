@@ -42,7 +42,7 @@ class PaginaCurriculo extends Pagina{
     }
 
     public static function createHabilidade($habilidade, $valor){
-        $skill = "<span class='skill_habilidade'>{$habilidade}</span><br /><span class='span3 skill' data-tooltip='{$habilidade}'><span data-skillbar='{$valor}' class='skill_bar'></span></span>";
+        $skill = "<span class='skill_habilidade'>{$habilidade}</span><br /><span class='col-md-11 skill' data-tooltip='{$habilidade}'><span data-skillbar='{$valor}' class='skill_bar'></span></span>";
         return $skill;
     }
 

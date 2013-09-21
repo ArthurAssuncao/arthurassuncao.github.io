@@ -56,7 +56,7 @@
     </span>
     <br /><br />
     <div class="row">
-        <form name="form_contato" id="form_contato" class="form-horizontal well span10" action="contato" method="post" onsubmit="return valida_campos()">
+        <form role="form" name="form_contato" id="form_contato" class="form-horizontal well col-md-10" action="contato" method="post" onsubmit="return valida_campos()">
           <fieldset>
             <div class="control-group">
               <?php
@@ -67,7 +67,7 @@
               ?>
               <input type="hidden" name="envia" />
               <div class="controls">
-                <input type="submit" class="btn btn-info" value="Enviar">
+                <input type="submit" class="btn btn-primary" value="Enviar">
               </div>
             </div>
               <?php 

@@ -7,7 +7,7 @@
   padding: 2px 0;
 
   /* Set the base colour */
-  background-color: #eb7600;
+  background-color: #1ba1e2;
 
   /* Set a gradient: transparent black at the top to almost-transparent black at the bottom */
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.00)), to(rgba(0, 0, 0, 0.15)));
@@ -35,7 +35,7 @@
 
   /* Set the text properties */
   text-decoration: none;
-  text-shadow: 0 -1px rgba(183,92,0,0.5);
+  text-shadow: 0 -1px rgba(19, 113, 160, 0.5);
   text-align: center;
 
   /* Set the geometry. If you fiddle with these you'll also need to tweak the top and right values in #github-fork-ribbon. */

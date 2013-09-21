@@ -5,12 +5,12 @@
     <![endif]-->
 <?php echo $this->robots_noindex_follow ? '<meta name="robots" content="noindex,follow">' : '' ?>
     <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="/min/?f=/css/reset.css,/css/gh_fork_ribbon/gh-fork-ribbon.css,/css/bootstrap/bootstrap_united.min.css,/css/principal.css,/css/site.css" />
+    <link rel="stylesheet" type="text/css" href="/min/?f=/css/reset.css,/css/gh_fork_ribbon/gh-fork-ribbon.css,/css/bootstrap3/bootstrap_cerulean.min.css,/css/principal.css,/css/site.css" />
 <?php 
     echo $this->createTagsCSS($this->links_css);
     echo $this->embedded_css ? "<style type='text/css'>{$this->embedded_css}</style>" : '';
  ?>
-    <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" />
+    <!--<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" />-->
 <?php echo $this->createTagsJS($this->links_js_header) ?>
     <link rel="shortcut icon" href="/favicon.ico" /> 
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />

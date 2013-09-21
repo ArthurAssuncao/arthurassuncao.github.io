@@ -23,14 +23,14 @@
 ?>
     <h3>Currículo</h3>
     <div class="container" itemscope='itemscope' itemtype='http://schema.org/Person'>
-        <div class="pull-right span4">
+        <div class="pull-right col-md-4">
             <h4 class="pull-right"><strong><span itemprop='name'>Arthur Nascimento Assunção</span></strong></h4><br />
             <span class="pull-right">Nasceu em 11/05/1992</span><br /><br />
             <span class="pull-right">Barbacena / MG</span><br />
             <span class="pull-right" data-email="%63%6f%6e%74%61%74%6f%40%61%72%74%68%75%72%61%73%73%75%6e%63%61%6f%2e%63%6f%6d"></span><br />
             <span class="pull-right">blog.arthurassuncao.com</span><br />
         </div>
-        <div id="curriculo_resumo" class="pull-left span6 offset1 justify">
+        <div id="curriculo_resumo" class="pull-left col-md-6 col-md-offset-1 justify">
             <h4>Resumo</h4>
             <span itemprop='description'>
                 <p>Arthur Assunção é atualmente <span itemprop='jobTitle'>desenvolvedor de aplicações</span> móveis para o suporte a aplicações comerciais
@@ -40,10 +40,10 @@
         </div>
     </div>
     <div class="row">
-        <div class="container span7 justify">
+        <div class="container col-md-7 justify">
             <div id="curriculo_experiencia">
                 <h4>Experiência</h4>
-                <ul id="lista_experiencia" class="unstyled">
+                <ul id="lista_experiencia" class="list-unstyled">
                     <li class='curriculo_item'>
                         <?php 
                         echo PaginaCurriculo::createExperiencia(
@@ -60,7 +60,7 @@
             <hr />
             <div id="curriculo_experiencia_academica">
                 <h4>Experiência Acadêmica</h4>
-                <ul id="lista_experiencia_academica" class="unstyled">
+                <ul id="lista_experiencia_academica" class="list-unstyled">
                     <li class='curriculo_item'>
                         <?php
                         echo PaginaCurriculo::createExperienciaAcademica(
@@ -99,7 +99,7 @@
             <hr />
             <div id="curriculo_formacao">
                 <h4>Formação</h4>
-                <ul id="lista_formacao" class="unstyled">
+                <ul id="lista_formacao" class="list-unstyled">
                     <li class='curriculo_item'>
                         <?php
                         echo PaginaCurriculo::createFormacao(
@@ -116,7 +116,7 @@
             <hr />
             <div id="curriculo_formacao_complementar">
                 <h4>Formação Complementar</h4>
-                <ul id="lista_formacao_complementar" class="unstyled">
+                <ul id="lista_formacao_complementar" class="list-unstyled">
                     <li class='curriculo_item'>
                         <?php
                         echo PaginaCurriculo::createFormacaoComplementar(
@@ -199,7 +199,7 @@
             <hr />
             <div id="curriculo_outros_conhecimentos">
                 <h4>Outros Conhecimentos</h4>
-                <ul id="lista_outros_conhecimentos">
+                <ul id="lista_outros_conhecimentos" class="list-unstyled">
                     <li class='curriculo_item'>
                         Linguagens de programação: Pascal, C, C++, Java, PHP, Python, Javascript.
                     </li>
@@ -235,7 +235,7 @@
             <hr />
             <div id="curriculo_seminarios_eventos">
                 <h4>Participação em Seminários e Eventos</h4>
-                <ul id="lista_seminarios_eventos" class="unstyled">
+                <ul id="lista_seminarios_eventos" class="list-unstyled">
                     <li class='curriculo_item'>
                         <?php
                         echo PaginaCurriculo::createSeminiarioEvento(
@@ -281,7 +281,7 @@
             <hr />
             <div id="curriculo_projetos_opensource">
                 <h4>Projetos Open Source</h4>
-                <ul id="lista_projetos_opensource" class="unstyled">
+                <ul id="lista_projetos_opensource" class="list-unstyled">
                     <li class='curriculo_item'>
                         <?php
                             echo PaginaCurriculo::createProjeto(
@@ -332,10 +332,10 @@
                 </ul>
             </div>
         </div>
-        <div class="span3 offset2 pull-right">
+        <div class="col-md-3 col-md-offset-2 pull-right">
             <div id="curriculo_habilidades">
                 <h4>Habilidades</h4>
-                <ul class="unstyled">
+                <ul class="list-unstyled">
                     <li>
                         <?php
                             echo PaginaCurriculo::createHabilidade("Java", "70");

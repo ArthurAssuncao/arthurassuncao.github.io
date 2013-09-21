@@ -11,7 +11,7 @@ require('Pagina.class.php');
  * @author ArthurAssuncao <contato[at]arthurassuncao[dot]com>
  * @copyright 2013 Arthur Assuncao. All rights reserved.
  * license not defined
- * @link https://bitbucket.org/arthurassuncao/arthurassuncao.com
+ * @link https://github.com/arthurassuncao/arthurassuncao.com
  */
 class PaginaCached extends Pagina {
     private $arquivoCache;

@@ -7,9 +7,9 @@
 		
 
 /* SITE */
-	Last update: 2012/04/30
+	Last update: 2013/09/20
 	Language: Brazilian Portuguese (PT-BR)
 	Doctype: HTML5
 	IDE: Sublime Text, Notepad++, FileZilla, Photoshop
 	Standards: HTML5, CSS3
-	Components: Javascript, Jquery, Framework Bootstrap, Google Custom Search Engine, Jquery FeedEk, PHP, Minify library
+	Components: Javascript, Jquery, Framework Bootstrap 3, Google Custom Search Engine, Jquery FeedEk, PHP, Minify library
