@@ -45,8 +45,8 @@
                 </ul>
             </ul>
         </nav>
-        <div class="col-md-4">
-            <form class="navbar-form navbar-right" method="get" action="/busca">
+        <div class="col-md-4 navbar-right">
+            <form class="navbar-form" method="get" action="/busca">
                 <div class="input-group">
                     <span class="input-group-btn">
                         <button class="btn btn-default botao_busca btn-sm" type="submit"><i class="glyphicon glyphicon-search"></i></button>
