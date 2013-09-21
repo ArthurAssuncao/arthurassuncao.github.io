@@ -33,9 +33,28 @@ function mudar_tamanho_barra_busca(){
 }
 
 function remover_data_slide(){
-    if (location.pathname != "/"){ //nao ta na home
+    var pagina = location.pathname;
+    if (pagina != "/"){ //nao ta na home
         $('li[data-slide]').each(function() {
             this.removeAttribute('data-slide');
+            //seleciona a pagina no menu
+            filha_a = child=(this.firstElementChild || this.firstChild);
+            endereco = filha_a.href.replace(location.href.replace(pagina, ''), '');
+            this.removeClass('selected');
+            if(pagina == endereco){
+                if(endereco == '/home'){
+                    $(this).addClass('selected');
+                }
+                else if(endereco == '/repositorios'){
+                    $(this).addClass('selected');
+                }
+                else if(endereco == '/curriculo'){
+                    $(this).addClass('selected');
+                }
+                else if(endereco == '/contato'){
+                    $(this).addClass('selected');
+                }
+            }
         });
     }
 }
