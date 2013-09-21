@@ -40,7 +40,7 @@ function remover_data_slide(){
             //seleciona a pagina no menu
             filha_a = child=(this.firstElementChild || this.firstChild);
             endereco = filha_a.href.replace(location.href.replace(pagina, ''), '');
-            this.removeClass('selected');
+            $(this).removeClass('selected');
             if(pagina == endereco){
                 if(endereco == '/home'){
                     $(this).addClass('selected');
