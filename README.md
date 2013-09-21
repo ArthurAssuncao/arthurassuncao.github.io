@@ -19,7 +19,7 @@ Site pessoal de [Arthur Assunção](http://arthurassuncao.com).
   * CSS3
   * Javascript
   * Jquery
-  * Framework Bootstrap
+  * Framework Bootstrap 3.0
   * Google Custom Search Engine
   * Jquery FeedEk
 * Back-end
