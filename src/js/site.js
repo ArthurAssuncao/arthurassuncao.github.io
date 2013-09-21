@@ -1,7 +1,7 @@
 $(document).ready(function() {
     remover_data_slide();
     //mudar_tamanho_barra_busca();
-    add_evento_gestos_pagina();
+    //add_evento_gestos_pagina();
 });
 
 function mudar_tema(){
