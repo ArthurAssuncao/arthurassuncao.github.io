@@ -28,6 +28,7 @@
             <span class="pull-right">Nasceu em 11/05/1992</span><br /><br />
             <span class="pull-right">Barbacena / MG</span><br />
             <span class="pull-right" data-email="%63%6f%6e%74%61%74%6f%40%61%72%74%68%75%72%61%73%73%75%6e%63%61%6f%2e%63%6f%6d"></span><br />
+            <span class="pull-right">github.com/arthurassuncao</span><br />
             <span class="pull-right">blog.arthurassuncao.com</span><br />
         </div>
         <div id="curriculo_resumo" class="pull-left col-md-6 col-md-offset-1 justify">
@@ -50,8 +51,20 @@
                             "Desenvolvedor de Aplicações Móveis Android e HTML5 e Aplicações Web Django", 
                             "<a href='http://www.addmob.com.br' title='AddMob Integradora de Soluções'>AddMob Integradora de Soluções</a>",
                             "", 
-                            "Desenvolvimento de aplicações móveis para o suporte a sistemas comerciais, e desenvolvimento de um WebServices para intercâmbio dos dados com as aplicações móveis.",
+                            "Desenvolvimento de aplicações móveis Android e Web Services em python com o framework Django, uso de notação JSON para representação dos dados para comunicação com as aplicações móveis. Utilização de controle de versão Git para melhor 
+manutenção do código e colaboração entre os membros da equipe.",
                             "2012 - (Emprego atual)"
+                        ); 
+                        ?>
+                    </li>
+                    <li class='curriculo_item'>
+                        <?php 
+                        echo PaginaCurriculo::createExperiencia(
+                            "Desenvolvedor Web e Web Designer",
+                            "Freelancer",
+                            "Website Addmob.com.br",
+                            "Desenvolvimento em conjunto com o profissional Charles Tim Batista Garrocho do website da empresa <a href='http://www.addmob.com.br'>AddMob Integradora de Soluções Ltda</a>. Website desenvolvido em HTML5 e Django, utilizando ainda o framework Bootstrap e Jquery, com layout responsivo e captura de gestos para melhor experiência em dispositivos móveis.",
+                            "2013"
                         ); 
                         ?>
                     </li>
@@ -64,22 +77,23 @@
                     <li class='curriculo_item'>
                         <?php
                         echo PaginaCurriculo::createExperienciaAcademica(
-                            "Acompanhamento dos Egressos utilizando Ferramenta On-Line",
+                            "Sistema Integrado de Gestão Acadêmica - SIGA – RENAPI (Rede Nacional de Pesquisa e Inovação) da SETEC/MEC, 
+núcleo do Instituto Federal do Sudeste de Minas Gerais câmpus Barbacena",
                             "Instituto Federal de Educação, Ciência e Tecnologia do Sudeste de Minas Gerais",
-                            "Bolsista",
-                            "",
-                            "2012 - 2013" 
+                            "Desenvolvedor e Tester em Java e PHP/Miolo",
+                            "Desenvolvimento, suporte e teste do Sistema Integrado de Gestão Acadêmica utilizado em institutos e universidades federais do Brasil. Desenvolvimento em PHP com o framework MIOLO e em Java, uso de ORM para acesso ao banco de dados PostgreSQL. Uso de controle de versão SVN e do gerenciador de projetos Redmine para melhor manutenção do código e colaboração entre os membros das equipes distribuídas pelo Brasil.", 
+                            "2012 - 2012"
                         );
                         ?>
                     </li>
                     <li class='curriculo_item'>
                         <?php
                         echo PaginaCurriculo::createExperienciaAcademica(
-                            "Sistema Integrado de Gestão Acadêmica – SIGA ADM - RENAPI",
+                            "Acompanhamento dos Egressos utilizando Ferramenta On-Line",
                             "Instituto Federal de Educação, Ciência e Tecnologia do Sudeste de Minas Gerais",
-                            "Desenvolvedor e Tester em Java e PHP/Miolo",
-                            "Desenvolvimento e manutenção do projeto Sistema Integrado de Gestão Acadêmica (SIGA-ADM)", 
-                            "2012 - 2012"
+                            "Bolsista",
+                            "Levantamento de informações sobre os cursos do Instituto Federal do Sudeste de Minas Gerais câmpus Barbacena, configuração da ferramenta de questionários LimeSurvey, montagem e acompanhamento de questionários voltados para alunos egressos e analise dos dados obtidos",
+                            "2012 - 2013" 
                         );
                         ?>
                     </li>
@@ -107,7 +121,7 @@
                             "Instituto Federal de Educação, Ciência e Tecnologia do Sudeste de Minas Gerais",
                             "",
                             "2011 - (Em andamento)",
-                            "" 
+                            ""
                         );
                         ?>
                     </li>
@@ -205,7 +219,13 @@
                             Linguagens de programação: Pascal, C, C++, Java, PHP, Python, Javascript.
                         </li>
                         <li class='curriculo_item'>
-                            Frameworks Web: Django, MIOLO.
+                            HTML5, CSS3
+                        </li>
+                        <li class='curriculo_item'>
+                            Linguagens de interoperabilidade: JSON, XML.
+                        </li>
+                        <li class='curriculo_item'>
+                            Frameworks/Bibliotecas: Django, MIOLO, Jquery, Jquery Mobile, Bootstrap 2.x e 3.0.
                         </li>
                         <li class='curriculo_item'>
                             Sistemas de controle de versão: Git, SVN.
