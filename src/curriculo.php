@@ -24,8 +24,8 @@
     <h3>Currículo</h3>
     <div class="container" itemscope='itemscope' itemtype='http://schema.org/Person'>
         <div class="pull-right col-md-5">
-            <h4 class="pull-right"><strong><span itemprop='name'>Arthur Nascimento Assunção</span></strong></h4><br />
-            <span class="pull-right">Nasceu em 11/05/1992</span><br /><br />
+            <h4 class="pull-right"><strong><span itemprop='name'>Arthur Nascimento Assunção</span></strong></h4><br /><br />
+            <span class="pull-right">Nasceu em 11/05/1992</span><br />
             <span class="pull-right">Barbacena / MG</span><br />
             <span class="pull-right" data-email="%63%6f%6e%74%61%74%6f%40%61%72%74%68%75%72%61%73%73%75%6e%63%61%6f%2e%63%6f%6d"></span><br />
             <span class="pull-right">github.com/arthurassuncao</span><br />
