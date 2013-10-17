@@ -53,7 +53,8 @@
                             "", 
                             "Desenvolvimento de aplicações móveis Android e Web Services em python com o framework Django, uso de notação JSON para representação dos dados para comunicação com as aplicações móveis. Utilização de controle de versão Git para melhor 
 manutenção do código e colaboração entre os membros da equipe.",
-                            "2012 - (Emprego atual)"
+                            "dezembro de 2012",
+                            null
                         ); 
                         ?>
                     </li>
@@ -64,6 +65,7 @@ manutenção do código e colaboração entre os membros da equipe.",
                             "Freelancer",
                             "Website Addmob.com.br",
                             "Desenvolvimento em conjunto com o profissional Charles Tim Batista Garrocho do website da empresa <a href='http://www.addmob.com.br'>AddMob Integradora de Soluções Ltda</a>. Website desenvolvido em HTML5 e Django, utilizando ainda o framework Bootstrap e Jquery, com layout responsivo e captura de gestos para melhor experiência em dispositivos móveis.",
+                            null,
                             "2013"
                         ); 
                         ?>
@@ -82,7 +84,8 @@ núcleo do Instituto Federal do Sudeste de Minas Gerais câmpus Barbacena",
                             "Instituto Federal de Educação, Ciência e Tecnologia do Sudeste de Minas Gerais",
                             "Desenvolvedor e Tester em Java e PHP/Miolo",
                             "Desenvolvimento, suporte e teste do Sistema Integrado de Gestão Acadêmica utilizado em institutos e universidades federais do Brasil. Desenvolvimento em PHP com o framework MIOLO e em Java, uso de ORM para acesso ao banco de dados PostgreSQL. Uso de controle de versão SVN e do gerenciador de projetos Redmine para melhor manutenção do código e colaboração entre os membros das equipes distribuídas pelo Brasil.", 
-                            "2012 - 2012"
+                            "março de 2012",
+                            "junho de 2012"
                         );
                         ?>
                     </li>
@@ -93,7 +96,8 @@ núcleo do Instituto Federal do Sudeste de Minas Gerais câmpus Barbacena",
                             "Instituto Federal de Educação, Ciência e Tecnologia do Sudeste de Minas Gerais",
                             "Bolsista",
                             "Levantamento de informações sobre os cursos do Instituto Federal do Sudeste de Minas Gerais câmpus Barbacena, configuração da ferramenta de questionários LimeSurvey, montagem e acompanhamento de questionários voltados para alunos egressos e analise dos dados obtidos",
-                            "2012 - 2013" 
+                            "outubro de 2012",
+                            "janeiro de 2013"
                         );
                         ?>
                     </li>
@@ -104,7 +108,8 @@ núcleo do Instituto Federal do Sudeste de Minas Gerais câmpus Barbacena",
                             "Instituto Federal de Educação, Ciência e Tecnologia do Sudeste de Minas Gerais",
                             "Secretário Geral",
                             "", 
-                            "Gestão 2013 - (Em andamento)"
+                            "Gestão 2013",
+                            null
                         );
                         ?>
                     </li>
@@ -120,8 +125,9 @@ núcleo do Instituto Federal do Sudeste de Minas Gerais câmpus Barbacena",
                             "Superior de Tecnologia em Sistemas para Internet", 
                             "Instituto Federal de Educação, Ciência e Tecnologia do Sudeste de Minas Gerais",
                             "",
-                            "2011 - (Em andamento)",
-                            ""
+                            "",
+                            "2011",
+                            null
                         );
                         ?>
                     </li>
@@ -137,8 +143,9 @@ núcleo do Instituto Federal do Sudeste de Minas Gerais câmpus Barbacena",
                             "Python para Administradores de Redes Linux", 
                             "Instituto Federal de Educação, Ciência e Tecnologia do Sudeste de Minas Gerais",
                             "",
-                            "2012 - 2012",
-                            "40 h"
+                            "40 h",
+                            "2012",
+                            "2012"
                         ); 
                         ?>
                     </li>
@@ -148,8 +155,9 @@ núcleo do Instituto Federal do Sudeste de Minas Gerais câmpus Barbacena",
                             "Programação para Dispositivos Móveis com Android", 
                             "Instituto Federal de Educação, Ciência e Tecnologia do Sudeste de Minas Gerais",
                             "",
-                            "2012 - 2013",
-                            "40 h"
+                            "40 h",
+                            "2012",
+                            "2013"
                         ); 
                         ?>
                     </li>
@@ -159,8 +167,9 @@ núcleo do Instituto Federal do Sudeste de Minas Gerais câmpus Barbacena",
                             "SQL Completo", 
                             "Softblue",
                             "",
-                            "2012 - 2012",
-                            "20 h"
+                            "20 h",
+                            "2012",
+                            "2012"
                         ); 
                         ?>
                     </li>
@@ -170,8 +179,9 @@ núcleo do Instituto Federal do Sudeste de Minas Gerais câmpus Barbacena",
                             "Montagem e Manutenção de Computadores", 
                             "Fundação ACMinas",
                             "",
-                            "2012 - 2012",
-                            "20 h"
+                            "20 h",
+                            "2012",
+                            "2012"
                         ); 
                         ?>
                     </li>
@@ -181,8 +191,9 @@ núcleo do Instituto Federal do Sudeste de Minas Gerais câmpus Barbacena",
                             "HTML Avançado", 
                             "Fundação Bradesco",
                             "",
-                            "2011 - 2011",
-                            "64 h"
+                            "64 h",
+                            "2011",
+                            "2011"
                         ); 
                         ?>
                     </li>
@@ -192,8 +203,9 @@ núcleo do Instituto Federal do Sudeste de Minas Gerais câmpus Barbacena",
                             "Javascript", 
                             "Fundação Bradesco",
                             "",
-                            "2011 - 2011",
-                            "45 h"
+                            "45 h",
+                            "2011",
+                            "2011"
                         ); 
                         ?>
                     </li>
@@ -203,8 +215,9 @@ núcleo do Instituto Federal do Sudeste de Minas Gerais câmpus Barbacena",
                             "Web Design", 
                             "Infocob Informática",
                             "",
-                            "2009 - 2009",
-                            "44 h"
+                            "44 h",
+                            "2009",
+                            "2009"
                         ); 
                         ?>
                     </li>
@@ -400,7 +413,7 @@ núcleo do Instituto Federal do Sudeste de Minas Gerais câmpus Barbacena",
                     </li>
                     <li>
                         <?php
-                        echo PaginaCurriculo::createHabilidade("PHP", "60");
+                        echo PaginaCurriculo::createHabilidade("PHP", "70");
                         ?>
                     </li>
                     <li>
