@@ -3,7 +3,7 @@ class PaginaCurriculo extends Pagina{
 
     public static function createExperiencia($funcao, $instituicao, $projeto, $descricao, $periodo){
         $experiencia = "<span class='curriculo_titulo'><strong>{$funcao}</strong></span><br />\n";
-        $experiencia .= "<span class='curriculo_instituicao'>{$instituicao}</span> <span class='pull-right curriculo_periodo'>{$periodo}</span><br />\n";
+        $experiencia .= "<span class='curriculo_instituicao'>{$instituicao}</span><br /><span class='curriculo_periodo'>{$periodo}</span><br />\n";
         if($projeto != ''){
             $experiencia .= "Projeto: {$projeto}<br />\n";
         }
@@ -13,14 +13,14 @@ class PaginaCurriculo extends Pagina{
 
     public static function createExperienciaAcademica($projeto, $instituicao, $funcao, $descricao, $periodo){
         $experiencia = "<span class='curriculo_titulo'><strong>{$projeto}</strong></span><br />\n";
-        $experiencia .= "<span class='curriculo_instituicao'>{$funcao}. {$instituicao}</span> <span class='pull-right curriculo_periodo'>{$periodo}</span><br />\n";
+        $experiencia .= "<span class='curriculo_instituicao'>{$funcao}. {$instituicao}</span><br /><span class='curriculo_periodo'>{$periodo}</span><br />\n";
         $experiencia .= "<span class='item_ultima_linha'>{$descricao}</span>\n";
         return $experiencia;
     }
 
     public static function createFormacao($curso, $instituicao, $descricao, $periodo, $cargaHoraria){
         $formacao = "<span class='curriculo_titulo'><strong>{$curso}</strong></span><br />\n";
-        $formacao .= "<span class='curriculo_instituicao'>{$instituicao}</span> <span class='pull-right curriculo_periodo'>{$periodo}</span><br />\n";
+        $formacao .= "<span class='curriculo_instituicao'>{$instituicao}</span><br /><span class='curriculo_periodo'>{$periodo}</span><br />\n";
         if($descricao != ''){
             $formacao .= "{$descricao}<br />\n";
         }
