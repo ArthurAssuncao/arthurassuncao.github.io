@@ -35,9 +35,9 @@
     require('footer.php');
 ?>
     <!-- Scripts rodam mais rapidos e de forma melhor estando no fim da pagina -->
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/min/?f=/js/util.js,/js/principal.js,/js/hammer/jquery.hammer.min.js,/js/site.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/min/?f=/js/util.js,/js/principal.js,/js/site.js"></script>
 <?php 
     echo $this->createTagsJS($this->links_js_footer);
     echo $this->embedded_js_footer ? "<script type='text/javascript'>{$this->embedded_js_footer}</script>" : '';
