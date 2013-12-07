@@ -221,6 +221,18 @@ núcleo do Instituto Federal do Sudeste de Minas Gerais câmpus Barbacena",
                         ); 
                         ?>
                     </li>
+                    <li class='curriculo_item'>
+                        <?php
+                        echo PaginaCurriculo::createFormacaoComplementar(
+                            "Aprendizagem Industrial de Instalação Elétrica Industrial", 
+                            "SENAI - Barbacena",
+                            "Instalar e montar componentes e dispositivos eletroeletrônicos para acionamento de máquinas industriais em redes elétricas de baixa tensão, obedecendo a especificações de projeto elétrico bem como normas técnicas de instalação elétrica, de saúde, meio ambiente e de segurança do trabalho.",
+                            "800 h",
+                            "2009",
+                            "2010"
+                        ); 
+                        ?>
+                    </li>
                 </ul>
             </div>
             <hr />
