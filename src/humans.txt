@@ -7,7 +7,7 @@
 		
 
 /* SITE */
-	Last update: 2013/10/17
+	Last update: 2014/02/07
 	Language: Brazilian Portuguese (PT-BR)
 	Doctype: HTML5
 	IDE/Softwares: Sublime Text, Notepad++, FileZilla, Photoshop

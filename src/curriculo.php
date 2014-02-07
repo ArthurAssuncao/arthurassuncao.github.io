@@ -36,7 +36,7 @@
             <span itemprop='description'>
                 <p>Arthur Assunção é atualmente <span itemprop='jobTitle'>desenvolvedor de aplicações</span> móveis para o suporte a aplicações comerciais
                  e desenvolvedor de Web Services para a comunicação das aplicações móveis com os sistemas comerciais na <span itemprop='worksFor'>AddMob Integradora de Soluções</span>.</p>
-                <p>Graduando em <strong>Tecnologia em Sistemas para Internet</strong> pelo Instituto Federal de Educação, Ciência e Tecnologia do Sudeste de Minas Gerais. Atualmente cursando o 6º período.</p>
+                <p>Graduado em <strong>Tecnologia em Sistemas para Internet</strong> pelo Instituto Federal de Educação, Ciência e Tecnologia do Sudeste de Minas Gerais.</p>
             </span>
         </div>
     </div>
@@ -125,9 +125,9 @@ núcleo do Instituto Federal do Sudeste de Minas Gerais câmpus Barbacena",
                             "Superior de Tecnologia em Sistemas para Internet", 
                             "Instituto Federal de Educação, Ciência e Tecnologia do Sudeste de Minas Gerais",
                             "",
-                            "",
+                            "2.426 h",
                             "2011",
-                            null
+                            "2014"
                         );
                         ?>
                     </li>
