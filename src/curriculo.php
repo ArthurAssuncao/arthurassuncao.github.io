@@ -34,8 +34,7 @@
         <div id="curriculo_resumo" class="pull-left col-md-6 col-md-offset-1 justify">
             <h4>Resumo</h4>
             <span itemprop='description'>
-                <p>Arthur Assunção é atualmente <span itemprop='jobTitle'>desenvolvedor de aplicações</span> móveis para o suporte a aplicações comerciais
-                 e desenvolvedor de Web Services para a comunicação das aplicações móveis com os sistemas comerciais na <span itemprop='worksFor'>AddMob Integradora de Soluções</span>.</p>
+                <p>Arthur Assunção é atualmente <span itemprop='jobTitle'>desenvolvedor de aplicações</span> móveis e Web</span>.</p>
                 <p>Graduado em <strong>Tecnologia em Sistemas para Internet</strong> pelo Instituto Federal de Educação, Ciência e Tecnologia do Sudeste de Minas Gerais.</p>
             </span>
         </div>
@@ -54,7 +53,7 @@
                             "Desenvolvimento de aplicações móveis Android e Web Services em python com o framework Django, uso de notação JSON para representação dos dados para comunicação com as aplicações móveis. Utilização de controle de versão Git para melhor 
 manutenção do código e colaboração entre os membros da equipe.",
                             "dezembro de 2012",
-                            null
+                            "fevereiro de 2014"
                         ); 
                         ?>
                     </li>
