@@ -10,7 +10,7 @@
     <body <?php echo $this->body_onload != '' ? "onload='{$this->body_onload}'" : '' ?>>
         <div id="wrapper" class="container">
             <div id="principal" class="clearfix">
-                <div class="github-fork-ribbon-wrapper right hidden-sm">
+                <div class="github-fork-ribbon-wrapper right hidden-sm hidden-xs">
                     <div class="github-fork-ribbon">
                         <a href="https://github.com/ArthurAssuncao">Fork me on GitHub</a>
                     </div>
