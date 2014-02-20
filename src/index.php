@@ -6,6 +6,8 @@
     $pagina->setKeywords('Arthur Assunção, Instituto Federal do Sudeste de Minas Gerais, Barbacena, Sistemas para Internet, Programação, github');
     $pagina->addCSS('css/jquery_github/github.css');
     $pagina->addJavascript('js/feedek/FeedEk.min.js');
+    $pagina->addCSS('js/imageflow/imageflow.min.css');
+    $pagina->addCSS('js/bootstrap-lightbox/bootstrap-lightbox.min.css');
     $pagina->addEmbeddedJavascript("
     $(document).ready(function() {
         $('#divRss').FeedEk({
@@ -25,6 +27,7 @@
         <div id="divRss"></div>
     </div>
     
+    <div id="pagina_portfolio" class="container pagina col-md-11"></div>
     <div id="pagina_repositorios" class="container pagina col-md-11"></div>
     <div id="pagina_curriculo" class="container pagina col-md-11"></div>
     <div id="pagina_contato" class="container pagina col-md-11"></div>
@@ -39,6 +42,27 @@
             if(hash != ''){
                 $('a[data-hash*='+'#pagina_' + hash.replace(/#/,'')+']').click();
             }
+        });
+    ";
+    //$pagina->addEmbeddedJavascript($embedded_js_footer);
+    $pagina->addJavascript('js/imageflow/imageflow.min.js');
+    $pagina->addJavascript('js/bootstrap-lightbox/bootstrap-lightbox.min.js');
+    $embedded_js_footer += "
+        domReady(function(){
+            var imageFlow = new ImageFlow();
+            imageFlow.init({
+                ImageFlowID: 'portfolio_slide',
+                /*reflectionGET: '&bgc=ffffff&fade_start=20%',*/
+                reflections: false,
+                reflectionP: 0.0,
+                opacity: true,
+                circular: true,
+                glideToStartID: false,
+                onClick: function() {\$('#lightbox_' + this.id.replace('imagem_','')).lightbox({
+                    show: true,
+                    resizeToFit: true
+                    });}
+            });
         });
     ";
     $pagina->addEmbeddedJavascript($embedded_js_footer);

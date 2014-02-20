@@ -65,6 +65,9 @@ function carregar_pagina($hash, endereco){
           oldest_first: false
         });
       }
+      else if(endereco == "portfolio"){
+        
+      }
       else if(endereco == "contato"){
         document.form_contato.envia.value = 'true';
       }
