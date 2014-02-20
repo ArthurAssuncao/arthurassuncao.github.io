@@ -7,8 +7,7 @@
     $pagina->setCanonical($pagina->createCanonicalLink());
     $pagina->iniciaConteudo();
 ?>
-    <br />
-    Sobre
+    <h3>Sobre</h3>
 
 <?php
     $pagina->finalizaConteudo();

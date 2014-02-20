@@ -1,6 +1,7 @@
 <?php
     /* menu de todas as paginas */
     $is_pagina_home = false;
+    $is_pagina_portfolio = false;
     $is_pagina_repositorios = false;
     $is_pagina_curriculo = false;
     $is_pagina_contato = false;
@@ -33,6 +34,7 @@
         <nav>
             <ul class="nav navbar-nav" id="nav">
               <li data-slide="1" <?php echo $is_pagina_home ? 'class="selected"' : ''?>><a href="/" data-hash="#pagina_home" title="Home">Home</a></li>
+              <li data-slide="2" <?php echo $is_pagina_portfolio ? 'class="selected"' : ''?>><a href="/portfolio" data-hash="#pagina_portfolio" title="Portfolio">Portfolio</a></li>
               <li data-slide="2" <?php echo $is_pagina_repositorios ? 'class="selected"' : ''?>><a href="/repositorios" data-hash="#pagina_repositorios" title="Repositórios">Repositórios</a></li>
               <li data-slide="3" <?php echo $is_pagina_curriculo ? 'class="selected"' : ''?>><a href="/curriculo" data-hash="#pagina_curriculo" title="Currículo">Currículo</a></li>
               <li data-slide="4" <?php echo $is_pagina_contato ? 'class="selected"' : ''?>><a href="/contato" data-hash="#pagina_contato" title="Contato">Contato</a></li>
