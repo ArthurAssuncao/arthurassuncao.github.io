@@ -13,17 +13,17 @@ red              229,20,0     #ffe51400
 teal (viridian)  0,171,169    #ff00aba9
 */
 @media (max-width: 767px) {
-  body {
+  body, .lightbox .lightbox-dialog {
     padding-top: 51px;
   }
 }
 @media (min-width: 768px) {
-  body {
+  body, .lightbox .lightbox-dialog {
     padding-top: 93px;
   }
 }
 @media (min-width: 992px) {
-    body {
+    body, .lightbox .lightbox-dialog {
     padding-top: 51px;
   }
 }
@@ -97,6 +97,12 @@ a:hover{
 }
 #portfolio_slide .scrollbar {
     border-bottom:1px solid #000;
+}
+.lightbox{
+    display: none;
+}
+.lightbox .lightbox-dialog{
+    z-index: 10004;
 }
 
 textarea:focus,

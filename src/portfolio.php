@@ -5,8 +5,8 @@
     $pagina->setDescription('Portfolio de Arthur Assuncao');
     $pagina->setKeywords('informacoes, portfolio, websites, programas, arthur assuncao');
     $pagina->setCanonical($pagina->createCanonicalLink());
-    /*$pagina->addCSS('js/imageflow/imageflow.min.css');
-    $pagina->addCSS('js/bootstrap-lightbox/bootstrap-lightbox.min.css');*/
+    $pagina->addCSS('js/imageflow/imageflow.min.css');
+    $pagina->addCSS('js/bootstrap-lightbox/bootstrap-lightbox.min.css');
     $pagina->iniciaConteudo();
 ?>
     <h3>Portfolio</h3>
@@ -19,8 +19,8 @@
     <div id="lightbox_addmob_site" class="lightbox fade" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="lightbox-dialog">
             <div class='lightbox-content'>
-                <img src="img/portfolio/apresentacao_site_addmob_reflexo.jpg" class="img-responsive" />
-                <div>
+                <img src="img/portfolio/apresentacao_site_addmob.jpg" class="img-responsive img-thumbnail" />
+                <div class="lightbox-caption">
                     <p>Website Addmob.com.br</p>
                 </div>
             </div>
@@ -42,10 +42,13 @@
                 opacity: true,
                 circular: true,
                 glideToStartID: false,
-                onClick: function() {\$('#lightbox_' + this.id.replace('imagem_','')).lightbox({
+                onClick: function() {
+                    \$('#lightbox_' + this.id.replace('imagem_','')).lightbox({
                     show: true,
-                    resizeToFit: true
-                    });}
+                    resizeToFit: true,
+                    backdrop: true
+                    });
+                    }
             });
         });
     ";
