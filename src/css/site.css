@@ -13,17 +13,17 @@ red              229,20,0     #ffe51400
 teal (viridian)  0,171,169    #ff00aba9
 */
 @media (max-width: 767px) {
-  body, .lightbox .lightbox-dialog {
+  body {
     padding-top: 51px;
   }
 }
 @media (min-width: 768px) {
-  body, .lightbox .lightbox-dialog {
+  body {
     padding-top: 93px;
   }
 }
 @media (min-width: 992px) {
-    body, .lightbox .lightbox-dialog {
+    body {
     padding-top: 51px;
   }
 }

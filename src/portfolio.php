@@ -16,7 +16,7 @@
         <img id="imagem_addmob_site" src="img/portfolio/apresentacao_site_addmob_reflexo.jpg" longdesc="URL_1" width="200" height="200" alt="Website Addmob.com.br" class="img-responsive" />
     </div>
 
-    <div id="lightbox_addmob_site" class="lightbox fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div id="lightbox_addmob_site" class="modal lightbox fade" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="lightbox-dialog">
             <div class='lightbox-content'>
                 <img src="img/portfolio/apresentacao_site_addmob.jpg" class="img-responsive img-thumbnail" />
