@@ -66,7 +66,32 @@ function carregar_pagina($hash, endereco){
         });
       }
       else if(endereco == "portfolio"){
-        
+        //redireciona pra pagina portfolio
+        window.location = window.location.origin + "/portfolio";
+
+        var imagensPortfolio = $('img', $pagina_temp);
+
+        for (var i = 0; i < imagensPortfolio.length; i++){
+          var img = $("img[src='" + imagensPortfolio[i].src.replace(window.location.origin + '/', '') + "']")[0];
+          $(img).attr('src', imagensPortfolio[i].src).fadeIn();
+          var imageFlow = new ImageFlow();
+          imageFlow.init({
+              ImageFlowID: 'portfolio_slide',
+              reflections: false,
+              reflectionP: 0.0,
+              opacity: true,
+              circular: true,
+              glideToStartID: false,
+              onClick: function() {
+                console.log('teste');
+                $('#lightbox_' + this.id.replace('imagem_','')).lightbox({
+                  show: true,
+                  resizeToFit: true,
+                  backdrop: true
+                  });
+                }
+          });
+        }
       }
       else if(endereco == "contato"){
         document.form_contato.envia.value = 'true';

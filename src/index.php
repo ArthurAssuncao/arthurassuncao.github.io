@@ -35,6 +35,8 @@
 <?php
     $pagina->finalizaConteudo();
     $pagina->addJavascript('js/jquery_github/jquery.github.js');
+    $pagina->addJavascript('js/imageflow/imageflow.min.js');
+    $pagina->addJavascript('js/bootstrap-lightbox/bootstrap-lightbox.min.js');
     $pagina->addJavascript('js/index.js');
     $embedded_js_footer = "
         $(document).ready(function() {
@@ -44,27 +46,5 @@
             }
         });
     ";
-    //$pagina->addEmbeddedJavascript($embedded_js_footer);
-    $pagina->addJavascript('js/imageflow/imageflow.min.js');
-    $pagina->addJavascript('js/bootstrap-lightbox/bootstrap-lightbox.min.js');
-    $embedded_js_footer += "
-        domReady(function(){
-            var imageFlow = new ImageFlow();
-            imageFlow.init({
-                ImageFlowID: 'portfolio_slide',
-                /*reflectionGET: '&bgc=ffffff&fade_start=20%',*/
-                reflections: false,
-                reflectionP: 0.0,
-                opacity: true,
-                circular: true,
-                glideToStartID: false,
-                onClick: function() {\$('#lightbox_' + this.id.replace('imagem_','')).lightbox({
-                    show: true,
-                    resizeToFit: true
-                    });}
-            });
-        });
-    ";
-    $pagina->addEmbeddedJavascript($embedded_js_footer);
     echo $pagina->renderizar();
 ?>

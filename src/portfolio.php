@@ -12,17 +12,14 @@
     <h3>Portfolio</h3>
       
     <div id="portfolio_slide" class="imageflow">
-        <img id="imagem_addmob_site" src="img/portfolio/apresentacao_site_addmob_reflexo.jpg" longdesc="URL_1" width="200" height="200" alt="<a href='http://addmob.com.br'>Website Addmob.com.br</a>" class="img-responsive" />
-        <img id="imagem_addmob_site" src="img/portfolio/apresentacao_site_addmob_reflexo.jpg" longdesc="URL_1" width="200" height="200" alt="Website Addmob.com.br" class="img-responsive" />
+        <img id="imagem_addmob_site" src="img/portfolio/apresentacao_site_addmob_reflexo.jpg" longdesc="/" width="200" height="200" alt="<a href='http://addmob.com.br'>Website Addmob.com.br</a>" class="img-responsive" />
+        <img id="imagem_addmob_site" src="img/portfolio/apresentacao_site_addmob_reflexo.jpg" longdesc="/" width="200" height="200" alt="Website Addmob.com.br" class="img-responsive" />
     </div>
 
     <div id="lightbox_addmob_site" class="modal lightbox fade" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="lightbox-dialog">
             <div class='lightbox-content'>
                 <img src="img/portfolio/apresentacao_site_addmob.jpg" class="img-responsive img-thumbnail" />
-                <div class="lightbox-caption">
-                    <p>Website Addmob.com.br</p>
-                </div>
             </div>
         </div>
     </div>
