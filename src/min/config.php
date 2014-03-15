@@ -58,7 +58,6 @@ $min_allowDebugFlag = false;
  */
 //require dirname(__FILE__) . '/lib/Minify/Cache/APC.php';
 //$min_cachePath = new Minify_Cache_APC();
-$min_cachePath = 'cache';
 
 
 /**
@@ -103,7 +102,7 @@ $min_serveOptions['bubbleCssImports'] = false;
  * Note: Despite this setting, if you include a number at the end of the
  * querystring, maxAge will be set to one year. E.g. /min/f=hello.css&123456
  */
-$min_serveOptions['maxAge'] = 259200; //default 1800 seconds, 259200 = tres dias
+$min_serveOptions['maxAge'] = 1800;
 
 
 /**
