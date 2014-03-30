@@ -34,7 +34,7 @@
         <div id="curriculo_resumo" class="pull-left col-md-6 col-md-offset-1 justify">
             <h4>Resumo</h4>
             <span itemprop='description'>
-                <p>Arthur Assunção é atualmente <span itemprop='jobTitle'>desenvolvedor de aplicações</span> móveis e Web</span>.</p>
+                <p>Arthur Assunção é atualmente Mestrando em Ciência da Computação pela UFOP e <span itemprop='jobTitle'>desenvolvedor de aplicações</span> móveis e Web</span>.</p>
                 <p>Graduado em <strong>Tecnologia em Sistemas para Internet</strong> pelo Instituto Federal de Educação, Ciência e Tecnologia do Sudeste de Minas Gerais.</p>
             </span>
         </div>
