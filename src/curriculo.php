@@ -121,10 +121,22 @@ núcleo do Instituto Federal do Sudeste de Minas Gerais câmpus Barbacena",
                     <li class='curriculo_item'>
                         <?php
                         echo PaginaCurriculo::createFormacao(
+                            "Mestrado em Ciẽncia da Computação", 
+                            "Universidade Federal de Ouro Preto",
+                            "",
+                            "",
+                            "2014",
+                            ""
+                        );
+                        ?>
+                    </li>
+                    <li class='curriculo_item'>
+                        <?php
+                        echo PaginaCurriculo::createFormacao(
                             "Superior de Tecnologia em Sistemas para Internet", 
                             "Instituto Federal de Educação, Ciência e Tecnologia do Sudeste de Minas Gerais",
                             "",
-                            "2.426 h",
+                            "2.500 h",
                             "2011",
                             "2014"
                         );
