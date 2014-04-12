@@ -29,6 +29,11 @@
     <!--<meta property="og:image" content="image.jpg" />-->
     <meta content="Arthur Assuncao" property="og:site_name"/>
     <meta content="<?php echo $this->description ?>" property="og:description"/>
+
+    <meta name="application-name" content="Arthur Assuncao Site"/>
+    <meta name="msapplication-TileColor" content="#1ba1e2"/>
+    <meta name="msapplication-notification" content="frequency=30;polling-uri=http://notifications.buildmypinnedsite.com/?feed=http://blog.arthurassuncao.com/atom.xml&amp;id=1;polling-uri2=http://notifications.buildmypinnedsite.com/?feed=http://blog.arthurassuncao.com/atom.xml&amp;id=2;polling-uri3=http://notifications.buildmypinnedsite.com/?feed=http://blog.arthurassuncao.com/atom.xml&amp;id=3;polling-uri4=http://notifications.buildmypinnedsite.com/?feed=http://blog.arthurassuncao.com/atom.xml&amp;id=4;polling-uri5=http://notifications.buildmypinnedsite.com/?feed=http://blog.arthurassuncao.com/atom.xml&amp;id=5; cycle=1"/>
+
 <?php echo $this->tags_head_extra ?>
 <?php echo $this->embedded_js_header ? "<script type='text/javascript'>{$this->embedded_js_header}</script>" : ''; ?>
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
