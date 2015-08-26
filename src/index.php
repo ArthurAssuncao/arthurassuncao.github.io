@@ -69,96 +69,69 @@
     <div class="container">
         <h2 class="header text_b">Alguns projetos que participei </h2>
         <div class="row">
-            <div class="col s12 m4 l4">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="http://fakeimg.pl/500/">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Projeto X <i class="mdi-navigation-more-vert right"></i></span>
-                        <p><a href="#">Projeto link</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Projeto X <i class="mdi-navigation-close right"></i></span>
-                        <p>Um pouco sobre o projeto.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m4 l4">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="http://fakeimg.pl/500/">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Projeto X <i class="mdi-navigation-more-vert right"></i></span>
-                        <p><a href="#">Projeto link</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Projeto X <i class="mdi-navigation-close right"></i></span>
-                        <p>Um pouco sobre o projeto.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m4 l4">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="http://fakeimg.pl/500/">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Projeto X <i class="mdi-navigation-more-vert right"></i></span>
-                        <p><a href="#">Projeto link</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Projeto X <i class="mdi-navigation-close right"></i></span>
-                        <p>Um pouco sobre o projeto.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m4 l4">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="http://fakeimg.pl/500/">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Projeto X <i class="mdi-navigation-more-vert right"></i></span>
-                        <p><a href="#">Projeto link</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Projeto X <i class="mdi-navigation-close right"></i></span>
-                        <p>Um pouco sobre o projeto.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m4 l4">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="http://fakeimg.pl/500/">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Projeto X <i class="mdi-navigation-more-vert right"></i></span>
-                        <p><a href="#">Projeto link</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Projeto X <i class="mdi-navigation-close right"></i></span>
-                        <p>Um pouco sobre o projeto.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m4 l4">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="http://fakeimg.pl/500/">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Projeto X <i class="mdi-navigation-more-vert right"></i></span>
-                        <p><a href="#">Projeto link</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Projeto X <i class="mdi-navigation-close right"></i></span>
-                        <p>Um pouco sobre o projeto.</p>
-                    </div>
-                </div>
-            </div>
+            <?php
+                echo PaginaCurriculo::createProjetoPortfolio(
+                    "MaisVendas", 
+                    array("MaisVendas na PlayStore", "https://play.google.com/store/apps/details?id=com.vendas"), 
+                    "http://fakeimg.pl/300x200/",
+                    array("Participei da programação para Android do app móvel e do Web Service em Django da empresa AddMob.",
+                    "Foi feito o desenolvimento do app Android e Web Service em Django com banco de dados MySQL, uso de notação JSON para comunicação entre os sistemas e utilização de controle de versão Git para uma melhor manutenção do código e colaboração entre os membros da equipe.",
+                    "O MaisVendas é um sistema para quem deseja ter seu catálogo de produtos e sua lista de clientes disponíveis ao toque da tela de seu tablet ou smartphone. É possível realizar vendas, consultar pedidos realizados, verificar o histórico de vendas através do gráfico iterativo e muito mais."
+                    )
+                );
+            ?>
+            <?php
+                echo PaginaCurriculo::createProjetoPortfolio(
+                    "JUMP!", 
+                    array("Repositorio do projeto","https://github.com/arthurassuncao/jump"), 
+                    "http://fakeimg.pl/300x200/",
+                    array("Participei da equipe de desenvolvimento do jogo JUMP (Jogo Unificado para Movimentação Projetada).",
+                    "O jogo permite que o jogador, em frente a uma webcam, controle, por meio de seus pulos, o personagem do jogo.",
+                    "Foram utilizados: linguagem Python com a biblioteca OpenCV e Node.js.",
+                    "Projeto foi apresentado na Semana Nacional de Ciência e Tecnologia (SNCT) de 2013 no IFSEMG - Câmpus Barbacena."
+                    )
+                );
+            ?>
+            <?php
+                echo PaginaCurriculo::createProjetoPortfolio(
+                    "uGuide Desk", 
+                    array("Repositorio do projeto","https://github.com/arthurassuncao/jump"), 
+                    "http://fakeimg.pl/300x200/",
+                    array("Participei da equipe de desenvolvimento da aplicação.",
+                    "O projeto consistiu de um software informativo e interativo para acompanhamento de eventos e notícias do Festival de Inverno de Ouro Preto e Mariana de 2014 com interação com os usuários por meio do sensor Kinect.",
+                    "Foram utilizadas linguagem C++ e interface gráfica Qt com comunicação com o Web Service via JSON."
+                    )
+                );
+            ?>
+            <?php
+                echo PaginaCurriculo::createProjetoPortfolio(
+                    "Chrome Extensions", 
+                    array("Entensões na Chrome Store","https://chrome.google.com/webstore/search/adev?hl=pt-BR"), 
+                    "http://fakeimg.pl/300x200/",
+                    array("Desenvolvimento de extensões para o navegador Google Chrome:",
+                    "<ul>
+                    <li>
+                        <a href='https://chrome.google.com/webstore/detail/hide-contact-from-faceboo/dldcnjjdfolnampaceecohfaolbefbhj'>Hide Contact From Facebook Chat List</a><br />
+                        <p>Esconde contatos da lista do chat do Facebook sem bloquear o contato. O contato continua te vendo na lista do chat dele como online, porém voce não o vê mais.</p>
+                    </li>
+                    <li>
+                        <a href='https://chrome.google.com/webstore/detail/wpp-web-customizer/lhaamjcmnafobcjjcjfpglfonpdkoedb'>Wpp web Customizador</a><br />
+                        <p>Modifica o fundo (background) do chat do Whatsapp™ Web.</p>
+                    </li>
+                    </ul>"
+                    )
+                );
+            ?>
+            <?php
+                echo PaginaCurriculo::createProjetoPortfolio(
+                    "Addmob.com.br", 
+                    array("Addmob.com.br","https://www.addmob.com.br"), 
+                    "http://fakeimg.pl/300x200/",
+                    array("Participei do desenvolvimento do Website da empresa AddMob Integradora de Soluções Ltda.",
+                    "Website desenvolvido em HTML5/CSS3 e Django, utilizando o framework Bootstrap 2.x e jQuery, com layout responsivo e captura de gestos (Hammer.js) para otimizar a experiência em dispositivos móveis."
+                    )
+                );
+            ?>
         </div>
     </div>
 </div>
@@ -168,7 +141,7 @@
     <div class="container">
         <h2 class="header text_b">Habilidades </h2>
         <div class="row">
-            <div class="col s12 m8 l8">
+            <div class="col s12 m6 l6">
                 <div id="curriculo_formacao">
                     <h5>Formação</h5>
                     <ul id="lista_formacao" class="list-unstyled">
@@ -223,38 +196,38 @@
                 <!-- fim producao cientifica -->
             </div>
                 <!-- habilidades -->
-            <div class="col s12 m4 l4">
+            <div class="col s12 m5 l5 offset-m1 offset-l1">
                 <div id="curriculo_habilidades">
                     <h5>Habilidades</h5>
                     <ul class="list-unstyled">
                         <li>
                             <?php
-                                echo PaginaCurriculo::createHabilidade("Java", "70");
+                                echo PaginaCurriculo::createHabilidade("Android", "70");
                             ?>
                         </li>
                         <li>
                             <?php
-                                echo PaginaCurriculo::createHabilidade("Python", "80");
+                                echo PaginaCurriculo::createHabilidade("Python", "60");
                             ?>
                         </li>
                         <li>
                             <?php
-                                echo PaginaCurriculo::createHabilidade("Android", "90");
+                                echo PaginaCurriculo::createHabilidade("JavaScript/jQuery", "60");
                             ?>
                         </li>
                         <li>
                             <?php
-                                echo PaginaCurriculo::createHabilidade("Django", "80");
+                                echo PaginaCurriculo::createHabilidade("R", "70");
                             ?>
                         </li>
                         <li>
                             <?php
-                                echo PaginaCurriculo::createHabilidade("Jquery", "75");
+                                echo PaginaCurriculo::createHabilidade("HTML5/CSS3", "70");
                             ?>
                         </li>
                         <li>
                             <?php
-                                echo PaginaCurriculo::createHabilidade("xHTML/HTML5", "80");
+                                echo PaginaCurriculo::createHabilidade("Twitter Bootstrap 2.x - 3.x", "70");
                             ?>
                         </li>
                         <li>
@@ -264,30 +237,35 @@
                         </li>
                         <li>
                             <?php
-                                echo PaginaCurriculo::createHabilidade("SQL", "80");
+                                echo PaginaCurriculo::createHabilidade("Design Responsivo", "70");
                             ?>
                         </li>
                         <li>
                             <?php
-                            echo PaginaCurriculo::createHabilidade("PHP", "70");
+                            echo PaginaCurriculo::createHabilidade("PHP", "40");
                             ?>
                         </li>
                         <li>
                             <?php
-                                echo PaginaCurriculo::createHabilidade("JSF (Java Server Faces)", "50");
+                                echo PaginaCurriculo::createHabilidade("Java", "50");
                             ?>
                         </li>
                         <li>
                             <?php
-                                echo PaginaCurriculo::createHabilidade("Javascript", "70");
+                                echo PaginaCurriculo::createHabilidade("C++", "50");
                             ?>
                         </li>
                         <li>
                             <?php
-                                echo PaginaCurriculo::createHabilidade("JSON", "80");
+                                echo PaginaCurriculo::createHabilidade("SQL", "60");
                             ?>
                         </li>
                     </ul>
+                    <div class="center-align btn_skills_more">
+                        <button class="btn waves-effect waves-light" id="btn_skills_more">
+                            Mais +
+                        </button>
+                    </div>
                 </div>
                 <!-- fim skills -->
             </div>

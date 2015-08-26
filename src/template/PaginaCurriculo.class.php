@@ -111,5 +111,25 @@ class PaginaCurriculo extends Pagina{
         $artigo .= "</span>";
         return $artigo;
     }
+
+    public static function createProjetoPortfolio($titulo, $url, $img, $descricao){
+        $descricao_formatada = implode("</p><p>", $descricao);
+        $item = "<div class='col s12 m4 l4'>
+            <div class='card'>
+                <div class='card-image waves-effect waves-block waves-light'>
+                    <img class='activator' src='{$img}'>
+                </div>
+                <div class='card-content'>
+                    <span class='card-title activator grey-text text-darken-4'>{$titulo} <i class='mdi-navigation-more-vert right'></i></span>
+                    <p><a href='{$url[1]}'>{$url[0]}</a></p>
+                </div>
+                <div class='card-reveal'>
+                    <span class='card-title grey-text text-darken-4'><strong>{$titulo}</strong> <i class='mdi-navigation-close right'></i></span>
+                    <div>{$descricao_formatada}</div>
+                </div>
+            </div>
+        </div>";
+        return $item;
+    }
 }
 ?>

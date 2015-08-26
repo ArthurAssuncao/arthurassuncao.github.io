@@ -64,3 +64,17 @@ li .skill{
 #social a:hover{
     opacity: 1 !important;
 }
+.center-align {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.btn_skills_more{
+    margin-top: 40px;
+}
+.card-reveal{
+    text-align: justify;
+}
+.card-reveal li p{
+    margin-left: 8px;
+}
