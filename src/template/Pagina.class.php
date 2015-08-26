@@ -41,16 +41,16 @@ class Pagina{
      *
      */
     public function Pagina() {
-        $this->iniciaValoresPadrao();
-        $this->verificaPost();
-        //$this->verificaGet();
+        $this->iniciarValoresPadrao();
+        $this->verificarPost();
+        //$this->verificarGet();
     }
 
     /**
      * Verifica paramentros Post
      * 
      */
-    private function verificaPost(){
+    private function verificarPost(){
         //ARRUMAR ISSO
         if((isset($_POST['exibir_header']) && $_POST['exibir_header'] == 'false') && (isset($_POST['exibir_footer']) && $_POST['exibir_footer'] == 'false')){
             $this->exibir_so_conteudo = true;
@@ -61,7 +61,7 @@ class Pagina{
      * Verifica paramentros Get
      * 
      */
-    private function verificaGet(){
+    private function verificarGet(){
         
     }
 
@@ -69,7 +69,7 @@ class Pagina{
      * Inicia os atributos com valores padrao
      * 
      */
-    private function iniciaValoresPadrao(){
+    private function iniciarValoresPadrao(){
         $this->lang = 'pt-br'; // idioma da pagina
         $this->robots_noindex_follow = false;
         $this->title = 'Arthur Assunção'; // titulo da pagina
@@ -277,7 +277,7 @@ class Pagina{
     /**
      * Inicia a captura do buffer de saida
      */
-    private function iniciaBuffer(){
+    private function iniciarBuffer(){
         if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], Pagina::$COMPRESS_GZIP)){
             ob_start('ob_gzhandler');
             return Pagina::$COMPRESS_GZIP;
@@ -291,22 +291,22 @@ class Pagina{
     /**
      * Finaliza a captura do buffer de saida
      */
-    private function finalizaBuffer(){
+    private function finalizarBuffer(){
         return ob_get_clean();
     }
 
     /**
      * Inicia a captura do conteudo da pagina
      */
-    public function iniciaConteudo() {
-        $this->compressao = $this->iniciaBuffer();
+    public function iniciarConteudo() {
+        $this->compressao = $this->iniciarBuffer();
     }
 
     /**
      * Finaliza a captura do conteudo da pagina
      */
-    public function finalizaConteudo() {
-        $this->conteudo = $this->finalizaBuffer();
+    public function finalizarConteudo() {
+        $this->conteudo = $this->finalizarBuffer();
     }
 
     /**
@@ -314,7 +314,7 @@ class Pagina{
      * @param string $conteudo com o conteudo que sera comprimido
      * @return string com o conteudo comprimido
      */
-    public static function comprimeHTML($conteudo) {
+    public static function comprimirHTML($conteudo) {
         $fileDirToRoot = $_SERVER['DOCUMENT_ROOT'];
         require($fileDirToRoot.'/min/lib/Minify/HTML.php');
         require($fileDirToRoot.'/min/lib/Minify/CommentPreserver.php');
@@ -338,15 +338,15 @@ class Pagina{
      * @return string com a pagina renderizada e comprimida
      */
     public function renderizar($template='template.php') {
-        $this->iniciaBuffer();
+        $this->iniciarBuffer();
         if($this->exibir_so_conteudo == false){
             include($template); //template html/php
         }
         else{
             echo $this->conteudo;
         }
-        $html = $this->finalizaBuffer();
-        return Pagina::comprimeHTML($html);
+        $html = $this->finalizarBuffer();
+        return Pagina::comprimirHTML($html);
     }
 
     /**

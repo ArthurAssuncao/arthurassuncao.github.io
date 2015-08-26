@@ -1,44 +1,35 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="<?php echo $this->lang ?>" prefix="og: http://ogp.me/ns#"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="<?php echo $this->lang ?>" prefix="og: http://ogp.me/ns#"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang="<?php echo $this->lang ?>" prefix="og: http://ogp.me/ns#"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="<?php echo $this->lang ?>" prefix="og: http://ogp.me/ns#"> <!--<![endif]-->
+<html lang="<?php echo $this->lang ?>" prefix="og: http://ogp.me/ns#">
 <?php
     // Header
     require('header.php');
 ?>
-    <body <?php echo $this->body_onload != '' ? "onload='{$this->body_onload}'" : '' ?>>
-        <div id="wrapper" class="container">
-            <div id="principal" class="clearfix">
-                <div class="github-fork-ribbon-wrapper right hidden-sm hidden-xs">
-                    <div class="github-fork-ribbon">
-                        <a href="https://github.com/ArthurAssuncao">Fork me on GitHub</a>
-                    </div>
-                </div>
+    <body id="top" class="scrollspy" <?php echo $this->body_onload != '' ? "onload='{$this->body_onload}'" : '' ?>>
+        <div id="wrapper">
+            <div id="principal">
 <?php
     // Menu
     require('menu.php');
-    require('carousel.php');
 ?>
-    <article id="conteudo" class="container">
+    <article id="conteudo">
 <?php
     // Conteudo
     echo $this->conteudo;
 ?>
                 <!-- /article container -->
                 </article>
-            <!-- /div principal -->
-            </div>
-        <!-- /div wrapper -->
-        </div>
+            
 <?php
     // Footer
     require('footer.php');
 ?>
+
+                <!-- /div principal -->
+            </div>
+        <!-- /div wrapper -->
+        </div>
     <!-- Scripts rodam mais rapidos e de forma melhor estando no fim da pagina -->
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/min/?f=/js/holder/holder.js,/js/util.js,/js/principal.js,/js/site.js"></script>
+    <script type="text/javascript" src="/min/?f=/js/plugin-min.js,/js/materialize.js,/js/custom-min.js,/js/myjs.js"></script>
 <?php 
     echo $this->createTagsJS($this->links_js_footer);
     echo $this->embedded_js_footer ? "<script type='text/javascript'>{$this->embedded_js_footer}</script>" : '';

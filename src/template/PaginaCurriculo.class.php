@@ -47,7 +47,7 @@ class PaginaCurriculo extends Pagina{
             $formacao .= "{$descricao}<br />\n";
         }
         if($cargaHoraria != ''){
-            $formacao .= "<span class='item_ultima_linha'>Carga Horária: {$cargaHoraria}</span>\n";
+            //$formacao .= "<span class='item_ultima_linha'>Carga Horária: {$cargaHoraria}</span>\n";
         }
         return $formacao;
     }
@@ -64,7 +64,23 @@ class PaginaCurriculo extends Pagina{
     }
 
     public static function createHabilidade($habilidade, $valor){
-        $skill = "<span class='skill_habilidade'>{$habilidade}</span><br /><span class='col-md-11 skill' data-tooltip='{$habilidade}'><span data-skillbar='{$valor}' class='skill_bar'></span></span>";
+        $nivel = "Iniciante"; //iniciante, intermediário, avançado, expert
+        if($valor >= 90){
+            $nivel = "Expert";
+        }
+        elseif ($valor >= 70) {
+            $nivel = "Avançado";
+        }
+        elseif ($valor >= 40) {
+            $nivel = "Intermediário";
+        }
+        $skill = "<span class='skill_name'>{$habilidade}</span>
+        <span class='skill_grade'>{$nivel}</span>
+        <br />
+        <span class='col-md-11 skill' data-tooltip='{$habilidade}' title='{$nivel}'>
+            <span data-skillbar='{$valor}' class='skill_bar'>
+            </span>
+        </span>";
         return $skill;
     }
 
@@ -73,6 +89,27 @@ class PaginaCurriculo extends Pagina{
         $projeto .= "<a href='{$link}' title='{$nome}'>{$link}</a><br />\n";
         $projeto .= "{$descricao}\n";
         return $projeto;
+    }
+
+    public static function createProducaoCientifica($titulo, $autores, $indice_eu, $evento, $sigla, $ano, $mes, $url){
+        $artigo = "<span class='curriculo_artigo'><span class='curriculo_artigo_titulo'><strong><a href='{$link}' title='{$titulo}'>{$titulo}</a></strong></span><br />\n";
+        $artigo .= "<span class='curriculo_artigo_autores'><em>";
+        for($i = 0; $i < count($autores); ++$i) {
+            $sep = ", ";
+            if($i == count($autores)-1){
+                $sep = "";
+            }
+            if($i == $indice_eu-1){
+                $artigo .= "<span class='curriculo_artigo_autor'><strong>{$autores[$i]}{$sep}</strong></span>";
+            }
+            else{
+                $artigo .= "<span class='curriculo_artigo_autor'>{$autores[$i]}{$sep}</span>";
+            }
+        }
+        $artigo .= "</em></span><br />";
+        $artigo .= "Em: {$evento}";
+        $artigo .= "</span>";
+        return $artigo;
     }
 }
 ?>

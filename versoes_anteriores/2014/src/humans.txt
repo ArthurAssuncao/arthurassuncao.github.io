@@ -1,0 +1,15 @@
+/* TEAM */
+	Developer: Arthur Assuncao
+	Github: https://github.com/arthurassuncao
+	Website: arthurassuncao.com
+	Blog: blog.arthurassuncao.com
+	From: Minas Gerais, Brazil
+		
+
+/* SITE */
+	Last update: 2014/02/19
+	Language: Brazilian Portuguese (PT-BR)
+	Doctype: HTML5
+	IDE/Softwares: Sublime Text, Notepad++, FileZilla, Photoshop
+	Standards: HTML5, CSS3
+	Components: Javascript, Jquery, Framework Bootstrap 3, Google Custom Search Engine, Jquery FeedEk, PHP, Minify library

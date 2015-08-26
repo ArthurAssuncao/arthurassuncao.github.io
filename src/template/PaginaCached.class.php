@@ -38,7 +38,7 @@ class PaginaCached extends Pagina {
      */
     public function renderizar($template='template.php') {
         if($this->exibir_so_conteudo == false){
-            $htmlRenderizado = $this->criaCache($template);
+            $htmlRenderizado = $this->criarCache($template);
         }
         else{
             $htmlRenderizado = parent::renderizar($template);
@@ -53,13 +53,13 @@ class PaginaCached extends Pagina {
      * @param string $template com o template que sera usado na renderizacao, valor padrao é template.php
      * @return string com a pagina renderizada que estava em cache ou que acabou de ir para o cache
      */
-    public function criaCache($template='template.php'){
+    public function criarCache($template='template.php'){
         $this->arquivoCache = new Minify_Cache_File($_SERVER['DOCUMENT_ROOT'].'/min/cache/');
-        $md5Arquivo = $this->geraCacheMd5();
-        $md5Template = $this->geraTemplateMd5();
-        $nomeCache = $this->geraNomeCache();
+        $md5Arquivo = $this->gerarCacheMd5();
+        $md5Template = $this->gerarTemplateMd5();
+        $nomeCache = $this->gerarNomeCache();
         $cachesAtual = glob($_SERVER['DOCUMENT_ROOT']."/min/cache/{$nomeCache}*");
-        $this->arquivoCacheId = $this->geraCacheId($md5Arquivo, $md5Template);
+        $this->arquivoCacheId = $this->gerarCacheId($md5Arquivo, $md5Template);
         $htmlRenderizado = null;
         if(count($cachesAtual) == 1){
             if(basename($cachesAtual[0]) == $this->arquivoCacheId){
@@ -81,7 +81,7 @@ class PaginaCached extends Pagina {
      * Gera o MD5 do arquivo da pagina
      * @return string com o MD5 do arquivo da pagina
      */
-    public function geraCacheFileMd5(){
+    public function gerarCacheFileMd5(){
         $md5Arquivo = md5_file($this->caminhoArquivo);
         return $md5Arquivo;
     }
@@ -90,7 +90,7 @@ class PaginaCached extends Pagina {
      * Gera o MD5 da data de modificacao do arquivo da pagina
      * @return string com o MD5 do arquivo da pagina
      */
-    public function geraCacheMd5(){
+    public function gerarCacheMd5(){
         $formatoData = "Y/m/d H:i:s"; //2013/12/31 23:50:00
         $md5Arquivo = md5(date($formatoData, filemtime($this->caminhoArquivo)));
         return $md5Arquivo;
@@ -100,7 +100,7 @@ class PaginaCached extends Pagina {
      * Gera o MD5 do template, ou seja, do arquivo template.php, header.php, menu.php e footer.php
      * @return string com o MD5 do template
      */
-    public function geraTemplateFilesMd5(){
+    public function gerarTemplateFilesMd5(){
         $md5Template = md5_file($_SERVER['DOCUMENT_ROOT'].'/template/template.php');
         $md5Header = md5_file($_SERVER['DOCUMENT_ROOT'].'/template/header.php');
         $md5Menu = md5_file($_SERVER['DOCUMENT_ROOT'].'/template/menu.php');
@@ -112,7 +112,7 @@ class PaginaCached extends Pagina {
      * Gera o MD5 do template, usando a data de modificacao dos arquivos template.php, header.php, menu.php e footer.php
      * @return string com o MD5 do template
      */
-    public function geraTemplateMd5(){
+    public function gerarTemplateMd5(){
         $formatoData = "Y/m/d H:i:s"; //2013/12/31 23:50:00
         $md5Template = md5(date($formatoData, filemtime($_SERVER['DOCUMENT_ROOT'].'/template/template.php')));
         $md5Header = md5(date($formatoData, filemtime($_SERVER['DOCUMENT_ROOT'].'/template/header.php')));
@@ -125,7 +125,7 @@ class PaginaCached extends Pagina {
      * Gera o nome do cache
      * @return string com o nome do cache
      */
-    public function geraNomeCache($prefixo='pagina'){
+    public function gerarNomeCache($prefixo='pagina'){
         //$nome = preg_replace('/[^a-zA-Z0-9\\.=_,]/', '', self::$_controller->selectionId);
         //$nome = preg_replace('/\\.+/', '.', $nome);
         $nome = basename($this->caminhoArquivo);
@@ -137,9 +137,9 @@ class PaginaCached extends Pagina {
      * Gera o id do cache, essa funcao usa o nome do cache e adiciona o md5 do arquivo com o md5 do template, este ultimo eh o md5 do arquivo template.php, header.php, menu.php e footer.php
      * @return string com o id do cache
      */
-    public function geraCacheId($md5Arquivo, $md5Template, $nome=''){
+    public function gerarCacheId($md5Arquivo, $md5Template, $nome=''){
         if(!$nome){
-            $nome = $this->geraNomeCache();
+            $nome = $this->gerarNomeCache();
         }
         return "{$nome}_{$md5Arquivo}_{$md5Template}";
     }
