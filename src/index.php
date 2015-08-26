@@ -95,7 +95,7 @@
             <?php
                 echo PaginaCurriculo::createProjetoPortfolio(
                     "uGuide Desk", 
-                    array("Repositorio do projeto","https://github.com/arthurassuncao/jump"), 
+                    array("Repositório do projeto","https://github.com/arthurassuncao/jump"), 
                     "http://fakeimg.pl/300x200/",
                     array("Participei da equipe de desenvolvimento da aplicação.",
                     "O projeto consistiu de um software informativo e interativo para acompanhamento de eventos e notícias do Festival de Inverno de Ouro Preto e Mariana de 2014 com interação com os usuários por meio do sensor Kinect.",
@@ -126,9 +126,19 @@
                 echo PaginaCurriculo::createProjetoPortfolio(
                     "Addmob.com.br", 
                     array("Addmob.com.br","https://www.addmob.com.br"), 
-                    "http://fakeimg.pl/300x200/",
+                    "/img/portfolio/addmob_com_br_300x200.jpg",
                     array("Participei do desenvolvimento do Website da empresa AddMob Integradora de Soluções Ltda.",
                     "Website desenvolvido em HTML5/CSS3 e Django, utilizando o framework Bootstrap 2.x e jQuery, com layout responsivo e captura de gestos (Hammer.js) para otimizar a experiência em dispositivos móveis."
+                    )
+                );
+            ?>
+            <?php
+                echo PaginaCurriculo::createProjetoPortfolio(
+                    "Android CepView", 
+                    array("Repositório do projeto","https://github.com/ArthurAssuncao/Android-CepView"), 
+                    "http://fakeimg.pl/300x200/",
+                    array("Android Cep View é um Android UI widget com os principais campos relacionados a endereço (CEP, endereço, número, complemento, bairro, cidade, estado), 
+                    fornece preenchimento automático dos dados com base no CEP (Código de Endereçamento Postal) informado.",
                     )
                 );
             ?>
@@ -172,7 +182,7 @@
                     </ul>
                 </div>
                 <!-- fim formacao -->
-                <hr />
+                <div class="divider"></div>
                 <!-- producao cientifica -->
                 <div id="curriculo_producao">
                     <h5>Produção Científica</h5>
@@ -258,6 +268,11 @@
                         <li>
                             <?php
                                 echo PaginaCurriculo::createHabilidade("SQL", "60");
+                            ?>
+                        </li>
+                        <li>
+                            <?php
+                                echo PaginaCurriculo::createHabilidade("Objective-C (Programação para iOS)", "20");
                             ?>
                         </li>
                     </ul>
