@@ -92,7 +92,7 @@ class PaginaCurriculo extends Pagina{
     }
 
     public static function createProducaoCientifica($titulo, $autores, $indice_eu, $evento, $sigla, $ano, $mes, $url){
-        $artigo = "<span class='curriculo_artigo'><span class='curriculo_artigo_titulo'><strong><a href='{$url}' title='{$titulo}'>{$titulo}</a></strong></span><br />\n";
+        $artigo = "<span class='curriculo_artigo'><span class='curriculo_artigo_titulo'><a href='{$url}' title='{$titulo}'><strong>{$titulo}</strong> <i class='fa fa-link'></i></a></span><br />\n";
         $artigo .= "<span class='curriculo_artigo_autores'><em>";
         for($i = 0; $i < count($autores); ++$i) {
             $sep = ", ";

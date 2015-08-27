@@ -44,6 +44,7 @@
     <link rel="icon" type="image/png" href="/apple-touch-icon.png" sizes="16x16">
 
     <link rel="stylesheet" type="text/css" href="/min/?f=/css/plugin-min.css,/css/custom-min.css,/css/animate.css,/css/mystyle.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <?php 
     echo $this->createTagsCSS($this->links_css);

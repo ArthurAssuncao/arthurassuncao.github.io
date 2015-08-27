@@ -20,10 +20,10 @@
             <h1 class="text_h center header cd-headline letters type">
                 <span>Hei, meu nome é Arthur e sou </span> 
                 <span class="cd-words-wrapper waiting">
-                    <b class="is-visible">mestrando em Ciência da Computação</b>
-                    <b>desenvolvedor de Apps Móveis</b>
-                    <b>desenvolvedor Web</b>
-                    <b>desenvolvedor de Sistemas</b>
+                    <b class="is-visible">Mestrando em Ciência da Computação</b>
+                    <b>Desenvolvedor de Apps Móveis</b>
+                    <b>Desenvolvedor Web</b>
+                    <b>Desenvolvedor de Sistemas</b>
                 </span>
             </h1>
         </div>
@@ -208,7 +208,7 @@
                 <!-- habilidades -->
             <div class="wow fadeInRight col s12 m5 l5 offset-m1 offset-l1">
                 <div id="curriculo_habilidades">
-                    <h5>Habilidades</h5>
+                    <!-- <h5>Habilidades</h5> -->
                     <ul class="list-unstyled">
                         <li>
                             <?php
@@ -277,13 +277,18 @@
                         </li>
                     </ul>
                     <div class="center-align btn_skills_more">
-                        <button class="btn waves-effect waves-light" id="btn_skills_more">
-                            Mais +
+                        <button class="btn-floating btn-large waves-effect waves-light" id="btn_skills_more">
+                            <i class="material-icons">add</i>
                         </button>
                     </div>
                 </div>
                 <!-- fim skills -->
             </div>
+            <!-- <div class="center-align btn_cv_download">
+                <a class="btn btn-default waves-effect waves-light" id="btn_cv_download" href="cv/arthur_assuncao_general_cv.pdf" target="_blank" download="Download PDF">
+                    <i class="material-icons right">cloud</i>Baixar Currículo
+                </a>
+            </div> -->
         </div>
     </div>
 </div>
