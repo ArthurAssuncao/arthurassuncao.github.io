@@ -73,7 +73,7 @@
                 echo PaginaCurriculo::createProjetoPortfolio(
                     "MaisVendas", 
                     array("MaisVendas na PlayStore", "https://play.google.com/store/apps/details?id=com.vendas"), 
-                    "http://fakeimg.pl/300x200/",
+                    "/img/portfolio/maisvendas_300x200.png",
                     array("Participei da programação para Android do app móvel e do Web Service em Django da empresa AddMob.",
                     "Foi feito o desenolvimento do app Android e Web Service em Django com banco de dados MySQL, uso de notação JSON para comunicação entre os sistemas e utilização de controle de versão Git para uma melhor manutenção do código e colaboração entre os membros da equipe.",
                     "O MaisVendas é um sistema para quem deseja ter seu catálogo de produtos e sua lista de clientes disponíveis ao toque da tela de seu tablet ou smartphone. É possível realizar vendas, consultar pedidos realizados, verificar o histórico de vendas através do gráfico iterativo e muito mais."
@@ -94,7 +94,7 @@
             ?>
             <?php
                 echo PaginaCurriculo::createProjetoPortfolio(
-                    "uGuide Desk", 
+                    "uGuide Desk 2014", 
                     array("Repositório do projeto","https://github.com/arthurassuncao/jump"), 
                     "http://fakeimg.pl/300x200/",
                     array("Participei da equipe de desenvolvimento da aplicação.",
@@ -107,7 +107,7 @@
                 echo PaginaCurriculo::createProjetoPortfolio(
                     "Chrome Extensions", 
                     array("Entensões na Chrome Store","https://chrome.google.com/webstore/search/adev?hl=pt-BR"), 
-                    "http://fakeimg.pl/300x200/",
+                    "/img/portfolio/chrome-web-store_300x200.png",
                     array("Desenvolvimento de extensões para o navegador Google Chrome:",
                     "<ul>
                     <li>
@@ -138,7 +138,7 @@
                     array("Repositório do projeto","https://github.com/ArthurAssuncao/Android-CepView"), 
                     "http://fakeimg.pl/300x200/",
                     array("Android Cep View é um Android UI widget com os principais campos relacionados a endereço (CEP, endereço, número, complemento, bairro, cidade, estado), 
-                    fornece preenchimento automático dos dados com base no CEP (Código de Endereçamento Postal) informado.",
+                    fornece preenchimento automático dos dados com base no CEP (Código de Endereçamento Postal) informado."
                     )
                 );
             ?>
@@ -151,7 +151,7 @@
     <div class="container">
         <h2 class="header text_b">Habilidades </h2>
         <div class="row">
-            <div class="col s12 m6 l6">
+            <div class="wow fadeInLeft col s12 m6 l6">
                 <div id="curriculo_formacao">
                     <h5>Formação</h5>
                     <ul id="lista_formacao" class="list-unstyled">
@@ -206,7 +206,7 @@
                 <!-- fim producao cientifica -->
             </div>
                 <!-- habilidades -->
-            <div class="col s12 m5 l5 offset-m1 offset-l1">
+            <div class="wow fadeInRight col s12 m5 l5 offset-m1 offset-l1">
                 <div id="curriculo_habilidades">
                     <h5>Habilidades</h5>
                     <ul class="list-unstyled">
@@ -295,8 +295,6 @@
 
 <?php
     $pagina->finalizarConteudo();
-    // $pagina->addJavascript('js/plugin-min.js"');
-    // $pagina->addJavascript('js/custom-min.js');
     $embedded_js_footer = "
         $(document).ready(function() {
             var hash = window.location.hash;

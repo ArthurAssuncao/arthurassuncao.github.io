@@ -29,7 +29,7 @@
         <!-- /div wrapper -->
         </div>
     <!-- Scripts rodam mais rapidos e de forma melhor estando no fim da pagina -->
-    <script type="text/javascript" src="/min/?f=/js/plugin-min.js,/js/materialize.js,/js/custom-min.js,/js/myjs.js"></script>
+    <script type="text/javascript" src="/min/?f=/js/plugin-min.js,/js/materialize.js,/js/custom-min.js,/js/wow.min.js,/js/myjs.js"></script>
 <?php 
     echo $this->createTagsJS($this->links_js_footer);
     echo $this->embedded_js_footer ? "<script type='text/javascript'>{$this->embedded_js_footer}</script>" : '';

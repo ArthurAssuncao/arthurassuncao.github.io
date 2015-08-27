@@ -92,7 +92,7 @@ class PaginaCurriculo extends Pagina{
     }
 
     public static function createProducaoCientifica($titulo, $autores, $indice_eu, $evento, $sigla, $ano, $mes, $url){
-        $artigo = "<span class='curriculo_artigo'><span class='curriculo_artigo_titulo'><strong><a href='{$link}' title='{$titulo}'>{$titulo}</a></strong></span><br />\n";
+        $artigo = "<span class='curriculo_artigo'><span class='curriculo_artigo_titulo'><strong><a href='{$url}' title='{$titulo}'>{$titulo}</a></strong></span><br />\n";
         $artigo .= "<span class='curriculo_artigo_autores'><em>";
         for($i = 0; $i < count($autores); ++$i) {
             $sep = ", ";
@@ -114,7 +114,7 @@ class PaginaCurriculo extends Pagina{
 
     public static function createProjetoPortfolio($titulo, $url, $img, $descricao){
         $descricao_formatada = implode("</p><p>", $descricao);
-        $item = "<div class='col s12 m4 l4'>
+        $item = "<div class='wow fadeInUp col s12 m4 l4'>
             <div class='card'>
                 <div class='card-image waves-effect waves-block waves-light'>
                     <img class='activator' src='{$img}'>

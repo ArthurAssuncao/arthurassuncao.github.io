@@ -3,9 +3,10 @@
 <footer id="contact" class="page-footer default_color scrollspy footer">
     <div class="container">  
         <div class="row">
-            <div class="col l8 s12">
+            <div class="center-align col l8 s12">
                 <form class="col s12" action="contact.php" method="post">
                     <div class="row">
+                        <h5 class="white-text">Contato</h5>
                         <div class="input-field col s6">
                             <i class="mdi-action-account-circle prefix white-text"></i>
                             <input id="icon_prefix" name="name" type="text" class="validate white-text">
@@ -21,7 +22,7 @@
                             <textarea id="icon_prefix2" name="message" class="materialize-textarea white-text"></textarea>
                             <label for="icon_prefix2" class="white-text">Mensagem</label>
                         </div>
-                        <div class="col offset-s7 s5">
+                        <div class="col s12">
                             <button class="btn waves-effect waves-light red darken-1" type="submit">Enviar
                                 <i class="mdi-content-send right white-text"></i>
                             </button>
@@ -31,7 +32,7 @@
             </div>
             <div class="col l3 s12" id="social">
                 <h5 class="white-text">Social</h5>
-                <ul>
+                <ul class="left-align">
                     <li>
                         <a class="white-text" href="https://www.facebook.com/arthurassuncao">
                             <i class="small fa fa-facebook-square white-text"></i> Facebook

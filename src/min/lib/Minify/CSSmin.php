@@ -1,20 +1,18 @@
 <?php
 /**
- * Class Minify_CSS  
+ * Class Minify_CSSmin
  * @package Minify
  */
 
 /**
- * Minify CSS
+ * Wrapper for CSSmin
  *
- * This class uses Minify_CSS_Compressor and Minify_CSS_UriRewriter to 
- * minify CSS and rewrite relative URIs.
+ * This class uses CSSmin and Minify_CSS_UriRewriter to minify CSS and rewrite relative URIs.
  * 
  * @package Minify
  * @author Stephen Clay <steve@mrclay.org>
- * @author http://code.google.com/u/1stvamp/ (Issue 64 patch)
  */
-class Minify_CSS {
+class Minify_CSSmin {
     
     /**
      * Minify a CSS string
@@ -23,12 +21,8 @@ class Minify_CSS {
      * 
      * @param array $options available options:
      * 
-     * 'preserveComments': (default true) multi-line comments that begin
-     * with "/*!" will be preserved with newlines before and after to
-     * enhance readability.
-     *
      * 'removeCharsets': (default true) remove all @charset at-rules
-     * 
+     *
      * 'prependRelativePath': (default null) if given, this string will be
      * prepended to all relative URIs in import/url declarations
      * 
@@ -58,7 +52,6 @@ class Minify_CSS {
         $options = array_merge(array(
             'compress' => true,
             'removeCharsets' => true,
-            'preserveComments' => true,
             'currentDir' => null,
             'docRoot' => $_SERVER['DOCUMENT_ROOT'],
             'prependRelativePath' => null,
@@ -69,15 +62,8 @@ class Minify_CSS {
             $css = preg_replace('/@charset[^;]+;\\s*/', '', $css);
         }
         if ($options['compress']) {
-            if (! $options['preserveComments']) {
-                $css = Minify_CSS_Compressor::process($css, $options);
-            } else {
-                $css = Minify_CommentPreserver::process(
-                    $css
-                    ,array('Minify_CSS_Compressor', 'process')
-                    ,array($options)
-                );
-            }
+            $obj = new CSSmin();
+            $css = $obj->run($css);
         }
         if (! $options['currentDir'] && ! $options['prependRelativePath']) {
             return $css;

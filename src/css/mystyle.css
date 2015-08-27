@@ -1,12 +1,32 @@
 footer .row{
     margin-bottom: 0;
 }
-.parallax{ z-index: 0; }
-.text_h{
-    font-size: 3.5em;
+.parallax{
+    z-index: 0;
 }
-.text_b{
-    font-size: 2.5em;
+@media only screen and (min-width: 0) {
+    .text_h{
+        font-size: 2.0em;
+    }
+    .text_b{
+        font-size: 1.5em;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .text_h{
+        font-size: 3.0em;
+    }
+    .text_b{
+        font-size: 2.0em;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .text_h{
+        font-size: 3.5em;
+    }
+    .text_b{
+        font-size: 2.5em;
+    }
 }
 #skills{
     text-align: justify;
@@ -63,11 +83,6 @@ li .skill{
 }
 #social a:hover{
     opacity: 1 !important;
-}
-.center-align {
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 .btn_skills_more{
     margin-top: 40px;

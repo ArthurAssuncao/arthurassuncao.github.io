@@ -52,7 +52,6 @@ $min_allowDebugFlag = false;
 //$min_cachePath = 'c:\\WINDOWS\\Temp';
 //$min_cachePath = '/tmp';
 //$min_cachePath = preg_replace('/^\\d+;/', '', session_save_path());
-
 /**
  * To use APC/Memcache/ZendPlatform for cache storage, require the class and
  * set $min_cachePath to an instance. Example below:
@@ -104,12 +103,6 @@ $min_serveOptions['bubbleCssImports'] = false;
  * querystring, maxAge will be set to one year. E.g. /min/f=hello.css&123456
  */
 $min_serveOptions['maxAge'] = 1800;
-
-
-/**
- * To use CSSmin (Túbal Martín's port of the YUI CSS compressor), uncomment the following line:
- */
-//$min_serveOptions['minifiers']['text/css'] = array('Minify_CSSmin', 'minify');
 
 
 /**

@@ -8,7 +8,7 @@ function fill_skills(){
 }
 
 function em_manutencao(){
-    Materialize.toast('O site está em manutenção, volte outro dia!!', 60000);
+    Materialize.toast('O site está em manutenção. Desculpe por qualquer erro :(', 60000);
 }
 
 function hide_skills_itens(){
@@ -16,12 +16,16 @@ function hide_skills_itens(){
 }
 
 function show_skills_itens(){
-    $("#curriculo_habilidades ul > li:gt(8)").show();
-    $("#btn_skills_more").hide();
+    $("#curriculo_habilidades ul > li:gt(8)").show(1000);
+    $("#btn_skills_more").hide(900);
 }
 
 function add_skills_more_event(){
     $("#btn_skills_more").on('click', show_skills_itens);
+}
+
+function iniciar_wow(){
+    new WOW().init();
 }
 
 $(document).ready(function(){
@@ -29,4 +33,5 @@ $(document).ready(function(){
     em_manutencao();
     hide_skills_itens();
     add_skills_more_event();
+    iniciar_wow();
 });
