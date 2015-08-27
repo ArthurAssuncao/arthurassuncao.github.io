@@ -74,7 +74,7 @@
                     "MaisVendas", 
                     array("MaisVendas na PlayStore", "https://play.google.com/store/apps/details?id=com.vendas"), 
                     "/img/portfolio/maisvendas_300x200.png",
-                    array("Participei da programação para Android do app móvel e do Web Service em Django da empresa AddMob.",
+                    array("Participei da programação do app móvel e do Web Service MaisVendas da empresa AddMob.",
                     "Foi feito o desenolvimento do app Android e Web Service em Django com banco de dados MySQL, uso de notação JSON para comunicação entre os sistemas e utilização de controle de versão Git para uma melhor manutenção do código e colaboração entre os membros da equipe.",
                     "O MaisVendas é um sistema para quem deseja ter seu catálogo de produtos e sua lista de clientes disponíveis ao toque da tela de seu tablet ou smartphone. É possível realizar vendas, consultar pedidos realizados, verificar o histórico de vendas através do gráfico iterativo e muito mais."
                     )
