@@ -93,10 +93,24 @@ li .skill{
 .card-reveal li p{
     margin-left: 8px;
 }
+.card a{
+    color: #2196F3;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    -ms-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+.card a:hover{
+    color: #9acffa;
+}
 .curriculo_artigo_titulo a i{
     opacity: 0.4;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
+    -moz-transition: color .3s ease;
+    -o-transition: color .3s ease;
+    -ms-transition: color .3s ease;
 }
 .curriculo_artigo_titulo a:hover i{
     opacity: 1;
