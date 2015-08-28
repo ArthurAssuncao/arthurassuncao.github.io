@@ -280,6 +280,7 @@ class Pagina{
     private function iniciarBuffer(){
         if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], Pagina::$COMPRESS_GZIP)){
             ob_start('ob_gzhandler');
+            //ob_start('sanitize_output');
             return Pagina::$COMPRESS_GZIP;
         }
         else{

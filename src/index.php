@@ -295,7 +295,7 @@
 
 <!--Parallax-->
 <div class="parallax-container">
-    <div class="parallax"><img src="img/ufop.jpg"></div>
+    <div class="parallax"><img src="img/ufop.jpg" alt="parallax image"></div>
 </div>
 
 <?php
