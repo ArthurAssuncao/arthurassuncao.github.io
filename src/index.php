@@ -29,119 +29,121 @@
         </div>
     </div>
     
+<div id="mywork" class="section scrollspy">
     <!--Intro and service-->
-<div id="intro" class="section scrollspy">
-    <div class="container">
-        <div class="row">
-            <!--
-            <div  class="col s12">
-                <h2 class="center header text_h2"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span class="span_h2"> Phasellus  </span>vestibulum lorem risus, nec suscipit lorem <span class="span_h2"> laoreet quis.</span> </h2>
-            </div>
-            -->
+    <div id="intro" class="section scrollspy">
+        <div class="container">
+            <div class="row">
+                <!--
+                <div  class="col s12">
+                    <h2 class="center header text_h2"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span class="span_h2"> Phasellus  </span>vestibulum lorem risus, nec suscipit lorem <span class="span_h2"> laoreet quis.</span> </h2>
+                </div>
+                -->
 
-            <div  class="col s12 m4 l4">
-                <div class="center promo promo-example">
-                    <i class="mdi-image-flash-on"></i>
-                    <h5 class="promo-caption">Acelere o desenvolvimento</h5>
-                    <p class="light center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+                <div  class="col s12 m4 l4">
+                    <div class="center promo promo-example">
+                        <i class="mdi-image-flash-on"></i>
+                        <h5 class="promo-caption">Acelere o desenvolvimento</h5>
+                        <p class="light center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col s12 m4 l4">
-                <div class="center promo promo-example">
-                    <i class="mdi-social-group"></i>
-                    <h5 class="promo-caption">Foco na experiência do usuário</h5>
-                    <p class="light center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                <div class="col s12 m4 l4">
+                    <div class="center promo promo-example">
+                        <i class="mdi-social-group"></i>
+                        <h5 class="promo-caption">Foco na experiência do usuário</h5>
+                        <p class="light center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col s12 m4 l4">
-                <div class="center promo promo-example">
-                    <i class="mdi-hardware-desktop-windows"></i>
-                    <h5 class="promo-caption">Totalmente responsivo</h5>
-                    <p class="light center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+                <div class="col s12 m4 l4">
+                    <div class="center promo promo-example">
+                        <i class="mdi-hardware-desktop-windows"></i>
+                        <h5 class="promo-caption">Totalmente responsivo</h5>
+                        <p class="light center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<!--Work-->
-<div class="section scrollspy" id="work">
-    <div class="container">
-        <h2 class="header text_b">Alguns projetos que participei </h2>
-        <div class="row">
-            <?php
-                echo PaginaCurriculo::createProjetoPortfolio(
-                    "MaisVendas", 
-                    array("MaisVendas na PlayStore", "https://play.google.com/store/apps/details?id=com.vendas"), 
-                    "/img/portfolio/maisvendas_300x200.png",
-                    array("Participei da programação do app móvel e do Web Service MaisVendas da empresa AddMob.",
-                    "Foi feito o desenolvimento do app Android e Web Service em Django com banco de dados MySQL, uso de notação JSON para comunicação entre os sistemas e utilização de controle de versão Git para uma melhor manutenção do código e colaboração entre os membros da equipe.",
-                    "O MaisVendas é um sistema para quem deseja ter seu catálogo de produtos e sua lista de clientes disponíveis ao toque da tela de seu tablet ou smartphone. É possível realizar vendas, consultar pedidos realizados, verificar o histórico de vendas através do gráfico iterativo e muito mais."
-                    )
-                );
-            ?>
-            <?php
-                echo PaginaCurriculo::createProjetoPortfolio(
-                    "JUMP!", 
-                    array("Repositorio do projeto","https://github.com/arthurassuncao/jump"), 
-                    "http://fakeimg.pl/300x200/",
-                    array("Participei da equipe de desenvolvimento do jogo JUMP (Jogo Unificado para Movimentação Projetada).",
-                    "O jogo permite que o jogador, em frente a uma webcam, controle, por meio de seus pulos, o personagem do jogo.",
-                    "Foram utilizados: linguagem Python com a biblioteca OpenCV e Node.js.",
-                    "Projeto foi apresentado na Semana Nacional de Ciência e Tecnologia (SNCT) de 2013 no IFSEMG - Câmpus Barbacena."
-                    )
-                );
-            ?>
-            <?php
-                echo PaginaCurriculo::createProjetoPortfolio(
-                    "uGuide Desk 2014", 
-                    array("Repositório do projeto","https://github.com/arthurassuncao/jump"), 
-                    "http://fakeimg.pl/300x200/",
-                    array("Participei da equipe de desenvolvimento da aplicação.",
-                    "O projeto consistiu de um software informativo e interativo para acompanhamento de eventos e notícias do Festival de Inverno de Ouro Preto e Mariana de 2014 com interação com os usuários por meio do sensor Kinect.",
-                    "Foram utilizadas linguagem C++ e interface gráfica Qt com comunicação com o Web Service via JSON."
-                    )
-                );
-            ?>
-            <?php
-                echo PaginaCurriculo::createProjetoPortfolio(
-                    "Chrome Extensions", 
-                    array("Entensões na Chrome Store","https://chrome.google.com/webstore/search/adev?hl=pt-BR"), 
-                    "/img/portfolio/chrome-web-store_300x200.png",
-                    array("Desenvolvimento de extensões para o navegador Google Chrome:",
-                    "<ul>
-                    <li>
-                        <a href='https://chrome.google.com/webstore/detail/hide-contact-from-faceboo/dldcnjjdfolnampaceecohfaolbefbhj'>Hide Contact From Facebook Chat List</a><br />
-                        <p>Esconde contatos da lista do chat do Facebook sem bloquear o contato. O contato continua te vendo na lista do chat dele como online, porém voce não o vê mais.</p>
-                    </li>
-                    <li>
-                        <a href='https://chrome.google.com/webstore/detail/wpp-web-customizer/lhaamjcmnafobcjjcjfpglfonpdkoedb'>Wpp web Customizador</a><br />
-                        <p>Modifica o fundo (background) do chat do Whatsapp™ Web.</p>
-                    </li>
-                    </ul>"
-                    )
-                );
-            ?>
-            <?php
-                echo PaginaCurriculo::createProjetoPortfolio(
-                    "Addmob.com.br", 
-                    array("Addmob.com.br","https://www.addmob.com.br"), 
-                    "/img/portfolio/addmob_com_br_300x200.jpg",
-                    array("Participei do desenvolvimento do Website da empresa AddMob Integradora de Soluções Ltda.",
-                    "Website desenvolvido em HTML5/CSS3 e Django, utilizando o framework Bootstrap 2.x e jQuery, com layout responsivo e captura de gestos (Hammer.js) para otimizar a experiência em dispositivos móveis."
-                    )
-                );
-            ?>
-            <?php
-                echo PaginaCurriculo::createProjetoPortfolio(
-                    "Android CepView", 
-                    array("Repositório do projeto","https://github.com/ArthurAssuncao/Android-CepView"), 
-                    "http://fakeimg.pl/300x200/",
-                    array("Android Cep View é um Android UI widget com os principais campos relacionados a endereço (CEP, endereço, número, complemento, bairro, cidade, estado), 
-                    fornece preenchimento automático dos dados com base no CEP (Código de Endereçamento Postal) informado."
-                    )
-                );
-            ?>
+    <!--Work-->
+    <div class="section scrollspy" id="work">
+        <div class="container">
+            <h2 class="header text_b">Alguns projetos que participei </h2>
+            <div class="row">
+                <?php
+                    echo PaginaCurriculo::createProjetoPortfolio(
+                        "MaisVendas", 
+                        array("MaisVendas na PlayStore", "https://play.google.com/store/apps/details?id=com.vendas"), 
+                        "/img/portfolio/maisvendas_300x200.png",
+                        array("Participei da programação do app móvel e do Web Service MaisVendas da empresa AddMob.",
+                        "Foi feito o desenolvimento do app Android e Web Service em Django com banco de dados MySQL, uso de notação JSON para comunicação entre os sistemas e utilização de controle de versão Git para uma melhor manutenção do código e colaboração entre os membros da equipe.",
+                        "O MaisVendas é um sistema para quem deseja ter seu catálogo de produtos e sua lista de clientes disponíveis ao toque da tela de seu tablet ou smartphone. É possível realizar vendas, consultar pedidos realizados, verificar o histórico de vendas através do gráfico iterativo e muito mais."
+                        )
+                    );
+                ?>
+                <?php
+                    echo PaginaCurriculo::createProjetoPortfolio(
+                        "JUMP!", 
+                        array("Repositorio do projeto","https://github.com/arthurassuncao/jump"), 
+                        "http://fakeimg.pl/300x200/",
+                        array("Participei da equipe de desenvolvimento do jogo JUMP (Jogo Unificado para Movimentação Projetada).",
+                        "O jogo permite que o jogador, em frente a uma webcam, controle, por meio de seus pulos, o personagem do jogo.",
+                        "Foram utilizados: linguagem Python com a biblioteca OpenCV e Node.js.",
+                        "Projeto foi apresentado na Semana Nacional de Ciência e Tecnologia (SNCT) de 2013 no IFSEMG - Câmpus Barbacena."
+                        )
+                    );
+                ?>
+                <?php
+                    echo PaginaCurriculo::createProjetoPortfolio(
+                        "uGuide Desk 2014", 
+                        array("Repositório do projeto","https://github.com/arthurassuncao/jump"), 
+                        "http://fakeimg.pl/300x200/",
+                        array("Participei da equipe de desenvolvimento da aplicação.",
+                        "O projeto consistiu de um software informativo e interativo para acompanhamento de eventos e notícias do Festival de Inverno de Ouro Preto e Mariana de 2014 com interação com os usuários por meio do sensor Kinect.",
+                        "Foram utilizadas linguagem C++ e interface gráfica Qt com comunicação com o Web Service via JSON."
+                        )
+                    );
+                ?>
+                <?php
+                    echo PaginaCurriculo::createProjetoPortfolio(
+                        "Chrome Extensions", 
+                        array("Entensões na Chrome Store","https://chrome.google.com/webstore/search/adev?hl=pt-BR"), 
+                        "/img/portfolio/chrome-web-store_300x200.png",
+                        array("Desenvolvimento de extensões para o navegador Google Chrome:",
+                        "<ul>
+                        <li>
+                            <a href='https://chrome.google.com/webstore/detail/hide-contact-from-faceboo/dldcnjjdfolnampaceecohfaolbefbhj'>Hide Contact From Facebook Chat List</a><br />
+                            <p>Esconde contatos da lista do chat do Facebook sem bloquear o contato. O contato continua te vendo na lista do chat dele como online, porém voce não o vê mais.</p>
+                        </li>
+                        <li>
+                            <a href='https://chrome.google.com/webstore/detail/wpp-web-customizer/lhaamjcmnafobcjjcjfpglfonpdkoedb'>Wpp web Customizador</a><br />
+                            <p>Modifica o fundo (background) do chat do Whatsapp™ Web.</p>
+                        </li>
+                        </ul>"
+                        )
+                    );
+                ?>
+                <?php
+                    echo PaginaCurriculo::createProjetoPortfolio(
+                        "Addmob.com.br", 
+                        array("Addmob.com.br","https://www.addmob.com.br"), 
+                        "/img/portfolio/addmob_com_br_300x200.jpg",
+                        array("Participei do desenvolvimento do Website da empresa AddMob Integradora de Soluções Ltda.",
+                        "Website desenvolvido em HTML5/CSS3 e Django, utilizando o framework Bootstrap 2.x e jQuery, com layout responsivo e captura de gestos (Hammer.js) para otimizar a experiência em dispositivos móveis."
+                        )
+                    );
+                ?>
+                <?php
+                    echo PaginaCurriculo::createProjetoPortfolio(
+                        "Android CepView", 
+                        array("Repositório do projeto","https://github.com/ArthurAssuncao/Android-CepView"), 
+                        "http://fakeimg.pl/300x200/",
+                        array("Android Cep View é um Android UI widget com os principais campos relacionados a endereço (CEP, endereço, número, complemento, bairro, cidade, estado), 
+                        fornece preenchimento automático dos dados com base no CEP (Código de Endereçamento Postal) informado."
+                        )
+                    );
+                ?>
+            </div>
         </div>
     </div>
 </div>
@@ -197,7 +199,7 @@
                                 "MobiWac", //sigla
                                 "2015", //ano
                                 "11", //mes
-                                "" //url
+                                "http://dx.doi.org/10.1145/2810362.2810378" //url
                             ); 
                             ?>
                         </li>
@@ -212,67 +214,93 @@
                     <ul class="list-unstyled">
                         <li>
                             <?php
-                                echo PaginaCurriculo::createHabilidade("Android", "70");
+                                echo PaginaCurriculo::createHabilidade("Android", "70", 
+                                    "Trabalhei por 1,25 ano e fiz um curso de Android, além de alguns projetos."
+                                );
                             ?>
                         </li>
                         <li>
                             <?php
-                                echo PaginaCurriculo::createHabilidade("Python", "60");
+                                echo PaginaCurriculo::createHabilidade("Python", "60", 
+                                    "Trabalhei por 1,25 ano, fiz um site e também um curso de Python, além de vários projetos, inclusive no mestrado."
+                                );
                             ?>
                         </li>
                         <li>
                             <?php
-                                echo PaginaCurriculo::createHabilidade("JavaScript/jQuery", "60");
+                                echo PaginaCurriculo::createHabilidade("JavaScript/jQuery", "60", 
+                                    "Trabalhei em alguns sites, extensões para o Chrome e projetos."
+                                );
                             ?>
                         </li>
                         <li>
                             <?php
-                                echo PaginaCurriculo::createHabilidade("R", "70");
+                                echo PaginaCurriculo::createHabilidade("R", "70", 
+                                    "Utilizo em projetos do mestrado."
+                                );
                             ?>
                         </li>
                         <li>
                             <?php
-                                echo PaginaCurriculo::createHabilidade("HTML5/CSS3", "70");
+                                echo PaginaCurriculo::createHabilidade("HTML5/CSS3", "70", 
+                                    "Trabalhei em alguns sites, extensões para o Chrome e alguns projetos."
+                                );
                             ?>
                         </li>
                         <li>
                             <?php
-                                echo PaginaCurriculo::createHabilidade("Twitter Bootstrap 2.x - 3.x", "70");
+                                echo PaginaCurriculo::createHabilidade("Twitter Bootstrap 2.x - 3.x", "70", 
+                                    "Trabalhei em alguns sites utilizando Bootstrap, extensões para o Chrome e projetos."
+                                );
                             ?>
                         </li>
                         <li>
                             <?php
-                                echo PaginaCurriculo::createHabilidade("Git (Controle de Versão)", "90");
+                                echo PaginaCurriculo::createHabilidade("Git (Controle de Versão)", "90", 
+                                    "Utilizo Git desde 2012 em boa parte dos projetos que participo, além de ter trabalhado por 1,25 ano e de utilizar no mestrado."
+                                );
                             ?>
                         </li>
                         <li>
                             <?php
-                                echo PaginaCurriculo::createHabilidade("Design Responsivo", "70");
+                                echo PaginaCurriculo::createHabilidade("Design Responsivo", "70", 
+                                    "Trabalhei em alguns sites com {$habilidade}."
+                                );
                             ?>
                         </li>
                         <li>
                             <?php
-                            echo PaginaCurriculo::createHabilidade("PHP", "40");
+                                echo PaginaCurriculo::createHabilidade("PHP", "40", 
+                                    "Trabalhei por alguns meses, além de criar este site e alguns projetos em PHP."
+                                );
                             ?>
                         </li>
                         <li>
                             <?php
-                                echo PaginaCurriculo::createHabilidade("Java", "50");
+                                echo PaginaCurriculo::createHabilidade("Java/Java Web", "50", 
+                                    "Trabalhei por alguns meses com Java Web e desenvolvi alguns projetos em Java."
+                                );
                             ?>
                         </li>
                         <li>
                             <?php
-                                echo PaginaCurriculo::createHabilidade("C++", "50");
+                                echo PaginaCurriculo::createHabilidade("C++", "50",
+                                    "Participei de projetos utilizando C++ e utilizei no mestrado."
+                                );
                             ?>
                         </li>
                         <li>
                             <?php
-                                echo PaginaCurriculo::createHabilidade("SQL", "60");
+                                echo PaginaCurriculo::createHabilidade("SQL", "60", 
+                                    "Trabalhei por 1,5 ano utilizando SQL, com o MySQL(1,25 ano) e Postgree(0,25 ano)."
+                                );
                             ?>
                         </li>
                         <li>
                             <?php
-                                echo PaginaCurriculo::createHabilidade("Objective-C (Programação para iOS)", "20");
+                                echo PaginaCurriculo::createHabilidade("Objective-C (Programação para iOS)", "20", 
+                                    "Aprendi no mestrado cursando uma disciplina de desenvolvimento móvel"
+                                );
                             ?>
                         </li>
                     </ul>

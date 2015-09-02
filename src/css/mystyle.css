@@ -106,8 +106,8 @@ li .skill{
 }
 .curriculo_artigo_titulo a i{
     opacity: 0.4;
-    -webkit-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
+    -webkit-transition: color .3s ease-in-out;
+    transition: color .3s ease-in-out;
     -moz-transition: color .3s ease;
     -o-transition: color .3s ease;
     -ms-transition: color .3s ease;
@@ -115,5 +115,66 @@ li .skill{
 .curriculo_artigo_titulo a:hover i{
     opacity: 1;
     color: #2196F3;
-    
+}
+.hyphens-auto {
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+/*mudar cor do form*/
+ /* label color */
+.input-field label {
+ color: #fff;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label, .input-field input[type=email]:focus + label, .input-field textarea:focus + label{
+ color: #fff;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus, .input-field input[type=email]:focus, .input-field textarea:focus{
+ border-bottom: 1px solid #fff;
+ box-shadow: 0 1px 0 0 #fff;
+}
+/* valid color */
+.input-field input[type=text].valid, .input-field input[type=email].valid, .input-field textarea.valid {
+ border-bottom: 1px solid #fff;
+ box-shadow: 0 1px 0 0 #fff;
+}
+/* invalid color */
+.input-field input[type=text].invalid, .input-field input[type=email].invalid, .input-field textarea.invalid {
+ border-bottom: 1px solid #fff;
+ box-shadow: 0 1px 0 0 #fff;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+ color: #fff;
+}
+.menu_left_side {
+    float: left;
+    position: fixed;
+    z-index: 1000;
+    color: lightgray;
+}
+.menu_left_side li.active{
+    color: darkgray;
+}
+.microtiny{
+    font-size: 0.7rem !important;
+    vertical-align: top;
+    color: gray;
+}
+.vertical-text {
+    writing-mode:tb-lr;
+    -ms-writing-mode: tb-lr; /* old syntax. IE */
+    -webkit-writing-mode: vertical-lr;
+    -moz-writing-mode: vertical-lr;
+    -ms-writing-mode: vertical-lr;
+    writing-mode: vertical-lr; /* new syntax */
+    -webkit-transform:rotate(180deg);
+    -moz-transform:rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform:rotate(180deg);
+    transform: rotate(180deg);
+    margin-bottom: 20px;
 }

@@ -63,7 +63,7 @@ class PaginaCurriculo extends Pagina{
         return $evento;
     }
 
-    public static function createHabilidade($habilidade, $valor){
+    public static function createHabilidade($habilidade, $valor, $descricao=null){
         $nivel = "Iniciante"; //iniciante, intermediário, avançado, expert
         if($valor >= 90){
             $nivel = "Expert";
@@ -74,11 +74,21 @@ class PaginaCurriculo extends Pagina{
         elseif ($valor >= 40) {
             $nivel = "Intermediário";
         }
-        $skill = "<span class='skill_name'>{$habilidade}</span>
-        <span class='skill_grade'>{$nivel}</span>
-        <br />
-        <span class='col-md-11 skill' data-tooltip='{$habilidade}' title='{$nivel}'>
-            <span data-skillbar='{$valor}' class='skill_bar'>
+        $tooltip = " tooltipped' data-position='bottom' data-delay='50' data-tooltip='{$habilidade}: {$descricao}'";
+        $icone_info = " <i class='tiny microtiny material-icons'>info_outline</i>";
+        if($descricao == null){
+            $descricao = $valor;
+            $tooltip = "'";
+            $icone_info = "";
+        }
+        $skill = "
+        <span class='myskill{$tooltip}>
+            <span class='skill_name'>{$habilidade}{$icone_info}</span>
+            <span class='skill_grade'>{$nivel}</span>
+            <br />
+            <span class='col-md-11 skill' data-tooltip='{$habilidade}' title='{$nivel}'>
+                <span data-skillbar='{$valor}' class='skill_bar'>
+                </span>
             </span>
         </span>";
         return $skill;

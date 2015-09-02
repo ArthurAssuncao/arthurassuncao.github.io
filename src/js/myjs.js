@@ -28,10 +28,31 @@ function iniciar_wow(){
     new WOW().init();
 }
 
+function onScrollMenu(event){
+    var scrollPos = $(document).scrollTop();
+    $('#nav_f li').each(function() {
+        var currLi = $(this);
+        var currLink = $(this).find(">a:first-child");
+        var refElement = $(currLink.attr("href"));
+        var menuSide = $('.menu_left_side li[data-href="' + currLink.attr("href") + '"]');
+        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            $('#nav_f ul li').removeClass("active");
+            $('.menu_left_side ul li').removeClass("active");
+            currLi.addClass("active");
+            menuSide.addClass("active");
+        }
+        else{
+            currLi.removeClass("active");
+            menuSide.removeClass("active");
+        }
+    });
+}
+
 $(document).ready(function(){
     fill_skills();
     em_manutencao();
     hide_skills_itens();
     add_skills_more_event();
     iniciar_wow();
+    $(document).on("scroll", onScrollMenu);
 });
