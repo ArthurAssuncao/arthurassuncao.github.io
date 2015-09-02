@@ -34,10 +34,3 @@
         </div>
     </nav>
 </div>
-<div class="menu_left_side hide-on-med-and-up">
-    <ul>
-        <li class="vertical-text" data-href="#mywork">Meu Trabalho</li>
-        <li class="vertical-text" data-href="#skills">Habilidades</li>
-        <li class="vertical-text" data-href="#contact">Contato</li>
-    </ul>
-</div>

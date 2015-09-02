@@ -155,9 +155,14 @@ li .skill{
     position: fixed;
     z-index: 1000;
     color: lightgray;
+    top: 100px;
+    vertical-align: middle;
+}
+.menu_left_side ul:not(:first-child) {
+    margin-top: 20px;
 }
 .menu_left_side li.active{
-    color: darkgray;
+    color: black;
 }
 .microtiny{
     font-size: 0.7rem !important;
@@ -176,5 +181,5 @@ li .skill{
     -o-transform: rotate(180deg);
     -ms-transform:rotate(180deg);
     transform: rotate(180deg);
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
 }

@@ -43,7 +43,8 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" href="/apple-touch-icon.png" sizes="16x16">
 
-    <link rel="stylesheet" type="text/css" href="/min/?f=/css/gmail-scrollbars.css,/css/plugin-min.css,/css/custom-min.css,/css/animate.css,/css/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="/min/?f=/css/gmail-scrollbars.css,/css/plugin-min.css,/css/custom-min.css,/css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="/css/mystyle.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="http://fonts.googleapis.com/css?family=Roboto:500,400italic,100,700italic,300,700,500italic,100italic,300italic,400" rel="stylesheet" type="text/css">
 
