@@ -264,7 +264,7 @@
                         <li>
                             <?php
                                 echo PaginaCurriculo::createHabilidade("Design Responsivo", "70", 
-                                    "Trabalhei em alguns sites com {$habilidade}."
+                                    "Trabalhei em alguns sites com Design Responsivo."
                                 );
                             ?>
                         </li>
