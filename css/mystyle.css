@@ -11,14 +11,23 @@
     .contact-email{
         clear: left;
     }
+    #social{
+        text-align: center;
+    }
     #social li{
         float: left;
         margin-right: 10px;
         width: 70px;
+        text-align: center;
     }
     #social li i{
         width: 100%;
         text-align: center;
+    }
+}
+@media only screen and (min-width: 481px) {
+    #social{
+        text-align: left;
     }
 }
 @media only screen and (min-width: 992px) {
@@ -34,10 +43,14 @@
     .contact-email{
         clear: none;
     }
+    #social{
+        text-align: left;
+    }
     #social li{
         float: none;
         margin-right: 10px;
         width: auto;
+        text-align: left;
     }
     #social li i{
         width: auto;
@@ -57,10 +70,14 @@
     .contact-email{
         clear: none;
     }
+    #social{
+        text-align: left;
+    }
     #social li{
         float: none;
         margin-right: 0px;
         width: auto;
+        text-align: left;
     }
     #social li i{
         width: auto;
