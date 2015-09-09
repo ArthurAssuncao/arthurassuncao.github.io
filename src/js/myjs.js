@@ -20,8 +20,36 @@ function show_skills_itens(){
     $("#btn_skills_more").hide(900);
 }
 
-function add_skills_more_event(){
-    $("#btn_skills_more").on('click', show_skills_itens);
+// function add_skills_more_event(){
+//     $("#btn_skills_more").on('click', show_skills_itens);
+// }
+
+function hide_prod_cientifica_itens(){
+    $("#curriculo_producao ul > li:gt(0)").hide(); 
+}
+
+function show_prod_cientifica_itens(){
+    $("#curriculo_producao ul > li:gt(0)").show(1000);
+    $("#btn_prod_cientifica_more").hide(900);
+}
+
+// function add_prod_cientifica_more_event(){
+//     $("#btn_prod_cientifica_more").on('click', show_prod_cientifica_itens);
+// }
+
+function show_habilidades_itens(){
+    show_skills_itens();
+    show_prod_cientifica_itens();
+    $("#btn_habilidades_more").hide(900);
+}
+
+function hide_habilidades_itens(){
+    hide_skills_itens();
+    hide_prod_cientifica_itens();
+}
+
+function add_habilidades_more_event(){
+    $("#btn_habilidades_more").on('click', show_habilidades_itens);
 }
 
 function iniciar_wow(){
@@ -29,7 +57,8 @@ function iniciar_wow(){
 }
 
 function onScrollMenu(event){
-    var scrollPos = $(document).scrollTop();
+    var navbarHeight = $("#nav_f").height();
+    var scrollPos = $(document).scrollTop() + navbarHeight;
     $('#nav_f li').each(function() {
         var currLi = $(this);
         var currLink = $(this).find(">a:first-child");
@@ -51,8 +80,8 @@ function onScrollMenu(event){
 $(document).ready(function(){
     fill_skills();
     em_manutencao();
-    hide_skills_itens();
-    add_skills_more_event();
+    hide_habilidades_itens();
+    add_habilidades_more_event();
     iniciar_wow();
     $(document).on("scroll", onScrollMenu);
 });

@@ -195,7 +195,7 @@
                                 "Methodology to Events Identification in Vehicles Using Statistical Process Control on Steering Wheel Data", //titulo
                                 array("Arthur N. Assuncao", "Fabio O. de Paula", "Ricardo A. R. Oliveira"), //autores
                                 1,
-                                "The 13th ACM International Symposium on Mobility Management and Wireless Access (MobiWac 2015)", //evento
+                                "The 13th ACM International Symposium on Mobility Management and Wireless Access (MobiWac)", //evento
                                 "MobiWac", //sigla
                                 "2015", //ano
                                 "11", //mes
@@ -203,7 +203,40 @@
                             ); 
                             ?>
                         </li>
+                        <li class='curriculo_item'>
+                            <?php 
+                            echo PaginaCurriculo::createProducaoCientifica(
+                                "KITT - Sistema de Carro Inteligente com Apoio à Segurança do Motorista", //titulo
+                                array("Arthur N. Assuncao", "Ricardo Camara", "Luiz Janeiro", "Rafael Vitor", "Fabio O. de Paula", "Ricardo A. R. Oliveira"), //autores
+                                1,
+                                "V Simpósio Brasileiro de Engenharia de Sistemas Computacionais (SBESC)", //evento
+                                "SBESC", //sigla
+                                "2015", //ano
+                                "11", //mes
+                                "" //url
+                            ); 
+                            ?>
+                        </li>
+                        <li class='curriculo_item'>
+                            <?php 
+                            echo PaginaCurriculo::createProducaoCientifica(
+                                "Metodologia para Detecção de Saída de Faixa Utilizando EWMA Aplicado a Sensores Inerciais no Volante", //titulo
+                                array("Arthur N. Assuncao", "Fabio O. de Paula", "Ricardo A. R. Oliveira"), //autores
+                                1,
+                                "V Simpósio Brasileiro de Engenharia de Sistemas Computacionais (SBESC)", //evento
+                                "SBESC", //sigla
+                                "2015", //ano
+                                "11", //mes
+                                "" //url
+                            ); 
+                            ?>
+                        </li>
                     </ul>
+                    <!-- <div class="center-align btn_prod_cientifica_more">
+                        <button class="btn-floating btn-large waves-effect waves-light" id="btn_prod_cientifica_more">
+                            <i class="material-icons">add</i>
+                        </button>
+                    </div> -->
                 </div>
                 <!-- fim producao cientifica -->
             </div>
@@ -304,19 +337,19 @@
                             ?>
                         </li>
                     </ul>
-                    <div class="center-align btn_skills_more">
+                    <!-- <div class="center-align btn_skills_more">
                         <button class="btn-floating btn-large waves-effect waves-light" id="btn_skills_more">
                             <i class="material-icons">add</i>
                         </button>
-                    </div>
+                    </div> -->
                 </div>
                 <!-- fim skills -->
             </div>
-            <!-- <div class="center-align btn_cv_download">
-                <a class="btn btn-default waves-effect waves-light" id="btn_cv_download" href="cv/arthur_assuncao_general_cv.pdf" target="_blank" download="Download PDF">
-                    <i class="material-icons right">cloud</i>Baixar Currículo
-                </a>
-            </div> -->
+            <div class="col s12 m12 l12 center-align btn_habilidades_more">
+                <button class="btn-floating btn-large waves-effect waves-light" id="btn_habilidades_more">
+                    <i class="material-icons">add</i>
+                </button>
+            </div>
         </div>
     </div>
 </div>

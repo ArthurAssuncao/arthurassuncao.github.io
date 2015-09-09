@@ -117,7 +117,7 @@ class PaginaCurriculo extends Pagina{
             }
         }
         $artigo .= "</em></span><br />";
-        $artigo .= "Em: {$evento}";
+        $artigo .= "Em: {$evento}, {$ano}";
         $artigo .= "</span>";
         return $artigo;
     }
