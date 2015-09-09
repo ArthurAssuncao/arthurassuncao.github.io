@@ -8,7 +8,7 @@
     #social a, #social a:visited{
         opacity: 1 !important;
     }
-    .contact-name{
+    .contact-email{
         clear: left;
     }
     #social li{
@@ -31,7 +31,7 @@
     #social a, #social a:visited{
         opacity: 0.8 !important;
     }
-    .contact-name{
+    .contact-email{
         clear: none;
     }
     #social li{
@@ -54,7 +54,7 @@
     #social a, #social a:visited{
         opacity: 0.8 !important;
     }
-    .contact-name{
+    .contact-email{
         clear: none;
     }
     #social li{
