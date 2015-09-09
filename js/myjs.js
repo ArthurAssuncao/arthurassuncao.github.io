@@ -78,8 +78,8 @@ function onScrollMenu(event){
 }
 
 $(document).ready(function(){
-    fill_skills();
     em_manutencao();
+    fill_skills();
     hide_habilidades_itens();
     add_habilidades_more_event();
     iniciar_wow();

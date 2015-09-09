@@ -5,6 +5,21 @@
     .text_b{
         font-size: 1.5em;
     }
+    #social a, #social a:visited{
+        opacity: 1 !important;
+    }
+    .contact-name{
+        clear: left;
+    }
+    #social li{
+        float: left;
+        margin-right: 10px;
+        width: 70px;
+    }
+    #social li i{
+        width: 100%;
+        text-align: center;
+    }
 }
 @media only screen and (min-width: 992px) {
     .text_h{
@@ -13,6 +28,21 @@
     .text_b{
         font-size: 2.0em;
     }
+    #social a, #social a:visited{
+        opacity: 0.8 !important;
+    }
+    .contact-name{
+        clear: none;
+    }
+    #social li{
+        float: none;
+        margin-right: 10px;
+        width: auto;
+    }
+    #social li i{
+        width: auto;
+        text-align: left;
+    }
 }
 @media only screen and (min-width: 1200px) {
     .text_h{
@@ -20,6 +50,21 @@
     }
     .text_b{
         font-size: 2.5em;
+    }
+    #social a, #social a:visited{
+        opacity: 0.8 !important;
+    }
+    .contact-name{
+        clear: none;
+    }
+    #social li{
+        float: none;
+        margin-right: 0px;
+        width: auto;
+    }
+    #social li i{
+        width: auto;
+        text-align: left;
     }
 }
 footer .row{
@@ -77,9 +122,6 @@ li .skill{
     background: #48b4ea;
     position: absolute;
     box-shadow: 0px 0px 10px 2px rgba(118, 199, 239, 0.4);
-}
-#social a, #social a:visited{
-    opacity: 0.8 !important;
 }
 #social a:hover{
     opacity: 1 !important;
