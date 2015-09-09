@@ -6,6 +6,7 @@
 #
 #
 User-agent: *
+Disallow: /versoes_anteriores/
 Disallow: /erro/
 Disallow: /template/
 Disallow: /teste/
