@@ -17,7 +17,7 @@ function hide_skills_itens(){
 
 function show_skills_itens(){
     $("#curriculo_habilidades ul > li:gt(8)").show(1000);
-    $("#btn_skills_more").hide(900);
+    // $("#btn_skills_more").hide(900);
 }
 
 // function add_skills_more_event(){
@@ -30,7 +30,7 @@ function hide_prod_cientifica_itens(){
 
 function show_prod_cientifica_itens(){
     $("#curriculo_producao ul > li:gt(0)").show(1000);
-    $("#btn_prod_cientifica_more").hide(900);
+    // $("#btn_prod_cientifica_more").hide(900);
 }
 
 // function add_prod_cientifica_more_event(){
