@@ -1,0 +1,15 @@
+/* TEAM */
+	Developer: Arthur Assuncao
+	Github: https://github.com/arthurassuncao
+	Website: http://arthurassuncao.com
+	LinkedIn: https://www.linkedin.com/in/arthurassuncao
+	From: Minas Gerais, Brazil
+		
+
+/* SITE */
+	Last update: 2015/08/26
+	Language: Brazilian Portuguese (PT-BR)
+	Doctype: HTML5
+	IDE/Softwares: Sublime Text, FileZilla, Gimp
+	Standards: HTML5, CSS3
+	Components: JavaScript, Jquery, Material Design One Page HTML Template, Materialize, PHP, Minify library

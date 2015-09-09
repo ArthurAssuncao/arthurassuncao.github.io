@@ -7,9 +7,9 @@
 		
 
 /* SITE */
-	Last update: 2015/08/26
+	Last update: 2015/09/09
 	Language: Brazilian Portuguese (PT-BR)
 	Doctype: HTML5
-	IDE/Softwares: Sublime Text, FileZilla, Gimp
+	IDE/Softwares: Sublime Text, Gimp
 	Standards: HTML5, CSS3
-	Components: JavaScript, Jquery, Material Design One Page HTML Template, Materialize, PHP, Minify library
+	Components: JavaScript, Jquery, Material Design One Page HTML Template, Materialize
