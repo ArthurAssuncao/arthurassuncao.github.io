@@ -54,6 +54,13 @@ function add_habilidades_more_event(){
 
 function iniciar_wow(){
     new WOW().init();
+    new WOW({
+        boxClass:     'wow-nonmobile',      // default
+        animateClass: 'animated', // default
+        offset:       0,          // default
+        mobile:       false,       // default
+        live:         true        // default
+    }).init(); //wow-nonmobile
 }
 
 function onScrollMenu(event){
