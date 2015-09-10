@@ -220,7 +220,7 @@ li .skill{
     vertical-align: middle;
 }
 .menu_left_side ul li:nth-child(n+2){
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .menu_left_side li.active{
     color: black;
