@@ -87,6 +87,9 @@
 footer .row{
     margin-bottom: 0;
 }
+.footer{
+    background-color: #212121 !important;
+}
 .parallax{
     z-index: 0;
 }
@@ -243,4 +246,13 @@ li .skill{
     -ms-transform:rotate(180deg);
     transform: rotate(180deg);
     /*margin-bottom: 20px;*/
+}
+a:hover .fa-facebook-square{
+    color: #3b5998 !important;
+}
+a:hover .fa-github-square{
+    color: #333 !important;
+}
+a:hover .fa-linkedin-square{
+    color: #007bb5 !important;
 }
