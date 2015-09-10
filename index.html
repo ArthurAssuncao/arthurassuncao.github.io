@@ -16,7 +16,7 @@
       <meta property="og:locale" content="pt_BR" />
       <meta property="og:title" content="Arthur Assunção - Desenvolvedor"/>
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="http://192.168.0.70/index.php"/>
+      <meta property="og:url" content="http://arthurassuncao.com"/>
       <meta property="og:image" content="http://arthurassuncao.com/assets/img/me256x256.png">
       <meta content="Arthur Assunção" property="og:site_name"/>
       <meta property="og:description" content="Arthur Assunção - Desenvolvedor de sistemas">
@@ -492,19 +492,22 @@
                            </div>
                         </form>
                      </div>
-                     <div class="col l3 s12" id="social">
+                     <div class="col l3 s12" id="social" itemscope="" itemtype="http://schema.org/Person">
+                        <link itemprop="url" href="http://arthurassuncao.com/">
+                        <description itemprop="description" href="Arthur Assuncao - Desenvolvedor de sistemas."></description>
+                        <img itemprop="image" href="http://arthurassuncao.com/assets/img/me256x256.png">
                         <h5 class="white-text">Social</h5>
                         <ul class="left-align">
                            <li>
-                              <a class="white-text" href="https://www.facebook.com/arthurassuncao">
+                              <a class="white-text" itemprop="sameAs" href="https://www.facebook.com/arthurassuncao">
                               <i class="small fa fa-facebook-square white-text"></i> <span>Facebook</span> </a>
                            </li>
                            <li>
-                              <a class="white-text" href="https://github.com/arthurassuncao">
+                              <a class="white-text" itemprop="sameAs" href="https://github.com/arthurassuncao">
                               <i class="small fa fa-github-square white-text"></i> <span>Github</span> </a>
                            </li>
                            <li>
-                              <a class="white-text" href="https://www.linkedin.com/in/arthurassuncao">
+                              <a class="white-text" itemprop="sameAs" href="https://www.linkedin.com/in/arthurassuncao">
                               <i class="small fa fa-linkedin-square white-text"></i> <span>LinkedIn</span> </a>
                            </li>
                         </ul>
@@ -522,6 +525,21 @@
       <script type="text/javascript" src="assets/js/materialize.js"></script>
       <script type="text/javascript" src="assets/js/custom-min.js"></script>
       <script type="text/javascript" src="assets/js/wow.min.js"></script>
-      <script type="text/javascript" src="assets/js/myjs.js"></script> 
+      <script type="text/javascript" src="assets/js/myjs.js"></script>
+      <script type="application/ld+json">{
+          "@context" : "http://schema.org",
+          "@type" : "Person",
+          "name" : "Arthur Nascimento Assuncao",
+          "url": "http://arthurassuncao.com/",
+          "description": "Arthur Assuncao - Desenvolvedor de sistemas.",
+          "image": "http://arthurassuncao.com/assets/img/me256x256.png",
+          "jobTitle": "Master's Degree student (Computer Science)",
+          "affiliation": "University of Ouro Preto",
+          "sameAs" : [
+              "https://www.facebook.com/arthurassuncao",
+              "https://www.linkedin.com/in/arthurassuncao",
+              "https://github.com/arthurassuncao"
+          ]
+      }</script>
    </body>
 </html>
