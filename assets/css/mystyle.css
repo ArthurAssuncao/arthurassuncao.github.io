@@ -256,3 +256,11 @@ a:hover .fa-github-square{
 a:hover .fa-linkedin-square{
     color: #007bb5 !important;
 }
+.footer-copyright{
+     line-height: 20px;
+}
+#nav_f.nav_shadow{
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
+    -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0,0,0,0.12) !important;
+}

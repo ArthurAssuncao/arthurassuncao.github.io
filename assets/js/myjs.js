@@ -82,6 +82,19 @@ function onScrollMenu(event){
             menuSide.removeClass("active");
         }
     });
+    var has_item_active = false;
+    $('#nav_f li').each(function() {
+        var currLi = $(this);
+        if(currLi.hasClass("active")){
+            has_item_active = true;
+        }
+    });
+    if(has_item_active){
+        $("#nav_f").addClass("nav_shadow");
+    }
+    else{
+        $("#nav_f").removeClass("nav_shadow");
+    }
 }
 
 $(document).ready(function(){
