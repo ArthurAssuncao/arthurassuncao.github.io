@@ -211,13 +211,15 @@ li .skill{
 }
 .menu_left_side {
     float: left;
+    height: 100px;
+    vertical-align: middle;
     position: fixed;
     z-index: 1000;
     color: lightgray;
     top: 100px;
     vertical-align: middle;
 }
-.menu_left_side ul:not(:first-child) {
+.menu_left_side ul li:nth-child(n+2){
     margin-top: 20px;
 }
 .menu_left_side li.active{
