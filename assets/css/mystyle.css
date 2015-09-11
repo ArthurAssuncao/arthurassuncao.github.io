@@ -316,8 +316,8 @@ a:hover .fa-lattes-square{
 }
 .fa-lattes-square{
     background: url(../img/icon_lattes.png) no-repeat;
-    width: 26px;
-    height: 26px;
+    width: 24px;
+    height: 24px;
     -webkit-transition: background .1s ease-in-out;
     transition: background .1s ease-in-out;
     -moz-transition: background .1s ease;
