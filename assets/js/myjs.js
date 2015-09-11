@@ -115,7 +115,7 @@ function add_contact_form_click() {
     $('#form-submit').click(function(e){
         e.preventDefault();
         $.ajax({
-            url: "http://formspree.io/arthur@arthurassuncao.com", 
+            url: "//formspree.io/arthur@arthurassuncao.com", 
             method: "POST",
             data: {
                 message: $('#form-message').val(),
