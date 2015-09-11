@@ -291,3 +291,18 @@ a:hover .fa-linkedin-square{
     float: none;
     margin: 0 auto;
 }
+.form-hidden-fields{
+    display: none;
+    visibility: hidden;
+}
+.form-result-ok,
+.form-result-error {
+    /*position: absolute;*/
+    top: 0;
+    display: none;
+}
+.form-result-ok h5,
+.form-result-error h5 {
+    color: #F5F5F5;
+    opacity: 0.5;
+}

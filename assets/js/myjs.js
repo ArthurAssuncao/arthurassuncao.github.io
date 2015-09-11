@@ -63,7 +63,7 @@ function iniciar_wow(){
     }).init(); //wow-nonmobile
 }
 
-function onScrollMenu(event){
+function on_scroll_menu(event){
     var navbarHeight = $("#nav_f").height();
     var scrollPos = $(document).scrollTop() + navbarHeight;
     $('#nav_f li').each(function() {
@@ -97,11 +97,48 @@ function onScrollMenu(event){
     }
 }
 
+function msg_send(success){
+    if (success) {
+        $('#form-contact').addClass('animated fadeOutRight', function(){
+            $(this).hide();
+        });
+        $('.form-result-ok').show().addClass('animated fadeInLeft');
+    }else{
+        $('#form-contact').addClass('animated fadeOutLeft', function(){
+            $(this).hide();
+        });
+        $('.form-result-error').show().addClass('animated fadeInRight');
+    };
+}
+
+function add_contact_form_click() {
+    $('#form-submit').click(function(e){
+        e.preventDefault();
+        $.ajax({
+            url: "http://formspree.io/arthur@arthurassuncao.com", 
+            method: "POST",
+            data: {
+                message: $('#form-message').val(),
+                _replyto: $('#form-email').val(),
+                name: $('#form-name').val()},
+            dataType: "json",
+            success: function(data) {
+                msg_send(true);
+            },
+            error: function(data) {
+                msg_send(false);
+            }
+        });
+    });
+}
+
 $(document).ready(function(){
     em_manutencao();
     fill_skills();
     hide_habilidades_itens();
     add_habilidades_more_event();
     iniciar_wow();
-    $(document).on("scroll", onScrollMenu);
+    // add_contact_form_click();
+    $(document).on("scroll", on_scroll_menu);
 });
+
