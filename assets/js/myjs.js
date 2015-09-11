@@ -99,16 +99,19 @@ function on_scroll_menu(event){
 
 function msg_send(success){
     if (success) {
-        $('#form-contact').addClass('animated fadeOutRight', function(){
-            $(this).hide();
-        });
+        $('#form-contact').addClass('animated fadeOutRight');
+        $('#form-contact').hide(500);
         $('.form-result-ok').show().addClass('animated fadeInLeft');
     }else{
-        $('#form-contact').addClass('animated fadeOutLeft', function(){
-            $(this).hide();
-        });
+        $('#form-contact').addClass('animated fadeOutLeft');
+        $('#form-contact').hide(500);
         $('.form-result-error').show().addClass('animated fadeInRight');
     };
+}
+
+function hide_form_result(){
+    $('.form-result-ok').hide();
+    $('.form-result-error').hide();
 }
 
 function add_contact_form_click() {
@@ -134,8 +137,9 @@ function add_contact_form_click() {
 
 $(document).ready(function(){
     em_manutencao();
-    fill_skills();
+    hide_form_result();
     hide_habilidades_itens();
+    fill_skills();
     add_habilidades_more_event();
     iniciar_wow();
     add_contact_form_click();
