@@ -102,10 +102,12 @@ function msg_send(success){
         $('#form-contact').addClass('animated fadeOutRight');
         $('#form-contact').hide(500);
         $('.form-result-ok').show().addClass('animated fadeInLeft');
+        $('.form-result-ok').attr('position', 'relative');
     }else{
         $('#form-contact').addClass('animated fadeOutLeft');
         $('#form-contact').hide(500);
         $('.form-result-error').show().addClass('animated fadeInRight');
+        $('.form-result-error').attr('position', 'relative');
     };
 }
 
