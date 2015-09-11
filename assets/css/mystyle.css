@@ -30,6 +30,8 @@
     }
     .fa-lattes-square{
         margin-left: 22px;
+        margin-bottom: 4px;
+        display: block;
     }
 }
 @media only screen and (min-width: 481px) {
@@ -38,6 +40,8 @@
 @media only screen and (min-width: 992px) {
     .fa-lattes-square{
         margin-left: auto;
+        margin-bottom: auto;
+        display: inline-block;
     }
     .text_h{
         font-size: 3.0em;
@@ -319,8 +323,6 @@ a:hover .fa-lattes-square{
     width: 24px;
     height: 24px;
     margin-top: 1px;
-    margin-bottom: 4px;
-    display: block;
     -webkit-transition: background .1s ease-in-out;
     transition: background .1s ease-in-out;
     -moz-transition: background .1s ease;
