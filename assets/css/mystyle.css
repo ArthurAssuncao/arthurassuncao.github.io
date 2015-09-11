@@ -39,6 +39,7 @@
 }
 @media only screen and (min-width: 992px) {
     .fa-lattes-square{
+        width: 24px !important;
         margin-left: auto;
         margin-bottom: auto;
         display: inline-block;
