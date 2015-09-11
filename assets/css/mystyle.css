@@ -297,7 +297,7 @@ a:hover .fa-linkedin-square{
 }
 .form-result-ok,
 .form-result-error {
-    /*position: absolute;*/
+    position: absolute;
     top: 0;
     display: none;
 }

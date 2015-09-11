@@ -138,7 +138,7 @@ $(document).ready(function(){
     hide_habilidades_itens();
     add_habilidades_more_event();
     iniciar_wow();
-    // add_contact_form_click();
+    add_contact_form_click();
     $(document).on("scroll", on_scroll_menu);
 });
 
