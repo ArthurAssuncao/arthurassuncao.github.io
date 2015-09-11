@@ -28,13 +28,17 @@
         width: 100%;
         text-align: center;
     }
-}
-@media only screen and (min-width: 481px) {
-    #social{
-        text-align: left;
+    .fa-lattes-square{
+        margin-left: 22px;
     }
 }
+@media only screen and (min-width: 481px) {
+    
+}
 @media only screen and (min-width: 992px) {
+    .fa-lattes-square{
+        margin-left: auto;
+    }
     .text_h{
         font-size: 3.0em;
     }
