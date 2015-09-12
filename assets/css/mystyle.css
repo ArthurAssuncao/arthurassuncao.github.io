@@ -261,7 +261,9 @@ li .skill{
     /*margin-bottom: 20px;*/
 }
 .footer-copyright{
-     line-height: 20px;
+    margin-top: 10px;
+    line-height: normal !important;
+    background-color: transparent !important;
 }
 #nav_f.nav_shadow{
     -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
@@ -330,3 +332,13 @@ a:hover .fa-lattes-square{
     -o-transition: background .1s ease;
     -ms-transition: background .1s ease;
 }
+/*#social li{
+    width:50%;
+    float:left;
+    display:inline;
+    margin-bottom: 10px;
+}
+#social .footer-copyright{
+    float: left;
+    margin: auto;
+}*/
