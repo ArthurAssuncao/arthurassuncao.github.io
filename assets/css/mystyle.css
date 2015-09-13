@@ -39,7 +39,8 @@
 }
 @media only screen and (min-width: 992px) {
     .fa-lattes-square{
-        width: 24px !important;
+        width: 27px !important;
+        height: 27px !important;
         margin-left: auto;
         margin-bottom: auto;
         display: inline-block;
@@ -179,6 +180,31 @@ li .skill{
 .card a:hover{
     color: #9acffa;
 }
+.card-image img{
+    width: 100%;
+    height: 100%;
+}
+.card .card-content{
+    padding: 10px;
+}
+.card.tiny{
+    height: 220px;
+}
+.card.tiny .card-image{
+    height: 130px;
+}
+.card.tiny .card-content{
+    height: 90px;
+}
+.card .card-content p{
+    margin: 0px 0px 5px 0px;
+}
+/*.card .card-content .card-title{
+    line-height: 30px;
+}
+.card .card-title{
+    font-size: 20px;
+}*/
 .curriculo_artigo_titulo a i{
     opacity: 0.4;
     -webkit-transition: color .3s ease-in-out;
@@ -279,7 +305,7 @@ li .skill{
     border-radius: 65px;
     -webkit-border-radius: 65px;
     -moz-border-radius: 65px;
-    background: url(http://arthurassuncao.com/assets/img/me256x256.png) no-repeat;
+    background: url(../img/me256x256.png) no-repeat;
     box-shadow: 0 0 8px rgba(0, 0, 0, .8);
     -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
     -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
