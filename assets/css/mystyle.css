@@ -352,6 +352,7 @@ a:hover .fa-lattes-square{
     width: 27px;
     height: 27px;
     margin-top: 1px;
+    vertical-align: text-bottom;
     -webkit-transition: background .1s ease-in-out;
     transition: background .1s ease-in-out;
     -moz-transition: background .1s ease;
