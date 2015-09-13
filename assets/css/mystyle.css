@@ -188,13 +188,13 @@ li .skill{
     padding: 10px;
 }
 .card.tiny{
-    height: 220px;
+    height: 230px;
 }
 .card.tiny .card-image{
     height: 130px;
 }
 .card.tiny .card-content{
-    height: 90px;
+    height: 100px;
 }
 .card .card-content p{
     margin: 0px 0px 5px 0px;
