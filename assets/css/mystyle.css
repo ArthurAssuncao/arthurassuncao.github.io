@@ -343,6 +343,9 @@ a:hover .fa-github-square{
 a:hover .fa-linkedin-square{
     color: #007bb5 !important;
 }
+a:hover .fa-google-plus-square{
+    color: #dd4b39 !important;
+}
 a:hover .fa-lattes-square{
     color: #637fbd;
     background: url(../img/icon_lattes_hover.png) no-repeat;
@@ -358,6 +361,10 @@ a:hover .fa-lattes-square{
     -moz-transition: background .1s ease;
     -o-transition: background .1s ease;
     -ms-transition: background .1s ease;
+}
+.esconde{
+    display: none;
+    visibility: hidden;
 }
 /*#social li{
     width:50%;
