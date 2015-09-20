@@ -415,8 +415,10 @@ a:hover .fa-lattes-square{
     color: #637fbd;
     background: url(../img/icon_lattes_hover.png) no-repeat;
 }
+.fa-lattes-square-preload{
+    background: url(../img/icon_lattes_hover.png) no-repeat -9999px -9999px;;
+}
 .fa-lattes-square{
-    background: url(../img/icon_lattes_hover.png) no-repeat;
     background: url(../img/icon_lattes.png) no-repeat;
     width: 27px;
     height: 27px;
