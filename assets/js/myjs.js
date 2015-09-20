@@ -20,10 +20,6 @@ function show_skills_itens(){
     // $("#btn_skills_more").hide(900);
 }
 
-// function add_skills_more_event(){
-//     $("#btn_skills_more").on('click', show_skills_itens);
-// }
-
 function hide_prod_cientifica_itens(){
     $("#curriculo_producao ul > li:gt(0)").hide(); 
 }
@@ -32,10 +28,6 @@ function show_prod_cientifica_itens(){
     $("#curriculo_producao ul > li:gt(0)").show(1000);
     // $("#btn_prod_cientifica_more").hide(900);
 }
-
-// function add_prod_cientifica_more_event(){
-//     $("#btn_prod_cientifica_more").on('click', show_prod_cientifica_itens);
-// }
 
 function show_habilidades_itens(){
     show_skills_itens();
@@ -50,6 +42,19 @@ function hide_habilidades_itens(){
 
 function add_habilidades_more_event(){
     $("#btn_habilidades_more").on('click', show_habilidades_itens);
+}
+
+function ativar_modals(){
+    $('.modal-trigger').leanModal({
+        in_duration: 400, // Transition in duration
+        out_duration: 300 // Transition out duration);
+    });
+    $('.modal-trigger-custom').each(function(){
+        var target = $(this).data('target');
+        $(this).click(function(){
+            $('#'+target).openModal();
+        });
+    });
 }
 
 function iniciar_wow(){
@@ -153,5 +158,6 @@ $(document).ready(function(){
     iniciar_wow();
     add_contact_form_click();
     $(document).on("scroll", on_scroll_menu);
+    ativar_modals();
 });
 

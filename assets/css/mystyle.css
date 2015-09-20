@@ -38,6 +38,9 @@
     
 }
 @media only screen and (min-width: 992px) {
+    #toast-container{
+        top: 6%;
+    }
     .fa-lattes-square{
         width: 27px !important;
         height: 27px !important;
@@ -199,12 +202,60 @@ li .skill{
 .card .card-content p{
     margin: 0px 0px 5px 0px;
 }
-/*.card .card-content .card-title{
-    line-height: 30px;
+.card > a{
+    margin: 0px;
 }
-.card .card-title{
-    font-size: 20px;
-}*/
+.card-modal{
+    background-color: white;
+    max-height: 90%;
+    width: 67%;
+    max-width: 90%;
+}
+.card-modal p{
+    padding-bottom: 10px;
+}
+.card-modal > a.modal-close{
+    position: absolute;
+    right: 3px;
+    z-index: 1002;
+}
+.card-modal-date:before{
+    content: " — ";
+}
+.card-modal-image{
+    /*overflow: auto;
+    height: 100%;*/
+    -webkit-order: 1;
+    order: 1;
+}
+.card-modal-content{
+    overflow: auto;
+    height: 100%;
+    -webkit-order: 0;
+    order: 0;
+}
+.card-modal-title{
+
+}
+ul.card-modal-specs{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+ul.card-modal-specs li{
+    display: inline;
+}
+ul.card-modal-specs li:nth-child(n+2):before{
+    content:" • ";
+}
+.card-modal-role{
+    font-weight: 500;
+}
+.card-modal-description{
+
+}
+.card-modal-visit{
+    margin-top: 10px;
+}
 .curriculo_artigo_titulo a i{
     opacity: 0.4;
     -webkit-transition: color .3s ease-in-out;
