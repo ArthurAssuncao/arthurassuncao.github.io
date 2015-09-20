@@ -33,11 +33,18 @@
         margin-bottom: 4px;
         display: block;
     }
+    .card-modal .modal-content{
+        display:flex;
+        flex-direction: column;
+    }
 }
 @media only screen and (min-width: 481px) {
     
 }
 @media only screen and (min-width: 992px) {
+    .card-modal .modal-content{
+        display:block;
+    }
     #toast-container{
         top: 6%;
     }
@@ -210,6 +217,8 @@ li .skill{
     max-height: 90%;
     width: 67%;
     max-width: 90%;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .card-modal p{
     padding-bottom: 10px;
