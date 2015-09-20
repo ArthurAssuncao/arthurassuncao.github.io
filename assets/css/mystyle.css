@@ -34,8 +34,8 @@
         display: block;
     }
     .card-modal{
-        width: 90%;
-        max-width: 90%;
+        width: 88%;
+        max-width: 88%;
     }
     .card-modal .modal-content{
         display: -webkit-flex; /* Safari */
