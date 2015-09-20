@@ -33,6 +33,10 @@
         margin-bottom: 4px;
         display: block;
     }
+    .card-modal{
+        width: 90%;
+        max-width: 90%;
+    }
     .card-modal .modal-content{
         display: -webkit-flex; /* Safari */
         -webkit-flex-direction: column; /* Safari 6.1+ */
@@ -44,6 +48,10 @@
     
 }
 @media only screen and (min-width: 992px) {
+    .card-modal{
+        width: 67%;
+        max-width: 90%;
+    }
     .card-modal .modal-content{
         display:block;
     }
@@ -217,8 +225,6 @@ li .skill{
 .card-modal{
     background-color: white;
     max-height: 90%;
-    width: 67%;
-    max-width: 90%;
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -416,7 +422,7 @@ a:hover .fa-lattes-square{
     background: url(../img/icon_lattes_hover.png) no-repeat;
 }
 .fa-lattes-square-preload{
-    background: url(../img/icon_lattes_hover.png) no-repeat -9999px -9999px;;
+    background: url(../img/icon_lattes_hover.png) no-repeat -9999px -9999px;
 }
 .fa-lattes-square{
     background: url(../img/icon_lattes.png) no-repeat;
