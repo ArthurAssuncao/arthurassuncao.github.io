@@ -338,8 +338,13 @@ ul.card-modal-specs li:nth-child(n+2):before{
 .menu_left_side li.active{
     color: black;
 }
+.tiny-force{
+    font-size: 1rem !important;
+}
 .microtiny{
     font-size: 0.7rem !important;
+}
+.skill-name-icon{
     vertical-align: top;
     color: gray;
 }
