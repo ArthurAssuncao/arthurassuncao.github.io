@@ -1,0 +1,100 @@
+footer#contact.page-footer.default_color.mdl-mega-footer.scrollspy.footer
+  .container.mdl-mega-footer__middle-section
+    .row
+      .center-align.col.l8.s12
+        form#form-contact.col.s12(onsubmit='javascript:return false')
+          .row
+            h5.white-text Contato
+            // Nome
+            .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+              i.material-icons.prefix.icon-large.white-text account_circle
+              input#form-name.mdl-textfield__input.white-text(name='name', type='text')
+              label.mdl-textfield__label(for='form-name') Nome
+            // Email
+            .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+              i.material-icons.prefix.icon-large.white-text email
+              input#form-email.mdl-textfield__input.white-text(name='_replyto', type='email')
+              label.mdl-textfield__label(for='form-email') Email
+            // Msg
+            .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+              i.material-icons.prefix.icon-large.white-text message
+              textarea#form-message.mdl-textfield__input.white-text(name='message', type='email')
+              label.mdl-textfield__label(for='form-message') Mensagem
+            // Hide
+            .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.hide
+              input#form-hidden.mdl-textfield__input.white-text(type='hidden', name='_subject', value='Contato site', required='')
+              input#form-hidden-text.mdl-textfield__input.white-text(type='text', name='_gotcha', style='display:none', required='')
+            // Button
+            .col.s12
+              button#form-submit.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.blue.white-text.btn-large
+                | Enviar  
+                i.material-icons.white-text send
+        .col.s12.l6.offset-l3.form-result-ok.white-text
+          h1
+            .fa.fa-thumbs-o-up.white-text
+          h6
+            | Obrigado.
+            br
+            br
+            | Sua mensagem enviada e
+            br
+            | irei respondê-la em breve.
+        .col.s12.l6.offset-l3.form-result-error.white-text
+          h1
+            .fa.fa-frown-o.white-text
+          h6
+            | Algo deu errado.
+            br
+            | Por favor, contate-me em arthur@arthurassuncao.com
+      #social.col.l3.s12(itemscope='', itemtype='http://schema.org/Person')
+        link(itemprop='url', href='http://arthurassuncao.com/')
+        description(itemprop='description', href='Arthur Assuncao - Desenvolvedor de sistemas.')
+        img.hide(itemprop='image', href='assets/img/me256x256.png')
+        h5.white-text Social
+        ul.left-align
+          li
+            a.white-text(itemprop='sameAs', href='https://www.facebook.com/arthurassuncao')
+              i.small.fa.fa-facebook-square.white-text
+              span  Facebook
+          li
+            a.white-text(itemprop='sameAs', href='https://github.com/arthurassuncao')
+              i.small.fa.fa-github-square.white-text
+              span  Github
+          li
+            a.white-text(itemprop='sameAs', href='https://www.linkedin.com/in/arthurassuncao')
+              i.small.fa.fa-linkedin-square.white-text
+              span  LinkedIn
+          li
+            a.white-text(itemprop='sameAs', href='http://lattes.cnpq.br/8136835668168874')
+              i.small.fa.fa-lattes-square.white-text
+              span  Lattes
+            i.small.fa.fa-lattes-square-preload
+          li.esconde.hide
+            a.white-text(itemprop='sameAs', href='https://plus.google.com/+ArthurAssuncao11')
+              i.small.fa.fa-google-plus-square.white-text
+              span  Google+
+        .esconde.hide
+          | Meu nome é 
+          span(itemprop='name')
+            span(itemprop='givenName') Arthur
+            span(itemprop='additionalName') Nascimento
+            span(itemprop='familyName') Assunção
+          | .
+          |           Moro em 
+          span
+            span(itemprop='address')
+              span Ouro Preto, Minas Gerais
+              | ,
+              span(itemprop='nationality') Brasil
+          |           e estudo 
+          span(itemprop='jobTitle') Mestrado em Ciência da Computação
+          |           na 
+          span(itemprop='affiliation') Universidade de Ouro Preto
+          | .
+        .col.s12.center-align.footer-copyright
+          p.no-marg.white-text
+            a.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.blue.white-text.btn-large(href='assets/files/resume_arthur_assuncao.pdf', target='_blank')
+              i.fa.fa-file-pdf-o
+              |  Baixar meu CV
+  br
+  br

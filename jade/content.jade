@@ -1,0 +1,358 @@
+main#conteudo.mdl-layout__content
+  #index-banner.section.no-pad-bot
+    .container
+      h1.text_h.center.header.cd-headline.letters.type
+        span Hei, meu nome é Arthur e sou 
+        span.cd-words-wrapper.waiting
+          b.is-visible Mestrando em Ciência da Computação
+          b Desenvolvedor de Apps Móveis
+          b Desenvolvedor Web
+          b Desenvolvedor de Sistemas
+  #mywork.section.scrollspy
+    #intro.section.scrollspy
+      .container
+        .row
+          .col.s12.m4.l4
+            .center.promo.promo-example
+              i.material-icons.text-blue flash_on
+              h5.promo-caption Acelere o desenvolvimento
+              p.light.center
+                | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Cum sociis natoque penatibus et magnis dis parturient montes.
+          .col.s12.m4.l4
+            .center.promo.promo-example
+              i.material-icons.text-blue people
+              h5.promo-caption Foco na experiência do usuário
+              p.light.center
+                | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+          .col.s12.m4.l4
+            .center.promo.promo-example
+              i.material-icons.text-blue smartphone
+              h5.promo-caption Totalmente responsivo
+              p.light.center
+                | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+    #work.section.scrollspy
+      .container
+        h2.header.text_b Alguns projetos que participei
+        .row
+          .wow-nonmobile.fadeInUp.col.s12.m4.l4
+            .card.tiny
+              a.modal-trigger(href='#modal_proj_maisvendas')
+                .card-image.waves-effect.waves-block.waves-light
+                  img.activator(src='assets/img/portfolio/maisvendas_300x200.png', alt='Projeto MaisVendas')
+              .card-content
+                span.card-title.activator.grey-text.text-darken-4.modal-trigger-custom(data-target='modal_proj_maisvendas')
+                  | MaisVendas  
+                  i.material-icons.right more_vert
+                p
+                  a(href='https://play.google.com/store/apps/details?id=com.vendas') MaisVendas na PlayStore
+            #modal_proj_maisvendas.modal.card-modal.container
+              a.btn-floating.btn-large.waves-effect.waves-light.red.modal-close.right
+                i.fa.fa-close
+              .modal-content.card-reveal.row
+                .col.s12.l6.card-modal-image
+                  img(src='assets/img/portfolio/maisvendas_300x200.png', alt='Projeto MaisVendas')
+                .col.s12.l6.card-modal-content
+                  h5.card-title.card-modal-title.grey-text.text-darken-4
+                    strong MaisVendas
+                  ul.card-modal-specs.grey-text.text-darken-0
+                    li Android
+                    li Python/Django
+                    li JSON
+                    li Git
+                    li MySQL
+                  p.card-modal-role.center-align
+                    | Desenvolvedor Mobile e Web
+                    span.card-modal-date 2013-2014
+                  .card-modal-description
+                    p
+                      | Participei da programação do app móvel e do Web Service MaisVendas da empresa AddMob.
+                    p
+                      | Foi feito o desenolvimento do app Android e Web Service em Django com banco de dados MySQL, uso de notação JSON para comunicação entre os sistemas e utilização de controle de versão Git para uma melhor manutenção do código e colaboração entre os membros da equipe.
+                    p
+                      | O MaisVendas é um sistema para quem deseja ter seu catálogo de produtos e sua lista de clientes disponíveis ao toque da tela de seu tablet ou smartphone. É possível realizar vendas, consultar pedidos realizados, verificar o histórico de vendas através do gráfico iterativo e muito mais.
+                  a.card-modal-visit.grey-text.text-darken-3.right(href='https://play.google.com/store/apps/details?id=com.vendas')
+                    strong MaisVendas na Play Store
+          .wow-nonmobile.fadeInUp.col.s12.m4.l4
+            .card.tiny
+              a.modal-trigger(href='#modal_proj_jump')
+                .card-image.waves-effect.waves-block.waves-light
+                  img.activator(src='http://fakeimg.pl/300x200/', alt='Projeto JUMP!')
+              .card-content
+                span.card-title.activator.grey-text.text-darken-4.modal-trigger-custom(data-target='modal_proj_jump')
+                  | JUMP! 
+                  i.material-icons.right more_vert
+                p
+                  a(href='https://github.com/arthurassuncao/jump') Repositorio do projeto
+            #modal_proj_jump.modal.card-modal.container
+              a.btn-floating.btn-large.waves-effect.waves-light.red.modal-close.right
+                i.fa.fa-close
+              .modal-content.card-reveal.row
+                .col.s12.l6.card-modal-image
+                  img.activator(src='http://fakeimg.pl/300x200/', alt='Projeto JUMP!')
+                .col.s12.l6.card-modal-content
+                  h5.card-title.card-modal-title.grey-text.text-darken-4
+                    strong JUMP!
+                  ul.card-modal-specs.grey-text.text-darken-0
+                    li Python
+                    li Node.js
+                    li HTML/CSS3
+                    li JavaScript/Phaser
+                    li Git
+                  p.card-modal-role.center-align
+                    | Projeto Acadêmico
+                    span.card-modal-date 2013
+                  .card-modal-description
+                    p
+                      | Participei da equipe de desenvolvimento do jogo JUMP (Jogo Unificado para Movimentação Projetada).
+                    p
+                      | O jogo permite que o jogador, em frente a uma webcam, controle, por meio de seus pulos, o personagem do jogo.
+                    p Foram utilizados: linguagem Python com a biblioteca OpenCV e Node.js.
+                    p
+                      | Projeto foi apresentado na Semana Nacional de Ciência e Tecnologia (SNCT) de 2013 no IFSEMG - Câmpus Barbacena.
+                  a.card-modal-visit.grey-text.text-darken-3.right(href='https://github.com/arthurassuncao/jump')
+                    strong Repositório do Projeto
+          .wow-nonmobile.fadeInUp.col.s12.m4.l4
+            .card.tiny
+              a.modal-trigger(href='#modal_proj_uguide-desk')
+                .card-image.waves-effect.waves-block.waves-light
+                  img.activator(src='http://fakeimg.pl/300x200/', alt='Projeto uGuide Desk 2014')
+              .card-content
+                span.card-title.activator.grey-text.text-darken-4.modal-trigger-custom(data-target='modal_proj_uguide-desk')
+                  | uGuide Desk 2014 
+                  i.material-icons.right more_vert
+            #modal_proj_uguide-desk.modal.card-modal.container
+              a.btn-floating.btn-large.waves-effect.waves-light.red.modal-close.right
+                i.fa.fa-close
+              .modal-content.card-reveal.row
+                .col.s12.l6.card-modal-image
+                  img.activator(src='http://fakeimg.pl/300x200/', alt='Projeto uGuide Desk 2014')
+                .col.s12.l6.card-modal-content
+                  h5.card-title.card-modal-title.grey-text.text-darken-4
+                    strong uGuide Desk 2014
+                  ul.card-modal-specs.grey-text.text-darken-0
+                    li C++
+                    li JSON
+                    li Git
+                  p.card-modal-role.center-align
+                    | Projeto Acadêmico
+                    span.card-modal-date 2014
+                  .card-modal-description
+                    p Participei da equipe de desenvolvimento da aplicação.
+                    p
+                      | O projeto consistiu de um software informativo e interativo para acompanhamento de eventos e notícias do Festival de Inverno de Ouro Preto e Mariana de 2014 com interação com os usuários por meio do sensor Kinect.
+                    p
+                      | Foram utilizadas linguagem C++ e interface gráfica Qt com comunicação com o Web Service via JSON.
+          .wow-nonmobile.fadeInUp.col.s12.m4.l4
+            .card.tiny
+              a.modal-trigger(href='#modal_proj_chrome-extensions')
+                .card-image.waves-effect.waves-block.waves-light
+                  img.activator(src='assets/img/portfolio/chrome-web-store_300x200.png', alt='Projeto Chrome Extensions')
+              .card-content
+                span.card-title.activator.grey-text.text-darken-4.modal-trigger-custom(data-target='modal_proj_chrome-extensions')
+                  | Chrome Extensions 
+                  i.material-icons.right more_vert
+                p
+                  a(href='https://chrome.google.com/webstore/search/adev?hl=pt-BR') Entensões na Chrome Store
+            #modal_proj_chrome-extensions.modal.card-modal.container
+              a.btn-floating.btn-large.waves-effect.waves-light.red.modal-close.right
+                i.fa.fa-close
+              .modal-content.card-reveal.row
+                .col.s12.l6.card-modal-image
+                  img.activator(src='assets/img/portfolio/chrome-web-store_300x200.png', alt='Projeto Chrome Extensions')
+                .col.s12.l6.card-modal-content
+                  h5.card-title.card-modal-title.grey-text.text-darken-4
+                    strong Chrome Extensions
+                  ul.card-modal-specs.grey-text.text-darken-0
+                    li HTML/CSS3
+                    li JavaScript/jQuery
+                    li Git
+                  p.card-modal-role.center-align
+                    | Projeto Pessoal
+                    span.card-modal-date 2013
+                  .card-modal-description
+                    p Desenvolvimento de extensões para o navegador Google Chrome:
+                    p
+                      ul
+                        li
+                          a(href='https://chrome.google.com/webstore/detail/hide-contact-from-faceboo/dldcnjjdfolnampaceecohfaolbefbhj') Hide Contact From Facebook Chat List
+                          br
+                          p
+                            | Esconde contatos da lista do chat do Facebook sem bloquear o contato. O contato continua te vendo na lista do chat dele como online, porém voce não o vê mais.
+                        li
+                          a(href='https://chrome.google.com/webstore/detail/wpp-web-customizer/lhaamjcmnafobcjjcjfpglfonpdkoedb') Wpp web Customizador
+                          br
+                          p Modifica o fundo (background) do chat do Whatsapp™ Web.
+                  a.card-modal-visit.grey-text.text-darken-3.right(href='https://github.com/arthurassuncao/jump')
+                    strong Repositório do Projeto
+          .wow-nonmobile.fadeInUp.col.s12.m4.l4
+            .card.tiny
+              a.modal-trigger(href='#modal_proj_addmobcombr')
+                .card-image.waves-effect.waves-block.waves-light
+                  img.activator(src='assets/img/portfolio/addmob_com_br_300x200.jpg', alt='Projeto Addmob.com.br')
+              .card-content
+                span.card-title.activator.grey-text.text-darken-4.modal-trigger-custom(data-target='modal_proj_addmobcombr')
+                  | Addmob.com.br 
+                  i.material-icons.right more_vert
+                p
+                  a(href='https://www.addmob.com.br') Addmob.com.br
+            #modal_proj_addmobcombr.modal.card-modal.container
+              a.btn-floating.btn-large.waves-effect.waves-light.red.modal-close.right
+                i.fa.fa-close
+              .modal-content.card-reveal.row
+                .col.s12.l6.card-modal-image
+                  img.activator(src='assets/img/portfolio/addmob_com_br_300x200.jpg', alt='Projeto Addmob.com.br')
+                .col.s12.l6.card-modal-content
+                  h5.card-title.card-modal-title.grey-text.text-darken-4
+                    strong Addmob.com.br
+                  ul.card-modal-specs.grey-text.text-darken-0
+                    li HTML/CSS3
+                    li JavaScript/jQuery
+                    li Python/Django
+                    li Git
+                  p.card-modal-role.center-align
+                    | Desenvolvedor Web
+                    span.card-modal-date 2014
+                  .card-modal-description
+                    p
+                      | Participei do desenvolvimento do Website da empresa AddMob Integradora de Soluções Ltda.
+                    p
+                      | Website desenvolvido em HTML5/CSS3 e Django, utilizando o framework Bootstrap 2.x e jQuery, com layout responsivo e captura de gestos (Hammer.js) para otimizar a experiência em dispositivos móveis.
+                a.card-modal-visit.grey-text.text-darken-3.right(href='https://www.addmob.com.br')
+                  strong Addmob.com.br
+          .wow-nonmobile.fadeInUp.col.s12.m4.l4
+            .card.tiny
+              a.modal-trigger(href='#modal_proj_android-cepview')
+                .card-image.waves-effect.waves-block.waves-light
+                  img.activator(src='http://fakeimg.pl/300x200/', alt='Projeto Android CepView')
+              .card-content
+                span.card-title.activator.grey-text.text-darken-4.modal-trigger-custom(data-target='modal_proj_android-cepview')
+                  | Android CepView 
+                  i.material-icons.right more_vert
+                p
+                  a(href='https://github.com/ArthurAssuncao/Android-CepView') Repositório do projeto
+            #modal_proj_android-cepview.modal.card-modal.container
+              a.btn-floating.btn-large.waves-effect.waves-light.red.modal-close.right
+                i.fa.fa-close
+              .modal-content.card-reveal.row
+                .col.s12.l6.card-modal-image
+                  img.activator(src='http://fakeimg.pl/300x200/', alt='Projeto Android CepView')
+                .col.s12.l6.card-modal-content
+                  h5.card-title.card-modal-title.grey-text.text-darken-4
+                    strong Android CepView
+                  ul.card-modal-specs.grey-text.text-darken-0
+                    li Android
+                    li JSON
+                    li Git
+                  p.card-modal-role.center-align
+                    | Desenvolvedor Mobile e Web
+                    span.card-modal-date 2014
+                  .card-modal-description
+                    p
+                      | Android Cep View é um Android UI widget com os principais campos relacionados a endereço (CEP, endereço, número, complemento, bairro, cidade, estado), fornece preenchimento automático dos dados com base no CEP (Código de Endereçamento Postal) informado.
+                a.card-modal-visit.grey-text.text-darken-3.right(href='https://github.com/ArthurAssuncao/Android-CepView')
+                  strong Repositório do projeto
+  #skills.section.scrollspy
+    .container
+      .row
+        .circular.center-align.col-centered.foto
+      h2.header.text_b Habilidades
+      .row
+        .wow-nonmobile.fadeInLeft.col.s12.m6.l6
+          #curriculo_formacao
+            h5 Formação
+            ul#lista_formacao.list-unstyled
+              li.curriculo_item
+                span.curriculo_titulo
+                  strong Mestrado em Ciência da Computação
+                br
+                span.curriculo_instituicao Universidade Federal de Ouro Preto
+                br
+                span.curriculo_periodo 2014 - Até o momento
+                br
+              li.curriculo_item
+                span.curriculo_titulo
+                  strong Superior de Tecnologia em Sistemas para Internet
+                br
+                span.curriculo_instituicao Instituto Federal do Sudeste de MG
+                br
+                span.curriculo_periodo 2011 - 2014
+                br
+          .divider
+          #curriculo_producao
+            h5 Produção Científica
+            ul#lista_experiencia.list-unstyled
+              li.curriculo_item
+                span.curriculo_artigo
+                  span.curriculo_artigo_titulo
+                    a(href='http://dx.doi.org/10.1145/2810362.2810378', title='Methodology to Events Identification in Vehicles Using Statistical Process Control on Steering Wheel Data')
+                      strong
+                        | Methodology to Events Identification in Vehicles Using Statistical Process Control on Steering Wheel Data
+                      i.fa.fa-link
+                  br
+                  span.curriculo_artigo_autores
+                    em
+                      span.curriculo_artigo_autor
+                        strong Arthur N. Assuncao, 
+                      span.curriculo_artigo_autor Fabio O. de Paula, 
+                      span.curriculo_artigo_autor Ricardo A. R. Oliveira
+                  br
+                  span.curriculo_artigo_evento
+                    | Em: The 13th ACM International Symposium on Mobility Management and Wireless Access (MobiWac), 2015, Cancun, México. Qualis-CC B3
+              li.curriculo_item
+                span.curriculo_artigo
+                  span.curriculo_artigo_titulo
+                    a(href='http://sbesc.lisha.ufsc.br/sbesc2015/proceedings/146713.pdf', title='KITT - Sistema de Carro Inteligente com Apoio à Segurança do Motorista')
+                      strong KITT - Sistema de Carro Inteligente com Apoio à Segurança do Motorista
+                      i.fa.fa-link
+                  br
+                  span.curriculo_artigo_autores
+                    em
+                      span.curriculo_artigo_autor
+                        strong Arthur N. Assuncao, 
+                      span.curriculo_artigo_autor Ricardo Camara, 
+                      span.curriculo_artigo_autor Luiz Janeiro, 
+                      span.curriculo_artigo_autor Rafael Vitor, 
+                      span.curriculo_artigo_autor Fabio O. de Paula, 
+                      span.curriculo_artigo_autor Ricardo A. R. Oliveira
+                  br
+                  span.curriculo_artigo_evento
+                    | Em: V Brazilian Symposium on Computing Systems Engineering (SBESC), 2015, Foz do Iguaçu, Brasil. Qualis-CC B4
+              li.curriculo_item
+                span.curriculo_artigo
+                  span.curriculo_artigo_titulo
+                    a(href='http://sbesc.lisha.ufsc.br/sbesc2015/proceedings/146842.pdf', title='Metodologia para Detecção de Saída de Faixa Utilizando EWMA Aplicado a Sensores Inerciais no Volante')
+                      strong
+                        | Metodologia para Detecção de Saída de Faixa Utilizando EWMA Aplicado a Sensores Inerciais no Volante
+                      i.fa.fa-link
+                  br
+                  span.curriculo_artigo_autores
+                    em
+                      span.curriculo_artigo_autor
+                        strong Arthur N. Assuncao, 
+                      span.curriculo_artigo_autor Fabio O. de Paula, 
+                      span.curriculo_artigo_autor Ricardo A. R. Oliveira
+                  br
+                  span.curriculo_artigo_evento
+                    | Em: V Brazilian Symposium on Computing Systems Engineering (SBESC), 2015, Foz do Iguaçu, Brasil. Qualis-CC B4
+          .divider.hide-on-med-and-up
+        .wow-nonmobile.fadeInRight.col.s12.m5.l5.offset-m1.offset-l1
+          #curriculo_habilidades(ng-app='skillApp', ng-controller='skillController')
+            ul.list-unstyled(ng-repeat='skill in skills')
+              li(id='skill_{{ skill.name }}')
+                .mdl-tooltip(for='skill_{{ skill.name }}')
+                  span.capitalize {{ skill.name }}
+                  |: {{ skill.msg }}
+                span.myskill
+                  span.skill_name
+                    | {{ skill.name }} 
+                    i.tiny.microtiny.skill-name-icon.material-icons info_outline
+                  span.skill_grade {{ generate_level(skill.value) }}
+                  br
+                  span.col-md-11.skill
+                    span.skill_bar(data-skillbar='{{ skill.value }}')
+        .col.s12.m12.l12.center-align.btn_habilidades_more
+          button#btn_habilidades_more.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-button--colored.blue
+            i.material-icons add
+  .parallax-container
+    .parallax
+      img(src='assets/img/ufop.jpg', alt='parallax image')

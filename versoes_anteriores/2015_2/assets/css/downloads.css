@@ -1,0 +1,15 @@
+.dl-submenu nav{
+    background-color: #212121 !important;
+}
+.dl-cv-link{
+    cursor:pointer;
+}
+.dl-cv-link:after{
+    content: "Download";
+}
+.comma-before:before{
+    content: ", ";
+}
+.dl-cv-title{
+    white-space-collapsing:discard;
+}

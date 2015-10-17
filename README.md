@@ -9,6 +9,13 @@ Site pessoal de [Arthur Assunção](http://arthurassuncao.com).
 
 ###Tecnologias Utilizadas
 * Front-end
-  * HTML5
-  * CSS3
-  * JavaScript/Jquery
+  * HTML5/SASS/CSS3
+  * JavaScript/jQuery
+  * AngularJS
+  * Polymer
+  * WOW.js + Animate.css
+  * Jade
+  * Material Design Lite
+  * Materialize Design (apenas grid e modal)
+
+

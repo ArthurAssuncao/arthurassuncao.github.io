@@ -1,8 +1,8 @@
 (function($) {
     $(function() {
-        $('.button-collapse').sideNav();
-        var navbarHeight = $("#nav_f").height();
-        $('.scrollspy').data("offset", navbarHeight);
+        // $('.button-collapse').sideNav();
+        // var navbarHeight = $("#nav_f").height();
+        // $('.scrollspy').data("offset", navbarHeight);
         $('.scrollspy').scrollSpy();
         var animationDelay = 2500,
             barAnimationDelay = 3800,
@@ -166,11 +166,11 @@
             $oldWord.removeClass('is-visible').addClass('is-hidden');
             $newWord.removeClass('is-hidden').addClass('is-visible');
         }
-        $('.button-collapse').sideNav({
-            menuWidth: 240,
-            activationWidth: 70
-        });
-        $('.parallax').parallax();
+        // $('.button-collapse').sideNav({
+        //     menuWidth: 240,
+        //     activationWidth: 70
+        // });
+        // $('.parallax').parallax();
         var card = document.querySelectorAll('.card-work');
         var transEndEventNames = {
                 'WebkitTransition': 'webkitTransitionEnd',
