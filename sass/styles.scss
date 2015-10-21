@@ -26,9 +26,17 @@
 // @import "third_party/waves/waves";
 @import "gmail-scrollbars";
 
-body{
-        font-family: 'Roboto', sans-serif;
-        // background-color: $my-primary-color;
+
+object[type^="application/gas-events-uni"] {
+    display: none;
+}
+
+html,
+body {
+    text-shadow: 0 0 #fff;
+    text-rendering: optimizeLegibility;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 
 .icon-block {
@@ -811,7 +819,7 @@ a:hover {
 
 #navbar{
     a.active, a:active, a:hover{
-        background-color: lighten($my-primary-color, 10%);
+        background-color: $my-bgcolor-menu-active;
     }
 }
 
@@ -864,4 +872,8 @@ form{
 
 .capitalize{
     text-transform: capitalize;
+}
+
+google-map{
+    height: 300px;
 }

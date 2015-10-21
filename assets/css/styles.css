@@ -16873,8 +16873,15 @@ body::-webkit-scrollbar-corner {
   border-width: 3px 0 0 3px;
   box-shadow: inset 1px 1px 0 rgba(33, 150, 243, 0.14); }
 
+object[type^="application/gas-events-uni"] {
+  display: none; }
+
+html,
 body {
-  font-family: 'Roboto', sans-serif; }
+  text-shadow: 0 0 #fff;
+  text-rendering: optimizeLegibility;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased; }
 
 .icon-block {
   padding: 0 15px; }
@@ -17474,7 +17481,7 @@ a:hover .fa-lattes-square {
   padding: 0px; }
 
 #navbar a.active, #navbar a:active, #navbar a:hover {
-  background-color: #51adf6; }
+  background-color: rgba(0, 0, 0, 0.1); }
 
 .mdl-layout__header {
   box-shadow: 0 0 0 0 transparent; }
@@ -17511,5 +17518,8 @@ form button, form .prefix {
     display: none; } }
 .capitalize {
   text-transform: capitalize; }
+
+google-map {
+  height: 300px; }
 
 /*# sourceMappingURL=styles.css.map */
