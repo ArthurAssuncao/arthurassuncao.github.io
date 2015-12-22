@@ -1,0 +1,39 @@
+header.mdl-layout__header.navbar#nav_f
+  .mdl-layout__header-row.container.row
+    // Title
+    span.mdl-layout-title.brand-logo
+      a#logo-container.brand-logo.active(href='#top')
+        | Arthur 
+        span.hide-on-med-and-down Assunção
+    // Add spacer, to align navigation to the right
+    .mdl-layout-spacer
+    // Navigation
+    nav#navbar.mdl-navigation
+      a.mdl-navigation__link.navbar-item(href='#mywork', data-hash='#page_mywork')
+        i.tiny-force.material-icons work
+        |  Meu Trabalho
+      a.mdl-navigation__link.navbar-item(href='#skills', data-hash='#page_skills')
+        i.tiny-force.material-icons code
+        |  Habilidades
+      a.mdl-navigation__link.navbar-item(href='#contact', data-hash='#page_contact')
+        i.tiny-force.material-icons assignment_ind
+        |  Contato
+.mdl-layout__drawer.navbar-side
+  span.mdl-layout-title
+    | Arthur 
+    span Assunção
+  nav.mdl-navigation
+    a.mdl-navigation__link(href='#mywork', data-hash='#page_mywork')
+      i.tiny-force.material-icons work
+      |  Meu Trabalho
+    a.mdl-navigation__link(href='#skills', data-hash='#page_skills')
+      i.tiny-force.material-icons code
+      |  Habilidades
+    a.mdl-navigation__link(href='#contact', data-hash='#page_contact')
+      i.tiny-force.material-icons assignment_ind
+      |  Contato
+.menu_left_side.hide-on-med-and-up
+  ul
+    li.vertical-text(data-href='#mywork') Meu Trabalho
+    li.vertical-text(data-href='#skills') Habilidades
+    li.vertical-text(data-href='#contact') Contato

@@ -1,0 +1,30 @@
+{
+  "name": "ArthurAssuncao.com",
+  "homepage": "arthurassuncao.com",
+  "authors": [
+    "ArthurAssuncao <arthur.xx92@gmail.com>"
+  ],
+  "description": "Website de Arthur Assuncao",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "arthurassuncao.com"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#~1.4.8",
+    "angular-route": "~1.4.8",
+    "material-icons": "~0.1.0",
+    "font-awesome": "~4.4.0",
+    "react": "~0.14.3",
+    "jquery": "~2.1.4",
+    "angular-material": "~1.0.x"
+  }
+}
