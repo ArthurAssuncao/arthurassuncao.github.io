@@ -354,6 +354,7 @@ nav a.button-collapse {
 footer {
     &.page-footer {
         margin-top: 0px !important;
+        width: 100%;
     }
     .row {
         margin-bottom: 0;
@@ -362,6 +363,37 @@ footer {
         padding-bottom: 0px;
         padding-top: 0px;
     }
+}
+
+#form-submit{
+    i.material-icon{
+        vertical-align: middle;
+    }
+}
+
+#btn_habilidades_more{
+    i{
+        vertical-align: top;
+    }
+    margin-bottom: 40px;
+}
+
+.space-bottom-0{
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.curriculo_artigo_autor{
+    &:after{
+        content: "- ";
+    }
+    &:last-child:after{
+        content: "";
+    }
+}
+
+strong{
+    font-weight: 600;
 }
 
 // My style

@@ -168,6 +168,7 @@ module.exports = function(grunt) {
           '<%= project.src_assets_js %>/scripts.min.js': [
             '<%= project.src_assets_js %>/modules.js',
             '<%= project.src_assets_js %>/*.js',
+            '!<%= project.src_assets_js %>/*.min.js',
           ]
         }
       }
@@ -283,31 +284,31 @@ module.exports = function(grunt) {
         interrupt: true,
       },
       scss: {
-        files: ['<%= project.src_sass %>/*.scss', ],
+        files: ['<%= project.src_sass %>/*.scss'],
         tasks: ['sass'],
         // options: {
         //   interval: 1000,
         // },
       },
       uglify_third_party_angular: {
-        files: ['<%= project.src_bower_components %>/angular**.js', ],
+        files: ['<%= project.src_bower_components %>/angular**.js'],
         tasks: ['newer:uglify:dev_third_party_angular'],
         options: {
-          interval: 10000,
+          interval: 1000,
         },
       },
       uglify_third_party: {
-        files: ['<%= project.src_bower_components %>/**.js', ],
+        files: ['<%= project.src_bower_components %>/**.js'],
         tasks: ['newer:uglify:dev_third_party'],
         options: {
-          interval: 10000,
+          interval: 1000,
         },
       },
       uglify: {
-        files: ['<%= project.src_assets_js %>*.js', ],
+        files: ['<%= project.src_assets_js %>/*.js', '!<%= project.src_assets_js %>/*.min.js'],
         tasks: ['newer:uglify:dev'],
         options: {
-          interval: 10000,
+          interval: 1000,
         },
       },
       jade: {

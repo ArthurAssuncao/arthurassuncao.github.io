@@ -281,38 +281,59 @@
       </div>
       <h2 class="header text_b">Habilidades</h2>
       <div layout="column">
-        <div layout="row" flex layout-margin layout-padding>
+        <div layout="row" flex layout-margin layout-padding class="space-bottom-0">
           <div class="wow-nonmobile fadeInLeft" flex-sd="100" flex="50">
             <div id="curriculo_formacao">
               <h5>Formação</h5>
-              <ul id="lista_formacao" class="list-unstyled">
-                <li class="curriculo_item"><span class="curriculo_titulo"><strong>Mestrado em Ciência da Computação</strong></span><br/><span class="curriculo_instituicao">Universidade Federal de Ouro Preto</span><br/><span class="curriculo_periodo">2014 - Até o momento</span><br/></li>
-                <li class="curriculo_item"><span class="curriculo_titulo"><strong>Superior de Tecnologia em Sistemas para Internet</strong></span><br/><span class="curriculo_instituicao">Instituto Federal do Sudeste de MG</span><br/><span class="curriculo_periodo">2011 - 2014</span><br/></li>
+              <ul id="lista_formacao" class="list-unstyled" ng-controller="CoursesController">
+                <li class="curriculo_item" ng-repeat="course in courses.data">
+                  <course 
+                    name="{{ course.name }}"
+                    institution="{{ course.institution }}"
+                    datestart="{{ course.date_start }}"
+                    dateend="{{ course.date_end }}" >
+                  </course>
+                </li>
               </ul>
             </div>
             <div class="divider"></div>
             <div id="curriculo_producao">
               <h5>Produção Científica</h5>
-              <ul id="lista_experiencia" class="list-unstyled">
-                <li class="curriculo_item"><span class="curriculo_artigo"><span class="curriculo_artigo_titulo"><a href="http://dx.doi.org/10.1145/2810362.2810378" title="Methodology to Events Identification in Vehicles Using Statistical Process Control on Steering Wheel Data"><strong>Methodology to Events Identification in Vehicles Using Statistical Process Control on Steering Wheel Data</strong><i class="fa fa-link"></i></a></span><br/><span class="curriculo_artigo_autores"><em><span class="curriculo_artigo_autor"><strong>Arthur N. Assuncao, </strong></span><span class="curriculo_artigo_autor">Fabio O. de Paula, </span><span class="curriculo_artigo_autor">Ricardo A. R. Oliveira</span></em></span><br/><span class="curriculo_artigo_evento">Em: The 13th ACM International Symposium on Mobility Management and Wireless Access (MobiWac), 2015, Cancun, México. Qualis-CC B3</span></span></li>
-                <li class="curriculo_item"><span class="curriculo_artigo"><span class="curriculo_artigo_titulo"><a href="http://sbesc.lisha.ufsc.br/sbesc2015/proceedings/146713.pdf" title="KITT - Sistema de Carro Inteligente com Apoio à Segurança do Motorista"><strong>KITT - Sistema de Carro Inteligente com Apoio à Segurança do Motorista</strong><i class="fa fa-link"></i></a></span><br/><span class="curriculo_artigo_autores"><em><span class="curriculo_artigo_autor"><strong>Arthur N. Assuncao, </strong></span><span class="curriculo_artigo_autor">Ricardo Camara, </span><span class="curriculo_artigo_autor">Luiz Janeiro, </span><span class="curriculo_artigo_autor">Rafael Vitor, </span><span class="curriculo_artigo_autor">Fabio O. de Paula, </span><span class="curriculo_artigo_autor">Ricardo A. R. Oliveira</span></em></span><br/><span class="curriculo_artigo_evento">Em: V Brazilian Symposium on Computing Systems Engineering (SBESC), 2015, Foz do Iguaçu, Brasil. Qualis-CC B4</span></span></li>
-                <li class="curriculo_item"><span class="curriculo_artigo"><span class="curriculo_artigo_titulo"><a href="http://sbesc.lisha.ufsc.br/sbesc2015/proceedings/146842.pdf" title="Metodologia para Detecção de Saída de Faixa Utilizando EWMA Aplicado a Sensores Inerciais no Volante"><strong>Metodologia para Detecção de Saída de Faixa Utilizando EWMA Aplicado a Sensores Inerciais no Volante</strong><i class="fa fa-link"></i></a></span><br/><span class="curriculo_artigo_autores"><em><span class="curriculo_artigo_autor"><strong>Arthur N. Assuncao, </strong></span><span class="curriculo_artigo_autor">Fabio O. de Paula, </span><span class="curriculo_artigo_autor">Ricardo A. R. Oliveira</span></em></span><br/><span class="curriculo_artigo_evento">Em: V Brazilian Symposium on Computing Systems Engineering (SBESC), 2015, Foz do Iguaçu, Brasil. Qualis-CC B4</span></span></li>
+              <ul id="lista_experiencia" class="list-unstyled" ng-controller="PapersController">
+                <li ng-repeat="paper in papers.data" class="curriculo_item">
+                  <paper url="{{ paper.url }}" 
+                    title="{{ paper.title }}" 
+                    authors="{{ paper.authors }}" 
+                    confjournal="{{ paper.confjournal }}" 
+                    ano="{{ paper.year }}" 
+                    local="{{ paper.local }}" 
+                    qualis="{{ paper.qualis }}" 
+                    authormain="{{ paper.authormain }}">
+                  </paper>
+                </li>
               </ul>
             </div>
             <div class="divider hide-on-med-and-up"></div>
           </div>
           <div class="wow-nonmobile fadeInRight" flex-sd="100" flex="35">
-            <div id="curriculo_habilidades" ng-app="skillApp" ng-controller="SkillController">
-              <ul ng-repeat="skill in skills" class="list-unstyled">
-                <li id="skill_{{ skill.name }}">
-                  <div for="skill_{{ skill.name }}" class="mdl-tooltip"><span class="capitalize">{{ skill.name }}</span>: {{ skill.msg }}</div><span class="myskill"><span class="skill_name">{{ skill.name }} <i class="tiny microtiny skill-name-icon material-icons">info_outline</i></span><span class="skill_grade">{{ generate_level(skill.value) }}</span><br/><span class="col-md-11 skill"><span data-skillbar="{{ skill.value }}" class="skill_bar"></span></span></span>
+            <div id="curriculo_habilidades" ng-controller="SkillsController">
+              <ul class="list-unstyled">
+                <li ng-repeat="skill in skills.data" id="skill_{{ skill.name }}">
+                  <skill 
+                    name="{{ skill.name }}" 
+                    msg="{{ skill.msg }}" 
+                    value="{{ skill.value }}" >
+                  </skill>
                 </li>
               </ul>
             </div>
           </div>
         </div>
         <div flex class="col-centered btn_habilidades_more">
-          <button id="btn_habilidades_more" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored blue"><i class="material-icons">add</i></button>
+          <md-button id="btn_habilidades_more" class="md-fab md-primary" aria-label="Use Android">
+            <md-icon><i class="material-icons">add</i></md-icon>
+          </md-button>
+
         </div>
       </div>
     </div>

@@ -3,12 +3,13 @@ app.controller('AppController', function($scope) {
 
 });
 
-app.controller('SkillController', function($scope) {
-    $scope.sortType     = 'value'; // set the default sort type
-    $scope.sortReverse  = false;  // set the default sort order
+app.controller('SkillsController', function($scope) {
+    $scope.sortType     = 'value'; // sort type default
+    $scope.sortReverse  = false;  // ordenacao do sort
 
     // cria a lista
-    $scope.skills = [
+    $scope.skills = {};
+    $scope.skills.data = [
         { name: 'android', value: 70, msg: 'Trabalhei por 1,25 ano e fiz um curso de Android, além de alguns projetos.' },
         { name: 'python', value: 60, msg: 'Trabalhei por 1,25 ano, fiz um site e também um curso de Python, além de vários projetos, inclusive no mestrado.' },
         { name: 'JavaScript/jQuery', value: 60, msg: 'Trabalhei em alguns sites, extensões para o Chrome e projetos.' },
@@ -23,26 +24,66 @@ app.controller('SkillController', function($scope) {
         { name: 'SQL', value: 60, msg: 'Trabalhei por 1,5 ano utilizando SQL, com o MySQL(1,25 ano) e Postgree(0,25 ano).' },
         { name: 'Objective-C (Programação para iOS)', value: 20, msg: 'Aprendi no mestrado cursando uma disciplina de desenvolvimento móvel' },
     ];
-    $scope.levels = [
-        { name: 'básico', value_min: 0, value_max: 39 },
-        { name: 'intermediário', value_min: 40, value_max: 69 },
-        { name: 'avançado', value_min: 70, value_max: 89 },
-        { name: 'expert', value_min: 90, value_max: 100 }
-    ];
-    $scope.generate_level = function(value) {
-        if(value >= $scope.levels[3].value_min){
-            return $scope.levels[3].name;
-        }
-        else if(value >= $scope.levels[2].value_min){
-            return $scope.levels[2].name;
-        }
-        else if(value >= $scope.levels[1].value_min){
-            return $scope.levels[1].name;
-        }
-        else if(value >= $scope.levels[0].value_min){
-            return $scope.levels[0].name;
-        }
-        return 'indefinido';
-    }
+});
 
+app.controller('PapersController', function($scope) {
+    $scope.sortType     = 'value'; // sort type default
+    $scope.sortReverse  = false;  // ordenacao do sort
+
+    // cria a lista
+    $scope.papers = {};
+    $scope.papers.data = [
+        {
+            url: "http://dx.doi.org/10.1145/2810362.2810378",
+            title: "Methodology to Events Identification in Vehicles Using Statistical Process Control on Steering Wheel Data",
+            authors: "Arthur N. Assuncao, Fabio O. de Paula, Ricardo A. R. Oliveira",
+            confjournal: "The 13th ACM International Symposium on Mobility Management and Wireless Access (MobiWac)",
+            year: "2015",
+            local: "Cancun, México",
+            qualis: "Qualis-CC B3",
+            authormain: 1
+        },
+        {
+            url: "http://sbesc.lisha.ufsc.br/sbesc2015/proceedings/146713.pdf",
+            title: "KITT - Sistema de Carro Inteligente com Apoio à Segurança do Motorista",
+            authors: "Arthur N. Assuncao, Ricardo Camara, Luiz Janeiro, Rafael Vitor, Fabio O. de Paula, Ricardo A. R. Oliveira",
+            confjournal: "V Brazilian Symposium on Computing Systems Engineering (SBESC)",
+            year: "2015",
+            local: "Foz do Iguaçu, Brasil",
+            qualis: "Qualis-CC B4",
+            authormain: 1
+        },
+        {
+            url: "http://sbesc.lisha.ufsc.br/sbesc2015/proceedings/146842.pdf",
+            title: "Metodologia para Detecção de Saída de Faixa Utilizando EWMA Aplicado a Sensores Inerciais no Volante",
+            authors: "Arthur N. Assuncao, Fabio O. de Paula, Ricardo A. R. Oliveira",
+            confjournal: "V Brazilian Symposium on Computing Systems Engineering (SBESC)",
+            year: "2015",
+            local: "Foz do Iguaçu, Brasil",
+            qualis: "Qualis-CC B4",
+            authormain: 1
+        },
+    ];
+});
+
+app.controller('CoursesController', function($scope) {
+    $scope.sortType     = 'value'; // sort type default
+    $scope.sortReverse  = false;  // ordenacao do sort
+
+    // cria a lista
+    $scope.courses = {};
+    $scope.courses.data = [
+        {
+            name : "Mestrado em Ciência da Computação",
+            institution : "Universidade Federal de Ouro Preto",
+            date_start : "2014",
+            date_end : "Até o momento",
+        },
+        {
+            name : "Superior de Tecnologia em Sistemas para Internet",
+            institution : "Instituto Federal do Sudeste de MG",
+            date_start : "2011",
+            date_end : "2014",
+        },
+    ];
 });
