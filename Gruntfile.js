@@ -145,22 +145,29 @@ module.exports = function(grunt) {
         preserveComments: 'some',
         sourceMap: true
       },
-      dev_third_party: {
+      dev_third_party_angular: {
         files: {
            '<%= project.src_assets_js_third_party %>/angular-bundle.min.js': [
              '<%= project.src_bower_components %>/angular/angular.min.js', 
              '<%= project.src_bower_components %>/angular-material/angular-material.min.js',
              '<%= project.src_bower_components %>/angular-animate/angular-animate.min.js',
              '<%= project.src_bower_components %>/angular-aria/angular-aria.min.js',
-             '<%= project.src_bower_components %>/angular-route/angular-route.min.js',
+           ],
+        }
+      },
+      dev_third_party: {
+        files: {
+           '<%= project.src_assets_js_third_party %>/plugins.min.js': [
+             '<%= project.src_bower_components %>/wow/dist/wow.min.js', 
+             '<%= project.src_bower_components %>/jquery/dist/jquery.min.js', 
            ],
         }
       },
       dev: {
         files: {
           '<%= project.src_assets_js %>/scripts.min.js': [
-            '<%= project.src_scripts %>/modules.js',
-            '<%= project.src_scripts %>/*.js',
+            '<%= project.src_assets_js %>/modules.js',
+            '<%= project.src_assets_js %>/*.js',
           ]
         }
       }
@@ -258,9 +265,9 @@ module.exports = function(grunt) {
         options: {
           data: {
             debug: true,
-            timestamp: "<%= new Date().getTime() %>",
-            pretty: true
-          }
+          },
+          timestamp: "<%= new Date().getTime() %>",
+          pretty: true
         },
         files: {
           "<%= project.src %>/index.html": ["<%= project.src_jade %>/index.jade"]
@@ -282,22 +289,29 @@ module.exports = function(grunt) {
         //   interval: 1000,
         // },
       },
+      uglify_third_party_angular: {
+        files: ['<%= project.src_bower_components %>/angular**.js', ],
+        tasks: ['newer:uglify:dev_third_party_angular'],
+        options: {
+          interval: 10000,
+        },
+      },
       uglify_third_party: {
         files: ['<%= project.src_bower_components %>/**.js', ],
-        tasks: ['uglify:dev_third_party'],
+        tasks: ['newer:uglify:dev_third_party'],
         options: {
           interval: 10000,
         },
       },
       uglify: {
-        files: ['<%= project.src_scripts %>*.js', ],
-        tasks: ['uglify:dev'],
+        files: ['<%= project.src_assets_js %>*.js', ],
+        tasks: ['newer:uglify:dev'],
         options: {
           interval: 10000,
         },
       },
       jade: {
-        files: ['<%= project.src_jade %>/*.jade', ],
+        files: ['<%= project.src_jade %>/*.jade', '<%= project.src_jade %>/*.html'],
         tasks: ['jade'],
       }
     },
@@ -330,5 +344,5 @@ module.exports = function(grunt) {
 
   // Tasks
   grunt.registerTask('dev', ['newer:sass', 'newer:jade', 'newer:uglify', 'concurrent:tasks']);
-  grunt.registerTask('default', ['mkdir', 'newer:sass', 'newer:postcss', 'newer:cssmin', 'newer:modernizr', 'newer:uglify:dev_third_party', 'newer:uglify:dev', 'newer:copy']);
+  grunt.registerTask('default', ['mkdir', 'newer:sass', 'newer:postcss', 'newer:cssmin', 'newer:modernizr', 'newer:uglify:dev_third_party', 'newer:uglify:dev_third_party_angular', 'newer:uglify:dev', 'newer:copy']);
 };

@@ -1,9 +1,10 @@
 // imports 
 @import "variables";
 @import "reset";
-@import "bower_components/font-awesome/css/font-awesome.min.css";
-@import "bower_components/roboto-fontface/css/roboto-fontface.css";
+@import "../bower_components/font-awesome/scss/font-awesome";
+@import "../bower_components/roboto-fontface/css/roboto-fontface";
 @import "gmail-scrollbars";
+@import "../bower_components/angular-material/angular-material";
 
 
 object[type^="application/gas-events-uni"] {
@@ -16,6 +17,29 @@ body {
     text-rendering: optimizeLegibility;
     font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    padding: 0 1.5rem;
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 90%;
+}
+
+#conteudo{
+    width: 100%;
+}
+
+.center{
+    text-align: center;
+}
+
+.promo-caption{
+    font-size: 1.5em;
+}
+
+.light{
+    font-weight: 300;
 }
 
 .icon-block {
@@ -90,6 +114,28 @@ body {
 
 .text_pink {
     color: #EF9A9A;
+}
+
+.white-text{
+    color: white !important;
+}
+
+.blue-text{
+    color: #2196f3 !important;
+}
+
+i.small {
+    font-size: 2rem;
+}
+
+i.tiny {
+    font-size: 1rem;
+}
+
+#social{
+    a, a:hover{
+        text-decoration: none;
+    }
 }
 
 .navbar-item {
@@ -432,6 +478,18 @@ footer {
     }
 }
 
+@media only screen and (min-width: 993px){
+    .container {
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 601px){
+    .container {
+        width: 85%;
+    }
+}
+
 .footer {
     background-color: #212121 !important;
 }
@@ -730,6 +788,10 @@ ul.card-modal-specs {
     opacity: 0.5;
 }
 
+md-input-container.md-default-theme .md-input, md-input-container .md-input {
+    border-color: rgba(255,255,255,1);
+}
+
 a:hover {
     .fa-facebook-square {
         color: #3b5998 !important;
@@ -783,7 +845,7 @@ a:hover {
 }*/
 
 // Material design lite
-.navbar, .navbar-side, .mdl-layout__drawer-button{
+.navbar, .navbar-side{
     position: fixed;
 }
 
@@ -800,10 +862,7 @@ a:hover {
     a.active, a:active, a:hover{
         background-color: $my-bgcolor-menu-active;
     }
-}
-
-.mdl-layout__header{
-    box-shadow: 0 0 0 0 transparent;
+    display: inherit;
 }
 
 .nav_shadow{
@@ -833,26 +892,21 @@ form{
     width: 150px;
 }
 
-
-.mdl-layout__drawer-button{
-    display: block;
-    color: white;
-}
-
-.mdl-layout__container{
-    position: relative;
-}
-
-@media only screen and (min-width: 1025px) {
-    .mdl-layout__drawer-button{
-        display: none;
-    }
-}
-
 .capitalize{
     text-transform: capitalize;
 }
 
 google-map{
     height: 300px;
+}
+
+//toolbar navbar
+md-toolbar{
+    #navbar{
+        height: 100%;
+        a{
+            padding-top: 20px; //refazer de outra forma depois
+        }
+    }
+
 }
