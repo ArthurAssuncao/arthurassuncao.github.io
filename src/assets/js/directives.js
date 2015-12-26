@@ -252,7 +252,7 @@ app.controller('ProjectController', function($scope, $mdMedia, $mdDialog) {
         });
     };
     function DialogProjectController($scope, $mdDialog, project) {
-        console.log(project);
+        $scope.project = project;
         $scope.hide = function() {
             $mdDialog.hide();
         };
