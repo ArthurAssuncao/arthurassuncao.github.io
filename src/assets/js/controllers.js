@@ -87,3 +87,26 @@ app.controller('CoursesController', function($scope) {
         },
     ];
 });
+
+app.controller('ProjectsController', function($scope) {
+    $scope.sortType     = 'value'; // sort type default
+    $scope.sortReverse  = false;  // ordenacao do sort
+
+    // cria a lista
+    $scope.projects = {};
+    $scope.projects.data = [
+        {
+            name: "MaisVendas",
+            imgurl: "assets/img/portfolio/maisvendas_300x200.png",
+            url: "https://play.google.com/store/apps/details?id=com.vendas",
+            urlname: "MaisVendas na PlayStore",
+            technologies: "Android, Python/Django, JSON, Git, MySQL",
+            type: "Desenvolvedor Mobile e Web",
+            datestart: "2013",
+            dateend: "2014",
+            description: "<p>Participei da programação do app móvel e do Web Service MaisVendas da empresa AddMob.</p>
+                    <p>Foi feito o desenolvimento do app Android e Web Service em Django com banco de dados MySQL, uso de notação JSON para comunicação entre os sistemas e utilização de controle de versão Git para uma melhor manutenção do código e colaboração entre os membros da equipe.</p>
+                    <p>O MaisVendas é um sistema para quem deseja ter seu catálogo de produtos e sua lista de clientes disponíveis ao toque da tela de seu tablet ou smartphone. É possível realizar vendas, consultar pedidos realizados, verificar o histórico de vendas através do gráfico iterativo e muito mais.</p>",
+        },
+    ];
+});

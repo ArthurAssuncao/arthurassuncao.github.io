@@ -1,0 +1,27 @@
+<md-dialog aria-label="name" ng-cloak>
+  <form>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>{{ project.name }}</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon aria-label="Close dialog">
+            <i class="fa fa-close"></i>
+          </md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content>
+      <div class="md-dialog-content">
+        <div>Lista de tecnologias</div>
+        <div>{{ type }}</div>
+        <div>Descricao</div>
+      </div>
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+      <md-button href="url" target="_blank" md-autofocus>
+        UrlName
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

@@ -32,179 +32,23 @@
     <div flex id="work" class="section scrollspy">
       <div class="container">
         <h2 class="header text_b">Alguns projetos que participei</h2>
-        <div class="row">
-          <div class="wow-nonmobile fadeInUp col s12 m4 l4">
-            <div class="card tiny"><a href="#modal_proj_maisvendas" class="modal-trigger">
-                <div class="card-image waves-effect waves-block waves-light"><img src="assets/img/portfolio/maisvendas_300x200.png" alt="Projeto MaisVendas" class="activator"/></div></a>
-              <div class="card-content"><span data-target="modal_proj_maisvendas" class="card-title activator grey-text text-darken-4 modal-trigger-custom">MaisVendas  <i class="material-icons right">more_vert</i></span>
-                <p><a href="https://play.google.com/store/apps/details?id=com.vendas">MaisVendas na PlayStore</a></p>
-              </div>
-            </div>
-            <div id="modal_proj_maisvendas" class="modal card-modal container"><a class="btn-floating btn-large waves-effect waves-light red modal-close right"><i class="fa fa-close"></i></a>
-              <div class="modal-content card-reveal row">
-                <div class="col s12 l6 card-modal-image"><img src="assets/img/portfolio/maisvendas_300x200.png" alt="Projeto MaisVendas"/></div>
-                <div class="col s12 l6 card-modal-content">
-                  <h5 class="card-title card-modal-title grey-text text-darken-4"><strong>MaisVendas</strong></h5>
-                  <ul class="card-modal-specs grey-text text-darken-0">
-                    <li>Android</li>
-                    <li>Python/Django</li>
-                    <li>JSON</li>
-                    <li>Git</li>
-                    <li>MySQL</li>
-                  </ul>
-                  <p class="card-modal-role center-align">Desenvolvedor Mobile e Web<span class="card-modal-date">2013-2014</span></p>
-                  <div class="card-modal-description">
-                    <p>Participei da programação do app móvel e do Web Service MaisVendas da empresa AddMob.</p>
-                    <p>Foi feito o desenolvimento do app Android e Web Service em Django com banco de dados MySQL, uso de notação JSON para comunicação entre os sistemas e utilização de controle de versão Git para uma melhor manutenção do código e colaboração entre os membros da equipe.</p>
-                    <p>O MaisVendas é um sistema para quem deseja ter seu catálogo de produtos e sua lista de clientes disponíveis ao toque da tela de seu tablet ou smartphone. É possível realizar vendas, consultar pedidos realizados, verificar o histórico de vendas através do gráfico iterativo e muito mais.</p>
-                  </div><a href="https://play.google.com/store/apps/details?id=com.vendas" class="card-modal-visit grey-text text-darken-3 right"><strong>MaisVendas na Play Store</strong></a>
-                </div>
-              </div>
-            </div>
+        <div layout="row" ng-controller="ProjectsController">
+          <div flex="30" ng-repeat="project in projects.data">
+            <project 
+              name="{{ project.name }}" 
+              imgurl="{{ project.imgurl }}" 
+              url="{{ project.url }}" 
+              urlname="{{ project.urlname }}" 
+              technologies="{{ project.technologies }}" 
+              type="{{ project.type }}" 
+              datestart="{{ project.datestart }}" 
+              dateend="{{ project.dateend }}" 
+              description="{{ project.description }}" 
+            ></project>
           </div>
-          <div class="wow-nonmobile fadeInUp col s12 m4 l4">
-            <div class="card tiny"><a href="#modal_proj_jump" class="modal-trigger">
-                <div class="card-image waves-effect waves-block waves-light"><img src="http://fakeimg.pl/300x200/" alt="Projeto JUMP!" class="activator"/></div></a>
-              <div class="card-content"><span data-target="modal_proj_jump" class="card-title activator grey-text text-darken-4 modal-trigger-custom">JUMP! <i class="material-icons right">more_vert</i></span>
-                <p><a href="https://github.com/arthurassuncao/jump">Repositorio do projeto</a></p>
-              </div>
-            </div>
-            <div id="modal_proj_jump" class="modal card-modal container"><a class="btn-floating btn-large waves-effect waves-light red modal-close right"><i class="fa fa-close"></i></a>
-              <div class="modal-content card-reveal row">
-                <div class="col s12 l6 card-modal-image"><img src="http://fakeimg.pl/300x200/" alt="Projeto JUMP!" class="activator"/></div>
-                <div class="col s12 l6 card-modal-content">
-                  <h5 class="card-title card-modal-title grey-text text-darken-4"><strong>JUMP!</strong></h5>
-                  <ul class="card-modal-specs grey-text text-darken-0">
-                    <li>Python</li>
-                    <li>Node.js</li>
-                    <li>HTML/CSS3</li>
-                    <li>JavaScript/Phaser</li>
-                    <li>Git</li>
-                  </ul>
-                  <p class="card-modal-role center-align">Projeto Acadêmico<span class="card-modal-date">2013</span></p>
-                  <div class="card-modal-description">
-                    <p>Participei da equipe de desenvolvimento do jogo JUMP (Jogo Unificado para Movimentação Projetada).</p>
-                    <p>O jogo permite que o jogador, em frente a uma webcam, controle, por meio de seus pulos, o personagem do jogo.</p>
-                    <p>Foram utilizados: linguagem Python com a biblioteca OpenCV e Node.js.</p>
-                    <p>Projeto foi apresentado na Semana Nacional de Ciência e Tecnologia (SNCT) de 2013 no IFSEMG - Câmpus Barbacena.</p>
-                  </div><a href="https://github.com/arthurassuncao/jump" class="card-modal-visit grey-text text-darken-3 right"><strong>Repositório do Projeto</strong></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="wow-nonmobile fadeInUp col s12 m4 l4">
-            <div class="card tiny"><a href="#modal_proj_uguide-desk" class="modal-trigger">
-                <div class="card-image waves-effect waves-block waves-light"><img src="http://fakeimg.pl/300x200/" alt="Projeto uGuide Desk 2014" class="activator"/></div></a>
-              <div class="card-content"><span data-target="modal_proj_uguide-desk" class="card-title activator grey-text text-darken-4 modal-trigger-custom">uGuide Desk 2014 <i class="material-icons right">more_vert</i></span></div>
-            </div>
-            <div id="modal_proj_uguide-desk" class="modal card-modal container"><a class="btn-floating btn-large waves-effect waves-light red modal-close right"><i class="fa fa-close"></i></a>
-              <div class="modal-content card-reveal row">
-                <div class="col s12 l6 card-modal-image"><img src="http://fakeimg.pl/300x200/" alt="Projeto uGuide Desk 2014" class="activator"/></div>
-                <div class="col s12 l6 card-modal-content">
-                  <h5 class="card-title card-modal-title grey-text text-darken-4"><strong>uGuide Desk 2014</strong></h5>
-                  <ul class="card-modal-specs grey-text text-darken-0">
-                    <li>C++</li>
-                    <li>JSON</li>
-                    <li>Git</li>
-                  </ul>
-                  <p class="card-modal-role center-align">Projeto Acadêmico<span class="card-modal-date">2014</span></p>
-                  <div class="card-modal-description">
-                    <p>Participei da equipe de desenvolvimento da aplicação.</p>
-                    <p>O projeto consistiu de um software informativo e interativo para acompanhamento de eventos e notícias do Festival de Inverno de Ouro Preto e Mariana de 2014 com interação com os usuários por meio do sensor Kinect.</p>
-                    <p>Foram utilizadas linguagem C++ e interface gráfica Qt com comunicação com o Web Service via JSON.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="wow-nonmobile fadeInUp col s12 m4 l4">
-            <div class="card tiny"><a href="#modal_proj_chrome-extensions" class="modal-trigger">
-                <div class="card-image waves-effect waves-block waves-light"><img src="assets/img/portfolio/chrome-web-store_300x200.png" alt="Projeto Chrome Extensions" class="activator"/></div></a>
-              <div class="card-content"><span data-target="modal_proj_chrome-extensions" class="card-title activator grey-text text-darken-4 modal-trigger-custom">Chrome Extensions <i class="material-icons right">more_vert</i></span>
-                <p><a href="https://chrome.google.com/webstore/search/adev?hl=pt-BR">Entensões na Chrome Store</a></p>
-              </div>
-            </div>
-            <div id="modal_proj_chrome-extensions" class="modal card-modal container"><a class="btn-floating btn-large waves-effect waves-light red modal-close right"><i class="fa fa-close"></i></a>
-              <div class="modal-content card-reveal row">
-                <div class="col s12 l6 card-modal-image"><img src="assets/img/portfolio/chrome-web-store_300x200.png" alt="Projeto Chrome Extensions" class="activator"/></div>
-                <div class="col s12 l6 card-modal-content">
-                  <h5 class="card-title card-modal-title grey-text text-darken-4"><strong>Chrome Extensions</strong></h5>
-                  <ul class="card-modal-specs grey-text text-darken-0">
-                    <li>HTML/CSS3</li>
-                    <li>JavaScript/jQuery</li>
-                    <li>Git</li>
-                  </ul>
-                  <p class="card-modal-role center-align">Projeto Pessoal<span class="card-modal-date">2013</span></p>
-                  <div class="card-modal-description">
-                    <p>Desenvolvimento de extensões para o navegador Google Chrome:</p>
-                    <p>
-                      <ul>
-                        <li><a href="https://chrome.google.com/webstore/detail/hide-contact-from-faceboo/dldcnjjdfolnampaceecohfaolbefbhj">Hide Contact From Facebook Chat List</a><br/>
-                          <p>Esconde contatos da lista do chat do Facebook sem bloquear o contato. O contato continua te vendo na lista do chat dele como online, porém voce não o vê mais.</p>
-                        </li>
-                        <li><a href="https://chrome.google.com/webstore/detail/wpp-web-customizer/lhaamjcmnafobcjjcjfpglfonpdkoedb">Wpp web Customizador</a><br/>
-                          <p>Modifica o fundo (background) do chat do Whatsapp™ Web.</p>
-                        </li>
-                      </ul>
-                    </p>
-                  </div><a href="https://github.com/arthurassuncao/jump" class="card-modal-visit grey-text text-darken-3 right"><strong>Repositório do Projeto</strong></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="wow-nonmobile fadeInUp col s12 m4 l4">
-            <div class="card tiny"><a href="#modal_proj_addmobcombr" class="modal-trigger">
-                <div class="card-image waves-effect waves-block waves-light"><img src="assets/img/portfolio/addmob_com_br_300x200.jpg" alt="Projeto Addmob.com.br" class="activator"/></div></a>
-              <div class="card-content"><span data-target="modal_proj_addmobcombr" class="card-title activator grey-text text-darken-4 modal-trigger-custom">Addmob.com.br <i class="material-icons right">more_vert</i></span>
-                <p><a href="https://www.addmob.com.br">Addmob.com.br</a></p>
-              </div>
-            </div>
-            <div id="modal_proj_addmobcombr" class="modal card-modal container"><a class="btn-floating btn-large waves-effect waves-light red modal-close right"><i class="fa fa-close"></i></a>
-              <div class="modal-content card-reveal row">
-                <div class="col s12 l6 card-modal-image"><img src="assets/img/portfolio/addmob_com_br_300x200.jpg" alt="Projeto Addmob.com.br" class="activator"/></div>
-                <div class="col s12 l6 card-modal-content">
-                  <h5 class="card-title card-modal-title grey-text text-darken-4"><strong>Addmob.com.br</strong></h5>
-                  <ul class="card-modal-specs grey-text text-darken-0">
-                    <li>HTML/CSS3</li>
-                    <li>JavaScript/jQuery</li>
-                    <li>Python/Django</li>
-                    <li>Git</li>
-                  </ul>
-                  <p class="card-modal-role center-align">Desenvolvedor Web<span class="card-modal-date">2014</span></p>
-                  <div class="card-modal-description">
-                    <p>Participei do desenvolvimento do Website da empresa AddMob Integradora de Soluções Ltda.</p>
-                    <p>Website desenvolvido em HTML5/CSS3 e Django, utilizando o framework Bootstrap 2.x e jQuery, com layout responsivo e captura de gestos (Hammer.js) para otimizar a experiência em dispositivos móveis.</p>
-                  </div>
-                </div><a href="https://www.addmob.com.br" class="card-modal-visit grey-text text-darken-3 right"><strong>Addmob.com.br</strong></a>
-              </div>
-            </div>
-          </div>
-          <div class="wow-nonmobile fadeInUp col s12 m4 l4">
-            <div class="card tiny"><a href="#modal_proj_android-cepview" class="modal-trigger">
-                <div class="card-image waves-effect waves-block waves-light"><img src="http://fakeimg.pl/300x200/" alt="Projeto Android CepView" class="activator"/></div></a>
-              <div class="card-content"><span data-target="modal_proj_android-cepview" class="card-title activator grey-text text-darken-4 modal-trigger-custom">Android CepView <i class="material-icons right">more_vert</i></span>
-                <p><a href="https://github.com/ArthurAssuncao/Android-CepView">Repositório do projeto</a></p>
-              </div>
-            </div>
-            <div id="modal_proj_android-cepview" class="modal card-modal container"><a class="btn-floating btn-large waves-effect waves-light red modal-close right"><i class="fa fa-close"></i></a>
-              <div class="modal-content card-reveal row">
-                <div class="col s12 l6 card-modal-image"><img src="http://fakeimg.pl/300x200/" alt="Projeto Android CepView" class="activator"/></div>
-                <div class="col s12 l6 card-modal-content">
-                  <h5 class="card-title card-modal-title grey-text text-darken-4"><strong>Android CepView</strong></h5>
-                  <ul class="card-modal-specs grey-text text-darken-0">
-                    <li>Android</li>
-                    <li>JSON</li>
-                    <li>Git</li>
-                  </ul>
-                  <p class="card-modal-role center-align">Desenvolvedor Mobile e Web<span class="card-modal-date">2014</span></p>
-                  <div class="card-modal-description">
-                    <p>Android Cep View é um Android UI widget com os principais campos relacionados a endereço (CEP, endereço, número, complemento, bairro, cidade, estado), fornece preenchimento automático dos dados com base no CEP (Código de Endereçamento Postal) informado.</p>
-                  </div>
-                </div><a href="https://github.com/ArthurAssuncao/Android-CepView" class="card-modal-visit grey-text text-darken-3 right"><strong>Repositório do projeto</strong></a>
-              </div>
-            </div>
-          </div>
-        </div>
+
+
+          
       </div>
     </div>
   </div>
