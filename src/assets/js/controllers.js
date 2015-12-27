@@ -15,11 +15,11 @@ app.controller('SkillsController', function($scope) {
         { name: 'MongoDB', value: 45, msg: 'Utilizei em um projeto vencedor de hackathon e em um app que está em desenvolvimento, além de um curso de MEAN.' },
         { name: 'JavaScript/jQuery', value: 75, msg: 'Trabalhei em alguns sites, extensões para o Chrome e projetos.' },
         { name: 'HTML5/CSS3/SASS', value: 80, msg: 'Trabalhei em alguns sites, extensões para o Chrome e alguns projetos.' },
-        { name: 'ReactJS', value: 20, msg: 'Aprendi durante um curso de Front-end.' },
+        { name: 'ReactJS', value: 15, msg: 'Aprendi durante um curso de Front-end.' },
         { name: 'Git (Controle de Versão)', value: 90, msg: 'Utilizo Git desde 2012 em boa parte dos projetos que participo, além de ter trabalhado por 1,25 ano e de utilizar no mestrado.' },
         { name: 'Design Responsivo', value: 70, msg: 'Trabalhei em alguns sites com Design Responsivo.' },
         { name: 'MaterializeCSS / Bootstrap 2.x-3.x', value: 70, msg: 'Trabalhei em alguns sites utilizando Bootstrap e MaterializeCSS, como as versões anteriores deste site pessoal, extensões para o Chrome e projetos.' },
-        { name: 'Grunt (automatizador)', value: 60, msg: 'Utilizo neste site, além do uso em um app que está em desenvolvimento.' },
+        { name: 'Grunt (automatizador)', value: 60, msg: 'Utilizo neste site e em um app que está em desenvolvimento.' },
         { name: 'Android', value: 70, msg: 'Trabalhei por 1,25 ano e fiz um curso de Android, além de alguns projetos.' },
         { name: 'Python', value: 60, msg: 'Trabalhei por 1,25 ano, fiz um site e também um curso de Python, além de vários projetos, inclusive no mestrado.' },
         { name: 'R', value: 70, msg: 'Utilizo em projetos do mestrado.' },
@@ -27,7 +27,7 @@ app.controller('SkillsController', function($scope) {
         // { name: 'Java/Java Web', value: 50, msg: 'Trabalhei por alguns meses com Java Web e desenvolvi alguns projetos em Java.' },
         // { name: 'C++', value: 50, msg: 'Participei de projetos utilizando C++ e utilizei no mestrado.' },
         { name: 'SQL', value: 60, msg: 'Trabalhei por 1,5 ano utilizando SQL, com o MySQL(1,25 ano) e Postgree(0,25 ano).' },
-        { name: 'Objective-C (Programação para iOS)', value: 15, msg: 'Aprendi no mestrado cursando uma disciplina de desenvolvimento móvel' },
+        { name: 'Objective-C (Programação para iOS)', value: 15, msg: 'Aprendi no mestrado cursando uma disciplina de desenvolvimento móvel.' },
     ];
 });
 
@@ -49,7 +49,8 @@ app.controller('PapersController', function($scope) {
             authormain: 1
         },
         {
-            url: "http://sbesc.lisha.ufsc.br/sbesc2015/proceedings/146713.pdf",
+            // url: "http://sbesc.lisha.ufsc.br/sbesc2015/proceedings/146713.pdf",
+            url: "http://localhost:8080/assets/files/146713_KITT_Sistema_de_Carro_Inteligente_com_Apoio_a_Seguranca_do_Motorista.pdf",
             title: "KITT - Sistema de Carro Inteligente com Apoio à Segurança do Motorista",
             authors: "Arthur N. Assuncao, Ricardo Camara, Luiz Janeiro, Rafael Vitor, Fabio O. de Paula, Ricardo A. R. Oliveira",
             confjournal: "V Brazilian Symposium on Computing Systems Engineering (SBESC)",
@@ -59,7 +60,8 @@ app.controller('PapersController', function($scope) {
             authormain: 1
         },
         {
-            url: "http://sbesc.lisha.ufsc.br/sbesc2015/proceedings/146842.pdf",
+            // url: "http://sbesc.lisha.ufsc.br/sbesc2015/proceedings/146842.pdf",
+            url: "http://localhost:8080/assets/files/146842_Metodologia_para_Deteccao_de_Saida_de_Faixa_Utilizando_EWMA_Aplicado_a_Sensores_Inerciais_no_Volante.pdf",
             title: "Metodologia para Detecção de Saída de Faixa Utilizando EWMA Aplicado a Sensores Inerciais no Volante",
             authors: "Arthur N. Assuncao, Fabio O. de Paula, Ricardo A. R. Oliveira",
             confjournal: "V Brazilian Symposium on Computing Systems Engineering (SBESC)",
@@ -241,13 +243,13 @@ app.controller('ProjectsController', function($scope) {
             datestart: "2012",
             dateend: "Atualmente",
             description: "<p>Meu site pessoal onde divulgo meu currículo, meus projetos, etc e o mantenho atualizado com o que há de mais interessante e recente em termos de tecnologias web.</p>
-            <p><strong>História</strong></p>
-            <p>Em 2012 o site não tinha o código fonte aberto e utilizava PHP e Bootstrap 2.x.</p>
-            <p>Em 2013 o site teve seu código fonte aberto e hospedado no Github.</p>
-            <p>Em 2014 o site teve o Bootstrap atualizado para a versão 3.x.</p>
-            <p>Em 2015 o site passou por várias reformulações, primeiro foi o uso do MaterializeCSS, em seguida foi removido o PHP e deixado apenas estático. Uma versão em Material Design Lite foi iniciada, porém descontinuada devido a falta de recursos desse framework da Google. Nesta versão mais recente de 2015, o site é feito utilizando AngularJS e AngularJS Material, que oferecem muitos recursos com grande produtividade, além de um bom desempenho, mesmo neste último quesito sendo inferior ao ReactJS ou AngularJS 2.0.</p>
-            <p>Além de todas estas mudanças, em 2015, comecei a utilizar no site o SASS para melhorar a códificação CSS, Jade pra modularizar melhor os HTML e, o mais interessante de todos, o Grunt como automatizador. O ganho em desempenho e produtividade que um automatizador gera é gigantesco.
-            <p>Em 2016 estou analisando, a principio, a possibilidade de substituir as directivas do AngularJS por componentes ReactJS, o que aumentaria muito o desempenho do site.</p>",
+                <p><strong>História</strong></p>
+                <p>Em 2012 o site não tinha o código fonte aberto e utilizava PHP e Bootstrap 2.x.</p>
+                <p>Em 2013 o site teve seu código fonte aberto e hospedado no Github.</p>
+                <p>Em 2014 o site teve o Bootstrap atualizado para a versão 3.x.</p>
+                <p>Em 2015 o site passou por várias reformulações, primeiro foi o uso do MaterializeCSS, em seguida foi removido o PHP e deixado apenas estático. Uma versão em Material Design Lite foi iniciada, porém descontinuada devido a falta de recursos desse framework da Google. Nesta versão mais recente de 2015, o site é feito utilizando AngularJS e AngularJS Material, que oferecem muitos recursos com grande produtividade, além de um bom desempenho, mesmo neste último quesito sendo inferior ao ReactJS ou AngularJS 2.0.</p>
+                <p>Além de todas estas mudanças, em 2015, comecei a utilizar no site o SASS para melhorar a códificação CSS, Jade pra modularizar melhor os HTML e, o mais interessante de todos, o Grunt como automatizador. O ganho em desempenho e produtividade que um automatizador gera é gigantesco.
+                <p>Em 2016 estou analisando, a principio, a possibilidade de substituir as directivas do AngularJS por componentes ReactJS, o que aumentaria muito o desempenho do site.</p>",
         },
     ];
 });

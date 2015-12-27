@@ -957,6 +957,10 @@ form{
     text-transform: capitalize;
 }
 
+.justify{
+    text-align: justify;
+}
+
 google-map{
     height: 300px;
 }
@@ -972,9 +976,21 @@ md-toolbar{
 
 }
 
+// secao meu trabalho
+// intro
+#intro{
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+// secao projetos
 .md-card-image{
     width: 328px;
     height: 172px;
+}
+
+md-card md-card-title {
+    padding: 8px 16px 8px;
 }
 
 project{
@@ -989,3 +1005,41 @@ project{
 strong{
     font-weight: 500;
 }
+
+em{
+    font-style: italic;
+}
+
+//secao technologies
+#technologies{
+    padding-top: 90px;
+    padding-bottom: 100px;
+    background-color: $my-primary-color;
+    color: white;
+
+    i{
+        color: white;
+    }
+
+    div{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+.divider{
+    height: 1px;
+    overflow: hidden;
+    background-color: #e0e0e0;
+}
+
+a{
+    text-decoration: none;
+    color: $my-primary-color;
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+//secao Habilidades
+//formacao
