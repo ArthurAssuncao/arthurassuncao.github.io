@@ -549,6 +549,11 @@ footer {
     .container {
         width: 85%;
     }
+    project{
+        md-card-title-text .md-headline{
+            font-size: 0.9em;
+        }
+    }
 }
 
 .footer {
@@ -978,9 +983,13 @@ md-toolbar{
     padding-bottom: 40px;
 }
 
+#work{
+    padding-bottom: 20px;
+}
+
 // secao projetos
 .md-card-image{
-    width: 328px;
+    max-width: 328px;
     height: 172px;
 }
 
@@ -988,9 +997,13 @@ md-card md-card-title {
     padding: 8px 16px 8px;
 }
 
+md-card{
+    cursor: pointer;
+}
+
 project{
     md-card-title-text .md-headline{
-        font-size: 1.3em;
+        font-size: 1.1em;
         i{
             vertical-align: sub;
         }
