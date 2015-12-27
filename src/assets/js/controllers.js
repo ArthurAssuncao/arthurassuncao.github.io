@@ -10,19 +10,24 @@ app.controller('SkillsController', function($scope) {
     // cria a lista
     $scope.skills = {};
     $scope.skills.data = [
-        { name: 'android', value: 70, msg: 'Trabalhei por 1,25 ano e fiz um curso de Android, além de alguns projetos.' },
-        { name: 'python', value: 60, msg: 'Trabalhei por 1,25 ano, fiz um site e também um curso de Python, além de vários projetos, inclusive no mestrado.' },
-        { name: 'JavaScript/jQuery', value: 60, msg: 'Trabalhei em alguns sites, extensões para o Chrome e projetos.' },
-        { name: 'R', value: 70, msg: 'Utilizo em projetos do mestrado.' },
-        { name: 'HTML5/CSS3/SASS', value: 70, msg: 'Trabalhei em alguns sites, extensões para o Chrome e alguns projetos.' },
-        { name: 'Twitter Bootstrap 2.x - 3.x', value: 70, msg: 'Trabalhei em alguns sites utilizando Bootstrap, extensões para o Chrome e projetos.' },
+        { name: 'AngularJS', value: 60, msg: 'Utilizei em um projeto vencedor do hackathon GDG, neste site pessoal e em um app que está em desenvolvimento, além de um curso de front-end.' },
+        { name: 'NodeJS', value: 55, msg: 'Utilizei em um projeto vencedor de hackathon, no projeto JUMP! e em um app que está em desenvolvimento, além de um curso de MEAN.' },
+        { name: 'MongoDB', value: 45, msg: 'Utilizei em um projeto vencedor de hackathon e em um app que está em desenvolvimento, além de um curso de MEAN.' },
+        { name: 'JavaScript/jQuery', value: 75, msg: 'Trabalhei em alguns sites, extensões para o Chrome e projetos.' },
+        { name: 'HTML5/CSS3/SASS', value: 80, msg: 'Trabalhei em alguns sites, extensões para o Chrome e alguns projetos.' },
+        { name: 'ReactJS', value: 20, msg: 'Aprendi durante um curso de Front-end.' },
         { name: 'Git (Controle de Versão)', value: 90, msg: 'Utilizo Git desde 2012 em boa parte dos projetos que participo, além de ter trabalhado por 1,25 ano e de utilizar no mestrado.' },
         { name: 'Design Responsivo', value: 70, msg: 'Trabalhei em alguns sites com Design Responsivo.' },
-        { name: 'PHP', value: 40, msg: 'Trabalhei por alguns meses, além de criar as versões anteriores deste site e alguns projetos em PHP.' },
-        { name: 'Java/Java Web', value: 50, msg: 'Trabalhei por alguns meses com Java Web e desenvolvi alguns projetos em Java.' },
-        { name: 'C++', value: 50, msg: 'Participei de projetos utilizando C++ e utilizei no mestrado.' },
+        { name: 'MaterializeCSS / Bootstrap 2.x-3.x', value: 70, msg: 'Trabalhei em alguns sites utilizando Bootstrap e MaterializeCSS, como as versões anteriores deste site pessoal, extensões para o Chrome e projetos.' },
+        { name: 'Grunt (automatizador)', value: 60, msg: 'Utilizo neste site, além do uso em um app que está em desenvolvimento.' },
+        { name: 'Android', value: 70, msg: 'Trabalhei por 1,25 ano e fiz um curso de Android, além de alguns projetos.' },
+        { name: 'Python', value: 60, msg: 'Trabalhei por 1,25 ano, fiz um site e também um curso de Python, além de vários projetos, inclusive no mestrado.' },
+        { name: 'R', value: 70, msg: 'Utilizo em projetos do mestrado.' },
+        // { name: 'PHP', value: 40, msg: 'Trabalhei por alguns meses, além de criar as versões anteriores deste site e alguns projetos em PHP.' },
+        // { name: 'Java/Java Web', value: 50, msg: 'Trabalhei por alguns meses com Java Web e desenvolvi alguns projetos em Java.' },
+        // { name: 'C++', value: 50, msg: 'Participei de projetos utilizando C++ e utilizei no mestrado.' },
         { name: 'SQL', value: 60, msg: 'Trabalhei por 1,5 ano utilizando SQL, com o MySQL(1,25 ano) e Postgree(0,25 ano).' },
-        { name: 'Objective-C (Programação para iOS)', value: 20, msg: 'Aprendi no mestrado cursando uma disciplina de desenvolvimento móvel' },
+        { name: 'Objective-C (Programação para iOS)', value: 15, msg: 'Aprendi no mestrado cursando uma disciplina de desenvolvimento móvel' },
     ];
 });
 
@@ -123,19 +128,20 @@ app.controller('ProjectsController', function($scope) {
                 http://mateusferreira.com.br/images/entregarapida/5.jpeg",
             url: "http://github.com/ArthurAssuncao/EntregaRapida",
             urlname: "Visite o projeto",
-            technologies: "HTML5/CSS3, SASS, JavaScript, AngularJS, AngularJS Material, Polymer, Polymer, Google Maps API, Google Sign In, Google Places, NodeJS, MongoDB",
+            technologies: "HTML5/CSS3, SASS, JavaScript, AngularJS, AngularJS Material, Polymer, Google Maps API, Google Sign In, Google Places, NodeJS, MongoDB",
             type: "Protótipo de Hackathon",
             datestart: "2015",
             dateend: "2015",
             description: "<p>Sistema colaborativo que permite o transporte de objetos dentro da região por meio de entregadores cadastrados. Desta forma diminuindo o custo e tempo no transporte desses objetos e, até, possibilitando entregas no mesmo dia.</p>
                 <p>O EntregaRápida também permite o envio por meio do EcoPacote, um pacote que utiliza as ciclovias para a entrega. Essas ciclovias têm sido implementadas em diversas cidades do Brasil, como na cidade de Belo Horizonte.</p>
-                <p>A partir das características do app é possível trazer uma série de melhorias para a sociedade, gerando novas oportunidades de négocio e, ao mesmo tempo, oferecer maior comodidade no envio e recebimento de objetos dentro da cidade, tornando-a mais morderna.</p>",
+                <p>A partir das características do app é possível trazer uma série de melhorias para a sociedade, gerando novas oportunidades de négocio e, ao mesmo tempo, oferecer maior comodidade no envio e recebimento de objetos dentro da cidade, tornando-a mais morderna.</p>
+                <p>O EntregaRápida foi vencedor do hackathon da Google Developer Group Devfest Sudeste</p>",
         },
         {
             name: "MaisVendas",
             fullname: "MaisVendas",
             imgurl: "assets/img/portfolio/maisvendas_300x200.png",
-            imgs: "assets/img/portfolio/maisvendas_300x200.png, assets/img/portfolio/maisvendas_300x200.png, assets/img/portfolio/maisvendas_300x200.png",
+            imgs: "assets/img/portfolio/maisvendas_300x200.png",
             url: "https://play.google.com/store/apps/details?id=com.vendas",
             urlname: "MaisVendas na PlayStore",
             technologies: "Android, Python/Django, JSON, Git, MySQL",
@@ -149,7 +155,7 @@ app.controller('ProjectsController', function($scope) {
         {
             name: "JUMP!",
             imgurl: "http://fakeimg.pl/300x200/",
-            imgs: "http://fakeimg.pl/300x200/, http://fakeimg.pl/300x200/, http://fakeimg.pl/300x200/",
+            imgs: "http://fakeimg.pl/300x200/",
             url: "https://github.com/arthurassuncao/jump",
             urlname: "Visite o projeto",
             technologies: "Python, Node.js, HTML/CSS3, JavaScript/Phaser, Git",
@@ -164,7 +170,7 @@ app.controller('ProjectsController', function($scope) {
         {
             name: "uGuide Desk 2014",
             imgurl: "http://fakeimg.pl/300x200/",
-            imgs: "http://fakeimg.pl/300x200/, http://fakeimg.pl/300x200/, http://fakeimg.pl/300x200/",
+            imgs: "http://fakeimg.pl/300x200/",
             url: "",
             urlname: "Projeto de código fonte fechado",
             technologies: "C++, JSON, Git",
@@ -178,7 +184,7 @@ app.controller('ProjectsController', function($scope) {
         {
             name: "Entensões na Chrome Store",
             imgurl: "assets/img/portfolio/chrome-web-store_300x200.png",
-            imgs: "assets/img/portfolio/chrome-web-store_300x200.png, assets/img/portfolio/chrome-web-store_300x200.png",
+            imgs: "assets/img/portfolio/chrome-web-store_300x200.png",
             url: "https://chrome.google.com/webstore/search/adev?hl=pt-BR",
             urlname: "Chrome Extensions",
             technologies: "HTML/CSS3, JavaScript/jQuery, Git",
@@ -200,7 +206,7 @@ app.controller('ProjectsController', function($scope) {
         {
             name: "Addmob.com.br",
             imgurl: "assets/img/portfolio/addmob_com_br_300x200.jpg",
-            imgs: "assets/img/portfolio/addmob_com_br_300x200.jpg, assets/img/portfolio/addmob_com_br_300x200.jpg",
+            imgs: "assets/img/portfolio/addmob_com_br_300x200.jpg",
             url: "https://www.addmob.com.br",
             urlname: "Visite Addmob.com.br",
             technologies: "HTML/CSS3, JavaScript/jQuery/HammerJS, Python/Django, Git",
