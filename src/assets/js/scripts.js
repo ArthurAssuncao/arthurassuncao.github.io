@@ -12,20 +12,20 @@ function em_manutencao(){
 }
 
 function hide_skills_itens(){
-    $("#curriculo_habilidades ul > li:gt(9)").hide(); 
+    $("#cv-habilidades ul > li:gt(11)").hide(); 
 }
 
 function show_skills_itens(){
-    $("#curriculo_habilidades ul > li:gt(9)").show(1000);
+    $("#cv-habilidades ul > li:gt(11)").show(1000);
     // $("#btn_skills_more").hide(900);
 }
 
 function hide_prod_cientifica_itens(){
-    $("#curriculo_producao ul > li:gt(0)").hide(); 
+    $("#cv-producao ul > li:gt(0)").hide(); 
 }
 
 function show_prod_cientifica_itens(){
-    $("#curriculo_producao ul > li:gt(0)").show(1000);
+    $("#cv-producao ul > li:gt(0)").show(1000);
     // $("#btn_prod_cientifica_more").hide(900);
 }
 

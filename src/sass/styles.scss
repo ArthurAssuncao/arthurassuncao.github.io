@@ -388,7 +388,7 @@ footer {
     margin-bottom: 0;
 }
 
-.curriculo_artigo_autor{
+.cv-artigo_autor{
     &:after{
         content: "- ";
     }
@@ -571,11 +571,11 @@ footer {
 
 /* curriculo */
 
-li.curriculo_item {
+li.cv-item {
     margin-top: 10px;
 }
 
-.curriculo_instituicao, .curriculo_periodo {
+.cv-instituicao, .cv-periodo {
     padding-bottom: 5px;
     color: gray;
 }
@@ -732,7 +732,7 @@ ul.card-modal-specs {
     margin-top: 10px;
 }
 
-.curriculo_artigo_titulo a {
+.cv-artigo_titulo a, .award-name a {
     i {
         opacity: 0.4;
         -webkit-transition: color .3s ease-in-out;
@@ -973,7 +973,10 @@ md-toolbar{
             padding-top: 20px; //refazer de outra forma depois
         }
     }
+}
 
+.md-toolbar-tools h1{
+    margin: 0px;
 }
 
 // secao meu trabalho
@@ -1041,5 +1044,21 @@ a{
     }
 }
 
-//secao Habilidades
-//formacao
+.cv-section-title{
+    font-size: 1.4rem;
+    line-height: 1.804rem;
+    margin: 0.82rem 0px 0.656rem;
+    font-weight: 400;
+}
+
+.cv-item{
+    span{
+        line-height: 1.4em;
+    }
+}
+
+ul.skills{
+    li{
+        margin-bottom: 15px;
+    }
+}
