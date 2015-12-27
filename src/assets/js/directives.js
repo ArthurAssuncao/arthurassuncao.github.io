@@ -14,6 +14,7 @@ app.directive('skill', function() {
 
     directive.controller = "SkillController";
 
+    // directive.templateUrl = '../../templates/skill.tmpl.html';
     directive.template = '
       <div>
         <md-tooltip md-direction="bottom">
@@ -82,31 +83,7 @@ app.directive('paper', function() {
         author_main : "@authormain"
     }
 
-    directive.template = '
-      <span class="curriculo_artigo">
-        <span class="curriculo_artigo_titulo">
-            <a href="{{ url }}" title="{{ title }}">
-                <strong>{{ title }}</strong>
-                <i class="fa fa-link"></i>
-            </a>
-        </span>
-        <br/>
-        <span class="curriculo_artigo_autores">
-            <em>
-                <span class="curriculo_artigo_autor" ng-repeat="author in split(authors) track by $index">
-                    <span ng-if="$index == author_main-1">
-                        <strong>{{ author }}</strong>
-                    </span>
-                    <span ng-if="$index != author_main-1">
-                        {{ author }}
-                    </span>
-                </span>
-            </em>
-        </span>
-        <br/>
-        <span class="curriculo_artigo_evento">Em: {{ title }}, {{ year }}, {{ local }}. {{ qualis }}</span>
-      </span>
-    ';
+    directive.templateUrl = '../../templates/paper.tmpl.html';
 
     return directive;
 });
@@ -134,18 +111,7 @@ app.directive('course', function() {
 
     directive.controller = "CourseController";
 
-    directive.template = '
-      <li class="curriculo_item">
-        <span class="curriculo_titulo">
-            <strong>{{ name }}</strong>
-        </span>
-        <br/>
-        <span class="curriculo_instituicao">{{ institution }}</span>
-        <br/>
-        <span class="curriculo_periodo">{{ date_start }} - {{ date_end }}</span>
-        <br/>
-      </li>
-    ';
+    directive.templateUrl = '../../templates/course.tmpl.html';
 
     return directive;
 });
@@ -164,7 +130,9 @@ app.directive('project', function() {
 
     directive.scope = {
         name : "@name",
+        fullname : "@fullname",
         imgurl : "@imgurl",
+        imgs: "@imgs",
         url : "@url",
         urlname : "@urlname",
         technologies : "@technologies",
@@ -181,6 +149,7 @@ app.directive('project', function() {
         name : "@name",
         fullname : "@fullname",
         imgurl : "@imgurl",
+        imgs: "@imgs",
         url : "@url",
         urlname : "@urlname",
         technologies : "@technologies",
@@ -190,27 +159,7 @@ app.directive('project', function() {
         description : "@description"
     }
 
-    directive.template = '
-        <md-card ng-click="showDialog($event)">
-          <img ng-src="{{ pc.imgurl }}" class="md-card-image" alt="Washed Out">
-          <md-card-title>
-            <md-card-title-text>
-              <span class="md-headline">{{ pc.name }} <i class="material-icons right">more_vert</i></span>
-            </md-card-title-text>
-          </md-card-title>
-          <!-- <md-card-actions layout="row" layout-align="end center">
-            <md-button class="md-icon-button" aria-label="Favorite">
-              <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>
-            </md-button>
-            <md-button class="md-icon-button" aria-label="Settings">
-              <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
-            </md-button>
-            <md-button class="md-icon-button" aria-label="Share">
-              <md-icon md-svg-icon="img/icons/share-arrow.svg"></md-icon>
-            </md-button>
-          </md-card-actions> -->
-        </md-card>
-    ';
+    directive.templateUrl = '../../templates/project.tmpl.html';
 
     return directive;
 });
@@ -220,6 +169,7 @@ app.controller('ProjectController', function($scope, $mdMedia, $mdDialog) {
     project.name = this.name;
     project.fullname = this.fullname;
     project.imgurl = this.imgurl;
+    project.imgs = this.imgs;
     project.url = this.url;
     project.urlname = this.urlname;
     project.technologies = this.technologies;
@@ -232,7 +182,7 @@ app.controller('ProjectController', function($scope, $mdMedia, $mdDialog) {
         var useFullScreen = ($mdMedia('sm') || $mdMedia('xs'))  && $scope.customFullscreen;
         $mdDialog.show({
             controller: DialogProjectController,
-            templateUrl: '../../templates/project.tmpl.html',
+            templateUrl: '../../templates/project-dialog.tmpl.html',
             parent: angular.element(document.body),
             targetEvent: ev,
             clickOutsideToClose: true,
@@ -287,18 +237,7 @@ app.directive('award', function() {
 
     directive.controller = "AwardController";
 
-    directive.template = '
-        <li class="curriculo_item">
-            <span class="curriculo_titulo">
-                <strong>{{ name }}</strong>
-            </span>
-            <br/>
-            <span class="curriculo_instituicao">{{ place }}</span>
-            <br/>
-            <span class="curriculo_periodo">{{ year }}</span>
-            <br/>
-          </li>
-    ';
+    directive.templateUrl = '../../templates/award.tmpl.html';
 
     return directive;
 });

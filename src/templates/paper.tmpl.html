@@ -1,0 +1,23 @@
+<span class="curriculo_artigo">
+    <span class="curriculo_artigo_titulo">
+        <a href="{{ url }}" title="{{ title }}">
+            <strong>{{ title }}</strong>
+            <i class="fa fa-link"></i>
+        </a>
+    </span>
+    <br/>
+    <span class="curriculo_artigo_autores">
+        <em>
+            <span class="curriculo_artigo_autor" ng-repeat="author in split(authors) track by $index">
+                <span ng-if="$index == author_main-1">
+                    <strong>{{ author }}</strong>
+                </span>
+                <span ng-if="$index != author_main-1">
+                    {{ author }}
+                </span>
+            </span>
+        </em>
+    </span>
+    <br/>
+    <span class="curriculo_artigo_evento">Em: {{ title }}, {{ year }}, {{ local }}. {{ qualis }}</span>
+</span>

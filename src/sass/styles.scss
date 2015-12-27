@@ -970,3 +970,21 @@ md-toolbar{
     }
 
 }
+
+.md-card-image{
+    width: 328px;
+    height: 172px;
+}
+
+project{
+    md-card-title-text .md-headline{
+        font-size: 1.3em;
+        i{
+            vertical-align: sub;
+        }
+    }
+}
+
+strong{
+    font-weight: 500;
+}
