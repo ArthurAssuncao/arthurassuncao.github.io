@@ -179,6 +179,7 @@ app.directive('project', function() {
 
     directive.bindToController = {
         name : "@name",
+        fullname : "@fullname",
         imgurl : "@imgurl",
         url : "@url",
         urlname : "@urlname",
@@ -217,6 +218,7 @@ app.directive('project', function() {
 app.controller('ProjectController', function($scope, $mdMedia, $mdDialog) {
     var project = {};
     project.name = this.name;
+    project.fullname = this.fullname;
     project.imgurl = this.imgurl;
     project.url = this.url;
     project.urlname = this.urlname;
@@ -225,7 +227,6 @@ app.controller('ProjectController', function($scope, $mdMedia, $mdDialog) {
     project.datestart = this.datestart;
     project.dateend = this.dateend;
     project.description = this.description;
-
 
     $scope.showDialog = function(ev) {
         var useFullScreen = ($mdMedia('sm') || $mdMedia('xs'))  && $scope.customFullscreen;
@@ -253,6 +254,10 @@ app.controller('ProjectController', function($scope, $mdMedia, $mdDialog) {
     };
     function DialogProjectController($scope, $mdDialog, project) {
         $scope.project = project;
+
+        $scope.split = function(text){
+            return text.split(",");
+        }
         $scope.hide = function() {
             $mdDialog.hide();
         };
@@ -263,4 +268,41 @@ app.controller('ProjectController', function($scope, $mdMedia, $mdDialog) {
             $mdDialog.hide(answer);
         };
     }
+});
+
+// Directiva award
+app.directive('award', function() {
+    var directive = {};
+
+    directive.restrict = 'E';
+
+    // directive.replace = true;
+
+    directive.scope = {
+        name : "@name",
+        year : "@year",
+        place : "@place",
+        url : "@url",
+    }
+
+    directive.controller = "AwardController";
+
+    directive.template = '
+        <li class="curriculo_item">
+            <span class="curriculo_titulo">
+                <strong>{{ name }}</strong>
+            </span>
+            <br/>
+            <span class="curriculo_instituicao">{{ place }}</span>
+            <br/>
+            <span class="curriculo_periodo">{{ year }}</span>
+            <br/>
+          </li>
+    ';
+
+    return directive;
+});
+
+app.controller('AwardController', function($scope) {
+    
 });

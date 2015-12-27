@@ -13,14 +13,18 @@
     </md-toolbar>
     <md-dialog-content>
       <div class="md-dialog-content">
-        <div>Lista de tecnologias</div>
-        <div>{{ project.type }}</div>
+        <div>
+          <ul class="card-modal-specs grey-text text-darken-0">
+            <li ng-repeat="tech in split(project.technologies)">{{tech}}</li>
+          </ul>
+        </div>
+        <div class="card-modal-role center-align"><span>{{ project.type }}</span> <span class="card-modal-date">{{ project.datestart }} - {{ project.dateend }}</span></div>
         <div>{{ project.description }}</div>
       </div>
     </md-dialog-content>
     <md-dialog-actions layout="row">
-      <md-button href="url" target="_blank" md-autofocus>
-        UrlName
+      <md-button href="{{ project.url }}" target="_blank" md-autofocus class="lowercase capitalize-first">
+        {{ project.urlname}}
       </md-button>
     </md-dialog-actions>
   </form>

@@ -32,9 +32,8 @@
     <div flex id="work" class="section scrollspy">
       <div class="container">
         <h2 class="header text_b">Alguns projetos que participei</h2>
-        <div layout="row" ng-controller="ProjectsController">
-          <div flex="30" ng-repeat="project in projects.data">
-            <project 
+        <div  layout="row" layout-wrap layout-align="center start" ng-controller="ProjectsController">
+            <project flex="30" flex-sm="100" flex-md="50" flex-lg="30" ng-repeat="project in projects.data"
               name="{{ project.name }}" 
               imgurl="{{ project.imgurl }}" 
               url="{{ project.url }}" 
@@ -45,10 +44,6 @@
               dateend="{{ project.dateend }}" 
               description="{{ project.description }}" 
             ></project>
-          </div>
-
-
-          
       </div>
     </div>
   </div>
@@ -62,7 +57,7 @@
         <div layout="row" flex layout-margin layout-padding class="space-bottom-0">
           <div class="wow-nonmobile fadeInLeft" flex-sd="100" flex="50">
             <div id="curriculo_formacao">
-              <h5>Formação</h5>
+              <h5>Educação</h5>
               <ul id="lista_formacao" class="list-unstyled" ng-controller="CoursesController">
                 <li class="curriculo_item" ng-repeat="course in courses.data">
                   <course 
@@ -75,15 +70,28 @@
               </ul>
             </div>
             <div class="divider"></div>
+            <div id="curriculo_awards">
+              <h5>Premiações</h5>
+              <ul id="lista_experiencia" class="list-unstyled" ng-controller="AwardsController">
+                <li ng-repeat="award in awards.data" class="curriculo_item">
+                  <award name="{{ award.name }}" 
+                    place="{{ award.place }}" 
+                    url="{{ award.url }}" 
+                    year="{{ award.year }}" >
+                  </award>
+                </li>
+              </ul>
+            </div>
+            <div class="divider"></div>
             <div id="curriculo_producao">
-              <h5>Produção Científica</h5>
+              <h5>Produções Científicas</h5>
               <ul id="lista_experiencia" class="list-unstyled" ng-controller="PapersController">
                 <li ng-repeat="paper in papers.data" class="curriculo_item">
                   <paper url="{{ paper.url }}" 
                     title="{{ paper.title }}" 
                     authors="{{ paper.authors }}" 
                     confjournal="{{ paper.confjournal }}" 
-                    ano="{{ paper.year }}" 
+                    year="{{ paper.year }}" 
                     local="{{ paper.local }}" 
                     qualis="{{ paper.qualis }}" 
                     authormain="{{ paper.authormain }}">

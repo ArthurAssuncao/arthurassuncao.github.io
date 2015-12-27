@@ -120,6 +120,10 @@ body {
     color: white !important;
 }
 
+.grey-text{
+    color: gray !important;
+}
+
 .blue-text{
     color: #2196f3 !important;
 }
@@ -392,8 +396,16 @@ footer {
     }
 }
 
-strong{
-    font-weight: 600;
+.lowercase {
+    text-transform: lowercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.capitalize-first:first-letter {
+  text-transform: uppercase;
 }
 
 // My style

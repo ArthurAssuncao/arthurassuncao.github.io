@@ -88,6 +88,22 @@ app.controller('CoursesController', function($scope) {
     ];
 });
 
+app.controller('AwardsController', function($scope) {
+    $scope.sortType     = 'value'; // sort type default
+    $scope.sortReverse  = false;  // ordenacao do sort
+
+    // cria a lista
+    $scope.awards = {};
+    $scope.awards.data = [
+        {
+            name : "GDG DevFest Sudeste Hackathon",
+            year : "2015",
+            place : "1º lugar",
+            url : "https://github.com/ArthurAssuncao/EntregaRapida",
+        },
+    ];
+});
+
 app.controller('ProjectsController', function($scope) {
     $scope.sortType     = 'value'; // sort type default
     $scope.sortReverse  = false;  // ordenacao do sort
@@ -96,8 +112,30 @@ app.controller('ProjectsController', function($scope) {
     $scope.projects = {};
     $scope.projects.data = [
         {
+            name: "EntregaRápida",
+            imgurl: "http://mateusferreira.com.br/images/entregarapida-thumbnail.jpeg",
+            imgs: "
+                http://mateusferreira.com.br/images/entregarapida/0.jpeg, 
+                http://mateusferreira.com.br/images/entregarapida/1.jpeg, 
+                http://mateusferreira.com.br/images/entregarapida/2.jpeg, 
+                http://mateusferreira.com.br/images/entregarapida/3.jpeg, 
+                http://mateusferreira.com.br/images/entregarapida/4.jpeg, 
+                http://mateusferreira.com.br/images/entregarapida/5.jpeg",
+            url: "http://github.com/ArthurAssuncao/EntregaRapida",
+            urlname: "Visite o projeto",
+            technologies: "HTML5/CSS3, SASS, JavaScript, AngularJS, AngularJS Material, Polymer, Polymer, Google Maps API, Google Sign In, Google Places, NodeJS, MongoDB",
+            type: "Protótipo de Hackathon",
+            datestart: "2015",
+            dateend: "2015",
+            description: "<p>Sistema colaborativo que permite o transporte de objetos dentro da região por meio de entregadores cadastrados. Desta forma diminuindo o custo e tempo no transporte desses objetos e, até, possibilitando entregas no mesmo dia.</p>
+                <p>O EntregaRápida também permite o envio por meio do EcoPacote, um pacote que utiliza as ciclovias para a entrega. Essas ciclovias têm sido implementadas em diversas cidades do Brasil, como na cidade de Belo Horizonte.</p>
+                <p>A partir das características do app é possível trazer uma série de melhorias para a sociedade, gerando novas oportunidades de négocio e, ao mesmo tempo, oferecer maior comodidade no envio e recebimento de objetos dentro da cidade, tornando-a mais morderna.</p>",
+        },
+        {
             name: "MaisVendas",
+            fullname: "MaisVendas",
             imgurl: "assets/img/portfolio/maisvendas_300x200.png",
+            imgs: "assets/img/portfolio/maisvendas_300x200.png, assets/img/portfolio/maisvendas_300x200.png, assets/img/portfolio/maisvendas_300x200.png",
             url: "https://play.google.com/store/apps/details?id=com.vendas",
             urlname: "MaisVendas na PlayStore",
             technologies: "Android, Python/Django, JSON, Git, MySQL",
@@ -108,5 +146,83 @@ app.controller('ProjectsController', function($scope) {
                     <p>Foi feito o desenolvimento do app Android e Web Service em Django com banco de dados MySQL, uso de notação JSON para comunicação entre os sistemas e utilização de controle de versão Git para uma melhor manutenção do código e colaboração entre os membros da equipe.</p>
                     <p>O MaisVendas é um sistema para quem deseja ter seu catálogo de produtos e sua lista de clientes disponíveis ao toque da tela de seu tablet ou smartphone. É possível realizar vendas, consultar pedidos realizados, verificar o histórico de vendas através do gráfico iterativo e muito mais.</p>",
         },
+        {
+            name: "JUMP!",
+            imgurl: "http://fakeimg.pl/300x200/",
+            imgs: "http://fakeimg.pl/300x200/, http://fakeimg.pl/300x200/, http://fakeimg.pl/300x200/",
+            url: "https://github.com/arthurassuncao/jump",
+            urlname: "Visite o projeto",
+            technologies: "Python, Node.js, HTML/CSS3, JavaScript/Phaser, Git",
+            type: "Projeto Acadêmico",
+            datestart: "2013",
+            dateend: "2013",
+            description: "<p>Participei da equipe de desenvolvimento do jogo JUMP (Jogo Unificado para Movimentação Projetada).</p>
+                    <p>O jogo permite que o jogador, em frente a uma webcam, controle, por meio de seus pulos, o personagem do jogo.</p>
+                    <p>Foram utilizados: linguagem Python com a biblioteca OpenCV e Node.js.</p>
+                    <p>Projeto foi apresentado na Semana Nacional de Ciência e Tecnologia (SNCT) de 2013 no IFSEMG - Câmpus Barbacena.</p>",
+        },
+        {
+            name: "uGuide Desk 2014",
+            imgurl: "http://fakeimg.pl/300x200/",
+            imgs: "http://fakeimg.pl/300x200/, http://fakeimg.pl/300x200/, http://fakeimg.pl/300x200/",
+            url: "",
+            urlname: "Projeto de código fonte fechado",
+            technologies: "C++, JSON, Git",
+            type: "Projeto Acadêmico",
+            datestart: "2014",
+            dateend: "2014",
+            description: "<p>Participei da equipe de desenvolvimento da aplicação.</p>
+                    <p>O projeto consistiu de um software informativo e interativo para acompanhamento de eventos e notícias do Festival de Inverno de Ouro Preto e Mariana de 2014 com interação com os usuários por meio do sensor Kinect.</p>
+                    <p>Foram utilizadas linguagem C++ e interface gráfica Qt com comunicação com o Web Service via JSON.</p>",
+        },
+        {
+            name: "Entensões na Chrome Store",
+            imgurl: "assets/img/portfolio/chrome-web-store_300x200.png",
+            imgs: "assets/img/portfolio/chrome-web-store_300x200.png, assets/img/portfolio/chrome-web-store_300x200.png",
+            url: "https://chrome.google.com/webstore/search/adev?hl=pt-BR",
+            urlname: "Chrome Extensions",
+            technologies: "HTML/CSS3, JavaScript/jQuery, Git",
+            type: "Projeto Pessoal",
+            datestart: "2013",
+            dateend: "Atualmente",
+            description: "<p>Desenvolvimento de extensões para o navegador Google Chrome:</p>
+                    <p>
+                      <ul>
+                        <li><a href='https://chrome.google.com/webstore/detail/hide-contact-from-faceboo/dldcnjjdfolnampaceecohfaolbefbhj'>Hide Contact From Facebook Chat List</a><br/>
+                          <p>Esconde contatos da lista do chat do Facebook sem bloquear o contato. O contato continua te vendo na lista do chat dele como online, porém voce não o vê mais.</p>
+                        </li>
+                        <li><a href='https://chrome.google.com/webstore/detail/wpp-web-customizer/lhaamjcmnafobcjjcjfpglfonpdkoedb'>Wpp web Customizador</a><br/>
+                          <p>Modifica o fundo (background) do chat do Whatsapp™ Web.</p>
+                        </li>
+                      </ul>
+                    </p>",
+        },
+        {
+            name: "Addmob.com.br",
+            imgurl: "assets/img/portfolio/addmob_com_br_300x200.jpg",
+            imgs: "assets/img/portfolio/addmob_com_br_300x200.jpg, assets/img/portfolio/addmob_com_br_300x200.jpg",
+            url: "https://www.addmob.com.br",
+            urlname: "Visite Addmob.com.br",
+            technologies: "HTML/CSS3, JavaScript/jQuery/HammerJS, Python/Django, Git",
+            type: "Desenvolvedor Web",
+            datestart: "2014",
+            dateend: "2014",
+            description: "<p>Participei do desenvolvimento do Website da empresa AddMob Integradora de Soluções Ltda.</p>
+                    <p>Website desenvolvido em HTML5/CSS3 e Django, utilizando o framework Bootstrap 2.x e jQuery, com layout responsivo e captura de gestos (Hammer.js) para otimizar a experiência em dispositivos móveis.</p>",
+        },
+        // {
+        //     name: "GeoColeta",
+        //     imgurl: "http://mateusferreira.com.br/images/geocoleta-thumbnail.jpeg",
+        //     imgs: "http://mateusferreira.com.br/images/geocoleta/0.jpeg, http://mateusferreira.com.br/images/geocoleta/1.jpeg, http://mateusferreira.com.br/images/geocoleta/2.jpeg",
+        //     url: "http://geocoleta.org/",
+        //     urlname: "Visite GeoColeta.org",
+        //     technologies: "HTML5/CSS3, JavaScript/jQuery, HTML5 Geolocation, jQuery Mobile, Python/Django",
+        //     type: "Projeto Acadêmico",
+        //     datestart: "2012",
+        //     dateend: "2013",
+        //     description: "<p>Aplicativo de código aberto para dispositivos móveis e Desktop, desenvolvido com o objetivo de estimular o processo de coleta seletivas na minha faculdade.</p>
+        //         <p>Usando geolocalização do HTML5 para pegar a posição atual do usuário o App indicará qual é ponto de coleta seletiva mais próximo de acordo com o material selecionado para ser descartado (Papel/Plástico/Metal&Vidro/ Orgânico/Não-reciclável). Todos os dados serão armazenados no servidor, onde serão analisadas no futuro.</p>
+        //         <p>Com os dados fornecidos pelo App é possível criar relatórios sobre o uso de cada ponto de coleta com base em sua localização ou materiais disponíveis, ajudando o campus a realocar-los, se necessário.</p>",
+        // },
     ];
 });
