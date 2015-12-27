@@ -80,13 +80,13 @@ app.controller('CoursesController', function($scope) {
     $scope.courses.data = [
         {
             name : "Mestrado em Ciência da Computação",
-            institution : "Universidade Federal de Ouro Preto",
+            institution : "Universidade Federal de Ouro Preto (UFOP)",
             date_start : "2014",
             date_end : "Até o momento",
         },
         {
             name : "Superior de Tecnologia em Sistemas para Internet",
-            institution : "Instituto Federal do Sudeste de MG",
+            institution : "Instituto Federal do Sudeste de Minas Gerais (IFSEMG)",
             date_start : "2011",
             date_end : "2014",
         },
@@ -101,7 +101,7 @@ app.controller('AwardsController', function($scope) {
     $scope.awards = {};
     $scope.awards.data = [
         {
-            name : "GDG DevFest Sudeste Hackathon",
+            name : "Google Developer Group DevFest Sudeste Hackathon",
             year : "2015",
             place : "1º lugar",
             url : "https://github.com/ArthurAssuncao/EntregaRapida",
@@ -135,7 +135,7 @@ app.controller('ProjectsController', function($scope) {
             description: "<p>Sistema colaborativo que permite o transporte de objetos dentro da região por meio de entregadores cadastrados. Desta forma diminuindo o custo e tempo no transporte desses objetos e, até, possibilitando entregas no mesmo dia.</p>
                 <p>O EntregaRápida também permite o envio por meio do EcoPacote, um pacote que utiliza as ciclovias para a entrega. Essas ciclovias têm sido implementadas em diversas cidades do Brasil, como na cidade de Belo Horizonte.</p>
                 <p>A partir das características do app é possível trazer uma série de melhorias para a sociedade, gerando novas oportunidades de négocio e, ao mesmo tempo, oferecer maior comodidade no envio e recebimento de objetos dentro da cidade, tornando-a mais morderna.</p>
-                <p>O EntregaRápida foi vencedor do hackathon da Google Developer Group Devfest Sudeste</p>",
+                <p>O EntregaRápida foi vencedor do hackathon da Google Developer Group DevFest Sudeste</p>",
         },
         {
             name: "MaisVendas",
