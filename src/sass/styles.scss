@@ -376,7 +376,7 @@ footer {
     }
 }
 
-#btn_habilidades_more{
+#btn-skill-more{
     i{
         vertical-align: top;
     }
@@ -582,22 +582,22 @@ li.cv-item {
 
 /* Skills do curriculo */
 
-li .skill {
+li .skill-bar {
     margin-bottom: 10px;
 }
 
-.skill_grade {
+.skill-grade {
     float: right;
     text-transform: capitalize;
     margin-right: 3px;
 }
 
-.skill_name {
+.skill-name {
     font-style: italic;
     text-transform: capitalize;
 }
 
-.skill {
+.skill-bar {
     position: relative;
     background: #d4d4d4;
     height: 7px;
@@ -611,8 +611,8 @@ li .skill {
     width: 100%;
 }
 
-.skill_bar {
-    height: 4px;
+.skill-value {
+    height: 6px;
     /*margin: 2px 1px;*/
     // border-radius: 2px;
     background: $my-primary-color;
@@ -624,7 +624,7 @@ li .skill {
     opacity: 1 !important;
 }
 
-.btn_skills_more {
+.btn_skill_more {
     margin-top: 20px;
 }
 
@@ -732,7 +732,7 @@ ul.card-modal-specs {
     margin-top: 10px;
 }
 
-.cv-artigo_titulo a, .award-name a {
+.cv-paper-title a, .award-name a {
     i {
         opacity: 0.4;
         -webkit-transition: color .3s ease-in-out;
@@ -812,20 +812,12 @@ ul.card-modal-specs {
 }
 
 .circular {
-    width: 130px;
-    height: 130px;
-    border-radius: 65px;
-    -webkit-border-radius: 65px;
-    -moz-border-radius: 65px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
     background: url(../img/me256x256.png) no-repeat;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
-    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
-    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
     background-size: 100% 100%;
-    -webkit-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    -khtml-background-size: 100% 100%;
-    -moz-background-size: 100% 100%;
 }
 
 .col-centered {
@@ -1002,6 +994,12 @@ project{
         i{
             vertical-align: sub;
         }
+    }
+}
+
+.btn-send{
+    i{
+        vertical-align: sub;
     }
 }
 

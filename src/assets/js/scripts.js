@@ -1,5 +1,5 @@
 function fill_skills(){
-    $('.skill_bar').each(function(){
+    $('.skill-value').each(function(){
         var tamanho = $(this).data('skillbar');
         $(this).animate({
             width: tamanho+'%'
@@ -32,7 +32,7 @@ function show_prod_cientifica_itens(){
 function show_habilidades_itens(){
     show_skills_itens();
     show_prod_cientifica_itens();
-    $("#btn_habilidades_more").hide(900);
+    $("#btn-skill-more").hide(900);
 }
 
 function hide_habilidades_itens(){
@@ -41,7 +41,7 @@ function hide_habilidades_itens(){
 }
 
 function add_habilidades_more_event(){
-    $("#btn_habilidades_more").on('click', show_habilidades_itens);
+    $("#btn-skill-more").on('click', show_habilidades_itens);
 }
 
 function ativar_modals(){

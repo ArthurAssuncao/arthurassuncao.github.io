@@ -290,6 +290,13 @@ module.exports = function(grunt) {
         //   interval: 1000,
         // },
       },
+      postcss: {
+        files: ['<%= project.src_assets_css %>/*.css'],
+        tasks: ['postcss'],
+        options: {
+          interval: 1000,
+        },
+      },
       uglify_third_party_angular: {
         files: ['<%= project.src_bower_components %>/angular**.js'],
         tasks: ['newer:uglify:dev_third_party_angular'],

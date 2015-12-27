@@ -16,22 +16,22 @@ app.directive('skill', function() {
 
     // directive.templateUrl = '../../templates/skill.tmpl.html';
     directive.template = '
-      <div>
+      <div class="skill">
         <md-tooltip md-direction="bottom">
           <span class="capitalize">{{ name }}</span>: {{ msg }}
         </md-tooltip>
-       
-        <span class="myskill">
-            <span class="skill_name">{{ name }} 
+
+        <span class="skill-body">
+            <span class="skill-name">{{ name }} 
                 <i class="tiny microtiny skill-name-icon material-icons">info_outline</i>
             </span>
-            <span class="skill_grade">{{ generate_level(value) }}</span>
+            <span class="skill-grade">{{ generate_level(value) }}</span>
             <br/>
-            <span class="col-md-11 skill">
-                <span data-skillbar="{{ value }}" class="skill_bar"></span>
+            <span class="skill-bar">
+                <span data-skillbar="{{ value }}" class="skill-value"></span>
             </span>
         </span>
-      </div>
+    </div>
     ';
 
     return directive;
