@@ -128,7 +128,7 @@ app.controller('ProjectsController', function($scope) {
                 http://mateusferreira.com.br/images/entregarapida/5.jpeg",
             url: "http://github.com/ArthurAssuncao/EntregaRapida",
             urlname: "Visite o projeto",
-            technologies: "HTML5/CSS3, SASS, JavaScript, AngularJS, AngularJS Material, Polymer, Google Maps API, Google Sign In, Google Places, NodeJS, MongoDB",
+            technologies: "HTML5/CSS3/SASS, JavaScript, AngularJS, AngularJS Material, Polymer, Google Maps API, Google Sign In, Google Places, NodeJS, MongoDB",
             type: "Protótipo de Hackathon",
             datestart: "2015",
             dateend: "2015",
@@ -230,5 +230,24 @@ app.controller('ProjectsController', function($scope) {
         //         <p>Usando geolocalização do HTML5 para pegar a posição atual do usuário o App indicará qual é ponto de coleta seletiva mais próximo de acordo com o material selecionado para ser descartado (Papel/Plástico/Metal&Vidro/ Orgânico/Não-reciclável). Todos os dados serão armazenados no servidor, onde serão analisadas no futuro.</p>
         //         <p>Com os dados fornecidos pelo App é possível criar relatórios sobre o uso de cada ponto de coleta com base em sua localização ou materiais disponíveis, ajudando o campus a realocar-los, se necessário.</p>",
         // },
+        {
+            name: "ArthurAssuncao.com",
+            imgurl: "",
+            imgs: "",
+            url: "http://ArthurAssuncao.com/",
+            urlname: "Visite ArthurAssuncao.com",
+            technologies: "HTML5/CSS3/SASS, JavaScript/jQuery, AngularJS, Angular Material, WOW.js, Jade, Grunt",
+            type: "Projeto Pessoal",
+            datestart: "2012",
+            dateend: "Atualmente",
+            description: "<p>Meu site pessoal onde divulgo meu currículo, meus projetos, etc e o mantenho atualizado com o que há de mais interessante e recente em termos de tecnologias web.</p>
+            <p><strong>História</strong></p>
+            <p>Em 2012 o site não tinha o código fonte aberto e utilizava PHP e Bootstrap 2.x.</p>
+            <p>Em 2013 o site teve seu código fonte aberto e hospedado no Github.</p>
+            <p>Em 2014 o site teve o Bootstrap atualizado para a versão 3.x.</p>
+            <p>Em 2015 o site passou por várias reformulações, primeiro foi o uso do MaterializeCSS, em seguida foi removido o PHP e deixado apenas estático. Uma versão em Material Design Lite foi iniciada, porém descontinuada devido a falta de recursos desse framework da Google. Nesta versão mais recente de 2015, o site é feito utilizando AngularJS e AngularJS Material, que oferecem muitos recursos com grande produtividade, além de um bom desempenho, mesmo neste último quesito sendo inferior ao ReactJS ou AngularJS 2.0.</p>
+            <p>Além de todas estas mudanças, em 2015, comecei a utilizar no site o SASS para melhorar a códificação CSS, Jade pra modularizar melhor os HTML e, o mais interessante de todos, o Grunt como automatizador. O ganho em desempenho e produtividade que um automatizador gera é gigantesco.
+            <p>Em 2016 estou analisando, a principio, a possibilidade de substituir as directivas do AngularJS por componentes ReactJS, o que aumentaria muito o desempenho do site.</p>",
+        },
     ];
 });
