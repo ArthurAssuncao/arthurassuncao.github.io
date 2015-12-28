@@ -75,7 +75,7 @@ module.exports = function(grunt) {
     sass: {
       dev: {
         options: {
-          style: 'compressed', //compressed or expanded
+          style: 'expanded', //compressed or expanded
           trace: true,
           unixNewlines: true,
         },
@@ -140,26 +140,35 @@ module.exports = function(grunt) {
       options: {
         banner: '<%= tag.banner %>',
         compress: true,
-        beautify: false,
+        beautify: true,
         mangle: false,
         preserveComments: 'some',
         sourceMap: true
       },
       dev_third_party_angular: {
+        options: {
+          banner: '<%= tag.banner %>',
+          compress: true,
+          beautify: true,
+          mangle: false,
+          preserveComments: 'some',
+          sourceMap: true
+        },
         files: {
            '<%= project.src_assets_js_third_party %>/angular-bundle.min.js': [
              '<%= project.src_bower_components %>/angular/angular.min.js', 
              '<%= project.src_bower_components %>/angular-material/angular-material.min.js',
              '<%= project.src_bower_components %>/angular-animate/angular-animate.min.js',
              '<%= project.src_bower_components %>/angular-aria/angular-aria.min.js',
+             '<%= project.src_bower_components %>/angular-typer/dist/typer.min.js',
            ],
         }
       },
       dev_third_party: {
         files: {
            '<%= project.src_assets_js_third_party %>/plugins.min.js': [
-             '<%= project.src_bower_components %>/wow/dist/wow.min.js', 
              '<%= project.src_bower_components %>/jquery/dist/jquery.min.js', 
+             '<%= project.src_bower_components %>/wow/dist/wow.min.js', 
            ],
         }
       },
@@ -180,6 +189,24 @@ module.exports = function(grunt) {
     copy: {
       options: {
         timestamp: true,
+      },
+      dev_css_not_scss: {
+        // @import "../bower_components/animate.css/animate.min.css";
+        // @import "../bower_components/material-icons/css/material-icons.min.css";
+        files: [
+          { //animate.css
+            expand: false, 
+            src: ["<%= project.src_bower_components %>/animate.css/animate.min.css"], 
+            dest: '<%= project.src_sass %>/_animatecss.scss', 
+            filter: 'isFile'
+          },
+          { //material-icons.css
+            expand: false, 
+            src: ["<%= project.src_bower_components %>/material-icons/css/material-icons.min.css"], 
+            dest: '<%= project.src_sass %>/_material-icons.scss', 
+            filter: 'isFile'
+          },
+        ]
       },
       dist_css: {
         files: [
@@ -295,6 +322,7 @@ module.exports = function(grunt) {
         tasks: ['postcss'],
         options: {
           interval: 5000,
+          interrupt: true,
         },
       },
       uglify_third_party_angular: {
@@ -351,6 +379,6 @@ module.exports = function(grunt) {
   // grunt.loadNpmTasks('grunt-nodemon');
 
   // Tasks
-  grunt.registerTask('dev', ['newer:sass', 'newer:jade', 'newer:uglify', 'concurrent:tasks']);
-  grunt.registerTask('default', ['mkdir', 'newer:sass', 'newer:postcss', 'newer:cssmin', 'newer:modernizr', 'newer:uglify:dev_third_party', 'newer:uglify:dev_third_party_angular', 'newer:uglify:dev', 'newer:copy']);
+  grunt.registerTask('dev', ['newer:copy:dev_css_not_scss', 'newer:sass', 'newer:jade', 'newer:uglify' ,'concurrent:tasks']);
+  grunt.registerTask('default', ['mkdir', 'newer:copy:dev_css_not_scss', 'newer:sass', 'newer:postcss', 'newer:cssmin', 'newer:modernizr', 'newer:uglify:dev_third_party', 'newer:uglify:dev_third_party_angular', 'newer:uglify:dev', 'newer:copy']);
 };

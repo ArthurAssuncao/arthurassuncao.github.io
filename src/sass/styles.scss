@@ -68,6 +68,10 @@ body {
     background-color: $my-primary-color;
 }
 
+.typer{
+    font-weight: 500;
+}
+
 .text_h {
     padding: 15% 0;
     font-size: 6.0em;
@@ -952,6 +956,10 @@ google-map{
 
 //toolbar navbar
 md-toolbar{
+    &#nav_f{
+        position: fixed;
+        z-index: 9999;
+    }
     #navbar{
         height: 100%;
         a{
@@ -1071,7 +1079,7 @@ ul.skills{
     }
 }
 
-md-toolbar{
-    position: fixed;
-    z-index: 9999;
+.project-dialog-imgs{
+    overflow: auto;
+    max-height: 50vh;
 }
