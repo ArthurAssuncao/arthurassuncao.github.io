@@ -35,6 +35,10 @@ body {
     text-align: center;
 }
 
+.center-align{
+    margin: 0 auto;
+}
+
 .promo-caption{
     font-size: 1.5em;
 }
@@ -156,6 +160,9 @@ i.tiny {
 #social{
     a, a:hover{
         text-decoration: none;
+    }
+    h5{
+        margin-bottom: 10px;
     }
 }
 
@@ -365,7 +372,7 @@ footer {
         margin-bottom: 0;
     }
     &.footer{
-        padding-bottom: 0px;
+        padding-bottom: 20px;
         padding-top: 0px;
     }
 }
@@ -493,19 +500,19 @@ footer {
     .contact-email {
         clear: none;
     }
-    #social {
-        text-align: left;
-        li {
-            float: none;
-            margin-right: 10px;
-            width: auto;
-            text-align: left;
-            i {
-                width: auto;
-                text-align: left;
-            }
-        }
-    }
+    // #social {
+    //     text-align: left;
+    //     li {
+    //         float: none;
+    //         margin-right: 10px;
+    //         width: auto;
+    //         text-align: left;
+    //         i {
+    //             width: auto;
+    //             text-align: left;
+    //         }
+    //     }
+    // }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -524,24 +531,33 @@ footer {
     .contact-email {
         clear: none;
     }
-    #social {
-        text-align: left;
-        li {
-            float: none;
-            margin-right: 0px;
-            width: auto;
-            text-align: left;
-            i {
-                width: auto;
-                text-align: left;
-            }
-        }
-    }
+    // #social {
+    //     text-align: left;
+    //     li {
+    //         float: none;
+    //         margin-right: 0px;
+    //         width: auto;
+    //         text-align: left;
+    //         i {
+    //             width: auto;
+    //             text-align: left;
+    //         }
+    //     }
+    // }
 }
 
-@media only screen and (min-width: 993px){
+.center-lt-sm{
+    text-align: center;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 960px){
     .container {
         width: 70%;
+    }
+    .center-lt-sm{
+        text-align: inherit;
+        margin: inherit;
     }
 }
 
@@ -920,7 +936,10 @@ a:hover {
     a.active, a:active, a:hover{
         background-color: $my-bgcolor-menu-active;
     }
-    display: inherit;
+    ul{
+        display: flex;
+    }
+    // display: inherit;
 }
 
 .nav_shadow{
@@ -967,7 +986,8 @@ md-toolbar{
     #navbar{
         height: 100%;
         a{
-            padding-top: 20px; //refazer de outra forma depois
+            padding-top: 25px; //refazer de outra forma depois
+            padding-bottom: 25px;
         }
     }
 }

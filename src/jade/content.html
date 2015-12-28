@@ -8,19 +8,19 @@
     <div id="intro" class="section scrollspy">
       <div class="container">
         <div layout="row" layout-wrap layout-align="center center" layout-padding layout-margin>
-          <div flex-sm="100" flex>
+          <div flex-xs="100" flex-sm="100" flex-md flex-gt-md>
             <div class="center promo promo-example"><i class="material-icons text-blue">flash_on</i>
               <h5 class="promo-caption">Acelere o desenvolvimento</h5>
               <p class="light center justify">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
             </div>
           </div>
-          <div flex-sm="100" flex>
+          <div flex-xs="100" flex-sm="100" flex-md flex-gt-md>
             <div class="center promo promo-example"><i class="material-icons text-blue">people</i>
               <h5 class="promo-caption">Foco na experiência do usuário</h5>
               <p class="light center justify">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
             </div>
           </div>
-          <div flex-sm="100" flex>
+          <div flex-xs="100" flex-sm="100" flex-md flex-gt-md>
             <div class="center promo promo-example"><i class="material-icons text-blue">smartphone</i>
               <h5 class="promo-caption">Totalmente responsivo</h5>
               <p class="light center justify">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
@@ -33,7 +33,7 @@
       <div class="container">
         <h2 class="header text_b">Alguns projetos que participei</h2>
         <div layout="row" layout-wrap layout-align="center center" ng-controller="ProjectsController">
-            <project flex="30" flex-sm="50" flex-md="50" flex-lg="30" ng-repeat="project in projects.data"
+            <project flex="100" flex-sm="50" flex-md="50" flex-lg="30" ng-repeat="project in projects.data"
               name="{{ project.name }}" 
               fullname="{{ project.fullname }}" 
               imgurl="{{ project.imgurl }}" 
@@ -57,7 +57,7 @@
       <h2 class="header text_b">Habilidades</h2>
       <div layout="column">
         <div layout="row" flex layout-margin layout-padding class="space-bottom-0" layout-wrap>
-          <div class="wow-nonmobile fadeInLeft" flex="50" flex-sm="100">
+          <div class="wow-nonmobile fadeInLeft" flex-sm="100" flex-md="50" flex-gt-md="50">
             <div id="cv-formacao">
               <h5 class="cv-section-title">Formação</h5>
               <ul id="lista_formacao" class="list-unstyled" ng-controller="CoursesController">
@@ -103,7 +103,7 @@
             </div>
             <div class="divider hide-on-med-and-up"></div>
           </div>
-          <div class="wow-nonmobile fadeInRight" flex="35" flex-sm="100">
+          <div class="wow-nonmobile fadeInRight" flex-sm="100" flex-md="35" flex-gt-md="35">
             <div id="cv-habilidades" ng-controller="SkillsController">
               <ul class="list-unstyled skills">
                 <li ng-repeat="skill in skills.data" id="skill_{{ skill.name }}">
@@ -124,32 +124,30 @@
         </div>
       </div>
     </div>
-  </div>
-  <div flex>
-    <div id="technologies" class="section scrollspy">
+    <div flex="100" id="technologies">
       <div class="container">
         <div layout="row" layout-wrap layout-align="center center">
-          <div flex-sm="100" flex>
+          <div flex-xs="100" flex-sm="100" flex-md flex-gt-md>
             <div class="center promo promo-example"><i class="material-icons text-blue">flash_on</i>
               <h5 class="promo-caption">HTML5</h5>
             </div>
           </div>
-          <div flex-sm="100" flex>
+          <div flex-xs="100" flex-sm="100" flex-md flex-gt-md>
             <div class="center promo promo-example"><i class="material-icons text-blue">people</i>
               <h5 class="promo-caption">AngularJS</h5>
             </div>
           </div>
-          <div flex-sm="100" flex>
+          <div flex-xs="100" flex-sm="100" flex-md flex-gt-md>
             <div class="center promo promo-example"><i class="material-icons text-blue">smartphone</i>
               <h5 class="promo-caption">MEAN</h5>
             </div>
           </div>
-          <div flex-sm="100" flex>
+          <div flex-xs="100" flex-sm="100" flex-md flex-gt-md>
             <div class="center promo promo-example"><i class="material-icons text-blue">people</i>
               <h5 class="promo-caption">ReactJS</h5>
             </div>
           </div>
-          <div flex-sm="100" flex>
+          <div flex-xs="100" flex-sm="100" flex-md flex-gt-md>
             <div class="center promo promo-example"><i class="material-icons text-blue">flash_off</i>
               <h5 class="promo-caption">Grunt</h5>
             </div>

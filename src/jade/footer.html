@@ -1,19 +1,19 @@
 <footer id="contact" layout-align="center center" class="page-footer default_color scrollspy footer">
   <div class="container">
     <div layout="row" layout-wrap layout-align="center center" layout-margin layout-padding>
-      <form id="form-contact" name="form-contact" onsubmit="javascript:return false" flex>
-        <div layout="row" layout-wrap layout-align="center start">
-          <h5 class="white-text" flex='100'>Contato</h5>
-          <div layout="row" flex='100'>
+      <form id="form-contact" name="form-contact" onsubmit="javascript:return false" flex="100" flex-sm="100" flex-md="70" flex-gt-md="70">
+        <div layout="row" layout-wrap layout-align="center center">
+          <h5 class="white-text center" flex='100'>Contato</h5>
+          <div layout="row" layout-wrap flex='100'>
             <!-- Nome-->
-            <md-input-container flex class="md-icon-float">
+            <md-input-container flex="100" flex-gt-sm="50" class="md-icon-float">
               <i class="material-icons prefix icon-large white-text">account_circle</i><label>Nome</label>
               <md-icon class="name">
                 </md-icon>
               <input id="form-name" name="name" type="text" ng-model="contato.name">
             </md-input-container>
             <!-- Email-->
-            <md-input-container flex class="md-icon-float">
+            <md-input-container flex="100" flex-gt-sm="50" class="md-icon-float">
               <i class="material-icons prefix icon-large white-text">email</i><label>Email</label>
               <md-icon class="name">
                 </md-icon>
@@ -39,26 +39,28 @@
 
         </div>
       </form>
-      <!-- <div hide flex-sm="100" flex="50" class="form-result-ok white-text">
-          <h1>
-            <div class="fa fa-thumbs-o-up white-text"></div>
-          </h1>
-          <h6>Obrigado.<br/><br/>Sua mensagem enviada e<br/>irei respondê-la em breve.</h6>
-        </div>
-        <div hide flex-sm="100" flex="50" class="form-result-error white-text">
-          <h1>
-            <div class="fa fa-frown-o white-text"></div>
-          </h1>
-          <h6>Algo deu errado.<br/>Por favor, contate-me em arthur@arthurassuncao.com</h6>
-        </div>
-      </div> -->
+      <div layout="row" flex="100" layout-wrap hide>
+          <div hide flex-xs="100" flex-sm="100" flex-md="50" class="form-result-ok white-text">
+              <h1>
+                <div class="fa fa-thumbs-o-up white-text"></div>
+              </h1>
+              <h6>Obrigado.<br/><br/>Sua mensagem enviada e<br/>irei respondê-la em breve.</h6>
+            </div>
+            <div hide flex-xs="100" flex-sm="100" flex-md="50" class="form-result-error white-text">
+              <h1>
+                <div class="fa fa-frown-o white-text"></div>
+              </h1>
+              <h6>Algo deu errado.<br/>Por favor, contate-me em arthur@arthurassuncao.com</h6>
+            </div>
+      </div>
+      </div>
       <!-- Feedback removido -->
-      <div id="social" itemscope="" itemtype="http://schema.org/Person" flex-sm="100" flex="30" layout="column">
-        <div flex="100">
+      <div id="social" itemscope="" itemtype="http://schema.org/Person" flex-xs="100" flex-sm="100" flex-md="40" flex-gt-md="40" layout="column" class="center-align">
+        <div flex="100" class="center-align">
           <link itemprop="url" href="http://arthurassuncao.com/"/>
           <description itemprop="description" href="Arthur Assuncao - Desenvolvedor de sistemas."></description><img itemprop="image" href="assets/img/me256x256.png" class="hide"/>
           <h5 class="white-text">Social</h5>
-          <ul class="left-align">
+          <ul class="center">
             <li><a itemprop="sameAs" href="https://www.facebook.com/arthurassuncao" class="white-text"><i class="small fa fa-facebook-square white-text"></i><span> Facebook</span></a></li>
             <li><a itemprop="sameAs" href="https://github.com/arthurassuncao" class="white-text"><i class="small fa fa-github-square white-text"></i><span> Github</span></a></li>
             <li><a itemprop="sameAs" href="https://www.linkedin.com/in/arthurassuncao" class="white-text"><i class="small fa fa-linkedin-square white-text"></i><span> LinkedIn</span></a></li>

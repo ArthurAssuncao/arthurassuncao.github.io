@@ -1,6 +1,8 @@
 // AngularJS controllers
 app.controller('AppController', function($scope) {
-
+    $scope.openSideMenu = function(){
+        console.log("Abrir menu lateral");
+    }
 });
 
 app.controller('SkillsController', function($scope) {

@@ -286,15 +286,15 @@ module.exports = function(grunt) {
       scss: {
         files: ['<%= project.src_sass %>/*.scss'],
         tasks: ['sass'],
-        // options: {
-        //   interval: 1000,
-        // },
+        options: {
+          interrupt: false,
+        },
       },
       postcss: {
         files: ['<%= project.src_assets_css %>/*.css'],
         tasks: ['postcss'],
         options: {
-          interval: 1000,
+          interval: 5000,
         },
       },
       uglify_third_party_angular: {

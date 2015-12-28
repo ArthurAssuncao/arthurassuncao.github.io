@@ -38,24 +38,25 @@
   <body layout="column" id="top" class="scrollspy ng-cloak">
     <div id="principal" layout="column" layout-align="center center"><md-toolbar layout="row">
     <div class="md-toolbar-tools container" layout="row">
-      <h1 class="logo"><a href="#" class="brand-logo">Arthur <span hide-sm>Assunção</span></a></h1>
+      <h1 class="logo"><a href="#" class="brand-logo">Arthur <span hide show-gt-md>Assunção</span></a></h1>
       <div flex></div>
-      <nav id="navbar">
-        <a href="#mywork" data-hash="#page_mywork" class="navbar-item">
+      <nav id="navbar" hide show-gt-sm>
+        <ul>
+        <li><a href="#mywork" data-hash="#page_mywork" class="navbar-item">
           <i class="tiny-force material-icons">work</i> Meu Trabalho
-        </a>
-        <a href="#skills" data-hash="#page_skills" class="navbar-item">
+        </a></li>
+        <li><a href="#skills" data-hash="#page_skills" class="navbar-item">
           <i class="tiny-force material-icons">code</i> Habilidades
-        </a>
-        <a href="#contact" data-hash="#page_contact" class="navbar-item">
+        </a></li>
+        <li><a href="#contact" data-hash="#page_contact" class="navbar-item">
           <i class="tiny-force material-icons">assignment_ind</i> Contato
-        </a>
+        </a></li>
+        </ul>
       </nav>
-      <md-button hide-gt-sm class="md-icon-button" aria-label="More">
+      <md-button hide-gt-sm flex class="md-icon-button" aria-label="More" ng-click="openSideMenu()">
         <i class="material-icons">more_vert</i>
       </md-button>
     </div>
-
 </md-toolbar>
 <div class="menu_left_side" hide-gt-sm>
   <ul>
@@ -74,19 +75,19 @@
     <div id="intro" class="section scrollspy">
       <div class="container">
         <div layout="row" layout-wrap layout-align="center center" layout-padding layout-margin>
-          <div flex-sm="100" flex>
+          <div flex-xs="100" flex-sm="100" flex-md flex-gt-md>
             <div class="center promo promo-example"><i class="material-icons text-blue">flash_on</i>
               <h5 class="promo-caption">Acelere o desenvolvimento</h5>
               <p class="light center justify">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
             </div>
           </div>
-          <div flex-sm="100" flex>
+          <div flex-xs="100" flex-sm="100" flex-md flex-gt-md>
             <div class="center promo promo-example"><i class="material-icons text-blue">people</i>
               <h5 class="promo-caption">Foco na experiência do usuário</h5>
               <p class="light center justify">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
             </div>
           </div>
-          <div flex-sm="100" flex>
+          <div flex-xs="100" flex-sm="100" flex-md flex-gt-md>
             <div class="center promo promo-example"><i class="material-icons text-blue">smartphone</i>
               <h5 class="promo-caption">Totalmente responsivo</h5>
               <p class="light center justify">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
@@ -99,7 +100,7 @@
       <div class="container">
         <h2 class="header text_b">Alguns projetos que participei</h2>
         <div layout="row" layout-wrap layout-align="center center" ng-controller="ProjectsController">
-            <project flex="30" flex-sm="50" flex-md="50" flex-lg="30" ng-repeat="project in projects.data"
+            <project flex="100" flex-sm="50" flex-md="50" flex-lg="30" ng-repeat="project in projects.data"
               name="{{ project.name }}" 
               fullname="{{ project.fullname }}" 
               imgurl="{{ project.imgurl }}" 
@@ -123,7 +124,7 @@
       <h2 class="header text_b">Habilidades</h2>
       <div layout="column">
         <div layout="row" flex layout-margin layout-padding class="space-bottom-0" layout-wrap>
-          <div class="wow-nonmobile fadeInLeft" flex="50" flex-sm="100">
+          <div class="wow-nonmobile fadeInLeft" flex-sm="100" flex-md="50" flex-gt-md="50">
             <div id="cv-formacao">
               <h5 class="cv-section-title">Formação</h5>
               <ul id="lista_formacao" class="list-unstyled" ng-controller="CoursesController">
@@ -169,7 +170,7 @@
             </div>
             <div class="divider hide-on-med-and-up"></div>
           </div>
-          <div class="wow-nonmobile fadeInRight" flex="35" flex-sm="100">
+          <div class="wow-nonmobile fadeInRight" flex-sm="100" flex-md="35" flex-gt-md="35">
             <div id="cv-habilidades" ng-controller="SkillsController">
               <ul class="list-unstyled skills">
                 <li ng-repeat="skill in skills.data" id="skill_{{ skill.name }}">
@@ -190,32 +191,30 @@
         </div>
       </div>
     </div>
-  </div>
-  <div flex>
-    <div id="technologies" class="section scrollspy">
+    <div flex="100" id="technologies">
       <div class="container">
         <div layout="row" layout-wrap layout-align="center center">
-          <div flex-sm="100" flex>
+          <div flex-xs="100" flex-sm="100" flex-md flex-gt-md>
             <div class="center promo promo-example"><i class="material-icons text-blue">flash_on</i>
               <h5 class="promo-caption">HTML5</h5>
             </div>
           </div>
-          <div flex-sm="100" flex>
+          <div flex-xs="100" flex-sm="100" flex-md flex-gt-md>
             <div class="center promo promo-example"><i class="material-icons text-blue">people</i>
               <h5 class="promo-caption">AngularJS</h5>
             </div>
           </div>
-          <div flex-sm="100" flex>
+          <div flex-xs="100" flex-sm="100" flex-md flex-gt-md>
             <div class="center promo promo-example"><i class="material-icons text-blue">smartphone</i>
               <h5 class="promo-caption">MEAN</h5>
             </div>
           </div>
-          <div flex-sm="100" flex>
+          <div flex-xs="100" flex-sm="100" flex-md flex-gt-md>
             <div class="center promo promo-example"><i class="material-icons text-blue">people</i>
               <h5 class="promo-caption">ReactJS</h5>
             </div>
           </div>
-          <div flex-sm="100" flex>
+          <div flex-xs="100" flex-sm="100" flex-md flex-gt-md>
             <div class="center promo promo-example"><i class="material-icons text-blue">flash_off</i>
               <h5 class="promo-caption">Grunt</h5>
             </div>
@@ -230,19 +229,19 @@
 </main><footer id="contact" layout-align="center center" class="page-footer default_color scrollspy footer">
   <div class="container">
     <div layout="row" layout-wrap layout-align="center center" layout-margin layout-padding>
-      <form id="form-contact" name="form-contact" onsubmit="javascript:return false" flex>
-        <div layout="row" layout-wrap layout-align="center start">
-          <h5 class="white-text" flex='100'>Contato</h5>
-          <div layout="row" flex='100'>
+      <form id="form-contact" name="form-contact" onsubmit="javascript:return false" flex="100" flex-sm="100" flex-md="70" flex-gt-md="70">
+        <div layout="row" layout-wrap layout-align="center center">
+          <h5 class="white-text center" flex='100'>Contato</h5>
+          <div layout="row" layout-wrap flex='100'>
             <!-- Nome-->
-            <md-input-container flex class="md-icon-float">
+            <md-input-container flex="100" flex-gt-sm="50" class="md-icon-float">
               <i class="material-icons prefix icon-large white-text">account_circle</i><label>Nome</label>
               <md-icon class="name">
                 </md-icon>
               <input id="form-name" name="name" type="text" ng-model="contato.name">
             </md-input-container>
             <!-- Email-->
-            <md-input-container flex class="md-icon-float">
+            <md-input-container flex="100" flex-gt-sm="50" class="md-icon-float">
               <i class="material-icons prefix icon-large white-text">email</i><label>Email</label>
               <md-icon class="name">
                 </md-icon>
@@ -268,26 +267,28 @@
 
         </div>
       </form>
-      <!-- <div hide flex-sm="100" flex="50" class="form-result-ok white-text">
-          <h1>
-            <div class="fa fa-thumbs-o-up white-text"></div>
-          </h1>
-          <h6>Obrigado.<br/><br/>Sua mensagem enviada e<br/>irei respondê-la em breve.</h6>
-        </div>
-        <div hide flex-sm="100" flex="50" class="form-result-error white-text">
-          <h1>
-            <div class="fa fa-frown-o white-text"></div>
-          </h1>
-          <h6>Algo deu errado.<br/>Por favor, contate-me em arthur@arthurassuncao.com</h6>
-        </div>
-      </div> -->
+      <div layout="row" flex="100" layout-wrap hide>
+          <div hide flex-xs="100" flex-sm="100" flex-md="50" class="form-result-ok white-text">
+              <h1>
+                <div class="fa fa-thumbs-o-up white-text"></div>
+              </h1>
+              <h6>Obrigado.<br/><br/>Sua mensagem enviada e<br/>irei respondê-la em breve.</h6>
+            </div>
+            <div hide flex-xs="100" flex-sm="100" flex-md="50" class="form-result-error white-text">
+              <h1>
+                <div class="fa fa-frown-o white-text"></div>
+              </h1>
+              <h6>Algo deu errado.<br/>Por favor, contate-me em arthur@arthurassuncao.com</h6>
+            </div>
+      </div>
+      </div>
       <!-- Feedback removido -->
-      <div id="social" itemscope="" itemtype="http://schema.org/Person" flex-sm="100" flex="30" layout="column">
-        <div flex="100">
+      <div id="social" itemscope="" itemtype="http://schema.org/Person" flex-xs="100" flex-sm="100" flex-md="40" flex-gt-md="40" layout="column" class="center-align">
+        <div flex="100" class="center-align">
           <link itemprop="url" href="http://arthurassuncao.com/"/>
           <description itemprop="description" href="Arthur Assuncao - Desenvolvedor de sistemas."></description><img itemprop="image" href="assets/img/me256x256.png" class="hide"/>
           <h5 class="white-text">Social</h5>
-          <ul class="left-align">
+          <ul class="center">
             <li><a itemprop="sameAs" href="https://www.facebook.com/arthurassuncao" class="white-text"><i class="small fa fa-facebook-square white-text"></i><span> Facebook</span></a></li>
             <li><a itemprop="sameAs" href="https://github.com/arthurassuncao" class="white-text"><i class="small fa fa-github-square white-text"></i><span> Github</span></a></li>
             <li><a itemprop="sameAs" href="https://www.linkedin.com/in/arthurassuncao" class="white-text"><i class="small fa fa-linkedin-square white-text"></i><span> LinkedIn</span></a></li>
