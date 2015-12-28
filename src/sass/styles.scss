@@ -372,7 +372,7 @@ footer {
         margin-bottom: 0;
     }
     &.footer{
-        padding-bottom: 20px;
+        padding-bottom: 30px;
         padding-top: 0px;
     }
 }
@@ -1091,5 +1091,13 @@ a{
 ul.skills{
     li{
         margin-bottom: 15px;
+    }
+}
+
+//secao technology
+.technology-icon{
+    img{
+        // width: 220px;
+        height: 150px;
     }
 }
