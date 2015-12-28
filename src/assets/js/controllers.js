@@ -5,6 +5,10 @@ app.controller('AppController', function($scope) {
     }
 });
 
+app.controller('TyperController', function($scope) {
+    
+});
+
 app.controller('SkillsController', function($scope) {
     $scope.sortType     = 'value'; // sort type default
     $scope.sortReverse  = false;  // ordenacao do sort

@@ -28,6 +28,7 @@
     "angular-typer": "~0.5.5",
     "wow": "~1.1.2",
     "ng-parallax": "~0.1.8",
-    "roboto-fontface": "~0.4.3"
+    "roboto-fontface": "~0.4.3",
+    "animate.css": "~3.5.0"
   }
 }

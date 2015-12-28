@@ -3,7 +3,8 @@
 @import "reset";
 @import "../bower_components/font-awesome/scss/font-awesome";
 @import "../bower_components/roboto-fontface/css/roboto-fontface";
-// @import "../bower_components/material-icons/css/material-icons.min.css";
+@import "animatecss.scss";
+// @import "material-icons.scss";
 @import "gmail-scrollbars";
 @import "../bower_components/angular-material/angular-material";
 
@@ -12,7 +13,7 @@ object[type^="application/gas-events-uni"] {
     display: none;
 }
 
-html,
+html, 
 body {
     text-shadow: 0 0 #fff;
     text-rendering: optimizeLegibility;
@@ -41,6 +42,11 @@ body {
 
 .promo-caption{
     font-size: 1.5em;
+    line-height: 2em;
+}
+
+.promo-description{
+    line-height: 1.5em;
 }
 
 .light{
@@ -186,10 +192,6 @@ i.tiny {
             right: 0;
             top: 50%;
             bottom: auto;
-            -webkit-transform: translateY(-50%);
-            -moz-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-            -o-transform: translateY(-50%);
             transform: translateY(-50%);
             height: 90%;
             width: 1px;
@@ -264,28 +266,16 @@ i.tiny {
 
 @keyframes cd-pulse {
     0% {
-        -webkit-transform: translateY(-50%) scale(1);
-        -moz-transform: translateY(-50%) scale(1);
-        -ms-transform: translateY(-50%) scale(1);
-        -o-transform: translateY(-50%) scale(1);
         transform: translateY(-50%) scale(1);
         opacity: 1;
     }
 
     40% {
-        -webkit-transform: translateY(-50%) scale(0.9);
-        -moz-transform: translateY(-50%) scale(0.9);
-        -ms-transform: translateY(-50%) scale(0.9);
-        -o-transform: translateY(-50%) scale(0.9);
         transform: translateY(-50%) scale(0.9);
         opacity: 0;
     }
 
     100% {
-        -webkit-transform: translateY(-50%) scale(0);
-        -moz-transform: translateY(-50%) scale(0);
-        -ms-transform: translateY(-50%) scale(0);
-        -o-transform: translateY(-50%) scale(0);
         transform: translateY(-50%) scale(0);
         opacity: 0;
     }
@@ -658,10 +648,6 @@ li .skill-bar {
 
 .card a {
     color: $my-primary-color;
-    -webkit-transition: color 0.3s ease;
-    -moz-transition: color 0.3s ease;
-    -o-transition: color 0.3s ease;
-    -ms-transition: color 0.3s ease;
     transition: color 0.3s ease;
     &:hover {
         color: #9acffa;
@@ -756,11 +742,7 @@ ul.card-modal-specs {
 .cv-paper-title a, .award-name a {
     i {
         opacity: 0.4;
-        -webkit-transition: color .3s ease-in-out;
         transition: color .3s ease-in-out;
-        -moz-transition: color .3s ease;
-        -o-transition: color .3s ease;
-        -ms-transition: color .3s ease;
     }
     &:hover i {
         opacity: 1;
@@ -769,9 +751,6 @@ ul.card-modal-specs {
 }
 
 .hyphens-auto {
-    -moz-hyphens: auto;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
     hyphens: auto;
 }
 
@@ -814,10 +793,6 @@ ul.card-modal-specs {
     -ms-writing-mode: vertical-lr;
     writing-mode: vertical-lr;
     /* new syntax */
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
     transform: rotate(180deg);
     /*margin-bottom: 20px;*/
 }
@@ -895,11 +870,7 @@ a:hover {
     height: 27px;
     margin-top: 1px;
     vertical-align: text-bottom;
-    -webkit-transition: background .1s ease-in-out;
     transition: background .1s ease-in-out;
-    -moz-transition: background .1s ease;
-    -o-transition: background .1s ease;
-    -ms-transition: background .1s ease;
 }
 
 .esconde {
@@ -942,9 +913,7 @@ a:hover {
     // display: inherit;
 }
 
-.nav_shadow{
-    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-    -moz-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+.nav-shadow{
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
@@ -986,8 +955,8 @@ md-toolbar{
     #navbar{
         height: 100%;
         a{
-            padding-top: 25px; //refazer de outra forma depois
-            padding-bottom: 25px;
+            padding-top: 22px; //refazer de outra forma depois
+            padding-bottom: 21px;
         }
     }
 }
@@ -999,8 +968,8 @@ md-toolbar{
 // secao meu trabalho
 // intro
 #intro{
-    padding-top: 20px;
-    padding-bottom: 40px;
+    padding-top: 10px;
+    padding-bottom: 20px;
 }
 
 #work{
@@ -1100,4 +1069,9 @@ ul.skills{
         // width: 220px;
         height: 150px;
     }
+}
+
+md-toolbar{
+    position: fixed;
+    z-index: 9999;
 }

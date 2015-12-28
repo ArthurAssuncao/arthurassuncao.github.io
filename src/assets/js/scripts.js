@@ -104,10 +104,10 @@ function on_scroll_menu(event){
         }
     });
     if(has_item_active){
-        $(".navbar").addClass("nav_shadow");
+        $("#nav_f").addClass("nav-shadow");
     }
     else{
-        $(".navbar").removeClass("nav_shadow");
+        $("#nav_f").removeClass("nav-shadow");
     }
 }
 
