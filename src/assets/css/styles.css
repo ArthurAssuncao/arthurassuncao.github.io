@@ -26720,6 +26720,10 @@ md-tooltip.md-show {
     border: 1px solid #fff;
   }
 }
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
 object[type^="application/gas-events-uni"] {
   display: none;
 }
@@ -26784,7 +26788,7 @@ body {
 }
 
 .text_h {
-  padding: 15% 0;
+  padding: 20% 0;
   font-size: 6.0em;
   font-weight: 100;
   color: white;
@@ -26995,7 +26999,7 @@ i.tiny {
 
 @media only screen and (max-width: 480px) {
   .text_h {
-    padding: 4% 0;
+    padding: 5% 0;
     font-size: 5em;
     font-weight: 100;
     color: white;
@@ -27718,5 +27722,24 @@ ul.skills li {
 .project-dialog-imgs {
   overflow: auto;
   max-height: 50vh !important;
+}
+
+.project-dialog-content {
+  line-height: 1.4em;
+}
+
+#navbar-left {
+  overflow: hidden;
+}
+#navbar-left li {
+  padding: 20px 0;
+}
+#navbar-left li:hover {
+  background-color: lightgray !important;
+  cursor: pointer;
+}
+#navbar-left a.navbar-left-item {
+  padding: 20px 0;
+  padding-right: 100%;
 }
 /*# sourceMappingURL=styles.css.map */

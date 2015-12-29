@@ -1,7 +1,7 @@
 <main id="conteudo" layout-align="center center">
   <div id="index-banner" class="section no-pad-bot">
     <div class="container">
-      <h1 class="main-title text_h center header cd-headline">Hei, sou o Arthur e sou<br/> <typer words="['Mestrando em Ciência da Computação', 'Desenvolvedor Mobile', 'Desenvolvedor Web', 'Desenvolvedor Front-end']" type-time='150' backspace-time='200' start-delay='1500' highlight-background='#2980b9'></typer></h1>
+      <h1 class="main-title text_h center header cd-headline">Hei, sou<br/> <typer words="['Mestrando em Ciência da Computação', 'Desenvolvedor Mobile', 'Desenvolvedor Web', 'Desenvolvedor Front-end']" type-time='150' backspace-time='200' start-delay='1500' highlight-background='#2980b9'></typer></h1>
     </div>
   </div>
   <div flex id="mywork" class="section scrollspy">
@@ -33,7 +33,7 @@
       <div class="container">
         <h2 class="header text_b">Alguns projetos que participei</h2>
         <div layout="row" layout-wrap layout-align="center center" ng-controller="ProjectsController">
-            <project flex="100" flex-sm="50" flex-md="50" flex-lg="30" ng-repeat="project in projects.data"
+            <project flex-xs="100" flex-sm="50" flex-md="50" flex-lg="30" ng-repeat="project in projects.data"
               name="{{ project.name }}" 
               fullname="{{ project.fullname }}" 
               imgurl="{{ project.imgurl }}" 
@@ -57,7 +57,7 @@
       <h2 class="header text_b">Habilidades</h2>
       <div layout="column">
         <div layout="row" flex layout-margin layout-padding class="space-bottom-0" layout-wrap>
-          <div class="wow-nonmobile fadeInLeft" flex-sm="100" flex-md="50" flex-gt-md="50">
+          <div class="wow-nonmobile fadeInLeft" flex-xs="100" flex-sm="100" flex-md="50" flex-gt-md="50">
             <div id="cv-formacao">
               <h5 class="cv-section-title">Formação</h5>
               <ul id="lista_formacao" class="list-unstyled" ng-controller="CoursesController">
@@ -103,7 +103,7 @@
             </div>
             <div class="divider hide-on-med-and-up"></div>
           </div>
-          <div class="wow-nonmobile fadeInRight" flex-sm="100" flex-md="35" flex-gt-md="35">
+          <div class="wow-nonmobile fadeInRight" flex-xs="100" flex-sm="100" flex-md="45" flex-gt-md="45">
             <div id="cv-habilidades" ng-controller="SkillsController">
               <ul class="list-unstyled skills">
                 <li ng-repeat="skill in skills.data" id="skill_{{ skill.name }}">

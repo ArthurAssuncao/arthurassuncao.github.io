@@ -1,12 +1,24 @@
 // AngularJS controllers
-app.controller('AppController', function($scope) {
+app.controller('AppController', function($scope, $timeout, $mdSidenav, $log) {
     $scope.openSideMenu = function(){
-        console.log("Abrir menu lateral");
+        $mdSidenav('left').toggle()
+            .then(function () {
+                $log.debug("abrir menu lateral");
+            });
     }
 });
 
 app.controller('TyperController', function($scope) {
     
+});
+
+app.controller('NavLeftController', function ($scope, $timeout, $mdSidenav, $log) {
+    $scope.close = function () {
+        $mdSidenav('left').close()
+            .then(function () {
+                $log.debug("close LEFT is done");
+            });
+    };
 });
 
 app.controller('SkillsController', function($scope) {
