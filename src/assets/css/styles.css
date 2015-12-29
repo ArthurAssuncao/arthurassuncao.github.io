@@ -27038,9 +27038,16 @@ nav a.button-collapse {
 }
 
 .parallax-container {
-  max-height: 400px;
+  max-height: 500px;
+  z-index: -1;
+}
+.parallax-container img {
+  min-width: 100%;
 }
 
+footer {
+  z-index: 1;
+}
 footer.page-footer {
   margin-top: 0px !important;
   width: 100%;
@@ -27051,6 +27058,7 @@ footer .row {
 footer.footer {
   padding-bottom: 30px;
   padding-top: 0px;
+  background-color: #212121 !important;
 }
 
 #form-submit i.material-icon {
@@ -27231,10 +27239,6 @@ footer.footer {
     font-size: 0.9em;
   }
 }
-.footer {
-  background-color: #212121 !important;
-}
-
 #skills {
   text-align: justify;
 }
@@ -27677,6 +27681,8 @@ em {
   padding-bottom: 100px;
   background-color: #2196f3;
   color: white;
+  z-index: 1;
+  position: relative;
 }
 #technologies i {
   color: white;

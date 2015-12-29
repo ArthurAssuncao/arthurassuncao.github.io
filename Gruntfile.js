@@ -146,14 +146,6 @@ module.exports = function(grunt) {
         sourceMap: true
       },
       dev_third_party_angular: {
-        options: {
-          banner: '<%= tag.banner %>',
-          compress: true,
-          beautify: true,
-          mangle: false,
-          preserveComments: 'some',
-          sourceMap: true
-        },
         files: {
            '<%= project.src_assets_js_third_party %>/angular-bundle.min.js': [
              '<%= project.src_bower_components %>/angular/angular.min.js', 
@@ -161,6 +153,8 @@ module.exports = function(grunt) {
              '<%= project.src_bower_components %>/angular-animate/angular-animate.min.js',
              '<%= project.src_bower_components %>/angular-aria/angular-aria.min.js',
              '<%= project.src_bower_components %>/angular-typer/dist/typer.min.js',
+             '<%= project.src_bower_components %>/angular-scroll/angular-scroll.min.js',
+             '<%= project.src_bower_components %>/ng-parallax/angular-parallax.min.js',
            ],
         }
       },
@@ -321,7 +315,7 @@ module.exports = function(grunt) {
         files: ['<%= project.src_assets_css %>/*.css'],
         tasks: ['postcss'],
         options: {
-          interval: 5000,
+          interval: 10000,
           interrupt: true,
         },
       },

@@ -12,6 +12,10 @@ app.controller('TyperController', function($scope) {
     
 });
 
+app.controller('ParallaxController', function($scope, parallaxHelper) {
+    $scope.background = parallaxHelper.createAnimator(-0.5);
+});
+
 app.controller('NavLeftController', function ($scope, $timeout, $mdSidenav, $log) {
     $scope.close = function () {
         $mdSidenav('left').close()

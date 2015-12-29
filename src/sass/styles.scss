@@ -22,6 +22,7 @@ body {
     text-rendering: optimizeLegibility;
     font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
+    // z-index: 2;
 }
 
 .container {
@@ -288,7 +289,6 @@ i.tiny {
     }
 }
 
-
 #preloader {
     position: fixed;
     top: 0;
@@ -357,10 +357,16 @@ nav a.button-collapse {
 }
 
 .parallax-container {
-    max-height: 400px;
+    max-height: 500px;
+    z-index: -1;
+    img{
+        min-width: 100%;
+    }
 }
 
 footer {
+    z-index: 1;
+    // transform: translateY(20%);
     &.page-footer {
         margin-top: 0px !important;
         width: 100%;
@@ -371,6 +377,7 @@ footer {
     &.footer{
         padding-bottom: 30px;
         padding-top: 0px;
+        background-color: #212121 !important;
     }
 }
 
@@ -568,14 +575,6 @@ footer {
         }
     }
 }
-
-.footer {
-    background-color: #212121 !important;
-}
-
-// .parallax{
-//     z-index: 0;
-// }
 
 #skills {
     text-align: justify;
@@ -1033,6 +1032,8 @@ em{
     padding-bottom: 100px;
     background-color: $my-primary-color;
     color: white;
+    z-index: 1;
+    position: relative;
 
     i{
         color: white;

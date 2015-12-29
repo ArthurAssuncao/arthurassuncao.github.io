@@ -1,4 +1,4 @@
-var app = angular.module('ArthurAssuncao', ['ngMaterial', 'ngAnimate', 'ngAria', 'typer']);
+var app = angular.module('ArthurAssuncao', ['ngMaterial', 'ngAnimate', 'ngAria', 'typer', 'duParallax']);
 
 app.config(function($mdThemingProvider) {
   $mdThemingProvider.theme('default')
