@@ -121,7 +121,7 @@ app.controller('CourseController', function($scope) {
 });
 
 // Directiva project
-app.directive('project', function() {
+app.directive('project', function($templateCache) {
     var directive = {};
 
     directive.restrict = 'E';
@@ -160,6 +160,8 @@ app.directive('project', function() {
     }
 
     directive.templateUrl = '../../templates/project.tmpl.html';
+
+    $templateCache.put('../../templates/project-dialog.tmpl.html');
 
     return directive;
 });

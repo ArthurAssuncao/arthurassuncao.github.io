@@ -27651,6 +27651,10 @@ project md-card-title-text .md-headline {
 project md-card-title-text .md-headline i {
   vertical-align: sub;
 }
+project md-card {
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
 
 .btn-send i {
   vertical-align: sub;
@@ -27713,6 +27717,6 @@ ul.skills li {
 
 .project-dialog-imgs {
   overflow: auto;
-  max-height: 50vh;
+  max-height: 50vh !important;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -1005,6 +1005,9 @@ project{
             vertical-align: sub;
         }
     }
+    md-card{
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,.16) , 0 2px 10px 0 rgba(0,0,0,.12);
+    }
 }
 
 .btn-send{
@@ -1081,5 +1084,5 @@ ul.skills{
 
 .project-dialog-imgs{
     overflow: auto;
-    max-height: 50vh;
+    max-height: 50vh !important;
 }

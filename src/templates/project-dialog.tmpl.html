@@ -14,7 +14,7 @@
     <md-dialog-content>
       <div class="md-dialog-content" layout="row">
         <div flex="50" layout="row" layout-wrap layout-padding layout-margin class="project-dialog-imgs">
-          <img ng-repeat="img in split(project.imgs)" src="{{ img }}" alt="{{ project.name }}" flex="100"/>
+          <img ng-repeat="img in split(project.imgs)" src="{{ img ? img : '' }}" alt="{{ project.name }}" flex="100"/>
         </div>
         <div flex="50">
           <div class="card-modal-role center"><span>{{ project.type }}</span> <span class="card-modal-date">{{ project.datestart }} - {{ project.dateend }}</span></div>
