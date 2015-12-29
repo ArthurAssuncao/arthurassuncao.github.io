@@ -162,19 +162,27 @@ app.controller('ProjectsController', function($scope) {
                 <p>O EntregaRápida foi vencedor do hackathon da Google Developer Group DevFest Sudeste</p>",
         },
         {
-            name: "MaisVendas",
-            fullname: "MaisVendas",
-            imgurl: "assets/img/portfolio/maisvendas/thumbnail.png",
-            imgs: "assets/img/portfolio/maisvendas/0.jpg, assets/img/portfolio/maisvendas/1.jpg",
-            url: "https://play.google.com/store/apps/details?id=com.vendas",
-            urlname: "MaisVendas na PlayStore",
-            technologies: "Android, Python/Django, JSON, Git, MySQL",
-            type: "Desenvolvedor Mobile e Web",
-            datestart: "2013",
-            dateend: "2014",
-            description: "<p>Participei da programação do app móvel e do Web Service MaisVendas da empresa AddMob.</p>
-                    <p>Foi feito o desenolvimento do app Android e Web Service em Django com banco de dados MySQL, uso de notação JSON para comunicação entre os sistemas e utilização de controle de versão Git para uma melhor manutenção do código e colaboração entre os membros da equipe.</p>
-                    <p>O MaisVendas é um sistema para quem deseja ter seu catálogo de produtos e sua lista de clientes disponíveis ao toque da tela de seu tablet ou smartphone. É possível realizar vendas, consultar pedidos realizados, verificar o histórico de vendas através do gráfico iterativo e muito mais.</p>",
+            name: "ArthurAssuncao.com",
+            imgurl: "assets/img/portfolio/arthurassuncao-com/thumbnail-0.png",
+            imgs: "
+                assets/img/portfolio/arthurassuncao-com/0.png, 
+                assets/img/portfolio/arthurassuncao-com/1.png,
+                assets/img/portfolio/arthurassuncao-com/2.png,
+                assets/img/portfolio/arthurassuncao-com/3.png",
+            url: "http://ArthurAssuncao.com/",
+            urlname: "Visite ArthurAssuncao.com",
+            technologies: "HTML5/CSS3/SASS, JavaScript/jQuery, AngularJS, AngularJS Material, WOW.js, Jade, Grunt",
+            type: "Projeto Pessoal",
+            datestart: "2012",
+            dateend: "Atualmente",
+            description: "<p>Meu site pessoal onde divulgo meu currículo, meus projetos, etc e o mantenho atualizado com o que há de mais interessante e recente em termos de tecnologias web.</p>
+                <p><strong>História</strong></p>
+                <p>Em 2012 o site não tinha o código fonte aberto e utilizava PHP e Bootstrap 2.x.</p>
+                <p>Em 2013 o site teve seu código fonte aberto e hospedado no Github.</p>
+                <p>Em 2014 o site teve o Bootstrap atualizado para a versão 3.x.</p>
+                <p>Em 2015 o site passou por várias reformulações, primeiro foi o uso do MaterializeCSS, em seguida foi removido o PHP e deixado apenas estático. Uma versão em Material Design Lite foi iniciada, porém descontinuada devido a falta de recursos desse framework da Google. Nesta versão mais recente de 2015, o site é feito utilizando AngularJS e AngularJS Material, que oferecem muitos recursos com grande produtividade, além de um bom desempenho, mesmo neste último quesito sendo inferior ao ReactJS ou AngularJS 2.0.</p>
+                <p>Além de todas estas mudanças, em 2015, comecei a utilizar no site o SASS para melhorar a códificação CSS, Jade pra modularizar melhor os HTML e, o mais interessante de todos, o Grunt como automatizador. O ganho em desempenho e produtividade que um automatizador gera é gigantesco.
+                <p>Em 2016 estou analisando, a principio, a possibilidade de substituir as directivas do AngularJS por componentes ReactJS, o que aumentaria muito o desempenho do site.</p>",
         },
         {
             name: "JUMP!",
@@ -205,6 +213,21 @@ app.controller('ProjectsController', function($scope) {
                     <p>O projeto consistiu de um software informativo e interativo para acompanhamento de eventos e notícias do Festival de Inverno de Ouro Preto e Mariana de 2014 com interação com os usuários por meio do sensor Kinect.</p>
                     <p>O uGuide Desk ficou em exposição na Casa dos Contos, em Ouro Preto, oferecendo maior interatividade para os visitantes.</p>
                     <p>Foram utilizadas linguagem C++ e interface gráfica Qt com comunicação com o Web Service via JSON.</p>",
+        },
+        {
+            name: "MaisVendas",
+            fullname: "MaisVendas",
+            imgurl: "assets/img/portfolio/maisvendas/thumbnail-1.jpg",
+            imgs: "assets/img/portfolio/maisvendas/0.jpg, assets/img/portfolio/maisvendas/1.jpg",
+            url: "https://play.google.com/store/apps/details?id=com.vendas",
+            urlname: "MaisVendas na PlayStore",
+            technologies: "Android, Python/Django, JSON, Git, MySQL",
+            type: "Desenvolvedor Mobile e Web",
+            datestart: "2013",
+            dateend: "2014",
+            description: "<p>Participei da programação do app móvel e do Web Service MaisVendas da empresa AddMob.</p>
+                    <p>Foi feito o desenolvimento do app Android e Web Service em Django com banco de dados MySQL, uso de notação JSON para comunicação entre os sistemas e utilização de controle de versão Git para uma melhor manutenção do código e colaboração entre os membros da equipe.</p>
+                    <p>O MaisVendas é um sistema para quem deseja ter seu catálogo de produtos e sua lista de clientes disponíveis ao toque da tela de seu tablet ou smartphone. É possível realizar vendas, consultar pedidos realizados, verificar o histórico de vendas através do gráfico iterativo e muito mais.</p>",
         },
         {
             name: "Entensões na Chrome Store",
@@ -255,24 +278,6 @@ app.controller('ProjectsController', function($scope) {
         //         <p>Usando geolocalização do HTML5 para pegar a posição atual do usuário o App indicará qual é ponto de coleta seletiva mais próximo de acordo com o material selecionado para ser descartado (Papel/Plástico/Metal&Vidro/ Orgânico/Não-reciclável). Todos os dados serão armazenados no servidor, onde serão analisadas no futuro.</p>
         //         <p>Com os dados fornecidos pelo App é possível criar relatórios sobre o uso de cada ponto de coleta com base em sua localização ou materiais disponíveis, ajudando o campus a realocar-los, se necessário.</p>",
         // },
-        {
-            name: "ArthurAssuncao.com",
-            imgurl: "",
-            imgs: "",
-            url: "http://ArthurAssuncao.com/",
-            urlname: "Visite ArthurAssuncao.com",
-            technologies: "HTML5/CSS3/SASS, JavaScript/jQuery, AngularJS, Angular Material, WOW.js, Jade, Grunt",
-            type: "Projeto Pessoal",
-            datestart: "2012",
-            dateend: "Atualmente",
-            description: "<p>Meu site pessoal onde divulgo meu currículo, meus projetos, etc e o mantenho atualizado com o que há de mais interessante e recente em termos de tecnologias web.</p>
-                <p><strong>História</strong></p>
-                <p>Em 2012 o site não tinha o código fonte aberto e utilizava PHP e Bootstrap 2.x.</p>
-                <p>Em 2013 o site teve seu código fonte aberto e hospedado no Github.</p>
-                <p>Em 2014 o site teve o Bootstrap atualizado para a versão 3.x.</p>
-                <p>Em 2015 o site passou por várias reformulações, primeiro foi o uso do MaterializeCSS, em seguida foi removido o PHP e deixado apenas estático. Uma versão em Material Design Lite foi iniciada, porém descontinuada devido a falta de recursos desse framework da Google. Nesta versão mais recente de 2015, o site é feito utilizando AngularJS e AngularJS Material, que oferecem muitos recursos com grande produtividade, além de um bom desempenho, mesmo neste último quesito sendo inferior ao ReactJS ou AngularJS 2.0.</p>
-                <p>Além de todas estas mudanças, em 2015, comecei a utilizar no site o SASS para melhorar a códificação CSS, Jade pra modularizar melhor os HTML e, o mais interessante de todos, o Grunt como automatizador. O ganho em desempenho e produtividade que um automatizador gera é gigantesco.
-                <p>Em 2016 estou analisando, a principio, a possibilidade de substituir as directivas do AngularJS por componentes ReactJS, o que aumentaria muito o desempenho do site.</p>",
-        },
+        
     ];
 });

@@ -359,6 +359,7 @@ nav a.button-collapse {
 .parallax-container {
     max-height: 500px;
     z-index: -1;
+    overflow: hidden;
     img{
         min-width: 100%;
     }
@@ -437,6 +438,7 @@ footer {
     .contact-email {
         clear: left;
     }
+    //comentei agora
     #social {
         text-align: center;
         li {
@@ -469,9 +471,20 @@ footer {
     }
 }
 
+#index-banner{
+    .text_h{
+        transform: translateY(50%);
+    }
+}
+
 @media only screen and (min-width: 481px) {}
 
 @media only screen and (min-width: 992px) {
+    #index-banner{
+        .text_h{
+            transform: translateY(0%);
+        }
+    }
     .card-modal {
         width: 67%;
         max-width: 90%;
