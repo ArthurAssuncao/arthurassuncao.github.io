@@ -142,14 +142,14 @@ app.controller('ProjectsController', function($scope) {
     $scope.projects.data = [
         {
             name: "EntregaRápida",
-            imgurl: "http://mateusferreira.com.br/images/entregarapida-thumbnail.jpeg",
+            imgurl: "assets/img/portfolio/entregarapida/thumbnail.jpeg",
             imgs: "
-                http://mateusferreira.com.br/images/entregarapida/0.jpeg, 
-                http://mateusferreira.com.br/images/entregarapida/1.jpeg, 
-                http://mateusferreira.com.br/images/entregarapida/2.jpeg, 
-                http://mateusferreira.com.br/images/entregarapida/3.jpeg, 
-                http://mateusferreira.com.br/images/entregarapida/4.jpeg, 
-                http://mateusferreira.com.br/images/entregarapida/5.jpeg",
+                assets/img/portfolio/entregarapida/0.jpeg, 
+                assets/img/portfolio/entregarapida/1.jpeg, 
+                assets/img/portfolio/entregarapida/2.jpeg, 
+                assets/img/portfolio/entregarapida/3.jpeg, 
+                assets/img/portfolio/entregarapida/4.jpeg, 
+                assets/img/portfolio/entregarapida/5.jpeg, ",
             url: "http://github.com/ArthurAssuncao/EntregaRapida",
             urlname: "Visite o projeto",
             technologies: "HTML5/CSS3/SASS, JavaScript, AngularJS, AngularJS Material, Polymer, Google Maps API, Google Sign In, Google Places, NodeJS, MongoDB",
@@ -164,8 +164,8 @@ app.controller('ProjectsController', function($scope) {
         {
             name: "MaisVendas",
             fullname: "MaisVendas",
-            imgurl: "assets/img/portfolio/maisvendas_300x200.png",
-            imgs: "assets/img/portfolio/maisvendas_300x200.png",
+            imgurl: "assets/img/portfolio/maisvendas/thumbnail.png",
+            imgs: "assets/img/portfolio/maisvendas/0.jpg, assets/img/portfolio/maisvendas/1.jpg",
             url: "https://play.google.com/store/apps/details?id=com.vendas",
             urlname: "MaisVendas na PlayStore",
             technologies: "Android, Python/Django, JSON, Git, MySQL",
@@ -193,8 +193,8 @@ app.controller('ProjectsController', function($scope) {
         },
         {
             name: "uGuide Desk 2014",
-            imgurl: "http://fakeimg.pl/300x200/",
-            imgs: "http://fakeimg.pl/300x200/",
+            imgurl: "assets/img/portfolio/uguide-desk-2014/thumbnail.png",
+            imgs: "assets/img/portfolio/uguide-desk-2014/0.png, assets/img/portfolio/uguide-desk-2014/1.png",
             url: "",
             urlname: "Projeto de código fonte fechado",
             technologies: "C++, JSON, Git",
@@ -203,6 +203,7 @@ app.controller('ProjectsController', function($scope) {
             dateend: "2014",
             description: "<p>Participei da equipe de desenvolvimento da aplicação.</p>
                     <p>O projeto consistiu de um software informativo e interativo para acompanhamento de eventos e notícias do Festival de Inverno de Ouro Preto e Mariana de 2014 com interação com os usuários por meio do sensor Kinect.</p>
+                    <p>O uGuide Desk ficou em exposição na Casa dos Contos, em Ouro Preto, oferecendo maior interatividade para os visitantes.</p>
                     <p>Foram utilizadas linguagem C++ e interface gráfica Qt com comunicação com o Web Service via JSON.</p>",
         },
         {
@@ -229,8 +230,8 @@ app.controller('ProjectsController', function($scope) {
         },
         {
             name: "Addmob.com.br",
-            imgurl: "assets/img/portfolio/addmob_com_br_300x200.jpg",
-            imgs: "assets/img/portfolio/addmob_com_br_300x200.jpg",
+            imgurl: "assets/img/portfolio/addmob-com-br/thumbnail.jpg",
+            imgs: "assets/img/portfolio/addmob-com-br/0.png, assets/img/portfolio/addmob-com-br/1.png",
             url: "https://www.addmob.com.br",
             urlname: "Visite Addmob.com.br",
             technologies: "HTML/CSS3, JavaScript/jQuery/HammerJS, Python/Django, Git",
@@ -242,8 +243,8 @@ app.controller('ProjectsController', function($scope) {
         },
         // {
         //     name: "GeoColeta",
-        //     imgurl: "http://mateusferreira.com.br/images/geocoleta-thumbnail.jpeg",
-        //     imgs: "http://mateusferreira.com.br/images/geocoleta/0.jpeg, http://mateusferreira.com.br/images/geocoleta/1.jpeg, http://mateusferreira.com.br/images/geocoleta/2.jpeg",
+        //     imgurl: "assets/img/portfolio/geocoleta/thumbnail.jpeg",
+        //     imgs: "assets/img/portfolio/geocoleta//0.jpeg, assets/img/portfolio/geocoleta//1.jpeg, assets/img/portfolio/geocoleta/2.jpeg",
         //     url: "http://geocoleta.org/",
         //     urlname: "Visite GeoColeta.org",
         //     technologies: "HTML5/CSS3, JavaScript/jQuery, HTML5 Geolocation, jQuery Mobile, Python/Django",
