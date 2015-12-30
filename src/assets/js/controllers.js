@@ -73,7 +73,7 @@ app.controller('PapersController', function($scope) {
         },
         {
             // url: "http://sbesc.lisha.ufsc.br/sbesc2015/proceedings/146713.pdf",
-            url: "http://localhost:8080/assets/files/146713_KITT_Sistema_de_Carro_Inteligente_com_Apoio_a_Seguranca_do_Motorista.pdf",
+            url: "assets/files/146713_KITT_Sistema_de_Carro_Inteligente_com_Apoio_a_Seguranca_do_Motorista.pdf",
             title: "KITT - Sistema de Carro Inteligente com Apoio à Segurança do Motorista",
             authors: "Arthur N. Assuncao, Ricardo Camara, Luiz Janeiro, Rafael Vitor, Fabio O. de Paula, Ricardo A. R. Oliveira",
             confjournal: "V Brazilian Symposium on Computing Systems Engineering (SBESC)",
@@ -84,7 +84,7 @@ app.controller('PapersController', function($scope) {
         },
         {
             // url: "http://sbesc.lisha.ufsc.br/sbesc2015/proceedings/146842.pdf",
-            url: "http://localhost:8080/assets/files/146842_Metodologia_para_Deteccao_de_Saida_de_Faixa_Utilizando_EWMA_Aplicado_a_Sensores_Inerciais_no_Volante.pdf",
+            url: "assets/files/146842_Metodologia_para_Deteccao_de_Saida_de_Faixa_Utilizando_EWMA_Aplicado_a_Sensores_Inerciais_no_Volante.pdf",
             title: "Metodologia para Detecção de Saída de Faixa Utilizando EWMA Aplicado a Sensores Inerciais no Volante",
             authors: "Arthur N. Assuncao, Fabio O. de Paula, Ricardo A. R. Oliveira",
             confjournal: "V Brazilian Symposium on Computing Systems Engineering (SBESC)",
