@@ -113,16 +113,16 @@ module.exports = function(grunt) {
     },
 
     // uncss pra remover classes nao usadas
-    // uncss: {
-    //   dev: {
-    //     files: [
-    //       {
-    //         src: ['<%= project.dist %>/*.html', '<%= project.dist_templates %>/*.html'],
-    //         dest: '<%= project.dist_assets_css %>/styles.css'
-    //       }
-    //     ]
-    //   }
-    // },
+    uncss: {
+      dist: {
+        files: [
+          {
+            src: ['<%= project.app %>/*.html', '<%= project.dist %>/*.html', '<%= project.dist_templates %>/*.html'],
+            dest: '<%= project.src_assets_css %>/styles.css'
+          }
+        ]
+      }
+    },
 
     // cssmin, minificar css
     cssmin: {
@@ -141,7 +141,7 @@ module.exports = function(grunt) {
 
     // modernizer
     modernizr: {
-      dev: {
+      dist: {
         "dest" : "<%= project.dist_assets_js %>/modernizr-custom.min.js",
       }
     },
@@ -228,7 +228,7 @@ module.exports = function(grunt) {
           { //html
             expand: true, 
             src: ['<%= project.src %>/index.html'], 
-            dest: '<%= project.app %>/', 
+            dest: '<%= project.dist %>/', 
             filter: 'isFile',
             flatten: true
           },
@@ -245,21 +245,23 @@ module.exports = function(grunt) {
         files: [
           { //img
             expand: true, 
-            src: ['<%= project.src_img %>/**.*'], 
+            cwd: '<%= project.src_assets_img %>/',
+            src: '**',
             dest: '<%= project.dist_assets_img %>/', 
             filter: 'isFile',
-            flatten: true
+            flatten: false
           }
         ]
       },
       dist_files: {
         files: [
-          { //img
+          { //files
             expand: true, 
-            src: ['<%= project.src_files %>/**.*'], 
+            cwd: '<%= project.src_assets_files %>/',
+            src: '**',
             dest: '<%= project.dist_assets_files %>/', 
             filter: 'isFile',
-            flatten: true
+            flatten: false
           }
         ]
       },
@@ -278,9 +280,44 @@ module.exports = function(grunt) {
             dest: '<%= project.dist_assets_js_third_party %>/', 
             filter: 'isFile',
             flatten: true
+          },
+          { //js plugins
+            expand: true, 
+            src: ['<%= project.src_assets_js_third_party %>/plugins.min.js'], 
+            dest: '<%= project.dist_assets_js_third_party %>/', 
+            filter: 'isFile',
+            flatten: true
           }
         ]
       },
+      fonts:{
+        files: [
+          { //fonts
+            expand: true, 
+            src: ['<%= project.src_assets_fonts %>/*.*'], 
+            dest: '<%= project.dist_assets_fonts %>/', 
+            filter: 'isFile',
+            flatten: true
+          },
+        ]
+      },
+      others:{
+        files: [
+          { //ourtros
+            expand: true, 
+            src: [
+              '<%= project.src %>/apple-touch-icon.png', 
+              '<%= project.src %>/favicon.ico',
+              '<%= project.src %>/humans.txt',
+              '<%= project.src %>/robots.txt'
+            ], 
+            dest: '<%= project.dist %>/', 
+            filter: 'isFile',
+            flatten: true
+          },
+        ]
+      },
+
     },
 
     'http-server': {
@@ -305,6 +342,21 @@ module.exports = function(grunt) {
         },
         files: {
           "<%= project.src %>/index.html": ["<%= project.src_jade %>/index.jade"]
+        }
+      }
+    },
+
+
+    // Secao do processHTML
+    processhtml: {
+      options: {
+        data: {
+          message: 'Hello world!'
+        }
+      },
+      dist: {
+        files: {
+          '<%= project.dist %>/index.html': ['<%= project.src %>/index.html']
         }
       }
     },
@@ -382,10 +434,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-http-server');
   grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-contrib-jade');
+  grunt.loadNpmTasks('grunt-processhtml');
+  
   // grunt.loadNpmTasks('grunt-nodemon');
 
   // Tasks
   grunt.registerTask('dev', ['newer:copy:dev_css_not_scss', 'newer:sass', 'newer:jade', 'newer:uglify' ,'concurrent:tasks']);
   grunt.registerTask('default', []);
-  grunt.registerTask('dist', ['mkdir', 'newer:copy:dev_css_not_scss', 'newer:sass', 'newer:jade', 'newer:postcss', 'newer:cssmin', 'newer:modernizr', 'newer:uglify:dev_third_party', 'newer:uglify:dev_third_party_angular', 'newer:uglify:dev', 'newer:copy']);
+  grunt.registerTask('dist', ['mkdir', 'copy:dev_css_not_scss', 'sass', 'jade', 'postcss', 'cssmin', 'modernizr:dist', 'newer:uglify:dev_third_party', 'newer:uglify:dev_third_party_angular', 'newer:uglify:dev', 'newer:copy', 'processhtml']);
 };

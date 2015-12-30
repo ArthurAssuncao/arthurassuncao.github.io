@@ -35,6 +35,7 @@
     "grunt-contrib-cssmin": "~0.14.0",
     "grunt-newer": "~1.1.1",
     "grunt-mkdir": "~0.1.2",
-    "grunt-contrib-jade": "~0.15.0"
+    "grunt-contrib-jade": "~0.15.0",
+    "grunt-processhtml": "~0.3.8"
   }
 }
