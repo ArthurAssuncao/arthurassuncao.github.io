@@ -1,16 +1,3 @@
-function fill_skills(){
-    $('.skill-value').each(function(){
-        var tamanho = $(this).data('skillbar');
-        $(this).animate({
-            width: tamanho+'%'
-        }, 1000);
-    });
-}
-
-function em_manutencao(){
-    // Materialize.toast('O site está em manutenção. Desculpe por qualquer erro :(', 60000);
-}
-
 function hide_skills_itens(){
     $("#cv-habilidades ul > li:gt(11)").hide(); 
 }
@@ -44,19 +31,6 @@ function add_habilidades_more_event(){
     $("#btn-skill-more").on('click', show_habilidades_itens);
 }
 
-function ativar_modals(){
-    // $('.modal-trigger').leanModal({
-    //     in_duration: 400, // Transition in duration
-    //     out_duration: 300 // Transition out duration);
-    // });
-    // $('.modal-trigger-custom').each(function(){
-    //     var target = $(this).data('target');
-    //     $(this).click(function(){
-    //         $('#'+target).openModal();
-    //     });
-    // });
-}
-
 function iniciar_wow(){
     // new WOW().init();
     new WOW({
@@ -72,9 +46,9 @@ function iniciar_parallax(){
     // $('.parallax').parallax();
 }
 
-// function iniciar_scrollspy(){
-//     $('.scrollspy').scrollSpy();
-// }
+function iniciar_scrollspy(){
+    $('.scrollspy').scrollSpy();
+}
 
 function on_scroll_menu(event){
     var navbarHeight = $("#navbar").height();
@@ -158,7 +132,6 @@ function remove_form_send_by_enter(){
 }
 
 $(document).ready(function(){
-    em_manutencao();
     remove_form_send_by_enter();
     hide_form_result();
     hide_habilidades_itens();
@@ -167,7 +140,5 @@ $(document).ready(function(){
     iniciar_wow();
     add_contact_form_click();
     $(window).scroll(on_scroll_menu);
-    ativar_modals();
-    iniciar_parallax();
-    // iniciar_scrollspy();
+    iniciar_scrollspy();
 });
