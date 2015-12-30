@@ -1,3 +1,12 @@
+function fill_skills(){
+    $('.skill-value').each(function(){
+        var tamanho = $(this).data('skillbar');
+        $(this).animate({
+            width: tamanho+'%'
+        }, 1000);
+    });
+}
+
 function hide_skills_itens(){
     $("#cv-habilidades ul > li:gt(11)").hide(); 
 }
@@ -140,5 +149,5 @@ $(document).ready(function(){
     iniciar_wow();
     add_contact_form_click();
     $(window).scroll(on_scroll_menu);
-    iniciar_scrollspy();
+    // iniciar_scrollspy();
 });

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-br" prefix="og: http://ogp.me/ns#" ng-app="ArthurAssuncao" ng-controller="AppController"><head>
+  <title>Arthur Assunção - Desenvolvedor Web</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#2196F3"/>
+  <meta name="author" content="Arthur Assunção"/>
+  <meta name="dcterms.rightsHolder" content="Arthur Assunção"/>
+  <meta name="description" content="Arthur Assunção - Desenvolvedor Web"/>
+  <meta name="keywords" content="Arthur Assunção, Sistemas para Internet, Desenvolvedor Web, Mestre em Computação"/>
+  <!-- Opengraph-->
+  <meta property="og:locale" content="pt_BR"/>
+  <meta property="og:title" content="Arthur Assunção - Desenvolvedor Web"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="http://arthurassuncao.com"/>
+  <meta property="og:image" content="http://arthurassuncao.com/assets/img/me256x256.png"/>
+  <meta property="og:site_name" content="Arthur Assunção"/>
+  <meta property="og:description" content="Arthur Assunção - Desenvolvedor Web"/>
+  <!-- Twitter cards-->
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:url" content="http://arthurassuncao.com"/>
+  <meta name="twitter:title" content="Arthur Assunção - Desenvolvedor Web"/>
+  <meta name="twitter:description" content="Arthur Assunção - Desenvolvedor Web"/>
+  <meta name="twitter:image" content="http://arthurassuncao.com/assets/img/me256x256.png"/>
+  <!-- Windows app-->
+  <meta name="application-name" content="Arthur Assunção Site"/>
+  <meta name="msapplication-TileColor" content="#2196F3"/>
+  <!-- Favicon-->
+  <link rel="shortcut icon" href="favicon.ico"/>
+  <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+  <link rel="icon" type="image/png" href="apple-touch-icon.png" sizes="16x16"/>
+  <!-- CSS-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+  <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+  <body layout="column" id="top" class="scrollspy ng-cloak">
+    <div id="principal" layout="column" layout-align="center center"><md-toolbar layout="row" id="nav_f">
+    <div class="md-toolbar-tools container" layout="row">
+      <h1 class="logo"><a href="#" class="brand-logo">Arthur <span hide show-gt-md>Assunção</span></a></h1>
+      <div flex></div>
+      <nav id="navbar" hide show-gt-sm>
+        <ul>
+        <li><a href="#mywork" data-hash="#page_mywork" class="navbar-item">
+          <i class="tiny-force material-icons">work</i> Meu Trabalho
+        </a></li>
+        <li><a href="#skills" data-hash="#page_skills" class="navbar-item">
+          <i class="tiny-force material-icons">code</i> Habilidades
+        </a></li>
+        <li><a href="#contact" data-hash="#page_contact" class="navbar-item">
+          <i class="tiny-force material-icons">assignment_ind</i> Contato
+        </a></li>
+        </ul>
+      </nav>
+      <md-button hide-gt-sm flex class="md-icon-button" aria-label="More" ng-click="openSideMenu()">
+        <i class="material-icons">more_vert</i>
+      </md-button>
+    </div>
+</md-toolbar>
+<div class="menu_left_side" hide-gt-sm>
+  <ul>
+    <li data-href="#mywork" class="vertical-text"><i class="tiny-force material-icons">work</i> Meu Trabalho</li>
+    <li data-href="#skills" class="vertical-text"><i class="tiny-force material-icons">code</i> Habilidades</li>
+    <li data-href="#contact" class="vertical-text"><i class="tiny-force material-icons">assignment_ind</i> Contato</li>
+  </ul>
+</div>
+<!--side-bar-->
+<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
+  <md-toolbar class="md-theme-indigo">
+    <h1 class="md-toolbar-tools">Arthur Assuncao</h1>
+  </md-toolbar>
+  <md-content layout-padding ng-controller="NavLeftController">
+    <nav id="navbar-left">
+        <ul>
+        <li><a href="#mywork" data-hash="#page_mywork" class="navbar-left-item">
+          <i class="tiny-force material-icons">work</i> Meu Trabalho
+        </a></li>
+        <li><a href="#skills" data-hash="#page_skills" class="navbar-left-item">
+          <i class="tiny-force material-icons">code</i> Habilidades
+        </a></li>
+        <li><a href="#contact" data-hash="#page_contact" class="navbar-left-item">
+          <i class="tiny-force material-icons">assignment_ind</i> Contato
+        </a></li>
+        </ul>
+      </nav>
+      <!-- <md-button ng-click="close()" class="md-primary" hide-gt-md>
+        Fechar
+      </md-button> -->
+  </md-content>
+</md-sidenav><main id="conteudo" layout-align="center center">
+  <div id="index-banner" class="section no-pad-bot">
+    <div class="container">
+      <h1 class="main-title text_h center header cd-headline">Desenvolvimento <br /><typer words="[' em AngularJS', ' Web', ' Mobile', ' Front-end']" type-time='150' backspace-time='200' start-delay='1500' highlight-background='#2980b9'></typer></h1>
+    </div>
+  </div>
+  <div flex id="mywork" class="section scrollspy">
+    <div id="intro" class="section scrollspy">
+      <div class="container">
+        <div layout="row" layout-wrap layout-align="center center" layout-padding>
+          <div flex-xs="100" flex-sm="100" flex-md flex-gt-md>
+            <div class="center promo promo-example"><i class="material-icons text-blue">flash_on</i>
+              <h5 class="promo-caption">Acelere o Desenvolvimento</h5>
+              <p class="light center promo-description justify">Desenvolvimento de soluções que se adaptam a múltiplos dispositivos, utilizando as mais recentes tecnologias para obter o melhor desempenho com a maior produtividade e seguindo tendências atuais.</p>
+            </div>
+          </div>
+          <div flex-xs="100" flex-sm="100" flex-md flex-gt-md>
+            <div class="center promo promo-example"><i class="material-icons text-blue">important_devices</i>
+              <h5 class="promo-caption">Totalmente responsivo</h5>
+              <p class="light center promo-description justify">Criação de sistemas responsivéis e com uso de técnicas como Mobile First, Desktop First e Offline First para atendender às diversas características dos atuais dispositivos.</p>
+            </div>
+          </div>
+          <div flex-xs="100" flex-sm="100" flex-md flex-gt-md>
+            <div class="center promo promo-example"><i class="material-icons text-blue">code</i>
+              <h5 class="promo-caption">Código Otimizado</h5>
+              <p class="light center promo-description justify">O uso de novas tecnologias, frameworks e pré-processadores com automatizadores, como grunt com postcss, uncss, sass, autoprefixer, uglify etc, alinhados a CSS3 orientado a objetos e HTML5 semântico tornam o código mais limpo e otimizado.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div flex id="work" class="section scrollspy">
+      <div class="container">
+        <h2 class="header text_b">Alguns projetos que participei</h2>
+        <div layout="row" layout-wrap layout-align="center center" ng-controller="ProjectsController">
+            <project flex-xs="100" flex-sm="50" flex-md="50" flex-lg="30" ng-repeat="project in projects.data"
+              name="{{ project.name }}" 
+              fullname="{{ project.fullname }}" 
+              imgurl="{{ project.imgurl }}" 
+              imgs="{{ project.imgs }}" 
+              url="{{ project.url }}" 
+              urlname="{{ project.urlname }}" 
+              technologies="{{ project.technologies }}" 
+              type="{{ project.type }}" 
+              datestart="{{ project.datestart }}" 
+              dateend="{{ project.dateend }}" 
+              description="{{ project.description }}" 
+            ></project>
+      </div>
+    </div>
+  </div>
+  <div flex id="skills" class="section scrollspy">
+    <div class="container">
+      <div layout="row">
+        <div class="circular center-align col-centered foto"></div>
+      </div>
+      <h2 class="header text_b">Habilidades</h2>
+      <div layout="column">
+        <div layout="row" flex layout-margin layout-padding class="space-bottom-0" layout-wrap>
+          <div class="wow-nonmobile fadeInLeft" flex-xs="100" flex-sm="100" flex-md="50" flex-gt-md="50">
+            <div id="cv-formacao">
+              <h5 class="cv-section-title">Formação</h5>
+              <ul id="lista_formacao" class="list-unstyled" ng-controller="CoursesController">
+                <li class="cv-item" ng-repeat="course in courses.data">
+                  <course 
+                    name="{{ course.name }}"
+                    institution="{{ course.institution }}"
+                    datestart="{{ course.date_start }}"
+                    dateend="{{ course.date_end }}" >
+                  </course>
+                </li>
+              </ul>
+            </div>
+            <div class="divider"></div>
+            <div id="cv-awards">
+              <h5 class="cv-section-title">Premiações</h5>
+              <ul id="lista_experiencia" class="list-unstyled" ng-controller="AwardsController">
+                <li ng-repeat="award in awards.data" class="cv-item">
+                  <award name="{{ award.name }}" 
+                    place="{{ award.place }}" 
+                    url="{{ award.url }}" 
+                    year="{{ award.year }}" >
+                  </award>
+                </li>
+              </ul>
+            </div>
+            <div class="divider"></div>
+            <div id="cv-producao">
+              <h5 class="cv-section-title">Produções Científicas</h5>
+              <ul id="lista_experiencia" class="list-unstyled" ng-controller="PapersController">
+                <li ng-repeat="paper in papers.data" class="cv-item">
+                  <paper url="{{ paper.url }}" 
+                    title="{{ paper.title }}" 
+                    authors="{{ paper.authors }}" 
+                    confjournal="{{ paper.confjournal }}" 
+                    year="{{ paper.year }}" 
+                    local="{{ paper.local }}" 
+                    qualis="{{ paper.qualis }}" 
+                    authormain="{{ paper.authormain }}">
+                  </paper>
+                </li>
+              </ul>
+            </div>
+            <div class="divider hide-on-med-and-up"></div>
+          </div>
+          <div class="wow-nonmobile fadeInRight" flex-xs="100" flex-sm="100" flex-md="45" flex-gt-md="45">
+            <div id="cv-habilidades" ng-controller="SkillsController">
+              <ul class="list-unstyled skills">
+                <li ng-repeat="skill in skills.data" id="skill_{{ skill.name }}">
+                  <skill 
+                    name="{{ skill.name }}" 
+                    msg="{{ skill.msg }}" 
+                    value="{{ skill.value }}" >
+                  </skill>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div flex class="col-centered btn-skill-more">
+          <md-button id="btn-skill-more" class="md-fab md-primary" aria-label="Use Android">
+            <md-icon><i class="material-icons">add</i></md-icon>
+          </md-button>
+        </div>
+      </div>
+    </div>
+    <div flex="100" id="technologies">
+      <div class="container">
+        <div layout="row" layout-wrap layout-align="center center">
+          <div flex-xs="100" flex-sm="100" flex-md flex-gt-md aria-label="HTML5">
+            <div class="center technology-icon">
+              <img src="assets/img/technologies/html5-icon.png" alt="HTML5" />
+            </div>
+          </div>
+          <div flex-xs="100" flex-sm="100" flex-md flex-gt-md aria-label="AngularJS">
+            <div class="center technology-icon">
+              <img src="assets/img/technologies/angularjs-icon.png" alt="AngularJS" />
+            </div>
+          </div>
+          <div flex-xs="100" flex-sm="100" flex-md flex-gt-md aria-label="MEAN">
+            <div class="center technology-icon">
+              <img src="assets/img/technologies/mean-icon.png" alt="MEAN" />
+            </div>
+          </div>
+          <div flex-xs="100" flex-sm="100" flex-md flex-gt-md aria-label="ReactJS">
+            <div class="center technology-icon">
+              <img src="assets/img/technologies/reactjs-icon.png" alt="ReactJS"/>
+            </div>
+          </div>
+          <div flex-xs="100" flex-sm="100" flex-md flex-gt-md aria-label="GruntJS">
+            <div class="center technology-icon">
+              <img src="assets/img/technologies/grunt-icon.png" alt="GruntJS"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="parallax-container" ng-controller="ParallaxController">
+    <div class="parallax"><img src="assets/img/ufop.jpg" alt="parallax image" du-parallax y="background"/>
+    </div>
+  </div>
+</main><footer id="contact" layout-align="center center" class="page-footer default_color scrollspy footer">
+  <div class="container">
+    <div layout="row" layout-wrap layout-align="center center" layout-margin layout-padding>
+      <form id="form-contact" name="form-contact" onsubmit="javascript:return false" flex="100" flex-sm="100" flex-md="70" flex-gt-md="70">
+        <div layout="row" layout-wrap layout-align="center center">
+          <h5 class="white-text center" flex='100'>Contato</h5>
+          <div layout="row" layout-wrap flex='100'>
+            <!-- Nome-->
+            <md-input-container flex="100" flex-gt-sm="50" class="md-icon-float">
+              <i class="material-icons prefix icon-large white-text">account_circle</i><label>Nome</label>
+              <md-icon class="name">
+                </md-icon>
+              <input id="form-name" name="name" type="text" ng-model="contato.name">
+            </md-input-container>
+            <!-- Email-->
+            <md-input-container flex="100" flex-gt-sm="50" class="md-icon-float">
+              <i class="material-icons prefix icon-large white-text">email</i><label>Email</label>
+              <md-icon class="name">
+                </md-icon>
+              <input id="form-email" name="email" type="email" ng-model="contato.email">
+            </md-input-container>
+          </div>
+          <!-- Mensagem-->
+          <md-input-container flex='100' class="md-icon-float">
+            <i class="material-icons prefix icon-large white-text">message</i><label>Mensagem</label>
+            <md-icon class="name">
+              </md-icon>
+            <textarea id="form-message" name="message" type="text" ng-model="contato.email"></textarea>
+          </md-input-container>
+          <!-- Hide-->
+          <md-input-container hide flex='100' class="md-icon-float">
+            <input id="form-hidden" aria-label="hidden1" type="hidden" name="_subject" value="Contato site" required=""/>
+          </md-input-container>
+          <md-input-container hide flex='100' class="md-icon-float">
+            <input id="form-hidden-text" aria-label="hidden2" type="text" name="_gotcha" style="display:none" required=""/>
+          </md-input-container>
+          <!-- Botao -->
+          <md-button flex="50" id="form-submit" class="md-primary md-raised btn-send" ng-click="submitForm($event)">Enviar  <i class="material-icons white-text">send</i></md-button>
+
+        </div>
+      </form>
+      <div layout="row" flex="100" layout-wrap hide>
+          <div hide flex-xs="100" flex-sm="100" flex-md="50" class="form-result-ok white-text">
+              <h1>
+                <div class="fa fa-thumbs-o-up white-text"></div>
+              </h1>
+              <h6>Obrigado.<br/><br/>Sua mensagem enviada e<br/>irei respondê-la em breve.</h6>
+            </div>
+            <div hide flex-xs="100" flex-sm="100" flex-md="50" class="form-result-error white-text">
+              <h1>
+                <div class="fa fa-frown-o white-text"></div>
+              </h1>
+              <h6>Algo deu errado.<br/>Por favor, contate-me em arthur@arthurassuncao.com</h6>
+            </div>
+      </div>
+      </div>
+      <!-- Feedback removido -->
+      <div id="social" itemscope="" itemtype="http://schema.org/Person" flex-xs="100" flex-sm="100" flex-md="40" flex-gt-md="40" layout="column" class="center-align">
+        <div flex="100" class="center-align">
+          <link itemprop="url" href="http://arthurassuncao.com/"/>
+          <description itemprop="description" href="Arthur Assuncao - Desenvolvedor de sistemas."></description><img itemprop="image" href="assets/img/me256x256.png" class="hide"/>
+          <h5 class="white-text">Social</h5>
+          <ul class="center" layout-wrap layout="row">
+            <li flex><a itemprop="sameAs" href="https://www.facebook.com/arthurassuncao" class="white-text"><i class="small fa fa-facebook-square white-text"></i><span> Facebook</span></a></li>
+            <li flex><a itemprop="sameAs" href="https://github.com/arthurassuncao" class="white-text"><i class="small fa fa-github-square white-text"></i><span> Github</span></a></li>
+            <li flex><a itemprop="sameAs" href="https://www.linkedin.com/in/arthurassuncao" class="white-text"><i class="small fa fa-linkedin-square white-text"></i><span> LinkedIn</span></a></li>
+            <li flex><a itemprop="sameAs" href="http://lattes.cnpq.br/8136835668168874" class="white-text"><i class="small fa fa-lattes-square white-text"></i><span> Lattes</span></a><i class="medium fa fa-lattes-square-preload"></i></li>
+            <li flex hide class="esconde hide"><a itemprop="sameAs" href="https://plus.google.com/+ArthurAssuncao11" class="white-text"><i class="small fa fa-google-plus-square white-text"></i><span> Google+</span></a></li>
+          </ul>
+          <div class="esconde hide">Meu nome é <span itemprop="name"><span itemprop="givenName">Arthur</span><span itemprop="additionalName">Nascimento</span><span itemprop="familyName">Assunção</span></span>.
+                      Moro em <span><span itemprop="address"><span>Ouro Preto, Minas Gerais</span>,<span itemprop="nationality">Brasil</span></span></span> e estudo <span itemprop="jobTitle">Mestrado em Ciência da Computação</span> na <span itemprop="affiliation">Universidade de Ouro Preto</span>.
+          </div>
+        </div>
+        <div flex="100" class="center-align footer-cv">
+          <p class="no-marg white-text"><a href="assets/files/resume_arthur_assuncao.pdf" target="_blank" class="blue white-text btn-large light"><i class="tiny fa fa-file-pdf-o"></i> Baixar meu <span class="blue-text">Currículo</span></a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script type="text/javascript" src="assets/js/third_party/plugins.min.js"></script>
+<script type="text/javascript" src="assets/js/third_party/angular-bundle.min.js"></script>
+<script type="text/javascript" src="assets/js/scripts.min.js"></script>
+
+
+<script type="application/ld+json">
+  "@context" : "http://schema.org",
+  "@type" : "Person",
+  "name" : "Arthur Nascimento Assunção",
+  "url": "http://arthurassuncao.com/",
+  "description": "Arthur Assuncao - Desenvolvedor Web.",
+  "image": "http://arthurassuncao.com/assets/img/me256x256.png",
+  "jobTitle": "Mestrado em Ciência da Computação",
+  "affiliation": "Universidade de Ouro Preto",
+  "sameAs" : [
+       "https://www.facebook.com/arthurassuncao",
+       "https://www.linkedin.com/in/arthurassuncao",
+       "https://github.com/arthurassuncao",
+       "https://plus.google.com/+ArthurAssuncao11"
+  ]
+</script>
+    </div>
+  </body>
+</html>
