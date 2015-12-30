@@ -245,7 +245,7 @@ module.exports = function(grunt) {
         files: [
           { //img
             expand: true, 
-            src: ['<%= project.src_img %>/*.*'], 
+            src: ['<%= project.src_img %>/**.*'], 
             dest: '<%= project.dist_assets_img %>/', 
             filter: 'isFile',
             flatten: true
@@ -256,7 +256,7 @@ module.exports = function(grunt) {
         files: [
           { //img
             expand: true, 
-            src: ['<%= project.src_files %>/*.*'], 
+            src: ['<%= project.src_files %>/**.*'], 
             dest: '<%= project.dist_assets_files %>/', 
             filter: 'isFile',
             flatten: true
@@ -386,5 +386,5 @@ module.exports = function(grunt) {
 
   // Tasks
   grunt.registerTask('dev', ['newer:copy:dev_css_not_scss', 'newer:sass', 'newer:jade', 'newer:uglify' ,'concurrent:tasks']);
-  grunt.registerTask('default', ['mkdir', 'newer:copy:dev_css_not_scss', 'newer:sass', 'newer:postcss', 'newer:cssmin', 'newer:modernizr', 'newer:uglify:dev_third_party', 'newer:uglify:dev_third_party_angular', 'newer:uglify:dev', 'newer:copy']);
+  grunt.registerTask('default', ['mkdir', 'newer:copy:dev_css_not_scss', 'newer:sass', 'newer:jade', 'newer:postcss', 'newer:cssmin', 'newer:modernizr', 'newer:uglify:dev_third_party', 'newer:uglify:dev_third_party_angular', 'newer:uglify:dev', 'newer:copy']);
 };
