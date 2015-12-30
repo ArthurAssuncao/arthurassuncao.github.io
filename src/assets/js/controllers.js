@@ -1,7 +1,7 @@
 // AngularJS controllers
 app.controller('AppController', function($scope, $timeout, $mdSidenav, $log, toastService) {
     $scope.openSideMenu = function(){
-        $mdSidenav('left').toggle()
+        $mdSidenav('right').toggle()
             .then(function () {
                 $log.debug("abrir menu lateral");
             });
@@ -17,11 +17,11 @@ app.controller('ParallaxController', function($scope, parallaxHelper) {
     $scope.background = parallaxHelper.createAnimator(-0.5);
 });
 
-app.controller('NavLeftController', function ($scope, $timeout, $mdSidenav, $log) {
+app.controller('NavRightController', function ($scope, $timeout, $mdSidenav, $log) {
     $scope.close = function () {
-        $mdSidenav('left').close()
+        $mdSidenav('right').close()
             .then(function () {
-                $log.debug("close LEFT is done");
+                $log.debug("Menu lateral direito fechado");
             });
     };
 });
@@ -36,20 +36,20 @@ app.controller('SkillsController', function($scope) {
         { name: 'AngularJS', value: 60, msg: 'Utilizei em um projeto vencedor do hackathon GDG, neste site pessoal e em um app que está em desenvolvimento, além de um curso de front-end.' },
         { name: 'NodeJS', value: 55, msg: 'Utilizei em um projeto vencedor de hackathon, no projeto JUMP! e em um app que está em desenvolvimento, além de um curso de MEAN.' },
         { name: 'MongoDB', value: 45, msg: 'Utilizei em um projeto vencedor de hackathon e em um app que está em desenvolvimento, além de um curso de MEAN.' },
-        { name: 'JavaScript/jQuery', value: 75, msg: 'Trabalhei em alguns sites, extensões para o Chrome e projetos.' },
-        { name: 'HTML5/CSS3/SASS', value: 80, msg: 'Trabalhei em alguns sites, extensões para o Chrome e alguns projetos.' },
+        { name: 'JavaScript/jQuery', value: 70, msg: 'Trabalhei em alguns sites, extensões para o Chrome e projetos.' },
+        { name: 'HTML5/CSS3/SASS', value: 75, msg: 'Trabalhei em alguns sites, extensões para o Chrome e alguns projetos.' },
         { name: 'ReactJS', value: 15, msg: 'Aprendi durante um curso de Front-end.' },
         { name: 'Git (Controle de Versão)', value: 90, msg: 'Utilizo Git desde 2012 em boa parte dos projetos que participo, além de ter trabalhado por 1,25 ano e de utilizar no mestrado.' },
-        { name: 'Design Responsivo', value: 70, msg: 'Trabalhei em alguns sites com Design Responsivo.' },
-        { name: 'MaterializeCSS / Bootstrap 2.x-3.x', value: 70, msg: 'Trabalhei em alguns sites utilizando Bootstrap e MaterializeCSS, como as versões anteriores deste site pessoal, extensões para o Chrome e projetos.' },
+        { name: 'Design Responsivo', value: 65, msg: 'Trabalhei em alguns sites com Design Responsivo.' },
+        { name: 'MaterializeCSS / Bootstrap 2.x-3.x', value: 65, msg: 'Trabalhei em alguns sites utilizando Bootstrap e MaterializeCSS, como as versões anteriores deste site pessoal, extensões para o Chrome e projetos.' },
         { name: 'Grunt (automatizador)', value: 60, msg: 'Utilizo neste site e em um app que está em desenvolvimento.' },
         { name: 'Android', value: 70, msg: 'Trabalhei por 1,25 ano e fiz um curso de Android, além de alguns projetos.' },
-        { name: 'Python', value: 60, msg: 'Trabalhei por 1,25 ano, fiz um site e também um curso de Python, além de vários projetos, inclusive no mestrado.' },
-        { name: 'R', value: 70, msg: 'Utilizo em projetos do mestrado.' },
+        { name: 'Python/Django', value: 50, msg: 'Trabalhei por 1,25 ano, fiz um site e também um curso de Python, além de vários projetos, inclusive no mestrado.' },
+        { name: 'R', value: 60, msg: 'Utilizo em projetos do mestrado.' },
         // { name: 'Java/Java Web', value: 50, msg: 'Trabalhei por alguns meses com Java Web e desenvolvi alguns projetos em Java.' },
         // { name: 'C++', value: 50, msg: 'Participei de projetos utilizando C++ e utilizei no mestrado.' },
         { name: 'SQL', value: 60, msg: 'Trabalhei por 1,5 ano utilizando SQL, com o MySQL(1,25 ano) e Postgree(0,25 ano).' },
-        { name: 'Objective-C (Programação para iOS)', value: 15, msg: 'Aprendi no mestrado cursando uma disciplina de desenvolvimento móvel.' },
+        { name: 'Objective-C (Programação para iOS)', value: 10, msg: 'Aprendi no mestrado cursando uma disciplina de desenvolvimento móvel.' },
         { name: 'PHP', value: 40, msg: 'Trabalhei por alguns meses, além de criar as versões anteriores deste site e alguns projetos em PHP.' },
     ];
 });

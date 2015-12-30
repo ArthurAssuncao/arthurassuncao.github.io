@@ -27097,7 +27097,7 @@ nav a.button-collapse {
 }
 
 .parallax-container {
-  max-height: 500px;
+  max-height: 350px;
   z-index: -1;
   overflow: hidden;
 }
@@ -27818,17 +27818,17 @@ ul.skills li {
   padding-bottom: 10px;
 }
 
-#navbar-left {
+#navbar-right {
   overflow: hidden;
 }
-#navbar-left li {
+#navbar-right li {
   padding: 20px 0;
 }
-#navbar-left li:hover {
+#navbar-right li:hover {
   background-color: lightgray !important;
   cursor: pointer;
 }
-#navbar-left a.navbar-left-item {
+#navbar-right a.navbar-right-item {
   padding: 20px 0;
   padding-right: 100%;
 }

@@ -357,7 +357,7 @@ nav a.button-collapse {
 }
 
 .parallax-container {
-    max-height: 500px;
+    max-height: 350px;
     z-index: -1;
     overflow: hidden;
     img{
@@ -1122,8 +1122,8 @@ ul.skills{
     }
 }
 
-//navbar-left
-#navbar-left{
+//navbar-right
+#navbar-right{
     overflow: hidden; 
     li{
         padding: 20px 0;
@@ -1132,7 +1132,7 @@ ul.skills{
             cursor: pointer;
         }
     }
-    a.navbar-left-item{
+    a.navbar-right-item{
         padding: 20px 0;
         padding-right: 100%;
     }

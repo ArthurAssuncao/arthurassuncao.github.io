@@ -28,20 +28,20 @@
   </ul>
 </div>
 <!--side-bar-->
-<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
+<md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
   <md-toolbar class="md-theme-indigo">
     <h1 class="md-toolbar-tools">Arthur Assuncao</h1>
   </md-toolbar>
-  <md-content layout-padding ng-controller="NavLeftController">
-    <nav id="navbar-left">
+  <md-content layout-padding ng-controller="NavRightController">
+    <nav id="navbar-right">
         <ul>
-        <li><a href="#mywork" data-hash="#page_mywork" class="navbar-left-item">
+        <li><a href="#mywork" data-hash="#page_mywork" class="navbar-right-item" ng-click="close()">
           <i class="tiny-force material-icons">work</i> Meu Trabalho
         </a></li>
-        <li><a href="#skills" data-hash="#page_skills" class="navbar-left-item">
+        <li><a href="#skills" data-hash="#page_skills" class="navbar-right-item" ng-click="close()">
           <i class="tiny-force material-icons">code</i> Habilidades
         </a></li>
-        <li><a href="#contact" data-hash="#page_contact" class="navbar-left-item">
+        <li><a href="#contact" data-hash="#page_contact" class="navbar-right-item" ng-click="close()">
           <i class="tiny-force material-icons">assignment_ind</i> Contato
         </a></li>
         </ul>
