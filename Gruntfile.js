@@ -363,6 +363,19 @@ module.exports = function(grunt) {
     },
 
 
+    // Secao do clean
+    clean: [
+      "dist", 
+      "assets",
+      "templates",
+      "apple-touch-icon.png", 
+      "favicon.ico",
+      "humans.txt",
+      "index.html",
+      "robots.txt"
+    ],
+
+
     // Secao do watch
 
     watch: {
@@ -436,11 +449,13 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-contrib-jade');
   grunt.loadNpmTasks('grunt-processhtml');
+  grunt.loadNpmTasks('grunt-contrib-clean');
   
   // grunt.loadNpmTasks('grunt-nodemon');
 
   // Tasks
   grunt.registerTask('dev', ['newer:copy:dev_css_not_scss', 'newer:sass', 'newer:jade', 'newer:uglify' ,'concurrent:tasks']);
   grunt.registerTask('default', []);
+  grunt.registerTask('clear', ['clean']);
   grunt.registerTask('dist', ['mkdir', 'copy:dev_css_not_scss', 'sass', 'jade', 'postcss', 'cssmin', 'modernizr:dist', 'newer:uglify:dev_third_party', 'newer:uglify:dev_third_party_angular', 'newer:uglify:dev', 'newer:copy', 'processhtml']);
 };

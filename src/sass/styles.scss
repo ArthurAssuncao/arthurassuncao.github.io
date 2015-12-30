@@ -973,6 +973,7 @@ md-toolbar{
     &#nav_f{
         position: fixed;
         z-index: 9999;
+        left: 0;
     }
     #navbar{
         height: 100%;
@@ -1104,10 +1105,21 @@ ul.skills{
 .project-dialog-imgs{
     overflow: auto;
     max-height: 50vh !important;
+    img{
+        width: 95%;
+    }
 }
+
+// .project-dialog-desc{
+//     overflow: auto;
+//     max-height: 50vh !important;
+// }
 
 .project-dialog-content{
     line-height: 1.4em;
+    p{
+        padding-bottom: 10px;
+    }
 }
 
 //navbar-left

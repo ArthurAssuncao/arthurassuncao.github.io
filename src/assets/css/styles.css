@@ -27691,6 +27691,7 @@ google-map {
 md-toolbar#nav_f {
   position: fixed;
   z-index: 9999;
+  left: 0;
 }
 md-toolbar #navbar {
   height: 100%;
@@ -27806,9 +27807,15 @@ ul.skills li {
   overflow: auto;
   max-height: 50vh !important;
 }
+.project-dialog-imgs img {
+  width: 95%;
+}
 
 .project-dialog-content {
   line-height: 1.4em;
+}
+.project-dialog-content p {
+  padding-bottom: 10px;
 }
 
 #navbar-left {

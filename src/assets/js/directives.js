@@ -210,6 +210,9 @@ app.controller('ProjectController', function($scope, $mdMedia, $mdDialog) {
         $scope.split = function(text){
             return text.split(",");
         }
+        $scope.splitP = function(text){
+            return text.split("</p>");
+        }
         $scope.hide = function() {
             $mdDialog.hide();
         };

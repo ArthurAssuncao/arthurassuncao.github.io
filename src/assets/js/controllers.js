@@ -156,10 +156,10 @@ app.controller('ProjectsController', function($scope) {
             type: "Protótipo de Hackathon",
             datestart: "2015",
             dateend: "2015",
-            description: "<p>Sistema colaborativo que permite o transporte de objetos dentro da região por meio de entregadores cadastrados. Desta forma diminuindo o custo e tempo no transporte desses objetos e, até, possibilitando entregas no mesmo dia.</p>
-                <p>O EntregaRápida também permite o envio por meio do EcoPacote, um pacote que utiliza as ciclovias para a entrega. Essas ciclovias têm sido implementadas em diversas cidades do Brasil, como na cidade de Belo Horizonte.</p>
-                <p>A partir das características do app é possível trazer uma série de melhorias para a sociedade, gerando novas oportunidades de négocio e, ao mesmo tempo, oferecer maior comodidade no envio e recebimento de objetos dentro da cidade, tornando-a mais morderna.</p>
-                <p>O EntregaRápida foi vencedor do hackathon da Google Developer Group DevFest Sudeste</p>",
+            description: "Sistema colaborativo que permite o transporte de objetos dentro da região por meio de entregadores cadastrados. Desta forma diminuindo o custo e tempo no transporte desses objetos e, até, possibilitando entregas no mesmo dia.</p>
+                O EntregaRápida também permite o envio por meio do EcoPacote, um pacote que utiliza as ciclovias para a entrega. Essas ciclovias têm sido implementadas em diversas cidades do Brasil, como na cidade de Belo Horizonte.</p>
+                A partir das características do app é possível trazer uma série de melhorias para a sociedade, gerando novas oportunidades de négocio e, ao mesmo tempo, oferecer maior comodidade no envio e recebimento de objetos dentro da cidade, tornando-a mais morderna.</p>
+                O EntregaRápida foi vencedor do hackathon da Google Developer Group DevFest Sudeste</p>",
         },
         {
             name: "ArthurAssuncao.com",
@@ -176,14 +176,14 @@ app.controller('ProjectsController', function($scope) {
             type: "Projeto Pessoal",
             datestart: "2012",
             dateend: "Atualmente",
-            description: "<p>Meu site pessoal onde divulgo meu currículo, meus projetos, etc e o mantenho atualizado com o que há de mais interessante e recente em termos de tecnologias web.</p>
-                <p><strong>História</strong></p>
-                <p>Em 2012 o site não tinha o código fonte aberto e utilizava PHP e Bootstrap 2.x.</p>
-                <p>Em 2013 o site teve seu código fonte aberto e hospedado no Github.</p>
-                <p>Em 2014 o site teve o Bootstrap atualizado para a versão 3.x.</p>
-                <p>Em 2015 o site passou por várias reformulações, primeiro foi o uso do MaterializeCSS, em seguida foi removido o PHP e deixado apenas estático. Uma versão em Material Design Lite foi iniciada, porém descontinuada devido a falta de recursos desse framework da Google. Nesta versão mais recente de 2015, o site é feito utilizando AngularJS e AngularJS Material, que oferecem muitos recursos com grande produtividade, além de um bom desempenho, mesmo neste último quesito sendo inferior ao ReactJS ou AngularJS 2.0.</p>
-                <p>Além de todas estas mudanças, em 2015, comecei a utilizar no site o SASS para melhorar a códificação CSS, Jade pra modularizar melhor os HTML e, o mais interessante de todos, o Grunt como automatizador. O ganho em desempenho e produtividade que um automatizador gera é gigantesco.
-                <p>Em 2016 estou analisando, a principio, a possibilidade de substituir as directivas do AngularJS por componentes ReactJS, o que aumentaria muito o desempenho do site.</p>",
+            description: "Meu site pessoal onde divulgo meu currículo, meus projetos, etc e o mantenho atualizado com o que há de mais interessante e recente em termos de tecnologias web.</p>
+                História</p>
+                Em 2012 o site não tinha o código fonte aberto e utilizava PHP e Bootstrap 2.x.</p>
+                Em 2013 o site teve seu código fonte aberto e hospedado no Github.</p>
+                Em 2014 o site teve o Bootstrap atualizado para a versão 3.x.</p>
+                Em 2015 o site passou por várias reformulações, primeiro foi o uso do MaterializeCSS, em seguida foi removido o PHP e deixado apenas estático. Uma versão em Material Design Lite foi iniciada, porém descontinuada devido a falta de recursos desse framework da Google. Nesta versão mais recente de 2015, o site é feito utilizando AngularJS e AngularJS Material, que oferecem muitos recursos com grande produtividade, além de um bom desempenho, mesmo neste último quesito sendo inferior ao ReactJS ou AngularJS 2.0.</p>
+                Além de todas estas mudanças, em 2015, comecei a utilizar no site o SASS para melhorar a códificação CSS, Jade pra modularizar melhor os HTML e, o mais interessante de todos, o Grunt como automatizador. O ganho em desempenho e produtividade que um automatizador gera é gigantesco.
+                Em 2016 estou analisando, a principio, a possibilidade de substituir as directivas do AngularJS por componentes ReactJS, o que aumentaria muito o desempenho do site.</p>",
         },
         {
             name: "JUMP!",
@@ -198,10 +198,10 @@ app.controller('ProjectsController', function($scope) {
             type: "Projeto Acadêmico",
             datestart: "2013",
             dateend: "2013",
-            description: "<p>Participei da equipe de desenvolvimento do jogo JUMP (Jogo Unificado para Movimentação Projetada).</p>
-                    <p>O jogo permite que o jogador, em frente a uma webcam, controle, por meio de seus pulos, o personagem do jogo.</p>
-                    <p>Foram utilizados: linguagem Python com a biblioteca OpenCV e Node.js.</p>
-                    <p>Projeto foi apresentado na Semana Nacional de Ciência e Tecnologia (SNCT) de 2013 no IFSEMG - Câmpus Barbacena.</p>",
+            description: "Participei da equipe de desenvolvimento do jogo JUMP (Jogo Unificado para Movimentação Projetada).</p>
+                    O jogo permite que o jogador, em frente a uma webcam, controle, por meio de seus pulos, o personagem do jogo.</p>
+                    Foram utilizados: linguagem Python com a biblioteca OpenCV e Node.js.</p>
+                    Projeto foi apresentado na Semana Nacional de Ciência e Tecnologia (SNCT) de 2013 no IFSEMG - Câmpus Barbacena.</p>",
         },
         {
             name: "uGuide Desk 2014",
@@ -213,10 +213,10 @@ app.controller('ProjectsController', function($scope) {
             type: "Projeto Acadêmico",
             datestart: "2014",
             dateend: "2014",
-            description: "<p>Participei da equipe de desenvolvimento da aplicação.</p>
-                    <p>O projeto consistiu de um software informativo e interativo para acompanhamento de eventos e notícias do Festival de Inverno de Ouro Preto e Mariana de 2014 com interação com os usuários por meio do sensor Kinect.</p>
-                    <p>O uGuide Desk ficou em exposição na Casa dos Contos, em Ouro Preto, oferecendo maior interatividade para os visitantes.</p>
-                    <p>Foram utilizadas linguagem C++ e interface gráfica Qt com comunicação com o Web Service via JSON.</p>",
+            description: "Participei da equipe de desenvolvimento da aplicação.</p>
+                    O projeto consistiu de um software informativo e interativo para acompanhamento de eventos e notícias do Festival de Inverno de Ouro Preto e Mariana de 2014 com interação com os usuários por meio do sensor Kinect.</p>
+                    O uGuide Desk ficou em exposição na Casa dos Contos, em Ouro Preto, oferecendo maior interatividade para os visitantes.</p>
+                    Foram utilizadas linguagem C++ e interface gráfica Qt com comunicação com o Web Service via JSON.</p>",
         },
         {
             name: "MaisVendas",
@@ -229,9 +229,9 @@ app.controller('ProjectsController', function($scope) {
             type: "Desenvolvedor Mobile e Web",
             datestart: "2013",
             dateend: "2014",
-            description: "<p>Participei da programação do app móvel e do Web Service MaisVendas da empresa AddMob.</p>
-                    <p>Foi feito o desenolvimento do app Android e Web Service em Django com banco de dados MySQL, uso de notação JSON para comunicação entre os sistemas e utilização de controle de versão Git para uma melhor manutenção do código e colaboração entre os membros da equipe.</p>
-                    <p>O MaisVendas é um sistema para quem deseja ter seu catálogo de produtos e sua lista de clientes disponíveis ao toque da tela de seu tablet ou smartphone. É possível realizar vendas, consultar pedidos realizados, verificar o histórico de vendas através do gráfico iterativo e muito mais.</p>",
+            description: "Participei da programação do app móvel e do Web Service MaisVendas da empresa AddMob.</p>
+                    Foi feito o desenolvimento do app Android e Web Service em Django com banco de dados MySQL, uso de notação JSON para comunicação entre os sistemas e utilização de controle de versão Git para uma melhor manutenção do código e colaboração entre os membros da equipe.</p>
+                    O MaisVendas é um sistema para quem deseja ter seu catálogo de produtos e sua lista de clientes disponíveis ao toque da tela de seu tablet ou smartphone. É possível realizar vendas, consultar pedidos realizados, verificar o histórico de vendas através do gráfico iterativo e muito mais.</p>",
         },
         {
             name: "Entensões na Chrome Store",
@@ -243,17 +243,11 @@ app.controller('ProjectsController', function($scope) {
             type: "Projeto Pessoal",
             datestart: "2013",
             dateend: "Atualmente",
-            description: "<p>Desenvolvimento de extensões para o navegador Google Chrome:</p>
-                    <p>
-                      <ul>
-                        <li><a href='https://chrome.google.com/webstore/detail/hide-contact-from-faceboo/dldcnjjdfolnampaceecohfaolbefbhj'>Hide Contact From Facebook Chat List</a><br/>
-                          <p>Esconde contatos da lista do chat do Facebook sem bloquear o contato. O contato continua te vendo na lista do chat dele como online, porém voce não o vê mais.</p>
-                        </li>
-                        <li><a href='https://chrome.google.com/webstore/detail/wpp-web-customizer/lhaamjcmnafobcjjcjfpglfonpdkoedb'>Wpp web Customizador</a><br/>
-                          <p>Modifica o fundo (background) do chat do Whatsapp™ Web.</p>
-                        </li>
-                      </ul>
-                    </p>",
+            description: "Desenvolvimento de extensões para o navegador Google Chrome:</p>
+                Hide Contact From Facebook Chat List</p>
+                Esconde contatos da lista do chat do Facebook sem bloquear o contato. O contato continua te vendo na lista do chat dele como online, porém voce não o vê mais.</p></p>
+                Wpp Web Customizador</p>
+                Modifica o fundo (background) do chat do Whatsapp™ Web.</p>",
         },
         {
             name: "Addmob.com.br",
@@ -265,8 +259,8 @@ app.controller('ProjectsController', function($scope) {
             type: "Desenvolvedor Web",
             datestart: "2014",
             dateend: "2014",
-            description: "<p>Participei do desenvolvimento do Website da empresa AddMob Integradora de Soluções Ltda.</p>
-                    <p>Website desenvolvido em HTML5/CSS3 e Django, utilizando o framework Bootstrap 2.x e jQuery, com layout responsivo e captura de gestos (Hammer.js) para otimizar a experiência em dispositivos móveis.</p>",
+            description: "Participei do desenvolvimento do Website da empresa AddMob Integradora de Soluções Ltda.</p>
+                    Website desenvolvido em HTML5/CSS3 e Django, utilizando o framework Bootstrap 2.x e jQuery, com layout responsivo e captura de gestos (Hammer.js) para otimizar a experiência em dispositivos móveis.</p>",
         },
         // {
         //     name: "GeoColeta",
