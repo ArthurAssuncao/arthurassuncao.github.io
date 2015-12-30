@@ -386,5 +386,6 @@ module.exports = function(grunt) {
 
   // Tasks
   grunt.registerTask('dev', ['newer:copy:dev_css_not_scss', 'newer:sass', 'newer:jade', 'newer:uglify' ,'concurrent:tasks']);
-  grunt.registerTask('default', ['mkdir', 'newer:copy:dev_css_not_scss', 'newer:sass', 'newer:jade', 'newer:postcss', 'newer:cssmin', 'newer:modernizr', 'newer:uglify:dev_third_party', 'newer:uglify:dev_third_party_angular', 'newer:uglify:dev', 'newer:copy']);
+  grunt.registerTask('default', []);
+  grunt.registerTask('dist', ['mkdir', 'newer:copy:dev_css_not_scss', 'newer:sass', 'newer:jade', 'newer:postcss', 'newer:cssmin', 'newer:modernizr', 'newer:uglify:dev_third_party', 'newer:uglify:dev_third_party_angular', 'newer:uglify:dev', 'newer:copy']);
 };
