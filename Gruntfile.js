@@ -26,7 +26,8 @@ module.exports = function(grunt) {
       src_assets_js_third_party: '<%= project.src_assets_js %>/third_party',
       src_jade: '<%= project.src %>/jade',
 
-      dist: '<%= project.app %>dist',
+      // dist: '<%= project.app %>dist',
+      dist: '<%= project.app %>',
       dist_assets: '<%= project.dist %>/assets',
       dist_assets_js: '<%= project.dist_assets %>/js',
       dist_assets_img: '<%= project.dist_assets %>/img',
