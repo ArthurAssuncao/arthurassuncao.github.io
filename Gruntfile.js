@@ -182,6 +182,8 @@ module.exports = function(grunt) {
         files: {
           '<%= project.src_assets_js %>/scripts.min.js': [
             '<%= project.src_assets_js %>/modules.js',
+            '<%= project.src_assets_js %>/services.js',
+            '<%= project.src_assets_js %>/directives.js',
             '<%= project.src_assets_js %>/*.js',
             '!<%= project.src_assets_js %>/*.min.js',
           ]

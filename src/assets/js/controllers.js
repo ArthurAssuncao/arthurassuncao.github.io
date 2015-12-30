@@ -1,11 +1,12 @@
 // AngularJS controllers
-app.controller('AppController', function($scope, $timeout, $mdSidenav, $log) {
+app.controller('AppController', function($scope, $timeout, $mdSidenav, $log, toastService) {
     $scope.openSideMenu = function(){
         $mdSidenav('left').toggle()
             .then(function () {
                 $log.debug("abrir menu lateral");
             });
     }
+    toastService.showSimpleToastTimeMillis("Versão beta, alguns erros ainda podem aparecer", 60000);
 });
 
 app.controller('TyperController', function($scope) {
@@ -163,13 +164,13 @@ app.controller('ProjectsController', function($scope) {
         },
         {
             name: "ArthurAssuncao.com",
-            imgurl: "assets/img/portfolio/arthurassuncao-com/thumbnail-0.png",
+            imgurl: "assets/img/portfolio/arthurassuncao-com/thumbnail-0.jpg",
             imgs: "
-                assets/img/portfolio/arthurassuncao-com/0.png, 
-                assets/img/portfolio/arthurassuncao-com/1.png,
-                assets/img/portfolio/arthurassuncao-com/2.png,
-                assets/img/portfolio/arthurassuncao-com/3.png,
-                assets/img/portfolio/arthurassuncao-com/4.png",
+                assets/img/portfolio/arthurassuncao-com/0.jpg, 
+                assets/img/portfolio/arthurassuncao-com/1.jpg,
+                assets/img/portfolio/arthurassuncao-com/2.jpg,
+                assets/img/portfolio/arthurassuncao-com/3.jpg,
+                assets/img/portfolio/arthurassuncao-com/4.jpg",
             url: "http://ArthurAssuncao.com/",
             urlname: "Visite ArthurAssuncao.com",
             technologies: "HTML5/CSS3/SASS, JavaScript/jQuery, AngularJS, AngularJS Material, WOW.js, Jade, Grunt",
@@ -187,11 +188,11 @@ app.controller('ProjectsController', function($scope) {
         },
         {
             name: "JUMP!",
-            imgurl: "assets/img/portfolio/jump/thumbnail.png",
+            imgurl: "assets/img/portfolio/jump/thumbnail.jpg",
             imgs: "
-                assets/img/portfolio/jump/0.png, 
-                assets/img/portfolio/jump/1.png, 
-                assets/img/portfolio/jump/2.png",
+                assets/img/portfolio/jump/0.jpg, 
+                assets/img/portfolio/jump/1.jpg, 
+                assets/img/portfolio/jump/2.jpg",
             url: "https://github.com/arthurassuncao/jump",
             urlname: "Visite o projeto",
             technologies: "Python, Node.js, HTML/CSS3, JavaScript/Phaser, Git",
@@ -205,8 +206,8 @@ app.controller('ProjectsController', function($scope) {
         },
         {
             name: "uGuide Desk 2014",
-            imgurl: "assets/img/portfolio/uguide-desk-2014/thumbnail.png",
-            imgs: "assets/img/portfolio/uguide-desk-2014/0.png, assets/img/portfolio/uguide-desk-2014/1.png",
+            imgurl: "assets/img/portfolio/uguide-desk-2014/thumbnail.jpg",
+            imgs: "assets/img/portfolio/uguide-desk-2014/0.jpg, assets/img/portfolio/uguide-desk-2014/1.jpg",
             url: "",
             urlname: "Projeto de código fonte fechado",
             technologies: "C++, JSON, Git",
@@ -235,8 +236,8 @@ app.controller('ProjectsController', function($scope) {
         },
         {
             name: "Entensões na Chrome Store",
-            imgurl: "assets/img/portfolio/chrome-web-store_300x200.png",
-            imgs: "assets/img/portfolio/chrome-web-store_300x200.png",
+            imgurl: "assets/img/portfolio/chrome-web-store/thumbnail.png",
+            imgs: "assets/img/portfolio/chrome-web-store/0.png",
             url: "https://chrome.google.com/webstore/search/adev?hl=pt-BR",
             urlname: "Chrome Extensions",
             technologies: "HTML/CSS3, JavaScript/jQuery, Git",
@@ -252,7 +253,7 @@ app.controller('ProjectsController', function($scope) {
         {
             name: "Addmob.com.br",
             imgurl: "assets/img/portfolio/addmob-com-br/thumbnail.jpg",
-            imgs: "assets/img/portfolio/addmob-com-br/0.png, assets/img/portfolio/addmob-com-br/1.png",
+            imgs: "assets/img/portfolio/addmob-com-br/0.jpg, assets/img/portfolio/addmob-com-br/1.jpg",
             url: "https://www.addmob.com.br",
             urlname: "Visite Addmob.com.br",
             technologies: "HTML/CSS3, JavaScript/jQuery/HammerJS, Python/Django, Git",

@@ -1,7 +1,7 @@
 app.service('toastService', function($rootScope, $mdToast){
     var last = {
-        bottom: false,
-        top: true,
+        bottom: true,
+        top: false,
         left: false,
         right: true
     };
@@ -26,6 +26,14 @@ app.service('toastService', function($rootScope, $mdToast){
             .content(msg)
             .position($rootScope.getToastPosition())
             .hideDelay(3000)
+        );
+    };
+    this.showSimpleToastTimeMillis = function(msg, time) {
+        $mdToast.show(
+          $mdToast.simple()
+            .content(msg)
+            .position($rootScope.getToastPosition())
+            .hideDelay(time)
         );
     };
 });

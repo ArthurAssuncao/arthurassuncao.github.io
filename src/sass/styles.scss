@@ -775,7 +775,7 @@ ul.card-modal-specs {
 
 .menu_left_side {
     float: left;
-    height: 100px;
+    height: 130px;
     vertical-align: middle;
     position: fixed;
     z-index: 1000;
@@ -783,7 +783,7 @@ ul.card-modal-specs {
     top: 100px;
     vertical-align: middle;
     ul li:nth-child(n+2) {
-        margin-top: 10px;
+        margin-top: 12px;
     }
     li.active {
         color: black;
@@ -1136,4 +1136,8 @@ ul.skills{
         padding: 20px 0;
         padding-right: 100%;
     }
+}
+
+body > md-toast{
+    position: fixed;
 }
