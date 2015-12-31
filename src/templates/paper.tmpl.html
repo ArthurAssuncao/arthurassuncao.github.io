@@ -1,7 +1,7 @@
 <span class="paper">
     <span class="cv-paper-title">
-        <a href="{{ url }}" title="{{ title }}">
-            <strong>{{ title }}</strong>
+        <a href="{{ ::url }}" title="{{ ::title }}">
+            <strong>{{ ::title }}</strong>
             <i class="fa fa-link"></i>
         </a>
     </span>
@@ -10,14 +10,14 @@
         <em>
             <span class="cv-artigo_autor" ng-repeat="author in split(authors) track by $index">
                 <span ng-if="$index == author_main-1">
-                    <strong>{{ author }}</strong>
+                    <strong>{{ ::author }}</strong>
                 </span>
                 <span ng-if="$index != author_main-1">
-                    {{ author }}
+                    {{ ::author }}
                 </span>
             </span>
         </em>
     </span>
     <br/>
-    <span class="cv-paper-event">Em: {{ conf_journal }}, {{ year }}, {{ local }}. {{ qualis }}</span>
+    <span class="cv-paper-event">Em: {{ ::conf_journal }}, {{ ::year }}, {{ ::local }}. {{ ::qualis }}</span>
 </span>

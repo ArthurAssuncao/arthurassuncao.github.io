@@ -6,7 +6,7 @@ app.controller('AppController', function($scope, $timeout, $mdSidenav, $log, toa
                 $log.debug("abrir menu lateral");
             });
     }
-    toastService.showSimpleToastTimeMillis("Versão beta, alguns erros ainda podem aparecer", 60000);
+    // toastService.showSimpleToastTimeMillis("Versão beta", 60000);
 });
 
 app.controller('TyperController', function($scope) {

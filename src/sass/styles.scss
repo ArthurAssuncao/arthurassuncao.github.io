@@ -176,7 +176,9 @@ i.tiny {
         text-decoration: none;
     }
     h5{
-        margin-bottom: 10px;
+        padding-top: 30px;
+        padding-bottom: 10px;
+        font-size: 1.5em;
     }
 }
 
@@ -313,7 +315,7 @@ i.tiny {
 
 @media only screen and (max-width: 480px) {
     .text_h {
-        padding: 5% 0;
+        padding: 15% 0;
         font-size: 5em;
         font-weight: 100;
         color: white;
@@ -385,6 +387,14 @@ footer {
 #form-submit{
     i.material-icon{
         vertical-align: middle;
+    }
+}
+
+#form-contact{
+    h5{
+        padding-top: 30px;
+        padding-bottom: 10px;
+        font-size: 1.5em;
     }
 }
 
@@ -575,6 +585,10 @@ footer {
     .center-lt-sm{
         text-align: inherit;
         margin: inherit;
+    }
+    .project-dialog-imgs{
+        overflow: auto;
+        max-height: 50vh !important;
     }
 }
 
@@ -860,6 +874,10 @@ md-input-container.md-default-theme .md-input, md-input-container .md-input {
     border-color: rgba(255,255,255,1);
 }
 
+#form-message, #form-name, #form-email{
+    color: white;
+}
+
 a:hover {
     .fa-facebook-square {
         color: #3b5998 !important;
@@ -1103,8 +1121,6 @@ ul.skills{
 }
 
 .project-dialog-imgs{
-    overflow: auto;
-    max-height: 50vh !important;
     img{
         width: 95%;
     }

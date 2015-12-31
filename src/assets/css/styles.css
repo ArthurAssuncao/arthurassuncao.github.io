@@ -26944,7 +26944,9 @@ i.tiny {
   text-decoration: none;
 }
 #social h5 {
-  margin-bottom: 10px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  font-size: 1.5em;
 }
 
 .navbar-item {
@@ -27057,7 +27059,7 @@ i.tiny {
 
 @media only screen and (max-width: 480px) {
   .text_h {
-    padding: 5% 0;
+    padding: 15% 0;
     font-size: 5em;
     font-weight: 100;
     color: white;
@@ -27123,6 +27125,12 @@ footer.footer {
 
 #form-submit i.material-icon {
   vertical-align: middle;
+}
+
+#form-contact h5 {
+  padding-top: 30px;
+  padding-bottom: 10px;
+  font-size: 1.5em;
 }
 
 #btn-skill-more {
@@ -27300,6 +27308,11 @@ footer.footer {
   .center-lt-sm {
     text-align: inherit;
     margin: inherit;
+  }
+
+  .project-dialog-imgs {
+    overflow: auto;
+    max-height: 50vh !important;
   }
 }
 @media only screen and (min-width: 601px) {
@@ -27586,6 +27599,10 @@ md-input-container.md-default-theme .md-input, md-input-container .md-input {
   border-color: white;
 }
 
+#form-message, #form-name, #form-email {
+  color: white;
+}
+
 a:hover .fa-facebook-square {
   color: #3b5998 !important;
 }
@@ -27803,10 +27820,6 @@ ul.skills li {
   height: 150px;
 }
 
-.project-dialog-imgs {
-  overflow: auto;
-  max-height: 50vh !important;
-}
 .project-dialog-imgs img {
   width: 95%;
 }

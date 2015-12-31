@@ -11,7 +11,7 @@ Site pessoal de [Arthur Assunção](http://arthurassuncao.com).
 * Front-end
   * HTML5/SASS/CSS3
   * JavaScript/jQuery
-  * AngularJS + Angular Material
+  * AngularJS + AngularJS Material
   * ~~Polymer~~
   * ~~ReactJS~~
   * WOW.js + Animate.css

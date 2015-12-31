@@ -51,13 +51,9 @@ function iniciar_wow(){
     }).init(); //wow-nonmobile
 }
 
-function iniciar_parallax(){
-    // $('.parallax').parallax();
-}
-
-function iniciar_scrollspy(){
-    $('.scrollspy').scrollSpy();
-}
+// function iniciar_scrollspy(){
+//     $('.scrollspy').scrollSpy();
+// }
 
 function on_scroll_menu(event){
     var navbarHeight = $("#navbar").height();
