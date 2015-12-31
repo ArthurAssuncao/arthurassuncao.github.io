@@ -25,7 +25,7 @@ app.directive('skill', function() {
             <span class="skill-name">{{ name }} 
                 <i class="tiny microtiny skill-name-icon material-icons">info_outline</i>
             </span>
-            <span class="skill-grade">{{ generate_level(value) }}</span>
+            <span class="skill-grade" hide show-gt-xs>{{ generate_level(value) }}</span>
             <br/>
             <span class="skill-bar">
                 <span data-skillbar="{{ value }}" class="skill-value"></span>

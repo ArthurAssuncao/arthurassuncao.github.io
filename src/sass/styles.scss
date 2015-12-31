@@ -1,12 +1,5 @@
 // imports 
 @import "variables";
-@import "reset";
-@import "../bower_components/font-awesome/scss/font-awesome";
-@import "../bower_components/roboto-fontface/css/roboto-fontface";
-@import "animatecss.scss";
-// @import "material-icons.scss";
-@import "gmail-scrollbars";
-@import "../bower_components/angular-material/angular-material";
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
     display: none !important;
@@ -22,7 +15,6 @@ body {
     text-rendering: optimizeLegibility;
     font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
-    // z-index: 2;
 }
 
 .container {

@@ -81,7 +81,9 @@ module.exports = function(grunt) {
           unixNewlines: true,
         },
         files: {
-          '<%= project.src_assets_css %>/styles.css': '<%= project.src_sass %>/styles.scss'
+          '<%= project.src_assets_css %>/styles.css': '<%= project.src_sass %>/styles.scss',
+          '<%= project.src_assets_css %>/plugins.css': '<%= project.src_sass %>/plugins.scss',
+          '<%= project.src_assets_css %>/angular-material.css': '<%= project.src_sass %>/angular-material.scss',
         }
       }
     },
@@ -109,16 +111,27 @@ module.exports = function(grunt) {
         ]
       },
       dist: {
-        src: '<%= project.src_assets_css %>/styles.css'
+        src: '<%= project.src_assets_css %>/*.css'
       }
     },
 
     // uncss pra remover classes nao usadas
     uncss: {
       dist: {
+        options: {
+            ignore: ['.ng-move', '.ng-enter', '.ng-leave', '.created_by_jQuery', '.ng-cloak', '.x-ng-cloak']
+        },
         files: [
           {
-            src: ['<%= project.app %>/*.html', '<%= project.dist %>/*.html', '<%= project.dist_templates %>/*.html'],
+            src: [
+              '<%= project.src %>/index.html', 
+              '<%= project.src_templates %>/award.tmpl.html',
+              '<%= project.src_templates %>/course.tmpl.html',
+              '<%= project.src_templates %>/paper.tmpl.html',
+              '<%= project.src_templates %>/project-dialog.tmpl.html',
+              '<%= project.src_templates %>/project.tmpl.html',
+              '<%= project.src_templates %>/skill.tmpl.html'
+            ],
             dest: '<%= project.src_assets_css %>/styles.css'
           }
         ]
@@ -128,12 +141,13 @@ module.exports = function(grunt) {
     // cssmin, minificar css
     cssmin: {
       dev: {
-        files: [
-          { 
-            src: '<%= project.src_assets_css %>/styles.css', 
-            dest: '<%= project.src_assets_css %>/styles.min.css' 
-          }
-        ]
+        files: [{
+          expand: true,
+          cwd: '<%= project.src_assets_css %>',
+          src: ['*.css', '!*.min.css'],
+          dest: '<%= project.src_assets_css %>',
+          ext: '.min.css'
+        }]
       }
     },
 
@@ -219,10 +233,11 @@ module.exports = function(grunt) {
       dist_css: {
         files: [
           { //css
-            expand: false, 
-            src: ['<%= project.src_assets_css %>/styles.min.css'], 
-            dest: '<%= project.dist_assets_css %>/styles.min.css', 
-            filter: 'isFile'
+            expand: true, 
+            src: ['<%= project.src_assets_css %>/*.min.css'], 
+            dest: '<%= project.dist_assets_css %>/', 
+            filter: 'isFile',
+            flatten: true
           },
         ]
       },
@@ -459,5 +474,5 @@ module.exports = function(grunt) {
   grunt.registerTask('dev', ['newer:copy:dev_css_not_scss', 'newer:sass', 'newer:jade', 'newer:uglify' ,'concurrent:tasks']);
   grunt.registerTask('default', []);
   grunt.registerTask('clear', ['clean']);
-  grunt.registerTask('dist', ['mkdir', 'copy:dev_css_not_scss', 'sass', 'jade', 'postcss', 'cssmin', 'modernizr:dist', 'newer:uglify:dev_third_party', 'newer:uglify:dev_third_party_angular', 'newer:uglify:dev', 'newer:copy', 'processhtml']);
+  grunt.registerTask('dist', ['mkdir', 'copy:dev_css_not_scss', 'sass', 'jade', 'postcss', 'uncss', 'cssmin', 'modernizr:dist', 'newer:uglify:dev_third_party', 'newer:uglify:dev_third_party_angular', 'newer:uglify:dev', 'newer:copy', 'processhtml']);
 };
