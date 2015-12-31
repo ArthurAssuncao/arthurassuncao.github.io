@@ -92,7 +92,7 @@ module.exports = function(grunt) {
     // Atualizar base de prefixos: npm update caniuse-db
     postcss: {
       options: {
-        map: true,
+        // map: true,
         processors: [
           require('autoprefixer')({
             // browsers: [
@@ -117,9 +117,11 @@ module.exports = function(grunt) {
 
     // uncss pra remover classes nao usadas
     uncss: {
-      dist: {
+      dist_plugins: {
         options: {
-            ignore: ['.ng-move', '.ng-enter', '.ng-leave', '.created_by_jQuery', '.ng-cloak', '.x-ng-cloak']
+            ignore: ['.ng-move', '.ng-enter', '.ng-leave', '.created_by_jQuery', '.ng-cloak', '.x-ng-cloak'],
+            stylesheets: ["plugins.css"],
+            csspath: "../<%= project.src_assets_css %>",
         },
         files: [
           {
@@ -132,15 +134,40 @@ module.exports = function(grunt) {
               '<%= project.src_templates %>/project.tmpl.html',
               '<%= project.src_templates %>/skill.tmpl.html'
             ],
-            dest: '<%= project.src_assets_css %>/styles.css'
+            dest: '<%= project.src_assets_css %>/plugins-tidy.css'
           }
         ]
-      }
+      },
+      dist_styles: {
+        options: {
+            ignore: ['.ng-move', '.ng-enter', '.ng-leave', '.created_by_jQuery', '.ng-cloak', '.x-ng-cloak'],
+            stylesheets: ["styles.css"],
+            csspath: "../<%= project.src_assets_css %>",
+        },
+        files: [
+          {
+            src: [
+              '<%= project.src %>/index.html', 
+              '<%= project.src_templates %>/award.tmpl.html',
+              '<%= project.src_templates %>/course.tmpl.html',
+              '<%= project.src_templates %>/paper.tmpl.html',
+              '<%= project.src_templates %>/project-dialog.tmpl.html',
+              '<%= project.src_templates %>/project.tmpl.html',
+              '<%= project.src_templates %>/skill.tmpl.html'
+            ],
+            dest: '<%= project.src_assets_css %>/styles-tidy.css'
+          }
+        ]
+      },
     },
 
     // cssmin, minificar css
     cssmin: {
       dev: {
+        options: {
+          report: 'gzip',
+          // sourceMap: true
+        },
         files: [{
           expand: true,
           cwd: '<%= project.src_assets_css %>',
@@ -169,7 +196,8 @@ module.exports = function(grunt) {
         beautify: false,
         mangle: false,
         preserveComments: 'some',
-        sourceMap: true
+        sourceMap: true,
+        report: 'gzip'
       },
       dev_third_party_angular: {
         files: {
@@ -474,5 +502,5 @@ module.exports = function(grunt) {
   grunt.registerTask('dev', ['newer:copy:dev_css_not_scss', 'newer:sass', 'newer:jade', 'newer:uglify' ,'concurrent:tasks']);
   grunt.registerTask('default', []);
   grunt.registerTask('clear', ['clean']);
-  grunt.registerTask('dist', ['mkdir', 'copy:dev_css_not_scss', 'sass', 'jade', 'postcss', 'uncss', 'cssmin', 'modernizr:dist', 'newer:uglify:dev_third_party', 'newer:uglify:dev_third_party_angular', 'newer:uglify:dev', 'newer:copy', 'processhtml']);
+  grunt.registerTask('dist', ['mkdir', 'copy:dev_css_not_scss', 'sass', 'jade', 'postcss', 'uncss', 'cssmin', 'newer:uglify:dev_third_party', 'newer:uglify:dev_third_party_angular', 'newer:uglify:dev', 'modernizr:dist', 'newer:copy', 'processhtml']);
 };

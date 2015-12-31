@@ -31,8 +31,9 @@
   <link rel="icon" type="image/png" href="apple-touch-icon.png" sizes="16x16"/>
   <!-- CSS-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
-  <link rel="stylesheet" href="assets/css/plugins.min.css">
+  <link rel="stylesheet" href="assets/css/plugins-tidy.min.css">
   <link rel="stylesheet" href="assets/css/angular-material.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.1/angular-material.min.css"/>
   <link rel="stylesheet" href="assets/css/styles.min.css">
   <link rel="manifest" href="/assets/logo/manifest.json?v=1">
 </head>
@@ -268,7 +269,7 @@
             <!-- Email-->
             <md-input-container flex="100" flex-gt-sm="50" class="md-icon-float">
               <i class="material-icons prefix icon-large white-text">email</i><label>Email</label>
-              <md-icon class="name">
+              <md-icon class="email">
                 </md-icon>
               <input id="form-email" name="email" type="email" ng-model="contato.email">
             </md-input-container>
@@ -276,9 +277,9 @@
           <!-- Mensagem-->
           <md-input-container flex='100' class="md-icon-float">
             <i class="material-icons prefix icon-large white-text">message</i><label>Mensagem</label>
-            <md-icon class="name">
+            <md-icon class="message">
               </md-icon>
-            <textarea id="form-message" name="message" type="text" ng-model="contato.email"></textarea>
+            <textarea id="form-message" name="message" type="text" ng-model="contato.message"></textarea>
           </md-input-container>
           <!-- Hide-->
           <md-input-container hide flex='100' class="md-icon-float">

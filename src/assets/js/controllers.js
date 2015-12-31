@@ -160,7 +160,7 @@ app.controller('ProjectsController', function($scope) {
             description: "Sistema colaborativo que permite o transporte de objetos dentro da região por meio de entregadores cadastrados. Desta forma diminuindo o custo e tempo no transporte desses objetos e, até, possibilitando entregas no mesmo dia.</p>
                 O EntregaRápida também permite o envio por meio do EcoPacote, um pacote que utiliza as ciclovias para a entrega. Essas ciclovias têm sido implementadas em diversas cidades do Brasil, como na cidade de Belo Horizonte.</p>
                 A partir das características do app é possível trazer uma série de melhorias para a sociedade, gerando novas oportunidades de négocio e, ao mesmo tempo, oferecer maior comodidade no envio e recebimento de objetos dentro da cidade, tornando-a mais morderna.</p>
-                O EntregaRápida foi vencedor do hackathon da Google Developer Group DevFest Sudeste</p>",
+                O EntregaRápida foi vencedor do hackathon da Google Developer Group DevFest Sudeste.</p>",
         },
         {
             name: "ArthurAssuncao.com",
