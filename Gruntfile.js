@@ -119,7 +119,8 @@ module.exports = function(grunt) {
     uncss: {
       dist_plugins: {
         options: {
-            ignore: ['.ng-move', '.ng-enter', '.ng-leave', '.created_by_jQuery', '.ng-cloak', '.x-ng-cloak'],
+            ignore: ['.ng-move', '.ng-enter', '.ng-leave', '.created_by_jQuery', '.ng-cloak', '.x-ng-cloak',
+              '.animated'],
             stylesheets: ["plugins.css"],
             csspath: "../<%= project.src_assets_css %>",
         },

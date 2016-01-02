@@ -246,7 +246,7 @@ app.controller('ProjectsController', function($scope) {
             dateend: "Atualmente",
             description: "Desenvolvimento de extensões para o navegador Google Chrome:</p>
                 Hide Contact From Facebook Chat List</p>
-                Esconde contatos da lista do chat do Facebook sem bloquear o contato. O contato continua te vendo na lista do chat dele como online, porém voce não o vê mais.</p></p>
+                Esconde contatos da lista do chat do Facebook sem bloquear o contato. O contato continua te vendo na lista do chat dele como online, porém voce não o vê mais.</p> </p>
                 Wpp Web Customizador</p>
                 Modifica o fundo (background) do chat do Whatsapp™ Web.</p>",
         },
