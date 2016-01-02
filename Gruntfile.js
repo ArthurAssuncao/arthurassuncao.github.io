@@ -369,8 +369,13 @@ module.exports = function(grunt) {
 
     'http-server': {
         dev: {
-            root: 'src',
+            root: '<%= project.src %>',
             port: 8080,
+            host: "192.168.0.103",
+        },
+        dist: {
+            root: '<%= project.dist %>',
+            port: 8000,
             host: "192.168.0.103",
         }
     },
@@ -474,7 +479,7 @@ module.exports = function(grunt) {
       options: {
         logConcurrentOutput: true
       },
-      tasks: ['http-server', 'watch']
+      tasks: ['http-server:dev', 'watch']
     },
 
   });
@@ -503,5 +508,5 @@ module.exports = function(grunt) {
   grunt.registerTask('dev', ['newer:copy:dev_css_not_scss', 'newer:sass', 'newer:jade', 'newer:uglify' ,'concurrent:tasks']);
   grunt.registerTask('default', []);
   grunt.registerTask('clear', ['clean']);
-  grunt.registerTask('dist', ['mkdir', 'copy:dev_css_not_scss', 'sass', 'jade', 'postcss', 'uncss', 'cssmin', 'newer:uglify:dev_third_party', 'newer:uglify:dev_third_party_angular', 'newer:uglify:dev', 'modernizr:dist', 'newer:copy', 'processhtml']);
+  grunt.registerTask('dist', ['mkdir', 'copy:dev_css_not_scss', 'sass', 'jade', 'postcss', 'uncss', 'cssmin', 'newer:uglify:dev_third_party', 'newer:uglify:dev_third_party_angular', 'newer:uglify:dev', 'modernizr:dist', 'newer:copy', 'processhtml', 'http-server:dist']);
 };
