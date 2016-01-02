@@ -18,6 +18,22 @@ Site pessoal de [Arthur Assunção](http://arthurassuncao.com).
   * Jade
   * Grunt
 
+##### Plugins Utilizados no **Grunt**
+* uglify
+* processhtml
+* uncss
+* postcss + autoprefixer
+* concurrent
+* http-server
+* watch
+* sass
+* cssmin
+* modernizr
+* jade
+* copy
+* mkdir
+* clean
+
 ###Screenshots
 
 <p align="center"><img src="https://github.com/ArthurAssuncao/arthurassuncao.github.io/blob/master/src/assets/img/portfolio/arthurassuncao-com/thumbnail-1.jpg"></p>
