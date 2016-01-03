@@ -415,6 +415,14 @@ module.exports = function(grunt) {
         files: {
           "<%= project.src %>/index.html": ["<%= project.src_jade %>/index.jade"]
         }
+      },
+      dist: {
+        options: {
+          pretty: false
+        },
+        files: {
+          "<%= project.src %>/index.html": ["<%= project.src_jade %>/index.jade"]
+        }
       }
     },
 
@@ -423,7 +431,7 @@ module.exports = function(grunt) {
     processhtml: {
       options: {
         data: {
-          message: 'Hello world!'
+          message: 'Versao de producao!'
         }
       },
       dist: {
@@ -491,7 +499,7 @@ module.exports = function(grunt) {
       },
       jade: {
         files: ['<%= project.src_jade %>/*.jade', '<%= project.src_jade %>/*.html'],
-        tasks: ['jade'],
+        tasks: ['jade:dev'],
       }
     },
 
@@ -526,8 +534,8 @@ module.exports = function(grunt) {
   // grunt.loadNpmTasks('grunt-nodemon');
 
   // Tasks
-  grunt.registerTask('dev', ['newer:copy:dev_css_not_scss', 'newer:sass', 'newer:jade', 'newer:uglify' ,'concurrent:tasks']);
+  grunt.registerTask('dev', ['newer:copy:dev_css_not_scss', 'newer:sass', 'newer:jade:dev', 'newer:uglify' ,'concurrent:tasks']);
   grunt.registerTask('default', []);
   grunt.registerTask('clear', ['clean']);
-  grunt.registerTask('dist', ['mkdir', 'copy:dev_css_not_scss', 'sass', 'jade', 'postcss', 'uncss', 'cssmin', 'newer:uglify:dev_third_party', 'newer:uglify:dev_third_party_angular', 'newer:uglify:dev', 'modernizr:dist', 'newer:copy', 'imagemin:dist', 'processhtml', 'http-server:dist']);
+  grunt.registerTask('dist', ['mkdir', 'copy:dev_css_not_scss', 'sass', 'jade:dist', 'postcss', 'uncss', 'cssmin', 'newer:uglify:dev_third_party', 'newer:uglify:dev_third_party_angular', 'newer:uglify:dev', 'modernizr:dist', 'newer:copy', 'imagemin:dist', 'processhtml', 'http-server:dist']);
 };
