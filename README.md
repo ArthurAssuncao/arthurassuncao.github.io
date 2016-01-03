@@ -28,6 +28,7 @@ Site pessoal de [Arthur Assunção](http://arthurassuncao.com).
 * watch
 * sass
 * cssmin
+* imagemin
 * modernizr
 * jade
 * copy

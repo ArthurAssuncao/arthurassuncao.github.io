@@ -36,6 +36,7 @@
     "grunt-mkdir": "~0.1.2",
     "grunt-contrib-jade": "~0.15.0",
     "grunt-processhtml": "~0.3.8",
-    "grunt-contrib-clean": "~0.7.0"
+    "grunt-contrib-clean": "~0.7.0",
+    "imagemin-mozjpeg": "~5.1.0"
   }
 }

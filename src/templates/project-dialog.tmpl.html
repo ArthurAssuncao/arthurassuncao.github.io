@@ -1,4 +1,4 @@
-<md-dialog aria-label="name" ng-cloak>
+<md-dialog aria-label="name" class="ng-cloak">
   <form>
     <md-toolbar>
       <div class="md-toolbar-tools">
@@ -22,7 +22,7 @@
           <div class="card-modal-role center"><span>{{ ::project.type }}</span> <span class="card-modal-date">{{ ::project.datestart }} - {{ ::project.dateend }}</span></div>
           <div>
             <ul class="card-modal-specs grey-text text-darken-0" class="justify">
-              <li ng-repeat="tech in split(project.technologies)">{{tech}}</li>
+              <li ng-repeat="tech in split(project.technologies)">{{ ::tech }}</li>
             </ul>
           </div>
           <div class="justify">

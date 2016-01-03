@@ -234,6 +234,24 @@ module.exports = function(grunt) {
       }
     },
 
+
+    // secao do imgmin
+    imagemin: {
+      dist: {
+        options: {
+          optimizationLevel: 3,
+          svgoPlugins: [{ removeViewBox: false }],
+          use: [require('imagemin-mozjpeg')({quality: 95})]
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= project.src_assets_img %>/',
+          src: ['**/*.{png,jpg,gif,svg,jpeg,json}'],
+          dest: '<%= project.dist_assets_img %>/'
+        }]
+      }
+    },
+
     // Secao do copy
 
     // copy
@@ -288,18 +306,18 @@ module.exports = function(grunt) {
           },
         ],
       },
-      dist_img: {
-        files: [
-          { //img
-            expand: true, 
-            cwd: '<%= project.src_assets_img %>/',
-            src: '**',
-            dest: '<%= project.dist_assets_img %>/', 
-            filter: 'isFile',
-            flatten: false
-          }
-        ]
-      },
+      // dist_img: {
+      //   files: [
+      //     { //img
+      //       expand: true, 
+      //       cwd: '<%= project.src_assets_img %>/',
+      //       src: '**',
+      //       dest: '<%= project.dist_assets_img %>/', 
+      //       filter: 'isFile',
+      //       flatten: false
+      //     }
+      //   ]
+      // },
       dist_files: {
         files: [
           { //files
@@ -316,21 +334,23 @@ module.exports = function(grunt) {
         files: [
           { //js
             expand: true, 
-            src: ['<%= project.src_assets_js %>/scripts.min.js'], 
+            src: ['<%= project.src_assets_js %>/scripts.min.js', '<%= project.src_assets_js %>/scripts.min.js.map'], 
             dest: '<%= project.dist_assets_js %>/', 
             filter: 'isFile',
             flatten: true
           },
           { //js angular
             expand: true, 
-            src: ['<%= project.src_assets_js_third_party %>/angular-bundle.min.js'], 
+            src: ['<%= project.src_assets_js_third_party %>/angular-bundle.min.js',
+              '<%= project.src_assets_js_third_party %>/angular-bundle.min.js.map'], 
             dest: '<%= project.dist_assets_js_third_party %>/', 
             filter: 'isFile',
             flatten: true
           },
           { //js plugins
             expand: true, 
-            src: ['<%= project.src_assets_js_third_party %>/plugins.min.js'], 
+            src: ['<%= project.src_assets_js_third_party %>/plugins.min.js',
+              '<%= project.src_assets_js_third_party %>/plugins.min.js.map'], 
             dest: '<%= project.dist_assets_js_third_party %>/', 
             filter: 'isFile',
             flatten: true
@@ -501,6 +521,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jade');
   grunt.loadNpmTasks('grunt-processhtml');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
   
   // grunt.loadNpmTasks('grunt-nodemon');
 
@@ -508,5 +529,5 @@ module.exports = function(grunt) {
   grunt.registerTask('dev', ['newer:copy:dev_css_not_scss', 'newer:sass', 'newer:jade', 'newer:uglify' ,'concurrent:tasks']);
   grunt.registerTask('default', []);
   grunt.registerTask('clear', ['clean']);
-  grunt.registerTask('dist', ['mkdir', 'copy:dev_css_not_scss', 'sass', 'jade', 'postcss', 'uncss', 'cssmin', 'newer:uglify:dev_third_party', 'newer:uglify:dev_third_party_angular', 'newer:uglify:dev', 'modernizr:dist', 'newer:copy', 'processhtml', 'http-server:dist']);
+  grunt.registerTask('dist', ['mkdir', 'copy:dev_css_not_scss', 'sass', 'jade', 'postcss', 'uncss', 'cssmin', 'newer:uglify:dev_third_party', 'newer:uglify:dev_third_party_angular', 'newer:uglify:dev', 'modernizr:dist', 'newer:copy', 'imagemin:dist', 'processhtml', 'http-server:dist']);
 };

@@ -4,7 +4,6 @@
 
 /* Gmail style scrollbar */
 
-[ng-cloak],
 .ng-cloak,
 .x-ng-cloak {
   display: none !important;

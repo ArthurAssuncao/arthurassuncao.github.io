@@ -90,7 +90,7 @@ app.directive('paper', function() {
 
 app.controller('PaperController', function($scope) {
     $scope.split = function(text){
-        return text.split(",");
+        return text.split(/,[ ]{0,1}/);
     }
 });
 
@@ -208,7 +208,7 @@ app.controller('ProjectController', function($scope, $mdMedia, $mdDialog) {
         $scope.project = project;
 
         $scope.split = function(text){
-            return text.split(",");
+            return text.split(/,[ ]{0,1}/);
         }
         $scope.splitP = function(text){
             return text.split("</p>");
