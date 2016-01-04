@@ -776,6 +776,7 @@ li .skill-bar {
 .card-image img {
   width: 100%;
   height: 100%;
+  margin: 0 auto;
 }
 
 .card .card-content {
@@ -1099,6 +1100,7 @@ md-toolbar #navbar a {
 .md-card-image {
   max-width: 328px;
   height: 172px;
+  margin: 0 auto;
 }
 
 md-card md-card-title {
