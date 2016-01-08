@@ -531,11 +531,15 @@ footer.footer {
 
 @media only screen and (min-width: 0) {
   .text_h {
-    font-size: 2.0em;
+    font-size: 2.8em;
+    -webkit-transform: translateY(70%);
+        -ms-transform: translateY(70%);
+            transform: translateY(70%);
   }
 
   .text_b {
-    font-size: 1.5em;
+    font-size: 1.7em;
+    margin-bottom: 10px;
   }
 
   #social a {
@@ -588,12 +592,13 @@ footer.footer {
             flex-direction: column;
   }
 }
-#index-banner .text_h {
-  -webkit-transform: translateY(50%);
-      -ms-transform: translateY(50%);
-          transform: translateY(50%);
+@media only screen and (min-width: 481px) {
+  #index-banner .text_h {
+    -webkit-transform: translateY(20%);
+        -ms-transform: translateY(20%);
+            transform: translateY(20%);
+  }
 }
-
 @media only screen and (min-width: 992px) {
   #index-banner .text_h {
     -webkit-transform: translateY(0%);
@@ -1111,6 +1116,9 @@ md-card {
   cursor: pointer;
 }
 
+project {
+  margin: 5px;
+}
 project md-card-title-text .md-headline {
   font-size: 1.1em;
 }

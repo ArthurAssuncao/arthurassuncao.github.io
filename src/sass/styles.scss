@@ -427,10 +427,12 @@ footer {
 // My style
 @media only screen and (min-width: 0) {
     .text_h {
-        font-size: 2.0em;
+        font-size: 2.8em;
+        transform: translateY(70%);
     }
     .text_b {
-        font-size: 1.5em;
+        font-size: 1.7em;
+        margin-bottom: 10px;
     }
     #social a {
         opacity: 1 !important;
@@ -474,13 +476,13 @@ footer {
     }
 }
 
-#index-banner{
-    .text_h{
-        transform: translateY(50%);
+@media only screen and (min-width: 481px) {
+    #index-banner{
+        .text_h{
+            transform: translateY(20%);
+        }
     }
 }
-
-@media only screen and (min-width: 481px) {}
 
 @media only screen and (min-width: 992px) {
     #index-banner{
@@ -1027,6 +1029,7 @@ md-card{
 }
 
 project{
+    margin: 5px;
     md-card-title-text .md-headline{
         font-size: 1.1em;
         i{

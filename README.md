@@ -34,6 +34,7 @@ Site pessoal de [Arthur Assunção](http://arthurassuncao.com).
 * copy
 * mkdir
 * clean
+* newer
 
 ###Screenshots
 

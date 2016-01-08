@@ -391,12 +391,12 @@ module.exports = function(grunt) {
         dev: {
             root: '<%= project.src %>',
             port: 8080,
-            host: "192.168.0.103",
+            host: "localhost",
         },
         dist: {
             root: '<%= project.dist %>',
             port: 8000,
-            host: "192.168.0.103",
+            host: "localhost",
         }
     },
 
