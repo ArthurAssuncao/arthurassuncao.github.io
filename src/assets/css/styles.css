@@ -530,7 +530,7 @@ footer.footer {
 
 @media only screen and (min-width: 0) {
   .text_h {
-    font-size: 2.7em;
+    font-size: 2.6em;
     -webkit-transform: translateY(70%);
         -ms-transform: translateY(70%);
             transform: translateY(70%);
@@ -539,6 +539,7 @@ footer.footer {
   .text_b {
     font-size: 1.7em;
     margin-bottom: 10px;
+    margin-top: 5px;
   }
 
   #social a {
@@ -670,20 +671,39 @@ footer.footer {
 }
 
 .project-dialog-imgs {
-  padding-right: 15px;
+  padding-right: 0;
 }
 .project-dialog-imgs img {
   width: 100%;
 }
 
 .project-dialog-desc {
-  padding-left: 25px;
-  padding-right: 12px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
+@media only screen and (min-width: 601px) {
+  .container {
+    width: 85%;
+  }
+
+  project md-card-title-text .md-headline {
+    font-size: 0.9em;
+  }
+
+  .project-dialog-imgs {
+    padding-right: 12px;
+    padding-left: 15px;
+  }
+
+  .project-dialog-desc {
+    padding-left: 15px;
+    padding-right: 12px;
+  }
+}
 @media only screen and (min-width: 960px) {
   .container {
-    width: 70%;
+    width: 85%;
   }
 
   .center-lt-sm {
@@ -699,15 +719,6 @@ footer.footer {
   .project-dialog-desc {
     overflow: auto;
     max-height: 55vh !important;
-  }
-}
-@media only screen and (min-width: 601px) {
-  .container {
-    width: 85%;
-  }
-
-  project md-card-title-text .md-headline {
-    font-size: 0.9em;
   }
 }
 #skills {
