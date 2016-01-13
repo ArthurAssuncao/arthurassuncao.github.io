@@ -13,7 +13,7 @@
     </md-toolbar>
     <md-dialog-content class="project-dialog-content">
       <div class="md-dialog-content" layout="row" layout-wrap>
-        <div flex-xs="100" flex-sm="100" flex-md flex-gt-md flex-order="2" flex-order-gt-sm="1" layout="row" layout-wrap layout-padding layout-margin class="project-dialog-imgs" layout-align="center start">
+        <div flex-xs="100" flex-sm="100" flex-md flex-gt-md flex-order="2" flex-order-gt-sm="1" layout="row" layout-wrap class="project-dialog-imgs" layout-align="center start">
           <div ng-repeat="img in split(project.imgs)">
             <img src="{{ ::img }}" alt="{{ ::project.name }}"/>
           </div>

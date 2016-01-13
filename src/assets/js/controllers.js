@@ -153,7 +153,7 @@ app.controller('ProjectsController', function($scope) {
                 assets/img/portfolio/entregarapida/5.jpeg",
             url: "http://github.com/ArthurAssuncao/EntregaRapida",
             urlname: "Visite o projeto",
-            technologies: "HTML5/CSS3/SASS, JavaScript, AngularJS, AngularJS Material, Polymer, Google Maps API, Google Sign In, Google Places, NodeJS, MongoDB",
+            technologies: "HTML5/CSS3/SASS, JavaScript, AngularJS, AngularJS Material, Polymer, Google Maps API, Google Sign In, Google Places, NodeJS, MongoDB, Git",
             type: "Protótipo de Hackathon",
             datestart: "2015",
             dateend: "2015",
@@ -173,18 +173,18 @@ app.controller('ProjectsController', function($scope) {
                 assets/img/portfolio/arthurassuncao-com/4.jpg",
             url: "http://ArthurAssuncao.com/",
             urlname: "Visite ArthurAssuncao.com",
-            technologies: "HTML5/CSS3/SASS, JavaScript/jQuery, AngularJS, AngularJS Material, WOW.js, Jade, Grunt",
+            technologies: "HTML5/CSS3/SASS, JavaScript/jQuery, AngularJS, AngularJS Material, WOW.js, Jade, Grunt, Git",
             type: "Projeto Pessoal",
             datestart: "2012",
             dateend: "Atualmente",
             description: "Meu site pessoal onde divulgo meu currículo, meus projetos, etc e o mantenho atualizado com o que há de mais interessante e recente em termos de tecnologias web.</p>
                 História</p>
-                Em 2012 o site não tinha o código fonte aberto e utilizava PHP e Bootstrap 2.x.</p>
-                Em 2013 o site teve seu código fonte aberto e hospedado no Github.</p>
-                Em 2014 o site teve o Bootstrap atualizado para a versão 3.x.</p>
-                Em 2015 o site passou por várias reformulações, primeiro foi o uso do MaterializeCSS, em seguida foi removido o PHP e deixado apenas estático. Uma versão em Material Design Lite foi iniciada, porém descontinuada devido a falta de recursos desse framework da Google. Nesta versão mais recente de 2015, o site é feito utilizando AngularJS e AngularJS Material, que oferecem muitos recursos com grande produtividade, além de um bom desempenho, mesmo neste último quesito sendo inferior ao ReactJS ou AngularJS 2.0.</p>
-                Além de todas estas mudanças, em 2015, comecei a utilizar no site o SASS para melhorar a códificação CSS, Jade pra modularizar melhor os HTML e, o mais interessante de todos, o Grunt como automatizador. O ganho em desempenho e produtividade que um automatizador gera é gigantesco.
-                Em 2016 estou analisando, a principio, a possibilidade de substituir as directivas do AngularJS por componentes ReactJS, o que aumentaria muito o desempenho do site.</p>",
+                Em 2012, o site não tinha o código fonte aberto, utilizava PHP e Bootstrap 2.x.</p>
+                Em 2013, o site teve seu código fonte aberto e hospedado no Github.</p>
+                Em 2014, o site teve o Bootstrap atualizado para a versão 3.x.</p>
+                Em 2015, o site passou por várias reformulações, primeiro foi a interface material design com o MaterializeCSS, em seguida foi removido o PHP e deixado apenas estático. Uma versão em Material Design Lite foi iniciada, porém descontinuada devido a falta de recursos desse framework da Google. Nesta versão mais recente de 2015, o site é feito utilizando AngularJS e AngularJS Material, que oferecem muitos recursos com grande produtividade, além de um bom desempenho, mesmo neste último quesito sendo inferior ao ReactJS ou AngularJS 2.0.</p>
+                Além de todas estas mudanças, em 2015, comecei a utilizar o SASS para melhorar a códificação CSS, Jade pra modularizar os HTML e, o mais interessante de todos, o Grunt como automatizador. O ganho em desempenho e produtividade que um automatizador gera é gigantesco.
+                Em 2016, estou analisando, a principio, a possibilidade de substituir as directivas do AngularJS por componentes ReactJS, o que aumentaria muito o desempenho do site.</p>",
         },
         {
             name: "JUMP!",
@@ -202,7 +202,7 @@ app.controller('ProjectsController', function($scope) {
             description: "Participei da equipe de desenvolvimento do jogo JUMP (Jogo Unificado para Movimentação Projetada).</p>
                     O jogo permite que o jogador, em frente a uma webcam, controle, por meio de seus pulos, o personagem do jogo.</p>
                     Foram utilizados: linguagem Python com a biblioteca OpenCV e Node.js.</p>
-                    Projeto foi apresentado na Semana Nacional de Ciência e Tecnologia (SNCT) de 2013 no IFSEMG - Câmpus Barbacena.</p>",
+                    Projeto foi apresentado na Semana Nacional de Ciência e Tecnologia (SNCT) de 2013 no IFSEMG - Campus Barbacena.</p>",
         },
         {
             name: "uGuide Desk 2014",
@@ -226,7 +226,7 @@ app.controller('ProjectsController', function($scope) {
             imgs: "assets/img/portfolio/maisvendas/0.jpg, assets/img/portfolio/maisvendas/1.jpg",
             url: "https://play.google.com/store/apps/details?id=com.vendas",
             urlname: "MaisVendas na PlayStore",
-            technologies: "Android, Python/Django, JSON, Git, MySQL",
+            technologies: "Android, Python/Django, JSON, MySQL, Git",
             type: "Desenvolvedor Mobile e Web",
             datestart: "2013",
             dateend: "2014",

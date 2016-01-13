@@ -1,10 +1,10 @@
 [ArthurAssuncao.com](http://arthurassuncao.com)
 ===================
 
-Site pessoal de [Arthur Assunção](http://arthurassuncao.com).
+Meu site pessoal com o uso do que há de mais recente em tecnologias web.
 
 ###Características
-* Segue o padrão ***single page*** com layout Material Design do Google. 
+* Segue o padrão ***Single-page applications (SPA)*** com layout Material Design do Google. 
 * Site com ***responsive layout***.
 
 ###Tecnologias Utilizadas

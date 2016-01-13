@@ -573,6 +573,18 @@ footer {
     margin: 0 auto;
 }
 
+.project-dialog-imgs{
+    img{
+        width: 100%;
+    }
+    padding-right: 15px;
+}
+
+.project-dialog-desc{
+    padding-left: 25px;
+    padding-right: 12px;
+}
+
 @media only screen and (min-width: 960px){
     .container {
         width: 70%;
@@ -583,7 +595,11 @@ footer {
     }
     .project-dialog-imgs{
         overflow: auto;
-        max-height: 50vh !important;
+        max-height: 55vh !important;
+    }
+    .project-dialog-desc{
+        overflow: auto;
+        max-height: 55vh !important;
     }
 }
 
@@ -1117,17 +1133,6 @@ ul.skills{
         height: 150px;
     }
 }
-
-.project-dialog-imgs{
-    img{
-        width: 95%;
-    }
-}
-
-// .project-dialog-desc{
-//     overflow: auto;
-//     max-height: 50vh !important;
-// }
 
 .project-dialog-content{
     line-height: 1.4em;
