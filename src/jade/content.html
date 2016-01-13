@@ -33,7 +33,7 @@
       <div class="container">
         <h2 class="header text_b">Alguns projetos que participei</h2>
         <div layout="row" layout-wrap layout-padding layout-align="center center" ng-controller="ProjectsController">
-            <project class="wow-nonmobile fadeInUp" flex-xs="100" flex-sm="50" flex-md="50" flex-lg="30" ng-repeat="project in projects.data"
+            <project class="wow-nonmobile fadeInUp" flex-xs="100" flex-sm="50" flex-md="40" flex-lg="30" ng-repeat="project in projects.data"
               name="{{ project.name }}" 
               fullname="{{ project.fullname }}" 
               imgurl="{{ project.imgurl }}" 
@@ -57,7 +57,7 @@
       <h2 class="header text_b">Habilidades</h2>
       <div layout="column">
         <div layout="row" flex layout-padding class="space-bottom-0" layout-wrap>
-          <div class="wow-nonmobile fadeInLeft" flex-xs="100" flex-sm="100" flex-md="50" flex-gt-md="50">
+          <div class="wow-nonmobile fadeInLeft" flex-xs="100" flex-sm="100" flex-md flex-gt-md>
             <div id="cv-formacao">
               <h5 class="cv-section-title">Formação</h5>
               <ul id="lista_formacao" class="list-unstyled" ng-controller="CoursesController">
@@ -103,8 +103,8 @@
             </div>
             <div class="divider hide-on-med-and-up"></div>
           </div>
-          <div hide-sm flex-md="5" flex-gt-md="5"></div>
-          <div class="wow-nonmobile fadeInRight" flex-xs="100" flex-sm="100" flex-md="45" flex-gt-md="45">
+          <div hide-xs hide-sm flex-md="5" flex-gt-md="5"></div>
+          <div class="wow-nonmobile fadeInRight" flex-xs="100" flex-sm="100" flex-md flex-gt-md>
             <div id="cv-habilidades" ng-controller="SkillsController">
               <ul class="list-unstyled skills">
                 <li ng-repeat="skill in skills.data" id="skill_{{ skill.name }}">
