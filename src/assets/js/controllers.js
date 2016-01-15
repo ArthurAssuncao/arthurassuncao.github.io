@@ -269,7 +269,7 @@ app.controller('ProjectsController', function($scope) {
         //     imgs: "assets/img/portfolio/geocoleta//0.jpeg, assets/img/portfolio/geocoleta//1.jpeg, assets/img/portfolio/geocoleta/2.jpeg",
         //     url: "http://geocoleta.org/",
         //     urlname: "Visite GeoColeta.org",
-        //     technologies: "HTML5/CSS3, JavaScript/jQuery, HTML5 Geolocation, jQuery Mobile, Python/Django",
+        //     technologies: "HTML5/CSS3, JavaScript/jQuery, HTML5 Geolocation, jQuery Mobile, Python/Django, Git",
         //     type: "Projeto Acadêmico",
         //     datestart: "2012",
         //     dateend: "2013",

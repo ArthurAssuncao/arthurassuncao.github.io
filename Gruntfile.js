@@ -431,7 +431,8 @@ module.exports = function(grunt) {
     processhtml: {
       options: {
         data: {
-          message: 'Versao de producao!'
+          message: 'Versao de producao!',
+          strip: true,
         }
       },
       dist: {

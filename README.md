@@ -4,7 +4,7 @@
 Meu site pessoal com o uso do que há de mais recente em tecnologias web.
 
 ###Características
-* Segue o padrão ***Single-page applications (SPA)*** com layout Material Design do Google. 
+* ***Single-page applications (SPA)*** com layout Material Design do Google. 
 * Site com ***responsive layout***.
 
 ###Tecnologias Utilizadas
@@ -16,7 +16,7 @@ Meu site pessoal com o uso do que há de mais recente em tecnologias web.
   * ~~ReactJS~~
   * WOW.js + Animate.css
   * Jade
-  * Grunt
+  * GruntJS
 
 ##### Plugins Utilizados no **Grunt**
 * uglify

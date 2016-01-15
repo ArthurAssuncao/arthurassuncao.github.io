@@ -1,16 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 120 120">
-  <defs>
-    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
-      <feOffset result="offOut" in="SourceAlpha" dx="0" dy="0"></feOffset>
-      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="3"></feGaussianBlur>
-      <feComponentTransfer in="blurOut" result="opacityOut">
-        <feFuncA type="linear" slope="0.5"></feFuncA>
-      </feComponentTransfer>
-      <feBlend in="SourceGraphic" in2="opacityOut" mode="normal"></feBlend>
-    </filter>
-  </defs>
-  <path d="      M 5 18.25      L 50 2.25      L 96 18      L 88.5 77      L 50 98.25      L 12 77.25      Z" fill="black" filter="url(#shadow)" class="outline"></path>
-  <path d="      M 5 18.25      L 50 2.25      L 50 98.25      L 12 77.25      Z" fill="#de3641" class="left"></path>
-  <path d="      M 50 2.25      L 96 18      L 88.5 77      L 50 98.25      Z" fill="#b13138" class="right"></path>
-  <path d="      M 50 13      L 79.25 75.5      L 69.25 75.5      L 63 61.25      L 50 61.25      L 50 52.75      L 59.5 52.75      L 50 33.1      L 42 52.75      L 50 52.75      L 50 61.25      L 38.1 61.25      L 32.5 75.5      L 21.75 75.5      Z" fill="white" class="letter"></path>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="379.992px" height="402.527px" viewBox="0 0 379.992 402.527" enable-background="new 0 0 379.992 402.527"
+	 xml:space="preserve">
+<g id="AngularJS_Logo">
+	<g>
+		<g>
+			<g>
+				<path fill="#B2B2B2" d="M189.396,0L0,66.648l29.927,248.125l159.66,87.754l160.486-88.938l29.919-248.119L189.396,0z"/>
+				<path fill="#B52E31" d="M361.108,79.811L188.953,21.102v360.467l144.277-79.846L361.108,79.811z"/>
+				<path fill="#E23237" d="M21.259,80.868l25.647,221.917l142.046,78.777V21.094L21.259,80.868z"/>
+				<path fill="#F2F2F2" d="M228.86,200.394l-39.593-82.678l-34.854,82.677L228.86,200.394L228.86,200.394z M243.953,235.156
+					H139.012l-23.479,58.729l-43.67,0.807l117.091-260.5l121.179,260.494h-40.476L243.953,235.156z"/>
+				<path fill="#B2B2B2" d="M188.953,34.193l0.313,83.523l39.549,82.741h-39.772l-0.09,34.647l54.997,0.053l25.707,59.539
+					l41.788,0.776L188.953,34.193z"/>
+			</g>
+		</g>
+	</g>
+</g>
 </svg>
