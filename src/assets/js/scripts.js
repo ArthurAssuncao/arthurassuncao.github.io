@@ -145,5 +145,6 @@ $(document).ready(function(){
     iniciar_wow();
     add_contact_form_click();
     $(window).scroll(on_scroll_menu);
+    aload();
     // iniciar_scrollspy();
 });

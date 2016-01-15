@@ -29,6 +29,7 @@
     "wow": "~1.1.2",
     "ng-parallax": "~0.1.8",
     "roboto-fontface": "~0.4.3",
-    "animate.css": "~3.5.0"
+    "animate.css": "~3.5.0",
+    "aload": "~1.2.1"
   }
 }

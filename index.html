@@ -21,9 +21,13 @@
   <meta name="twitter:title" content="Arthur Assunção - Desenvolvedor Web"/>
   <meta name="twitter:description" content="Arthur Assunção - Desenvolvedor Web"/>
   <meta name="twitter:image" content="http://arthurassuncao.com/assets/img/me256x256.png"/>
-  <!-- Windows app-->
-  <meta name="application-name" content="Arthur Assunção Site"/>
+  <!-- Windows phone-->
+  <meta name="application-name" content="ArthurAssuncao.com"/>
   <meta name="msapplication-TileColor" content="#2196F3"/>
+  <meta name="msapplication-square70x70logo" content="assets/img/winphone/tiny.png"/>
+  <meta name="msapplication-square150x150logo" content="assets/img/winphone/square.png"/>
+  <meta name="msapplication-wide310x150logo" content="assets/img/winphone/wide.png"/>
+  <meta name="msapplication-square310x310logo" content="assets/img/winphone/large.jpg"/>
   <!-- Favicon-->
   <link rel="shortcut icon" href="favicon.ico"/>
   <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
@@ -34,6 +38,7 @@
   <link rel="stylesheet" href="assets/css/plugins-tidy.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.1/angular-material.min.css"/>
   <link rel="stylesheet" href="assets/css/styles.min.css">
+  <!-- Chrome app -->
   <link rel="manifest" href="/assets/img/logo/manifest.json?v=1">
 </head><body layout="column" id="top" class="scrollspy ng-cloak"><div id="principal" layout="column" layout-align="center center"><md-toolbar layout="row" id="nav_f">
     <div class="md-toolbar-tools container" layout="row">
@@ -247,7 +252,7 @@
     </div>
   </div>
   <div id="parallax" class="parallax-container" ng-controller="ParallaxController">
-    <div class="parallax"><img src="assets/img/ufop.jpg" alt="parallax image" du-parallax y="background"/>
+    <div class="parallax"><img data-aload="assets/img/ufop.jpg" alt="parallax image" du-parallax y="background"/>
     </div>
   </div>
 </main><footer id="contact" layout-align="center center" layout-padding class="page-footer default_color scrollspy footer">

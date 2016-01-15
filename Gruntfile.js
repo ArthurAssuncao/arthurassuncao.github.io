@@ -218,6 +218,7 @@ module.exports = function(grunt) {
            '<%= project.src_assets_js_third_party %>/plugins.min.js': [
              '<%= project.src_bower_components %>/jquery/dist/jquery.min.js', 
              '<%= project.src_bower_components %>/wow/dist/wow.min.js', 
+             '<%= project.src_bower_components %>/aload/dist/aload.min.js', 
            ],
         }
       },
