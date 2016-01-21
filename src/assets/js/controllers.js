@@ -6,7 +6,6 @@ app.controller('AppController', function($scope, $timeout, $mdSidenav, $log, toa
                 $log.debug("abrir menu lateral");
             });
     }
-    // toastService.showSimpleToastTimeMillis("Versão beta", 60000);
 });
 
 app.controller('TyperController', function($scope) {
@@ -33,12 +32,12 @@ app.controller('SkillsController', function($scope) {
     // cria a lista
     $scope.skills = {};
     $scope.skills.data = [
-        { name: 'AngularJS', value: 60, msg: 'Utilizei em um projeto vencedor do hackathon GDG, neste site pessoal e em um app que está em desenvolvimento, além de um curso de front-end.' },
+        { name: 'AngularJS', value: 65, msg: 'Utilizei em um projeto vencedor do hackathon GDG, neste site pessoal e em um app que está em desenvolvimento, além de um curso de front-end.' },
         { name: 'NodeJS', value: 55, msg: 'Utilizei em um projeto vencedor de hackathon, no projeto JUMP! e em um app que está em desenvolvimento, além de um curso de MEAN.' },
         { name: 'MongoDB', value: 45, msg: 'Utilizei em um projeto vencedor de hackathon e em um app que está em desenvolvimento, além de um curso de MEAN.' },
         { name: 'JavaScript/jQuery', value: 70, msg: 'Trabalhei em alguns sites, extensões para o Chrome e projetos.' },
         { name: 'HTML5/CSS3/SASS', value: 75, msg: 'Trabalhei em alguns sites, extensões para o Chrome e alguns projetos.' },
-        { name: 'ReactJS', value: 15, msg: 'Aprendi durante um curso de Front-end.' },
+        { name: 'ReactJS', value: 10, msg: 'Aprendi durante um curso de Front-end.' },
         { name: 'Git (Controle de Versão)', value: 90, msg: 'Utilizo Git desde 2012 em boa parte dos projetos que participo, além de ter trabalhado por 1,25 ano e de utilizar no mestrado.' },
         { name: 'Design Responsivo', value: 65, msg: 'Trabalhei em alguns sites com Design Responsivo.' },
         { name: 'MaterializeCSS / Bootstrap 2.x-3.x', value: 65, msg: 'Trabalhei em alguns sites utilizando Bootstrap e MaterializeCSS, como as versões anteriores deste site pessoal, extensões para o Chrome e projetos.' },
@@ -73,7 +72,7 @@ app.controller('PapersController', function($scope) {
         },
         {
             // url: "http://sbesc.lisha.ufsc.br/sbesc2015/proceedings/146713.pdf",
-            url: "assets/files/146713_KITT_Sistema_de_Carro_Inteligente_com_Apoio_a_Seguranca_do_Motorista.pdf",
+            url: "assets/files/papers/KITT_Sistema_de_Carro_Inteligente_com_Apoio_a_Seguranca_do_Motorista.pdf",
             title: "KITT - Sistema de Carro Inteligente com Apoio à Segurança do Motorista",
             authors: "Arthur N. Assuncao, Ricardo Camara, Luiz Janeiro, Rafael Vitor, Fabio O. de Paula, Ricardo A. R. Oliveira",
             confjournal: "V Brazilian Symposium on Computing Systems Engineering (SBESC)",
@@ -84,7 +83,7 @@ app.controller('PapersController', function($scope) {
         },
         {
             // url: "http://sbesc.lisha.ufsc.br/sbesc2015/proceedings/146842.pdf",
-            url: "assets/files/146842_Metodologia_para_Deteccao_de_Saida_de_Faixa_Utilizando_EWMA_Aplicado_a_Sensores_Inerciais_no_Volante.pdf",
+            url: "assets/files/papers/Metodologia_para_Deteccao_de_Saida_de_Faixa_Utilizando_EWMA_Aplicado_a_Sensores_Inerciais_no_Volante.pdf",
             title: "Metodologia para Detecção de Saída de Faixa Utilizando EWMA Aplicado a Sensores Inerciais no Volante",
             authors: "Arthur N. Assuncao, Fabio O. de Paula, Ricardo A. R. Oliveira",
             confjournal: "V Brazilian Symposium on Computing Systems Engineering (SBESC)",
@@ -182,7 +181,7 @@ app.controller('ProjectsController', function($scope) {
                 Em 2012, o site não tinha o código fonte aberto, utilizava PHP e Bootstrap 2.x.</p>
                 Em 2013, o site teve seu código fonte aberto e hospedado no Github.</p>
                 Em 2014, o site teve o Bootstrap atualizado para a versão 3.x.</p>
-                Em 2015, o site passou por várias reformulações, primeiro foi a interface material design com o MaterializeCSS, em seguida foi removido o PHP e deixado apenas estático. Uma versão em Material Design Lite foi iniciada, porém descontinuada devido a falta de recursos desse framework da Google. Nesta versão mais recente de 2015, o site é feito utilizando AngularJS e AngularJS Material, que oferecem muitos recursos com grande produtividade, além de um bom desempenho, mesmo neste último quesito sendo inferior ao ReactJS ou AngularJS 2.0.</p>
+                Em 2015, o site passou por várias reformulações, primeiro foi a interface material design com o MaterializeCSS, em seguida foi removido o PHP e deixado apenas estático. Uma versão em Material Design Lite foi iniciada, porém descontinuada devido a falta de recursos desse framework da Google. Nesta versão mais recente de 2015, o site é feito utilizando AngularJS e AngularJS Material, que oferecem muitos recursos com grande produtividade, além de um bom desempenho, mesmo neste último quesito sendo inferior ao ReactJS e AngularJS 2.0.</p>
                 Além de todas estas mudanças, em 2015, comecei a utilizar o SASS para melhorar a códificação CSS, Jade pra modularizar os HTML e, o mais interessante de todos, o Grunt como automatizador. O ganho em desempenho e produtividade que um automatizador gera é gigantesco.
                 Em 2016, estou analisando, a principio, a possibilidade de substituir as directivas do AngularJS por componentes ReactJS, o que aumentaria muito o desempenho do site.</p>",
         },

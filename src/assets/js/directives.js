@@ -18,17 +18,17 @@ app.directive('skill', function() {
     directive.template = '
       <div class="skill">
         <md-tooltip md-direction="bottom">
-          <span class="capitalize">{{ name }}</span>: {{ msg }}
+          <span class="capitalize">{{ ::name }}</span>: {{ ::msg }}
         </md-tooltip>
 
         <span class="skill-body">
-            <span class="skill-name">{{ name }} 
+            <span class="skill-name">{{ ::name }} 
                 <i class="tiny microtiny skill-name-icon material-icons">info_outline</i>
             </span>
             <span class="skill-grade" hide show-gt-xs>{{ generate_level(value) }}</span>
             <br/>
             <span class="skill-bar">
-                <span data-skillbar="{{ value }}" class="skill-value"></span>
+                <span data-skillbar="{{ ::value }}" class="skill-value"></span>
             </span>
         </span>
     </div>
