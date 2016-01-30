@@ -167,8 +167,8 @@ app.controller('ProjectsController', function($scope) {
             imgs: "
                 assets/img/portfolio/arthurassuncao-com/0.jpg, 
                 assets/img/portfolio/arthurassuncao-com/1.jpg,
-                assets/img/portfolio/arthurassuncao-com/2.jpg,
                 assets/img/portfolio/arthurassuncao-com/3.jpg,
+                assets/img/portfolio/arthurassuncao-com/2.jpg,
                 assets/img/portfolio/arthurassuncao-com/4.jpg",
             url: "http://ArthurAssuncao.com/",
             urlname: "Visite ArthurAssuncao.com",

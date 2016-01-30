@@ -44,8 +44,8 @@ Meu site pessoal com o uso do que há de mais recente em tecnologias web.
 
 <p align="center"><img src="https://github.com/ArthurAssuncao/arthurassuncao.github.io/blob/master/src/assets/img/portfolio/arthurassuncao-com/1.jpg"></p>
 
-<p align="center"><img src="https://github.com/ArthurAssuncao/arthurassuncao.github.io/blob/master/src/assets/img/portfolio/arthurassuncao-com/2.jpg"></p>
-
 <p align="center"><img src="https://github.com/ArthurAssuncao/arthurassuncao.github.io/blob/master/src/assets/img/portfolio/arthurassuncao-com/3.jpg"></p>
+
+<p align="center"><img src="https://github.com/ArthurAssuncao/arthurassuncao.github.io/blob/master/src/assets/img/portfolio/arthurassuncao-com/2.jpg"></p>
 
 <p align="center"><img src="https://github.com/ArthurAssuncao/arthurassuncao.github.io/blob/master/src/assets/img/portfolio/arthurassuncao-com/4.jpg"></p>

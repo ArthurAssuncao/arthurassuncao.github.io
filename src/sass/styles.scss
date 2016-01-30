@@ -889,22 +889,38 @@ md-input-container.md-default-theme .md-input, md-input-container .md-input {
 }
 
 a:hover {
-    .fa-facebook-square {
+    .fa-facebook-square, .fa-facebook-text {
         color: #3b5998 !important;
     }
-    .fa-github-square {
+    .fa-github-square, .fa-github-text {
         color: #333 !important;
     }
-    .fa-linkedin-square {
+    .fa-linkedin-square, .fa-linkedin-text {
         color: #007bb5 !important;
     }
-    .fa-google-plus-square {
+    .fa-google-plus-square, .fa-google-plus-text {
         color: #dd4b39 !important;
     }
     .fa-lattes-square {
         color: #637fbd;
         background: url(../img/icon_lattes_hover.png) no-repeat;
     }
+    .fa-lattes-text{
+        color: #637fbd;
+    }
+}
+
+.fa-facebook-square, .fa-facebook-text {
+    transition: color .3s ease-in-out;
+}
+.fa-github-square, .fa-github-text {
+    transition: color .3s ease-in-out;
+}
+.fa-linkedin-square, .fa-linkedin-text {
+    transition: color .3s ease-in-out;
+}
+.fa-google-plus-square, .fa-google-plus-text {
+    transition: color .3s ease-in-out;
 }
 
 .fa-lattes-square-preload {
@@ -917,7 +933,11 @@ a:hover {
     height: 27px;
     margin-top: 2px;
     // vertical-align: text-bottom;
-    transition: background .1s ease-in-out;
+    transition: background .3s ease-in-out;
+}
+
+.fa-lattes-text{
+    transition: color .3s ease-in-out;
 }
 
 .esconde {
@@ -953,6 +973,9 @@ a:hover {
 #navbar{
     a.active, a:active, a:hover{
         background-color: $my-bgcolor-menu-active;
+    }
+    a{
+        transition: background-color .3s ease-out;
     }
     ul{
         display: flex;
