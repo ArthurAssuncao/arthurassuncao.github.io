@@ -36,11 +36,12 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
   <link href="http://fonts.googleapis.com/css?family=Roboto:500,400italic,100,700italic,300,700,500italic,100italic,300italic,400" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="assets/css/plugins-tidy.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.2/angular-material.min.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.4/angular-material.min.css"/>
   <link rel="stylesheet" href="assets/css/styles.min.css">
   <!-- Chrome app -->
   <link rel="manifest" href="assets/img/logo/manifest.json?v=1">
-</head><body layout="column" id="top" class="scrollspy ng-cloak"><div id="principal" layout="column" layout-align="center center"><md-toolbar layout="row" id="nav_f">
+</head>
+<body layout="column" id="top" class="scrollspy ng-cloak"><div id="principal" layout="row" layout-align="center" layout-wrap><md-toolbar layout="row" id="nav_f" flex="100">
     <div class="md-toolbar-tools container" layout="row">
       <h1 class="logo"><a href="#" class="brand-logo">Arthur <span hide show-gt-md>Assunção</span></a></h1>
       <div flex></div>
@@ -92,7 +93,8 @@
         Fechar
       </md-button> -->
   </md-content>
-</md-sidenav><main id="conteudo" layout-align="center center">
+</md-sidenav>
+<main id="conteudo" layout-align="center" flex="100">
   <div id="index-banner" class="section no-pad-bot">
     <div class="container">
       <h1 class="main-title text_h center header cd-headline">Desenvolvimento <br /><typer words="[' em AngularJS', ' Web', ' Mobile', ' Front-end']" type-time='150' backspace-time='200' start-delay='1500' highlight-background='#2980b9'></typer></h1>
@@ -128,17 +130,17 @@
         <h2 class="header text_b">Alguns projetos que participei</h2>
         <div layout="row" layout-wrap layout-padding layout-align="center center" ng-controller="ProjectsController">
             <project class="wow-nonmobile fadeInUp" flex-xs="100" flex-sm="50" flex-md="40" flex-lg="30" ng-repeat="project in projects.data"
-              name="{{ project.name }}" 
-              fullname="{{ project.fullname }}" 
-              imgurl="{{ project.imgurl }}" 
-              imgs="{{ project.imgs }}" 
-              url="{{ project.url }}" 
-              urlname="{{ project.urlname }}" 
-              technologies="{{ project.technologies }}" 
-              type="{{ project.type }}" 
-              datestart="{{ project.datestart }}" 
-              dateend="{{ project.dateend }}" 
-              description="{{ project.description }}" 
+              name="{{ project.name }}"
+              fullname="{{ project.fullname }}"
+              imgurl="{{ project.imgurl }}"
+              imgs="{{ project.imgs }}"
+              url="{{ project.url }}"
+              urlname="{{ project.urlname }}"
+              technologies="{{ project.technologies }}"
+              type="{{ project.type }}"
+              datestart="{{ project.datestart }}"
+              dateend="{{ project.dateend }}"
+              description="{{ project.description }}"
             ></project>
       </div>
     </div>
@@ -156,7 +158,7 @@
               <h5 class="cv-section-title">Formação</h5>
               <ul id="lista_formacao" class="list-unstyled" ng-controller="CoursesController">
                 <li class="cv-item" ng-repeat="course in courses.data">
-                  <course 
+                  <course
                     name="{{ course.name }}"
                     institution="{{ course.institution }}"
                     datestart="{{ course.date_start }}"
@@ -170,9 +172,9 @@
               <h5 class="cv-section-title">Premiações</h5>
               <ul id="lista_experiencia" class="list-unstyled" ng-controller="AwardsController">
                 <li ng-repeat="award in awards.data" class="cv-item">
-                  <award name="{{ award.name }}" 
-                    place="{{ award.place }}" 
-                    url="{{ award.url }}" 
+                  <award name="{{ award.name }}"
+                    place="{{ award.place }}"
+                    url="{{ award.url }}"
                     year="{{ award.year }}" >
                   </award>
                 </li>
@@ -183,13 +185,13 @@
               <h5 class="cv-section-title">Produções Científicas</h5>
               <ul id="lista_experiencia" class="list-unstyled" ng-controller="PapersController">
                 <li ng-repeat="paper in papers.data" class="cv-item">
-                  <paper url="{{ paper.url }}" 
-                    title="{{ paper.title }}" 
-                    authors="{{ paper.authors }}" 
-                    confjournal="{{ paper.confjournal }}" 
-                    year="{{ paper.year }}" 
-                    local="{{ paper.local }}" 
-                    qualis="{{ paper.qualis }}" 
+                  <paper url="{{ paper.url }}"
+                    title="{{ paper.title }}"
+                    authors="{{ paper.authors }}"
+                    confjournal="{{ paper.confjournal }}"
+                    year="{{ paper.year }}"
+                    local="{{ paper.local }}"
+                    qualis="{{ paper.qualis }}"
                     authormain="{{ paper.authormain }}">
                   </paper>
                 </li>
@@ -202,9 +204,9 @@
             <div id="cv-habilidades" ng-controller="SkillsController">
               <ul class="list-unstyled skills">
                 <li ng-repeat="skill in skills.data" id="skill_{{ skill.name }}">
-                  <skill 
-                    name="{{ skill.name }}" 
-                    msg="{{ skill.msg }}" 
+                  <skill
+                    name="{{ skill.name }}"
+                    msg="{{ skill.msg }}"
                     value="{{ skill.value }}" >
                   </skill>
                 </li>
@@ -255,20 +257,22 @@
     <div class="parallax"><img data-aload="assets/img/ufop.jpg" alt="parallax image" du-parallax y="background"/>
     </div>
   </div>
-</main><footer id="contact" layout-align="center center" layout-padding class="page-footer default_color scrollspy footer">
+</main>
+<footer id="contact" layout-align="center" layout-padding class="page-footer default_color scrollspy footer" flex="100">
   <div class="container">
-    <div layout="row" layout-wrap layout-margin layout-align="center center">
+    <div layout="row" layout-wrap layout-margin layout-align="center">
       <form id="form-contact" name="form-contact" onsubmit="javascript:return false" flex="100" flex-sm="100" flex-md="70" flex-gt-md="70">
         <div layout="row" layout-wrap layout-align="center center">
           <h5 class="white-text center" flex='100'>Contato</h5>
           <div layout="row" layout-wrap flex='100'>
             <!-- Nome-->
-            <md-input-container flex="100" flex-gt-sm="50" class="md-icon-float">
+            <md-input-container flex="100" flex-gt-sm="45" class="md-icon-float">
               <i class="material-icons prefix icon-large white-text">account_circle</i><label>Nome</label>
               <md-icon class="name">
                 </md-icon>
               <input id="form-name" name="name" type="text" ng-model="contato.name">
             </md-input-container>
+            <span flex></span>
             <!-- Email-->
             <md-input-container flex="100" flex-gt-sm="50" class="md-icon-float">
               <i class="material-icons prefix icon-large white-text">email</i><label>Email</label>
@@ -335,8 +339,6 @@
     </div>
   </div>
 </footer>
-
-
 </div><script type="text/javascript" src="assets/js/third_party/plugins.min.js"></script>
 <script type="text/javascript" src="assets/js/third_party/angular-bundle.min.js"></script>
 <script type="text/javascript" src="assets/js/scripts.min.js"></script>
