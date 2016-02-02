@@ -1,4 +1,4 @@
-<main id="conteudo" layout-align="center center">
+<main id="conteudo" layout-align="center" flex="100">
   <div id="index-banner" class="section no-pad-bot">
     <div class="container">
       <h1 class="main-title text_h center header cd-headline">Desenvolvimento <br /><typer words="[' em AngularJS', ' Web', ' Mobile', ' Front-end']" type-time='150' backspace-time='200' start-delay='1500' highlight-background='#2980b9'></typer></h1>
@@ -34,17 +34,17 @@
         <h2 class="header text_b">Alguns projetos que participei</h2>
         <div layout="row" layout-wrap layout-padding layout-align="center center" ng-controller="ProjectsController">
             <project class="wow-nonmobile fadeInUp" flex-xs="100" flex-sm="50" flex-md="40" flex-lg="30" ng-repeat="project in projects.data"
-              name="{{ project.name }}" 
-              fullname="{{ project.fullname }}" 
-              imgurl="{{ project.imgurl }}" 
-              imgs="{{ project.imgs }}" 
-              url="{{ project.url }}" 
-              urlname="{{ project.urlname }}" 
-              technologies="{{ project.technologies }}" 
-              type="{{ project.type }}" 
-              datestart="{{ project.datestart }}" 
-              dateend="{{ project.dateend }}" 
-              description="{{ project.description }}" 
+              name="{{ project.name }}"
+              fullname="{{ project.fullname }}"
+              imgurl="{{ project.imgurl }}"
+              imgs="{{ project.imgs }}"
+              url="{{ project.url }}"
+              urlname="{{ project.urlname }}"
+              technologies="{{ project.technologies }}"
+              type="{{ project.type }}"
+              datestart="{{ project.datestart }}"
+              dateend="{{ project.dateend }}"
+              description="{{ project.description }}"
             ></project>
       </div>
     </div>
@@ -62,7 +62,7 @@
               <h5 class="cv-section-title">Formação</h5>
               <ul id="lista_formacao" class="list-unstyled" ng-controller="CoursesController">
                 <li class="cv-item" ng-repeat="course in courses.data">
-                  <course 
+                  <course
                     name="{{ course.name }}"
                     institution="{{ course.institution }}"
                     datestart="{{ course.date_start }}"
@@ -76,9 +76,9 @@
               <h5 class="cv-section-title">Premiações</h5>
               <ul id="lista_experiencia" class="list-unstyled" ng-controller="AwardsController">
                 <li ng-repeat="award in awards.data" class="cv-item">
-                  <award name="{{ award.name }}" 
-                    place="{{ award.place }}" 
-                    url="{{ award.url }}" 
+                  <award name="{{ award.name }}"
+                    place="{{ award.place }}"
+                    url="{{ award.url }}"
                     year="{{ award.year }}" >
                   </award>
                 </li>
@@ -89,13 +89,13 @@
               <h5 class="cv-section-title">Produções Científicas</h5>
               <ul id="lista_experiencia" class="list-unstyled" ng-controller="PapersController">
                 <li ng-repeat="paper in papers.data" class="cv-item">
-                  <paper url="{{ paper.url }}" 
-                    title="{{ paper.title }}" 
-                    authors="{{ paper.authors }}" 
-                    confjournal="{{ paper.confjournal }}" 
-                    year="{{ paper.year }}" 
-                    local="{{ paper.local }}" 
-                    qualis="{{ paper.qualis }}" 
+                  <paper url="{{ paper.url }}"
+                    title="{{ paper.title }}"
+                    authors="{{ paper.authors }}"
+                    confjournal="{{ paper.confjournal }}"
+                    year="{{ paper.year }}"
+                    local="{{ paper.local }}"
+                    qualis="{{ paper.qualis }}"
                     authormain="{{ paper.authormain }}">
                   </paper>
                 </li>
@@ -108,9 +108,9 @@
             <div id="cv-habilidades" ng-controller="SkillsController">
               <ul class="list-unstyled skills">
                 <li ng-repeat="skill in skills.data" id="skill_{{ skill.name }}">
-                  <skill 
-                    name="{{ skill.name }}" 
-                    msg="{{ skill.msg }}" 
+                  <skill
+                    name="{{ skill.name }}"
+                    msg="{{ skill.msg }}"
                     value="{{ skill.value }}" >
                   </skill>
                 </li>

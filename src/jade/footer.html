@@ -1,17 +1,18 @@
-<footer id="contact" layout-align="center center" layout-padding class="page-footer default_color scrollspy footer">
+<footer id="contact" layout-align="center" layout-padding class="page-footer default_color scrollspy footer" flex="100">
   <div class="container">
-    <div layout="row" layout-wrap layout-margin layout-align="center center">
+    <div layout="row" layout-wrap layout-margin layout-align="center">
       <form id="form-contact" name="form-contact" onsubmit="javascript:return false" flex="100" flex-sm="100" flex-md="70" flex-gt-md="70">
         <div layout="row" layout-wrap layout-align="center center">
           <h5 class="white-text center" flex='100'>Contato</h5>
           <div layout="row" layout-wrap flex='100'>
             <!-- Nome-->
-            <md-input-container flex="100" flex-gt-sm="50" class="md-icon-float">
+            <md-input-container flex="100" flex-gt-sm="45" class="md-icon-float">
               <i class="material-icons prefix icon-large white-text">account_circle</i><label>Nome</label>
               <md-icon class="name">
                 </md-icon>
               <input id="form-name" name="name" type="text" ng-model="contato.name">
             </md-input-container>
+            <span flex></span>
             <!-- Email-->
             <md-input-container flex="100" flex-gt-sm="50" class="md-icon-float">
               <i class="material-icons prefix icon-large white-text">email</i><label>Email</label>
@@ -78,5 +79,3 @@
     </div>
   </div>
 </footer>
-
-
