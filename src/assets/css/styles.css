@@ -1014,6 +1014,9 @@ a:hover .fa-linkedin-square, a:hover .fa-linkedin-text {
 a:hover .fa-google-plus-square, a:hover .fa-google-plus-text {
   color: #dd4b39 !important;
 }
+a:hover .fa-angellist, a:hover .fa-angellist-text {
+  color: #000 !important;
+}
 a:hover .fa-lattes-square {
   color: #637fbd;
   background: url(../img/icon_lattes_hover.png) no-repeat;
@@ -1033,6 +1036,11 @@ a:hover .fa-lattes-text {
 }
 
 .fa-linkedin-square, .fa-linkedin-text {
+  -webkit-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
+}
+
+.fa-angellist, .fa-angellist-text {
   -webkit-transition: color .3s ease-in-out;
   transition: color .3s ease-in-out;
 }
