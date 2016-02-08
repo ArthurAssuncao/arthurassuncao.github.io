@@ -36,7 +36,7 @@ module.exports = function(grunt) {
       dist_assets_fonts: '<%= project.dist_assets %>/fonts',
       dist_templates: '<%= project.dist %>/templates',
       dist_assets_js_third_party: '<%= project.dist_assets_js %>/third_party',
-      
+
     },
 
     tag: {
@@ -96,13 +96,13 @@ module.exports = function(grunt) {
         processors: [
           require('autoprefixer')({
             // browsers: [
-            //   '> 5%', 
-            //   '> 10% in BR', 
-            //   'last 10 Chrome versions', 
-            //   'last 7 Firefox versions', 
-            //   'last 7 Opera versions', 
-            //   'ie >= 10', 
-            //   'Edge > 0', 
+            //   '> 5%',
+            //   '> 10% in BR',
+            //   'last 10 Chrome versions',
+            //   'last 7 Firefox versions',
+            //   'last 7 Opera versions',
+            //   'ie >= 10',
+            //   'Edge > 0',
             //   'ie_mob >= 10',
             //   'Safari >= 5',
             //   ]
@@ -127,7 +127,7 @@ module.exports = function(grunt) {
         files: [
           {
             src: [
-              '<%= project.src %>/index.html', 
+              '<%= project.src %>/index.html',
               '<%= project.src_templates %>/award.tmpl.html',
               '<%= project.src_templates %>/course.tmpl.html',
               '<%= project.src_templates %>/paper.tmpl.html',
@@ -148,7 +148,7 @@ module.exports = function(grunt) {
         files: [
           {
             src: [
-              '<%= project.src %>/index.html', 
+              '<%= project.src %>/index.html',
               '<%= project.src_templates %>/award.tmpl.html',
               '<%= project.src_templates %>/course.tmpl.html',
               '<%= project.src_templates %>/paper.tmpl.html',
@@ -179,7 +179,7 @@ module.exports = function(grunt) {
       }
     },
 
-    
+
     // Secao JS
 
     // modernizer
@@ -194,7 +194,6 @@ module.exports = function(grunt) {
       options: {
         banner: '<%= tag.banner %>',
         compress: true,
-        beautify: false,
         mangle: false,
         preserveComments: 'some',
         sourceMap: true,
@@ -203,7 +202,7 @@ module.exports = function(grunt) {
       dev_third_party_angular: {
         files: {
            '<%= project.src_assets_js_third_party %>/angular-bundle.min.js': [
-             '<%= project.src_bower_components %>/angular/angular.min.js', 
+             '<%= project.src_bower_components %>/angular/angular.min.js',
              '<%= project.src_bower_components %>/angular-material/angular-material.min.js',
              '<%= project.src_bower_components %>/angular-animate/angular-animate.min.js',
              '<%= project.src_bower_components %>/angular-aria/angular-aria.min.js',
@@ -214,11 +213,20 @@ module.exports = function(grunt) {
         }
       },
       dev_third_party: {
+        options: {
+          banner: '<%= tag.banner %>',
+          compress: true,
+          mangle: true,
+          except: ['jQuery', 'Backbone'],
+          preserveComments: 'some',
+          sourceMap: true,
+          report: 'gzip'
+        },
         files: {
            '<%= project.src_assets_js_third_party %>/plugins.min.js': [
-             '<%= project.src_bower_components %>/jquery/dist/jquery.min.js', 
-             '<%= project.src_bower_components %>/wow/dist/wow.min.js', 
-             '<%= project.src_bower_components %>/aload/dist/aload.min.js', 
+             '<%= project.src_bower_components %>/jquery/dist/jquery.min.js',
+             '<%= project.src_bower_components %>/wow/dist/wow.min.js',
+             '<%= project.src_bower_components %>/aload/dist/aload.min.js',
            ],
         }
       },
@@ -265,15 +273,15 @@ module.exports = function(grunt) {
         // @import "../bower_components/material-icons/css/material-icons.min.css";
         files: [
           { //animate.css
-            expand: false, 
-            src: ["<%= project.src_bower_components %>/animate.css/animate.min.css"], 
-            dest: '<%= project.src_sass %>/_animatecss.scss', 
+            expand: false,
+            src: ["<%= project.src_bower_components %>/animate.css/animate.min.css"],
+            dest: '<%= project.src_sass %>/_animatecss.scss',
             filter: 'isFile'
           },
           { //material-icons.css
-            expand: false, 
-            src: ["<%= project.src_bower_components %>/material-icons/css/material-icons.min.css"], 
-            dest: '<%= project.src_sass %>/_material-icons.scss', 
+            expand: false,
+            src: ["<%= project.src_bower_components %>/material-icons/css/material-icons.min.css"],
+            dest: '<%= project.src_sass %>/_material-icons.scss',
             filter: 'isFile'
           },
         ]
@@ -281,9 +289,9 @@ module.exports = function(grunt) {
       dist_css: {
         files: [
           { //css
-            expand: true, 
-            src: ['<%= project.src_assets_css %>/*.min.css'], 
-            dest: '<%= project.dist_assets_css %>/', 
+            expand: true,
+            src: ['<%= project.src_assets_css %>/*.min.css'],
+            dest: '<%= project.dist_assets_css %>/',
             filter: 'isFile',
             flatten: true
           },
@@ -292,16 +300,16 @@ module.exports = function(grunt) {
       dist_html: {
         files: [
           { //html
-            expand: true, 
-            src: ['<%= project.src %>/index.html'], 
-            dest: '<%= project.dist %>/', 
+            expand: true,
+            src: ['<%= project.src %>/index.html'],
+            dest: '<%= project.dist %>/',
             filter: 'isFile',
             flatten: true
           },
           { //html templates
-            expand: true, 
-            src: ['<%= project.src_templates %>/*.html'], 
-            dest: '<%= project.dist_templates %>/', 
+            expand: true,
+            src: ['<%= project.src_templates %>/*.html'],
+            dest: '<%= project.dist_templates %>/',
             filter: 'isFile',
             flatten: true
           },
@@ -310,10 +318,10 @@ module.exports = function(grunt) {
       // dist_img: {
       //   files: [
       //     { //img
-      //       expand: true, 
+      //       expand: true,
       //       cwd: '<%= project.src_assets_img %>/',
       //       src: '**',
-      //       dest: '<%= project.dist_assets_img %>/', 
+      //       dest: '<%= project.dist_assets_img %>/',
       //       filter: 'isFile',
       //       flatten: false
       //     }
@@ -322,10 +330,10 @@ module.exports = function(grunt) {
       dist_files: {
         files: [
           { //files
-            expand: true, 
+            expand: true,
             cwd: '<%= project.src_assets_files %>/',
             src: '**',
-            dest: '<%= project.dist_assets_files %>/', 
+            dest: '<%= project.dist_assets_files %>/',
             filter: 'isFile',
             flatten: false
           }
@@ -334,25 +342,25 @@ module.exports = function(grunt) {
       dist_js: {
         files: [
           { //js
-            expand: true, 
-            src: ['<%= project.src_assets_js %>/scripts.min.js', '<%= project.src_assets_js %>/scripts.min.js.map'], 
-            dest: '<%= project.dist_assets_js %>/', 
+            expand: true,
+            src: ['<%= project.src_assets_js %>/scripts.min.js', '<%= project.src_assets_js %>/scripts.min.js.map'],
+            dest: '<%= project.dist_assets_js %>/',
             filter: 'isFile',
             flatten: true
           },
           { //js angular
-            expand: true, 
+            expand: true,
             src: ['<%= project.src_assets_js_third_party %>/angular-bundle.min.js',
-              '<%= project.src_assets_js_third_party %>/angular-bundle.min.js.map'], 
-            dest: '<%= project.dist_assets_js_third_party %>/', 
+              '<%= project.src_assets_js_third_party %>/angular-bundle.min.js.map'],
+            dest: '<%= project.dist_assets_js_third_party %>/',
             filter: 'isFile',
             flatten: true
           },
           { //js plugins
-            expand: true, 
+            expand: true,
             src: ['<%= project.src_assets_js_third_party %>/plugins.min.js',
-              '<%= project.src_assets_js_third_party %>/plugins.min.js.map'], 
-            dest: '<%= project.dist_assets_js_third_party %>/', 
+              '<%= project.src_assets_js_third_party %>/plugins.min.js.map'],
+            dest: '<%= project.dist_assets_js_third_party %>/',
             filter: 'isFile',
             flatten: true
           }
@@ -361,9 +369,9 @@ module.exports = function(grunt) {
       fonts:{
         files: [
           { //fonts
-            expand: true, 
-            src: ['<%= project.src_assets_fonts %>/*.*'], 
-            dest: '<%= project.dist_assets_fonts %>/', 
+            expand: true,
+            src: ['<%= project.src_assets_fonts %>/*.*'],
+            dest: '<%= project.dist_assets_fonts %>/',
             filter: 'isFile',
             flatten: true
           },
@@ -372,14 +380,14 @@ module.exports = function(grunt) {
       others:{
         files: [
           { //ourtros
-            expand: true, 
+            expand: true,
             src: [
-              '<%= project.src %>/apple-touch-icon.png', 
+              '<%= project.src %>/apple-touch-icon.png',
               '<%= project.src %>/favicon.ico',
               '<%= project.src %>/humans.txt',
               '<%= project.src %>/robots.txt'
-            ], 
-            dest: '<%= project.dist %>/', 
+            ],
+            dest: '<%= project.dist %>/',
             filter: 'isFile',
             flatten: true
           },
@@ -446,10 +454,10 @@ module.exports = function(grunt) {
 
     // Secao do clean
     clean: [
-      "dist", 
+      "dist",
       "assets",
       "templates",
-      "apple-touch-icon.png", 
+      "apple-touch-icon.png",
       "favicon.ico",
       "humans.txt",
       "index.html",
@@ -532,12 +540,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-processhtml');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
-  
+
   // grunt.loadNpmTasks('grunt-nodemon');
 
   // Tasks
   grunt.registerTask('dev', ['newer:copy:dev_css_not_scss', 'newer:sass', 'newer:jade:dev', 'newer:uglify' ,'concurrent:tasks']);
   grunt.registerTask('default', []);
   grunt.registerTask('clear', ['clean']);
-  grunt.registerTask('dist', ['mkdir', 'copy:dev_css_not_scss', 'sass', 'jade:dist', 'postcss', 'uncss', 'cssmin', 'newer:uglify:dev_third_party', 'newer:uglify:dev_third_party_angular', 'newer:uglify:dev', 'modernizr:dist', 'newer:copy', 'imagemin:dist', 'processhtml', 'http-server:dist']);
+  grunt.registerTask('dist', ['mkdir', 'copy:dev_css_not_scss', 'sass', 'jade:dist', 'postcss', 'uncss', 'cssmin', 'uglify:dev_third_party', 'uglify:dev_third_party_angular', 'uglify:dev', 'modernizr:dist', 'copy', 'imagemin:dist', 'processhtml', 'http-server:dist']);
 };
