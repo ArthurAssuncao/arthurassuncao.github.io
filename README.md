@@ -4,7 +4,7 @@
 Meu site pessoal com o uso do que há de mais recente em tecnologias web.
 
 ###Características
-* ***Single-page applications (SPA)*** com layout Material Design do Google. 
+* ***Single-page applications (SPA)*** com layout Material Design do Google.
 * Site com ***responsive layout***.
 
 ###Tecnologias Utilizadas
@@ -35,6 +35,35 @@ Meu site pessoal com o uso do que há de mais recente em tecnologias web.
 * mkdir
 * clean
 * newer
+
+###Instalação
+
+Instale o grunt e grunt-cli.
+```
+# npm install -g grunt
+# npm install -g grunt-cli
+```
+
+Instale as dependências para o npm.
+```
+$ npm install
+```
+
+Instale as dependências para o bower.
+```
+$ bower install
+```
+
+Gere a versão de desenvolvimento.
+```
+$ grunt dev
+```
+
+Limpe a versão dist e, em seguida, gere uma nova versão dist.
+```
+$ grunt clear
+$ grunt dist
+```
 
 ###Screenshots
 

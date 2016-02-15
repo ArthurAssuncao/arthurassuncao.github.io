@@ -8,7 +8,7 @@ function fill_skills(){
 }
 
 function hide_skills_itens(){
-    $("#cv-habilidades ul > li:gt(11)").hide(); 
+    $("#cv-habilidades ul > li:gt(11)").hide();
 }
 
 function show_skills_itens(){
@@ -17,7 +17,7 @@ function show_skills_itens(){
 }
 
 function hide_prod_cientifica_itens(){
-    $("#cv-producao ul > li:gt(0)").hide(); 
+    $("#cv-producao ul > li:gt(0)").hide();
 }
 
 function show_prod_cientifica_itens(){
@@ -113,7 +113,7 @@ function add_contact_form_click() {
     $('#form-submit').click(function(e){
         e.preventDefault();
         $.ajax({
-            url: "//formspree.io/arthur@arthurassuncao.com", 
+            url: "//formspree.io/arthur@arthurassuncao.com",
             method: "POST",
             data: {
                 message: $('#form-message').val(),
@@ -131,7 +131,7 @@ function add_contact_form_click() {
 }
 
 function remove_form_send_by_enter(){
-    $(document).on("keypress", "form", function(event) { 
+    $(document).on("keypress", "form", function(event) {
         return event.keyCode != 13;
     });
 }
