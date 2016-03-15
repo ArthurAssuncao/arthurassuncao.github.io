@@ -23,6 +23,7 @@ module.exports = function(grunt) {
       src_assets_files: '<%= project.src_assets %>/files',
       src_assets_fonts: '<%= project.src_assets %>/fonts',
       src_templates: '<%= project.src %>/templates',
+      src_ensino: '<%= project.src %>/ensino',
       src_assets_js_third_party: '<%= project.src_assets_js %>/third_party',
       src_jade: '<%= project.src %>/jade',
 
@@ -35,6 +36,7 @@ module.exports = function(grunt) {
       dist_assets_files: '<%= project.dist_assets %>/files',
       dist_assets_fonts: '<%= project.dist_assets %>/fonts',
       dist_templates: '<%= project.dist %>/templates',
+      dist_ensino: '<%= project.dist %>/ensino',
       dist_assets_js_third_party: '<%= project.dist_assets_js %>/third_party',
 
     },
@@ -122,25 +124,15 @@ module.exports = function(grunt) {
             ignore: ['.ng-move', '.ng-enter', '.ng-leave', '.created_by_jQuery', '.ng-cloak', '.x-ng-cloak',
               '.animated'],
             stylesheets: ["plugins.css"],
-            csspath: "../<%= project.src_assets_css %>",
+            csspath: "../<%= project.src_assets_css %>/",
+            htmlroot: '<%= project.app %>/'
         },
         files: [
           {
             src: [
               '<%= project.src %>/index.html',
-              '<%= project.src_templates %>/award.tmpl.html',
-              '<%= project.src_templates %>/course.tmpl.html',
-              '<%= project.src_templates %>/paper.tmpl.html',
-              '<%= project.src_templates %>/project-dialog.tmpl.html',
-              '<%= project.src_templates %>/project.tmpl.html',
-              '<%= project.src_templates %>/skill.tmpl.html',
-              {
-                expand: true,        // Enable dynamic expansion.
-                cwd: '<%= project.src_jade %>/ensino/',  // Src matches are relative to this path.
-                src: ['*.html'],     // Actual pattern(s) to match.
-                dest: '<%= project.src_assets_css %>/plugins-tidy.css',  // Destination path prefix.
-                ext: '.css',         // Dest filepaths will have this extension.
-            }
+              '<%= project.src_templates %>/*.html',
+              '<%= project.src %>/ensino/**/*.html'
             ],
             dest: '<%= project.src_assets_css %>/plugins-tidy.css'
           }
@@ -150,18 +142,15 @@ module.exports = function(grunt) {
         options: {
             ignore: ['.ng-move', '.ng-enter', '.ng-leave', '.created_by_jQuery', '.ng-cloak', '.x-ng-cloak'],
             stylesheets: ["styles.css"],
-            csspath: "../<%= project.src_assets_css %>",
+            csspath: "../<%= project.src_assets_css %>/",
+            htmlroot: '<%= project.app %>/'
         },
         files: [
           {
             src: [
               '<%= project.src %>/index.html',
-              '<%= project.src_templates %>/award.tmpl.html',
-              '<%= project.src_templates %>/course.tmpl.html',
-              '<%= project.src_templates %>/paper.tmpl.html',
-              '<%= project.src_templates %>/project-dialog.tmpl.html',
-              '<%= project.src_templates %>/project.tmpl.html',
-              '<%= project.src_templates %>/skill.tmpl.html'
+              '<%= project.src_templates %>/*.html',
+              '<%= project.src %>/ensino/**/*.html'
             ],
             dest: '<%= project.src_assets_css %>/styles-tidy.css'
           }
@@ -191,8 +180,8 @@ module.exports = function(grunt) {
 
     // modernizer
     modernizr: {
-      dist: {
-        "dest" : "<%= project.dist_assets_js %>/modernizr-custom.min.js",
+      dev: {
+        "dest" : "<%= project.src_assets_js %>/modernizr-custom.min.js",
       }
     },
 
@@ -232,6 +221,7 @@ module.exports = function(grunt) {
         files: {
            '<%= project.src_assets_js_third_party %>/plugins.min.js': [
              '<%= project.src_bower_components %>/jquery/dist/jquery.min.js',
+             '<%= project.src_assets_js %>/modernizr-custom.min.js',
              '<%= project.src_bower_components %>/wow/dist/wow.min.js',
              '<%= project.src_bower_components %>/aload/dist/aload.min.js',
            ],
@@ -308,17 +298,27 @@ module.exports = function(grunt) {
         files: [
           { //html
             expand: true,
-            src: ['<%= project.src %>/index.html'],
+            cwd: '<%= project.src %>',
+            src: ['index.html'],
             dest: '<%= project.dist %>/',
             filter: 'isFile',
-            flatten: true
+            flatten: false
           },
           { //html templates
             expand: true,
-            src: ['<%= project.src_templates %>/*.html'],
+            cwd: '<%= project.src_templates %>',
+            src: ['*.html'],
             dest: '<%= project.dist_templates %>/',
             filter: 'isFile',
-            flatten: true
+            flatten: false
+          },
+          { //html ensino
+            expand: true,
+            cwd: '<%= project.src_ensino %>',
+            src: ['**/*.html'],
+            dest: '<%= project.dist_ensino %>/',
+            filter: 'isFile',
+            flatten: false
           },
         ],
       },
@@ -434,7 +434,7 @@ module.exports = function(grunt) {
           {
               cwd: "<%= project.src_jade %>/ensino/",
               src: "**/*.jade",
-              dest: "<%= project.src %>/ensino/",
+              dest: "<%= project.src_ensino %>/",
               expand: true,
               ext: ".html"
           }
@@ -451,9 +451,9 @@ module.exports = function(grunt) {
         files: [
           {"<%= project.src %>/index.html": ["<%= project.src_jade %>/index.jade"]},
           {
-              cwd: "<%= project.src %>/ensino/",
+              cwd: "<%= project.src_jade %>/ensino/",
               src: "**/*.jade",
-              dest: "<%= project.src %>/ensino/",
+              dest: "<%= project.src_ensino %>/",
               expand: true,
               ext: ".html"
           }
@@ -468,12 +468,42 @@ module.exports = function(grunt) {
         data: {
           message: 'Versao de producao!',
           strip: true,
-        }
+        },
+        process: true,
       },
       dist: {
-        files: {
-          '<%= project.dist %>/index.html': ['<%= project.src %>/index.html']
-        }
+        files: [
+          {
+            expand: true,
+            cwd: '<%= project.src %>/',
+            src: [
+              'index.html',
+            ],
+            dest: '<%= project.dist %>/',
+            ext: '.html',
+            flatten: false,
+          },
+          {
+            expand: true,
+            cwd: '<%= project.src_templates %>/',
+            src: [
+              '*.html',
+            ],
+            dest: '<%= project.dist_templates %>/',
+            ext: '.html',
+            flatten: false,
+          },
+          {
+            expand: true,
+            cwd: '<%= project.src_ensino %>/',
+            src: [
+              '**/*.html',
+            ],
+            dest: '<%= project.dist_ensino %>/',
+            ext: '.html',
+            flatten: false,
+          },
+        ],
       }
     },
 
@@ -573,8 +603,8 @@ module.exports = function(grunt) {
   // grunt.loadNpmTasks('grunt-nodemon');
 
   // Tasks
-  grunt.registerTask('dev', ['newer:copy:dev_css_not_scss', 'newer:sass', 'newer:jade:dev', 'newer:uglify' ,'concurrent:tasks']);
+  grunt.registerTask('dev', ['newer:copy:dev_css_not_scss', 'newer:sass', 'newer:jade:dev', 'newer:modernizr', 'newer:uglify' ,'concurrent:tasks']);
   grunt.registerTask('default', []);
   grunt.registerTask('clear', ['clean']);
-  grunt.registerTask('dist', ['mkdir', 'copy:dev_css_not_scss', 'sass', 'jade:dist', 'postcss', 'uncss', 'cssmin', 'uglify:dev_third_party', 'uglify:dev_third_party_angular', 'uglify:dev', 'modernizr:dist', 'copy', 'imagemin:dist', 'processhtml', 'http-server:dist']);
+  grunt.registerTask('dist', ['mkdir', 'copy:dev_css_not_scss', 'sass', 'jade:dist', 'postcss', 'uncss', 'cssmin', 'modernizr', 'uglify:dev_third_party', 'uglify:dev_third_party_angular', 'uglify:dev', 'copy', 'imagemin:dist', 'processhtml', 'http-server:dist']);
 };
