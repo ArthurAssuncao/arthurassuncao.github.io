@@ -1,0 +1,10 @@
+doctype html
+html(lang="pt-br", prefix="og: http://ogp.me/ns#", ng-app="ArthurAssuncao", ng-controller="AppController")
+    include ../head.html
+
+    body(layout='column').scrollspy.ng-cloak#top
+        #principal(layout='row', layout-align="center", layout-wrap)
+            include ../header.html
+            include ensino.html
+            include ../footer.html
+        include ../scripts.html

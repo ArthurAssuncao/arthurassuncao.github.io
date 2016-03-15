@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="pt-br" prefix="og: http://ogp.me/ns#" ng-app="ArthurAssuncao" ng-controller="AppController"><head>
+<!DOCTYPE html>
+<html lang="pt-br" prefix="og: http://ogp.me/ns#" ng-app="ArthurAssuncao" ng-controller="AppController"><head>
   <title>Arthur Assunção - Desenvolvedor Web</title>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -24,41 +25,46 @@
   <!-- Windows phone-->
   <meta name="application-name" content="ArthurAssuncao.com"/>
   <meta name="msapplication-TileColor" content="#2196F3"/>
-  <meta name="msapplication-square70x70logo" content="assets/img/winphone/tiny.png"/>
-  <meta name="msapplication-square150x150logo" content="assets/img/winphone/square.png"/>
-  <meta name="msapplication-wide310x150logo" content="assets/img/winphone/wide.png"/>
-  <meta name="msapplication-square310x310logo" content="assets/img/winphone/large.jpg"/>
+  <meta name="msapplication-square70x70logo" content="http://arthurassuncao.com/assets/img/winphone/tiny.png"/>
+  <meta name="msapplication-square150x150logo" content="http://arthurassuncao.com/assets/img/winphone/square.png"/>
+  <meta name="msapplication-wide310x150logo" content="http://arthurassuncao.com/assets/img/winphone/wide.png"/>
+  <meta name="msapplication-square310x310logo" content="http://arthurassuncao.com/assets/img/winphone/large.jpg"/>
   <!-- Favicon-->
-  <link rel="shortcut icon" href="favicon.ico"/>
-  <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
-  <link rel="icon" type="image/png" href="apple-touch-icon.png" sizes="16x16"/>
+  <link rel="shortcut icon" href="/favicon.ico"/>
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+  <link rel="icon" type="image/png" href="/apple-touch-icon.png" sizes="16x16"/>
   <!-- CSS-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
   <link href="http://fonts.googleapis.com/css?family=Roboto:500,400italic,100,700italic,300,700,500italic,100italic,300italic,400" rel="stylesheet" type="text/css">
   <!-- build:css assets/css/plugins-tidy.min.css -->
-  <link rel="stylesheet" type="text/css" href="assets/css/plugins.css"/>
+  <link rel="stylesheet" type="text/css" href="/assets/css/plugins.css"/>
   <!-- /build -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.4/angular-material.min.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.6/angular-material.min.css"/>
   <!-- build:css assets/css/styles.min.css -->
-  <link rel="stylesheet" type="text/css" href="assets/css/styles.css"/>
+  <link rel="stylesheet" type="text/css" href="/assets/css/styles.css"/>
   <!-- /build -->
   <!-- Chrome app -->
-  <link rel="manifest" href="assets/img/logo/manifest.json?v=1">
+  <link rel="manifest" href="/assets/img/logo_site/manifest.json?v=1">
 </head>
-<body layout="column" id="top" class="scrollspy ng-cloak"><div id="principal" layout="row" layout-align="center" layout-wrap><md-toolbar layout="row" id="nav_f" flex="100">
+
+  <body layout="column" id="top" class="scrollspy ng-cloak">
+    <div id="principal" layout="row" layout-align="center" layout-wrap><md-toolbar layout="row" id="nav_f" flex="100">
     <div class="md-toolbar-tools container" layout="row">
       <h1 class="logo"><a href="#" class="brand-logo">Arthur <span hide show-gt-md>Assunção</span></a></h1>
       <div flex></div>
       <nav id="navbar" hide show-gt-sm>
         <ul>
-        <li><a href="#mywork" data-hash="#page_mywork" class="navbar-item">
+        <li><a href="/#mywork" data-hash="#page_mywork" class="navbar-item">
           <i class="tiny-force material-icons">work</i> Meu Trabalho
         </a></li>
-        <li><a href="#skills" data-hash="#page_skills" class="navbar-item">
+        <li><a href="/#skills" data-hash="#page_skills" class="navbar-item">
           <i class="tiny-force material-icons">code</i> Habilidades
         </a></li>
         <li><a href="#contact" data-hash="#page_contact" class="navbar-item">
           <i class="tiny-force material-icons">assignment_ind</i> Contato
+        </a></li>
+        <li><a href="/ensino" data-hash="#ensino" class="navbar-item">
+          <i class="tiny-force material-icons">school</i> Ensino
         </a></li>
         </ul>
       </nav>
@@ -69,8 +75,8 @@
 </md-toolbar>
 <div class="menu_left_side" hide-gt-sm>
   <ul>
-    <li data-href="#mywork" class="vertical-text"><i class="tiny-force material-icons">work</i> Meu Trabalho</li>
-    <li data-href="#skills" class="vertical-text"><i class="tiny-force material-icons">code</i> Habilidades</li>
+    <li data-href="/#mywork" class="vertical-text"><i class="tiny-force material-icons">work</i> Meu Trabalho</li>
+    <li data-href="/#skills" class="vertical-text"><i class="tiny-force material-icons">code</i> Habilidades</li>
     <li data-href="#contact" class="vertical-text"><i class="tiny-force material-icons">assignment_ind</i> Contato</li>
   </ul>
 </div>
@@ -82,14 +88,17 @@
   <md-content layout-padding ng-controller="NavRightController">
     <nav id="navbar-right">
         <ul>
-        <li><a href="#mywork" data-hash="#page_mywork" class="navbar-right-item" ng-click="close()">
+        <li><a href="/#mywork" data-hash="#page_mywork" class="navbar-right-item" ng-click="close()">
           <i class="tiny-force material-icons">work</i> Meu Trabalho
         </a></li>
-        <li><a href="#skills" data-hash="#page_skills" class="navbar-right-item" ng-click="close()">
+        <li><a href="/#skills" data-hash="#page_skills" class="navbar-right-item" ng-click="close()">
           <i class="tiny-force material-icons">code</i> Habilidades
         </a></li>
         <li><a href="#contact" data-hash="#page_contact" class="navbar-right-item" ng-click="close()">
           <i class="tiny-force material-icons">assignment_ind</i> Contato
+        </a></li>
+        <li><a href="/ensino" data-hash="#ensino" class="navbar-right-item" ng-click="close()">
+          <i class="tiny-force material-icons">school</i> Ensino
         </a></li>
         </ul>
       </nav>
@@ -338,15 +347,16 @@
           </div>
         </div>
         <div flex="100" class="center-align footer-cv">
-          <p class="no-marg white-text"><a href="assets/files/resume_arthur_assuncao.pdf" target="_blank" class="blue white-text btn-large light"><i class="tiny fa fa-file-pdf-o"></i> Baixar meu <span class="blue-text">Currículo</span></a></p>
+          <p class="no-marg white-text"><a href="/assets/files/resume_arthur_assuncao.pdf" target="_blank" class="blue white-text btn-large light"><i class="tiny fa fa-file-pdf-o"></i> Baixar meu <span class="blue-text">Currículo</span></a></p>
         </div>
       </div>
     </div>
   </div>
 </footer>
-</div><script type="text/javascript" src="assets/js/third_party/plugins.min.js"></script>
-<script type="text/javascript" src="assets/js/third_party/angular-bundle.min.js"></script>
-<script type="text/javascript" src="assets/js/scripts.min.js"></script>
+
+    </div><script type="text/javascript" src="/assets/js/third_party/plugins.min.js"></script>
+<script type="text/javascript" src="/assets/js/third_party/angular-bundle.min.js"></script>
+<script type="text/javascript" src="/assets/js/scripts.min.js"></script>
 
 
 <script type="application/ld+json">
@@ -364,4 +374,7 @@
        "https://github.com/arthurassuncao",
        "https://plus.google.com/+ArthurAssuncao11"
   ]
-</script></body></html>
+</script>
+
+  </body>
+</html>

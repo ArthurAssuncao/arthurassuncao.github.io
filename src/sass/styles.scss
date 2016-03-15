@@ -98,7 +98,7 @@ body {
     color: $my-primary-color;
 }
 
-.text_b {
+.text_b, .text_b2 {
     color: $my-primary-color;
 }
 
@@ -132,7 +132,7 @@ body {
     color: white !important;
 }
 
-.grey-text{
+.grey-text, .gray-text{
     color: gray !important;
 }
 
@@ -435,6 +435,11 @@ footer {
         margin-bottom: 10px;
         margin-top: 5px;
     }
+    .text_b2 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        margin-top: 5px;
+    }
     #social a {
         opacity: 1 !important;
         &:visited {
@@ -514,6 +519,9 @@ footer {
     .text_b {
         font-size: 2.0em;
     }
+    .text_b2 {
+        font-size: 1.8em;
+    }
     #social a {
         opacity: 0.8 !important;
         &:visited {
@@ -544,6 +552,9 @@ footer {
     }
     .text_b {
         font-size: 2.5em;
+    }
+    .text_b {
+        font-size: 2.3em;
     }
     #social a {
         opacity: 0.8 !important;
@@ -906,7 +917,7 @@ a:hover {
     }
     .fa-lattes-square {
         color: #637fbd;
-        background: url(../img/icon_lattes_hover.png) no-repeat;
+        background: url(../img/icones/icon_lattes_hover.png) no-repeat;
     }
     .fa-lattes-text{
         color: #637fbd;
@@ -930,11 +941,11 @@ a:hover {
 }
 
 .fa-lattes-square-preload {
-    background: url(../img/icon_lattes_hover.png) no-repeat -9999px -9999px;
+    background: url(../img/icones/icon_lattes_hover.png) no-repeat -9999px -9999px;
 }
 
 .fa-lattes-square {
-    background: url(../img/icon_lattes.png) no-repeat;
+    background: url(../img/icones/icon_lattes.png) no-repeat;
     width: 27px;
     height: 27px;
     margin-top: 2px;
@@ -1038,7 +1049,17 @@ md-toolbar{
         a{
             padding-top: 22px; //refazer de outra forma depois
             padding-bottom: 21px;
+            &:hover{
+              text-decoration: none;
+              color: #fff;
+            }
         }
+    }
+    .brand-logo{
+      &:hover{
+        text-decoration: none;
+        color: #fff;
+      }
     }
 }
 
@@ -1132,6 +1153,7 @@ a{
     color: $my-primary-color;
     &:hover{
         text-decoration: none;
+        color: darken($my-primary-color, 25%);
     }
 }
 
@@ -1187,4 +1209,75 @@ ul.skills{
 
 body > md-toast{
     position: fixed;
+}
+
+// Ensino
+.ensino{
+  md-toolbar{
+    background-color: #fff;
+    color: #555;
+    padding-top: 15px;
+  }
+  .md-toolbar-tools{
+    font-size: 24px;
+  }
+}
+
+.ensino-mais-info{
+  padding-bottom: 20px;
+  .infos{
+    div{
+      padding-left: 15px;
+    }
+    span{
+      line-height: 2em;
+    }
+  }
+}
+
+md-list-item.ensino-disciplinas-item{
+  padding-left: 35px;
+  &:hover{
+    background-color: lighten($my-primary-color, 41%);
+  }
+}
+
+.ensino-disciplinas-semestre-text{
+  float: right;
+}
+
+.ensino-disciplina{
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.ensino-disciplina-conteudo{
+  margin-top: 30px;
+  &.tabela{
+    border: 1px solid lightgray;
+    border-radius: 10px;
+
+    .ensino-disciplina-conteudo-item{
+      border-top: 1px solid lightgray;
+      border-bottom: 1px solid lightgray;
+
+      &:hover{
+        background-color: lighten($my-primary-color, 41%);
+      }
+      &.item-header{
+        background-color: $my-primary-color;
+        color: white;
+      }
+      &:last-child, &:first-child{
+        border: 0px;
+      }
+      &.prova{
+        background-color: $my-warn-color;
+        color: $my-warn-color-text;
+        &:hover{
+          background-color: darken($my-warn-color, 10%);
+        }
+      }
+    }
+  }
 }

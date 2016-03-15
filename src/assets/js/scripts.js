@@ -62,17 +62,19 @@ function on_scroll_menu(event){
         var currLi = $(this);
         // var currLink = $(this).find(">a:first-child");
         var currLink = $(this);
-        var refElement = $(currLink.attr("href"));
+        var refElement = $(currLink.attr("href").substring(1));
         var menuSide = $('.menu_left_side li[data-href="' + currLink.attr("href") + '"]');
-        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-            $('#navbar a').removeClass("active");
-            $('.menu_left_side ul li').removeClass("active");
-            currLi.addClass("active");
-            menuSide.addClass("active");
-        }
-        else{
-            currLi.removeClass("active");
-            menuSide.removeClass("active");
+        if(typeof refElement != 'undefined' && typeof refElement.position() != 'undefined'){
+          if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+              $('#navbar a').removeClass("active");
+              $('.menu_left_side ul li').removeClass("active");
+              currLi.addClass("active");
+              menuSide.addClass("active");
+          }
+          else{
+              currLi.removeClass("active");
+              menuSide.removeClass("active");
+          }
         }
     });
     var has_item_active = false;

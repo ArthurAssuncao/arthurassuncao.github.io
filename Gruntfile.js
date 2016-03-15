@@ -133,7 +133,14 @@ module.exports = function(grunt) {
               '<%= project.src_templates %>/paper.tmpl.html',
               '<%= project.src_templates %>/project-dialog.tmpl.html',
               '<%= project.src_templates %>/project.tmpl.html',
-              '<%= project.src_templates %>/skill.tmpl.html'
+              '<%= project.src_templates %>/skill.tmpl.html',
+              {
+                expand: true,        // Enable dynamic expansion.
+                cwd: '<%= project.src_jade %>/ensino/',  // Src matches are relative to this path.
+                src: ['*.html'],     // Actual pattern(s) to match.
+                dest: '<%= project.src_assets_css %>/plugins-tidy.css',  // Destination path prefix.
+                ext: '.css',         // Dest filepaths will have this extension.
+            }
             ],
             dest: '<%= project.src_assets_css %>/plugins-tidy.css'
           }
@@ -416,22 +423,41 @@ module.exports = function(grunt) {
       dev: {
         options: {
           data: {
-            debug: true,
+            debug: true
           },
+          basedir: "<%= project.src %>/jade",
           timestamp: "<%= new Date().getTime() %>",
           pretty: true
         },
-        files: {
-          "<%= project.src %>/index.html": ["<%= project.src_jade %>/index.jade"]
-        }
+        files: [
+          {"<%= project.src %>/index.html": ["<%= project.src_jade %>/index.jade"]},
+          {
+              cwd: "<%= project.src_jade %>/ensino/",
+              src: "**/*.jade",
+              dest: "<%= project.src %>/ensino/",
+              expand: true,
+              ext: ".html"
+          }
+        ]
       },
       dist: {
         options: {
+          data: {
+            debug: false
+          },
+          basedir: "<%= project.src %>/jade",
           pretty: false
         },
-        files: {
-          "<%= project.src %>/index.html": ["<%= project.src_jade %>/index.jade"]
-        }
+        files: [
+          {"<%= project.src %>/index.html": ["<%= project.src_jade %>/index.jade"]},
+          {
+              cwd: "<%= project.src %>/ensino/",
+              src: "**/*.jade",
+              dest: "<%= project.src %>/ensino/",
+              expand: true,
+              ext: ".html"
+          }
+        ]
       }
     },
 
@@ -456,6 +482,7 @@ module.exports = function(grunt) {
     clean: [
       "dist",
       "assets",
+      "ensino",
       "templates",
       "apple-touch-icon.png",
       "favicon.ico",
@@ -508,7 +535,9 @@ module.exports = function(grunt) {
         },
       },
       jade: {
-        files: ['<%= project.src_jade %>/*.jade', '<%= project.src_jade %>/*.html'],
+        files: ['<%= project.src_jade %>/*.jade', '<%= project.src_jade %>/*.html',
+                '<%= project.src_jade %>/ensino/*.jade', '<%= project.src_jade %>/ensino/*.html',
+              '<%= project.src_jade %>/ensino/**/*.jade', '<%= project.src_jade %>/ensino/**/*.html'],
         tasks: ['jade:dev'],
       }
     },

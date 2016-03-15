@@ -22,7 +22,7 @@ app.directive('skill', function() {
         </md-tooltip>
 
         <span class="skill-body">
-            <span class="skill-name">{{ ::name }} 
+            <span class="skill-name">{{ ::name }}
                 <i class="tiny microtiny skill-name-icon material-icons">info_outline</i>
             </span>
             <span class="skill-grade" hide show-gt-xs>{{ generate_level(value) }}</span>
@@ -83,7 +83,7 @@ app.directive('paper', function() {
         author_main : "@authormain"
     }
 
-    directive.templateUrl = '../../templates/paper.tmpl.html';
+    directive.templateUrl = '/templates/paper.tmpl.html';
 
     return directive;
 });
@@ -111,13 +111,13 @@ app.directive('course', function() {
 
     directive.controller = "CourseController";
 
-    directive.templateUrl = '../../templates/course.tmpl.html';
+    directive.templateUrl = '/templates/course.tmpl.html';
 
     return directive;
 });
 
 app.controller('CourseController', function($scope) {
-    
+
 });
 
 // Directiva project
@@ -159,9 +159,9 @@ app.directive('project', function($templateCache) {
         description : "@description"
     }
 
-    directive.templateUrl = '../../templates/project.tmpl.html';
+    directive.templateUrl = '/templates/project.tmpl.html';
 
-    $templateCache.put('../../templates/project-dialog.tmpl.html');
+    $templateCache.put('/templates/project-dialog.tmpl.html');
 
     return directive;
 });
@@ -184,7 +184,7 @@ app.controller('ProjectController', function($scope, $mdMedia, $mdDialog) {
         var useFullScreen = ($mdMedia('sm') || $mdMedia('xs'))  && $scope.customFullscreen;
         $mdDialog.show({
             controller: DialogProjectController,
-            templateUrl: '../../templates/project-dialog.tmpl.html',
+            templateUrl: '/templates/project-dialog.tmpl.html',
             parent: angular.element(document.body),
             targetEvent: ev,
             clickOutsideToClose: true,
@@ -242,11 +242,32 @@ app.directive('award', function() {
 
     directive.controller = "AwardController";
 
-    directive.templateUrl = '../../templates/award.tmpl.html';
+    directive.templateUrl = '/templates/award.tmpl.html';
 
     return directive;
 });
 
 app.controller('AwardController', function($scope) {
-    
+
+});
+
+// Directiva ensino-mais-info
+app.directive('ensinoMaisInfo', function() {
+    var directive = {};
+
+    directive.restrict = 'E';
+
+    directive.scope = {
+        plano_aula : "@planoAula",
+    }
+
+    directive.controller = "EnsinoMaisInfoController";
+
+    directive.templateUrl = '/templates/ensino-mais-info.tmpl.html';
+
+    return directive;
+});
+
+app.controller('EnsinoMaisInfoController', function($scope) {
+
 });
