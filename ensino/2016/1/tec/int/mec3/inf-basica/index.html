@@ -1,0 +1,238 @@
+<!DOCTYPE html><html lang="pt-br" prefix="og: http://ogp.me/ns#" ng-app="ArthurAssuncao" ng-controller="AppController"><head>
+  <title>Arthur Assunção - Desenvolvedor Web</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#2196F3"/>
+  <meta name="author" content="Arthur Assunção"/>
+  <meta name="dcterms.rightsHolder" content="Arthur Assunção"/>
+  <meta name="description" content="Arthur Assunção - Desenvolvedor Web"/>
+  <meta name="keywords" content="Arthur Assunção, Sistemas para Internet, Desenvolvedor Web, Mestre em Computação"/>
+  <!-- Opengraph-->
+  <meta property="og:locale" content="pt_BR"/>
+  <meta property="og:title" content="Arthur Assunção - Desenvolvedor Web"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="http://arthurassuncao.com"/>
+  <meta property="og:image" content="http://arthurassuncao.com/assets/img/me256x256.png"/>
+  <meta property="og:site_name" content="Arthur Assunção"/>
+  <meta property="og:description" content="Arthur Assunção - Desenvolvedor Web"/>
+  <!-- Twitter cards-->
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:url" content="http://arthurassuncao.com"/>
+  <meta name="twitter:title" content="Arthur Assunção - Desenvolvedor Web"/>
+  <meta name="twitter:description" content="Arthur Assunção - Desenvolvedor Web"/>
+  <meta name="twitter:image" content="http://arthurassuncao.com/assets/img/me256x256.png"/>
+  <!-- Windows phone-->
+  <meta name="application-name" content="ArthurAssuncao.com"/>
+  <meta name="msapplication-TileColor" content="#2196F3"/>
+  <meta name="msapplication-square70x70logo" content="http://arthurassuncao.com/assets/img/winphone/tiny.png"/>
+  <meta name="msapplication-square150x150logo" content="http://arthurassuncao.com/assets/img/winphone/square.png"/>
+  <meta name="msapplication-wide310x150logo" content="http://arthurassuncao.com/assets/img/winphone/wide.png"/>
+  <meta name="msapplication-square310x310logo" content="http://arthurassuncao.com/assets/img/winphone/large.jpg"/>
+  <!-- Favicon-->
+  <link rel="shortcut icon" href="/favicon.ico"/>
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+  <link rel="icon" type="image/png" href="/apple-touch-icon.png" sizes="16x16"/>
+  <!-- CSS-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+  <link href="http://fonts.googleapis.com/css?family=Roboto:500,400italic,100,700italic,300,700,500italic,100italic,300italic,400" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/assets/css/plugins-tidy.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.6/angular-material.min.css"/>
+  <link rel="stylesheet" href="/assets/css/styles.min.css">
+  <!-- Chrome app -->
+  <link rel="manifest" href="/assets/img/logo_site/manifest.json?v=1">
+</head>
+<body layout="column" id="top" class="scrollspy ng-cloak"><div id="principal" layout="row" layout-align="center" layout-wrap><md-toolbar layout="row" id="nav_f" flex="100">
+    <div class="md-toolbar-tools container" layout="row">
+      <h1 class="logo"><a href="#" class="brand-logo">Arthur <span hide show-gt-md>Assunção</span></a></h1>
+      <div flex></div>
+      <nav id="navbar" hide show-gt-sm>
+        <ul>
+        <li><a href="/#mywork" data-hash="#page_mywork" class="navbar-item">
+          <i class="tiny-force material-icons">work</i> Meu Trabalho
+        </a></li>
+        <li><a href="/#skills" data-hash="#page_skills" class="navbar-item">
+          <i class="tiny-force material-icons">code</i> Habilidades
+        </a></li>
+        <li><a href="#contact" data-hash="#page_contact" class="navbar-item">
+          <i class="tiny-force material-icons">assignment_ind</i> Contato
+        </a></li>
+        <li><a href="/ensino" data-hash="#ensino" class="navbar-item">
+          <i class="tiny-force material-icons">school</i> Ensino
+        </a></li>
+        </ul>
+      </nav>
+      <md-button hide-gt-sm flex class="md-icon-button" aria-label="More" ng-click="openSideMenu()">
+        <i class="material-icons">more_vert</i>
+      </md-button>
+    </div>
+</md-toolbar>
+<div class="menu_left_side" hide-gt-sm>
+  <ul>
+    <li data-href="/#mywork" class="vertical-text"><i class="tiny-force material-icons">work</i> Meu Trabalho</li>
+    <li data-href="/#skills" class="vertical-text"><i class="tiny-force material-icons">code</i> Habilidades</li>
+    <li data-href="#contact" class="vertical-text"><i class="tiny-force material-icons">assignment_ind</i> Contato</li>
+  </ul>
+</div>
+<!--side-bar-->
+<md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
+  <md-toolbar class="md-theme-indigo">
+    <h1 class="md-toolbar-tools">Arthur Assuncao</h1>
+  </md-toolbar>
+  <md-content layout-padding ng-controller="NavRightController">
+    <nav id="navbar-right">
+        <ul>
+        <li><a href="/#mywork" data-hash="#page_mywork" class="navbar-right-item" ng-click="close()">
+          <i class="tiny-force material-icons">work</i> Meu Trabalho
+        </a></li>
+        <li><a href="/#skills" data-hash="#page_skills" class="navbar-right-item" ng-click="close()">
+          <i class="tiny-force material-icons">code</i> Habilidades
+        </a></li>
+        <li><a href="#contact" data-hash="#page_contact" class="navbar-right-item" ng-click="close()">
+          <i class="tiny-force material-icons">assignment_ind</i> Contato
+        </a></li>
+        <li><a href="/ensino" data-hash="#ensino" class="navbar-right-item" ng-click="close()">
+          <i class="tiny-force material-icons">school</i> Ensino
+        </a></li>
+        </ul>
+      </nav>
+      <!-- <md-button ng-click="close()" class="md-primary" hide-gt-md>
+        Fechar
+      </md-button> -->
+  </md-content>
+</md-sidenav>
+<main id="conteudo" layout-align="center" flex="100">
+  <div flex class="section scrollspy">
+    <div class="container ensino-disciplina">
+      <h2 class="header text_b">Informática Básica</h2>
+      <h4 class="header text_b2 grey-text">Técnico em Mecânica - Turma 3 (A e B)</h4>
+      <p class="gray-text">Quarta 09:30 às 11:00 (A) e 13:00 às 14:30 (B)</p>
+      <!-- <md-divider inset></md-divider> -->
+      <md-list class="ensino-disciplina-conteudo tabela">
+        <md-list-item class="md-1-line ensino-disciplina-conteudo-item item-header">
+          <div class="md-list-item-text" layout="column">
+            <h3>Slides</h3>
+          </div>
+        </md-list-item>
+        <md-list-item class="md-1-line ensino-disciplina-conteudo-item">
+          <div class="md-list-item-text" layout="column">
+            <h3>Slide 01</h3>
+          </div>
+        </md-list-item>
+        <md-list-item class="md-1-line ensino-disciplina-conteudo-item prova">
+          <div class="md-list-item-text" layout="column">
+            <h3>Primeira Prova (Data indefinida)</h3>
+          </div>
+        </md-list-item>
+      </md-list>
+    </div>
+    <div class="container ensino-mais-info">
+      <h2 class="md-flex">Mais Informações</h2>
+      <ensino-mais-info class="infos" plano-aula="/assets/files/ensino/planos-aula/2016-1/Plano-aula_Curso-Integrado-Mecanica_-_Informatica-Basica.pdf">
+      </ensino-mais-info>
+    </div>
+  </div>
+</main>
+<footer id="contact" layout-align="center center" layout-padding class="page-footer default_color scrollspy footer" flex="100">
+  <div class="container">
+    <div layout="row" layout-wrap layout-margin layout-padding layout-align="center">
+      <form id="form-contact" name="form-contact" onsubmit="javascript:return false" flex="100" flex-sm="100" flex-md="70" flex-gt-md="70">
+        <div layout="row" layout-wrap layout-align="center center">
+          <h5 class="white-text center" flex='100'>Contato</h5>
+          <div layout="row" layout-wrap flex='100'>
+            <!-- Nome-->
+            <md-input-container flex="100" flex-gt-sm="45" class="md-icon-float">
+              <i class="material-icons prefix icon-large white-text">account_circle</i><label>Nome</label>
+              <md-icon class="name">
+                </md-icon>
+              <input id="form-name" name="name" type="text" ng-model="contato.name">
+            </md-input-container>
+            <span flex></span>
+            <!-- Email-->
+            <md-input-container flex="100" flex-gt-sm="50" class="md-icon-float">
+              <i class="material-icons prefix icon-large white-text">email</i><label>Email</label>
+              <md-icon class="email">
+                </md-icon>
+              <input id="form-email" name="email" type="email" ng-model="contato.email">
+            </md-input-container>
+          </div>
+          <!-- Mensagem-->
+          <md-input-container flex='100' class="md-icon-float">
+            <i class="material-icons prefix icon-large white-text">message</i><label>Mensagem</label>
+            <md-icon class="message">
+              </md-icon>
+            <textarea id="form-message" name="message" type="text" ng-model="contato.message"></textarea>
+          </md-input-container>
+          <!-- Hide-->
+          <md-input-container hide flex='100' class="md-icon-float">
+            <input id="form-hidden" aria-label="hidden1" type="hidden" name="_subject" value="Contato site" required=""/>
+          </md-input-container>
+          <md-input-container hide flex='100' class="md-icon-float">
+            <input id="form-hidden-text" aria-label="hidden2" type="text" name="_gotcha" style="display:none" required=""/>
+          </md-input-container>
+          <!-- Botao -->
+          <md-button flex="50" id="form-submit" class="md-primary md-raised btn-send" ng-click="submitForm($event)">Enviar  <i class="material-icons white-text">send</i></md-button>
+
+        </div>
+      </form>
+      <div layout="row" flex="100" layout-wrap hide>
+          <div hide flex-xs="100" flex-sm="100" flex-md="50" class="form-result-ok white-text">
+              <h1>
+                <div class="fa fa-thumbs-o-up white-text"></div>
+              </h1>
+              <h6>Obrigado.<br/><br/>Sua mensagem enviada e<br/>irei respondê-la em breve.</h6>
+            </div>
+            <div hide flex-xs="100" flex-sm="100" flex-md="50" class="form-result-error white-text">
+              <h1>
+                <div class="fa fa-frown-o white-text"></div>
+              </h1>
+              <h6>Algo deu errado.<br/>Por favor, contate-me em arthur@arthurassuncao.com</h6>
+            </div>
+      </div>
+      </div>
+      <!-- Feedback removido -->
+      <div id="social" itemscope="" itemtype="http://schema.org/Person" flex-xs="100" flex-sm="100" flex-md="40" flex-gt-md="40" layout="column" class="center-align">
+        <div flex="100" class="center-align">
+          <link itemprop="url" href="http://arthurassuncao.com/"/>
+          <description itemprop="description" href="Arthur Assuncao - Desenvolvedor de sistemas."></description><img itemprop="image" href="assets/img/me256x256.png" class="hide"/>
+          <h5 class="white-text">Social</h5>
+          <ul class="center" layout-wrap layout="row">
+            <li flex><a itemprop="sameAs" href="https://www.facebook.com/arthurassuncao" class="white-text"><i class="small fa fa-facebook-square white-text"></i><span class="fa-facebook-text" hide show-gt-xs> Facebook</span></a></li>
+            <li flex><a itemprop="sameAs" href="https://github.com/arthurassuncao" class="white-text"><i class="small fa fa-github-square white-text"></i><span class="fa-github-text" hide show-gt-xs> Github</span></a></li>
+            <li flex><a itemprop="sameAs" href="https://www.linkedin.com/in/arthurassuncao" class="white-text"><i class="small fa fa-linkedin-square white-text"></i><span class="fa-linkedin-text" hide show-gt-xs> LinkedIn</span></a></li>
+            <li flex><a itemprop="sameAs" href="https://angel.co/arthurassuncao" class="white-text"><i class="small fa fa-angellist white-text"></i><span class="fa-angellist-text" hide show-gt-xs> AngelList</span></a></li>
+            <li flex><a itemprop="sameAs" href="http://lattes.cnpq.br/8136835668168874" class="white-text"><i class="small fa fa-lattes-square white-text"></i><span class="fa-lattes-text" hide show-gt-xs> Lattes</span></a><i class="medium fa fa-lattes-square-preload"></i></li>
+            <li flex hide class="esconde hide"><a itemprop="sameAs" href="https://plus.google.com/+ArthurAssuncao11" class="white-text"><i class="small fa fa-google-plus-square white-text" hide show-gt-xs></i><span class="fa-google-plus-text"> Google+</span></a></li>
+          </ul>
+          <div class="esconde hide">Meu nome é <span itemprop="name"><span itemprop="givenName">Arthur</span><span itemprop="additionalName">Nascimento</span><span itemprop="familyName">Assunção</span></span>.
+                      Moro em <span><span itemprop="address"><span>Ouro Preto, Minas Gerais</span>,<span itemprop="nationality">Brasil</span></span></span> e estudo <span itemprop="jobTitle">Mestrado em Ciência da Computação</span> na <span itemprop="affiliation">Universidade de Ouro Preto</span>.
+          </div>
+        </div>
+        <div flex="100" class="center-align footer-cv">
+          <p class="no-marg white-text"><a href="/assets/files/resume_arthur_assuncao.pdf" target="_blank" class="blue white-text btn-large light"><i class="tiny fa fa-file-pdf-o"></i> Baixar meu <span class="blue-text">Currículo</span></a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</div><script type="text/javascript" src="/assets/js/third_party/plugins.min.js"></script>
+<script type="text/javascript" src="/assets/js/third_party/angular-bundle.min.js"></script>
+<script type="text/javascript" src="/assets/js/scripts.min.js"></script>
+
+
+<script type="application/ld+json">
+  "@context" : "http://schema.org",
+  "@type" : "Person",
+  "name" : "Arthur Nascimento Assunção",
+  "url": "http://arthurassuncao.com/",
+  "description": "Arthur Assuncao - Desenvolvedor Web.",
+  "image": "http://arthurassuncao.com/assets/img/me256x256.png",
+  "jobTitle": "Mestrado em Ciência da Computação",
+  "affiliation": "Universidade de Ouro Preto",
+  "sameAs" : [
+       "https://www.facebook.com/arthurassuncao",
+       "https://www.linkedin.com/in/arthurassuncao",
+       "https://github.com/arthurassuncao",
+       "https://plus.google.com/+ArthurAssuncao11"
+  ]
+</script>
+</body></html>

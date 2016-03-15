@@ -1151,6 +1151,7 @@ em{
 a{
     text-decoration: none;
     color: $my-primary-color;
+    transition: 0.3s ease-in-out color;
     &:hover{
         text-decoration: none;
         color: darken($my-primary-color, 25%);
