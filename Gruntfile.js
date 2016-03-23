@@ -182,7 +182,8 @@ module.exports = function(grunt) {
     modernizr: {
       dev: {
         "dest" : "<%= project.src_assets_js %>/modernizr-custom.min.js",
-      }
+        "uglify": true
+      },
     },
 
     //uglufy
@@ -603,7 +604,7 @@ module.exports = function(grunt) {
   // grunt.loadNpmTasks('grunt-nodemon');
 
   // Tasks
-  grunt.registerTask('dev', ['newer:copy:dev_css_not_scss', 'newer:sass', 'newer:jade:dev', 'newer:modernizr', 'newer:uglify' ,'concurrent:tasks']);
+  grunt.registerTask('dev', ['newer:copy:dev_css_not_scss', 'newer:sass', 'newer:jade:dev', 'modernizr', 'newer:uglify' ,'concurrent:tasks']);
   grunt.registerTask('default', []);
   grunt.registerTask('clear', ['clean']);
   grunt.registerTask('dist', ['mkdir', 'copy:dev_css_not_scss', 'sass', 'jade:dist', 'postcss', 'uncss', 'cssmin', 'modernizr', 'uglify:dev_third_party', 'uglify:dev_third_party_angular', 'uglify:dev', 'copy', 'imagemin:dist', 'processhtml', 'http-server:dist']);
