@@ -1,0 +1,40 @@
+<md-dialog aria-label="name" class="ng-cloak">
+  <form>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>{{ ::project.name }}</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon aria-label="Close dialog">
+            <i class="fa fa-close"></i>
+          </md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content class="project-dialog-content">
+      <div class="md-dialog-content" layout="row" layout-wrap>
+        <div flex-xs="100" flex-sm="100" flex-md flex-gt-md flex-order="2" flex-order-gt-sm="1" layout="row" layout-wrap class="project-dialog-imgs" layout-align="center start">
+          <div ng-repeat="img in split(project.imgs)">
+            <img ng-src="{{ ::img }}" alt="{{ ::project.name }}"/>
+          </div>
+        </div>
+        <div flex-xs="100" flex-sm="100" flex-md flex-gt-md flex-order="1" flex-order-gt-sm="2" class="project-dialog-desc">
+          <div class="card-modal-role center"><span>{{ ::project.type }}</span> <span class="card-modal-date">{{ ::project.datestart }} - {{ ::project.dateend }}</span></div>
+          <div>
+            <ul class="card-modal-specs grey-text text-darken-0" class="justify">
+              <li ng-repeat="tech in split(project.technologies)">{{ ::tech }}</li>
+            </ul>
+          </div>
+          <div class="justify">
+            <p ng-repeat="desc in splitP(project.description)">{{ ::desc }}</p>
+          </div>
+        </div>
+      </div>
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+      <md-button href="{{ ::project.url }}" target="_blank" md-autofocus class="lowercase capitalize-first">
+        {{ ::project.urlname}}
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>
