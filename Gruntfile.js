@@ -510,17 +510,23 @@ module.exports = function(grunt) {
 
 
     // Secao do clean
-    clean: [
-      "dist",
-      "assets",
-      "ensino",
-      "templates",
-      "apple-touch-icon.png",
-      "favicon.ico",
-      "humans.txt",
-      "index.html",
-      "robots.txt"
-    ],
+    clean: {
+      dist: [
+        "dist",
+        "assets",
+        "ensino",
+        "src/ensino",
+        "templates",
+        "apple-touch-icon.png",
+        "favicon.ico",
+        "humans.txt",
+        "index.html",
+        "robots.txt"
+      ],
+      dev: [
+        "src/ensino"
+      ]
+    },
 
 
     // Secao do watch
@@ -604,8 +610,8 @@ module.exports = function(grunt) {
   // grunt.loadNpmTasks('grunt-nodemon');
 
   // Tasks
-  grunt.registerTask('dev', ['newer:copy:dev_css_not_scss', 'newer:sass', 'newer:jade:dev', 'modernizr', 'newer:uglify' ,'concurrent:tasks']);
+  grunt.registerTask('dev', ['clean:dev', 'newer:copy:dev_css_not_scss', 'newer:sass', 'newer:jade:dev', 'modernizr', 'newer:uglify' ,'concurrent:tasks']);
   grunt.registerTask('default', []);
-  grunt.registerTask('clear', ['clean']);
+  grunt.registerTask('clear', ['clean:dist']);
   grunt.registerTask('dist', ['mkdir', 'copy:dev_css_not_scss', 'sass', 'jade:dist', 'postcss', 'uncss', 'cssmin', 'modernizr', 'uglify:dev_third_party', 'uglify:dev_third_party_angular', 'uglify:dev', 'copy', 'imagemin:dist', 'processhtml', 'http-server:dist']);
 };
