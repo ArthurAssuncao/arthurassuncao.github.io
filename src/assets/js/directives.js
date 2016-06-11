@@ -252,22 +252,96 @@ app.controller('AwardController', function($scope) {
 });
 
 // Directiva ensino-mais-info
-app.directive('ensinoMaisInfo', function() {
+app.directive('teachingMoreInfo', function() {
     var directive = {};
 
     directive.restrict = 'E';
 
+    directive.replace = true;
+
     directive.scope = {
-        plano_aula : "@planoAula",
+        classroom_plan : "@classroomPlan",
     }
 
-    directive.controller = "EnsinoMaisInfoController";
+    directive.controller = "TeachingMoreInfoController";
 
-    directive.templateUrl = '/templates/ensino-mais-info.tmpl.html';
+    directive.templateUrl = '/templates/teaching-more-info.tmpl.html';
 
     return directive;
 });
 
-app.controller('EnsinoMaisInfoController', function($scope) {
+app.controller('TeachingMoreInfoController', function($scope) {
 
+});
+
+//directiva para ensino
+app.directive('teachingContent', function() {
+  var directive = {};
+
+  directive.restrict = 'E';
+
+  directive.replace = true;
+
+  directive.transclude = true;
+
+  directive.controller = "TeachingContentController";
+
+  directive.templateUrl = '/templates/teaching-content.tmpl.html';
+
+  return directive;
+});
+
+app.controller('TeachingContentController', function($scope) {
+
+});
+
+//directive para item titulo
+app.directive('teachingContentSectionTitle', function() {
+  var directive = {};
+
+  directive.restrict = 'E';
+
+  directive.replace = true;
+
+  directive.transclude = true;
+
+  directive.controller = "TeachingContentSectionTitleController";
+
+  directive.templateUrl = '/templates/teaching-content-section-title.tmpl.html';
+
+  return directive;
+});
+
+app.controller('TeachingContentSectionTitleController', function($scope) {
+
+});
+
+//directive para itens
+app.directive('teachingContentItem', function() {
+  var directive = {};
+
+  directive.restrict = 'E';
+
+  directive.replace = true;
+
+  directive.transclude = true;
+
+  directive.scope = {
+      tipo : "@tipo",
+  }
+
+  directive.controller = "TeachingContentItemController";
+
+  directive.templateUrl = '/templates/teaching-content-item.tmpl.html';
+
+  return directive;
+});
+
+app.controller('TeachingContentItemController', function($scope) {
+  $scope.extra_classes = "";
+  if(typeof $scope.tipo !== "undefined"){
+    if($scope.tipo == "prova"){
+      $scope.extra_classes = "prova";
+    }
+  }
 });

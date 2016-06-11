@@ -9,7 +9,7 @@ app.controller('AppController', function($scope, $timeout, $mdSidenav, $log, toa
 });
 
 app.controller('TyperController', function($scope) {
-    
+
 });
 
 app.controller('ParallaxController', function($scope, parallaxHelper) {
@@ -141,14 +141,32 @@ app.controller('ProjectsController', function($scope) {
     $scope.projects = {};
     $scope.projects.data = [
         {
+            name: "GloboHistorias",
+            imgurl: "assets/img/portfolio/globohistorias/thumbnail.jpg",
+            imgs: "
+                assets/img/portfolio/globohistorias/0.jpg,
+                assets/img/portfolio/globohistorias/1.jpg,
+                assets/img/portfolio/globohistorias/2.jpg,
+                assets/img/portfolio/globohistorias/3.jpg
+            ",
+            url: "https://github.com/ArthurAssuncao/globo-historias",
+            urlname: "Visite o projeto",
+            technologies: "HTML5/CSS3/SASS, JavaScript, AngularJS, AngularJS Material, NodeJS, MongoDB, Git",
+            type: "Protótipo de Hackathon",
+            datestart: "2016",
+            dateend: "2016",
+            description: "Protótipo de Hackathon participante do Hackathon da Globo 2016.</p>
+              O app permite que pessoas de qualquer lugar, em qualquer momento, possam contar suas experiências, histórias para a Globo e a Globo, após moderação, pode incluir essas histórias em notícias relacionadas. Melhorando a experiência de que lê notícia em seus portais, além de aumentar a divulgação das notícias ao permitir que as pessoas que contaram suas histórias compartilhem links de notícias onde, ao final do texto, sua história está contada em vídeo.</p>",
+        },
+        {
             name: "EntregaRápida",
             imgurl: "assets/img/portfolio/entregarapida/thumbnail.jpeg",
             imgs: "
-                assets/img/portfolio/entregarapida/0.jpeg, 
-                assets/img/portfolio/entregarapida/1.jpeg, 
-                assets/img/portfolio/entregarapida/2.jpeg, 
-                assets/img/portfolio/entregarapida/3.jpeg, 
-                assets/img/portfolio/entregarapida/4.jpeg, 
+                assets/img/portfolio/entregarapida/0.jpeg,
+                assets/img/portfolio/entregarapida/1.jpeg,
+                assets/img/portfolio/entregarapida/2.jpeg,
+                assets/img/portfolio/entregarapida/3.jpeg,
+                assets/img/portfolio/entregarapida/4.jpeg,
                 assets/img/portfolio/entregarapida/5.jpeg",
             url: "http://github.com/ArthurAssuncao/EntregaRapida",
             urlname: "Visite o projeto",
@@ -165,7 +183,7 @@ app.controller('ProjectsController', function($scope) {
             name: "ArthurAssuncao.com",
             imgurl: "assets/img/portfolio/arthurassuncao-com/thumbnail-0.jpg",
             imgs: "
-                assets/img/portfolio/arthurassuncao-com/0.jpg, 
+                assets/img/portfolio/arthurassuncao-com/0.jpg,
                 assets/img/portfolio/arthurassuncao-com/1.jpg,
                 assets/img/portfolio/arthurassuncao-com/3.jpg,
                 assets/img/portfolio/arthurassuncao-com/2.jpg,
@@ -189,8 +207,8 @@ app.controller('ProjectsController', function($scope) {
             name: "JUMP!",
             imgurl: "assets/img/portfolio/jump/thumbnail.jpg",
             imgs: "
-                assets/img/portfolio/jump/0.jpg, 
-                assets/img/portfolio/jump/1.jpg, 
+                assets/img/portfolio/jump/0.jpg,
+                assets/img/portfolio/jump/1.jpg,
                 assets/img/portfolio/jump/2.jpg",
             url: "https://github.com/arthurassuncao/jump",
             urlname: "Visite o projeto",
@@ -276,6 +294,6 @@ app.controller('ProjectsController', function($scope) {
         //         <p>Usando geolocalização do HTML5 para pegar a posição atual do usuário o App indicará qual é ponto de coleta seletiva mais próximo de acordo com o material selecionado para ser descartado (Papel/Plástico/Metal&Vidro/ Orgânico/Não-reciclável). Todos os dados serão armazenados no servidor, onde serão analisadas no futuro.</p>
         //         <p>Com os dados fornecidos pelo App é possível criar relatórios sobre o uso de cada ponto de coleta com base em sua localização ou materiais disponíveis, ajudando o campus a realocar-los, se necessário.</p>",
         // },
-        
+
     ];
 });

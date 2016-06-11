@@ -242,6 +242,23 @@ module.exports = function(grunt) {
     },
 
 
+    // secao do template inline
+    // angular_template_inline_js: {
+    //   dist:{
+    //     options: {
+    //       basePath: '<%= project.src_templates %>',
+    //       key: ''
+    //     },
+    //     files: [{
+    //       cwd: './',
+    //       expand: true,
+    //       src: [ '<%= project.src_assets_js %>/directives.js' ],
+    //       dest: '<%= project.dist_assets_js %>'
+    //     }],
+    //   },
+    // },
+
+
     // secao do imgmin
     imagemin: {
       dist: {
@@ -606,6 +623,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-processhtml');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
+  // grunt.loadNpmTasks('grunt-angular-template-inline-js');
 
   // grunt.loadNpmTasks('grunt-nodemon');
 

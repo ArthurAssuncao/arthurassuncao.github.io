@@ -519,6 +519,7 @@ ul.card-modal-specs li {
 
 .foto {
   margin-top: 40px !important;
+  margin-bottom: 20px !important;
 }
 
 .circular {
@@ -876,32 +877,4 @@ md-list-item.ensino-disciplinas-item:hover {
   border: 1px solid lightgray;
   -webkit-border-radius: 10px;
   border-radius: 10px;
-}
-
-.ensino-disciplina-conteudo.tabela .ensino-disciplina-conteudo-item {
-  border-top: 1px solid lightgray;
-  border-bottom: 1px solid lightgray;
-}
-
-.ensino-disciplina-conteudo.tabela .ensino-disciplina-conteudo-item:hover {
-  background-color: #e7f4fe;
-}
-
-.ensino-disciplina-conteudo.tabela .ensino-disciplina-conteudo-item.item-header {
-  background-color: #2196f3;
-  color: white;
-}
-
-.ensino-disciplina-conteudo.tabela .ensino-disciplina-conteudo-item:last-child,
-.ensino-disciplina-conteudo.tabela .ensino-disciplina-conteudo-item:first-child {
-  border: 0px;
-}
-
-.ensino-disciplina-conteudo.tabela .ensino-disciplina-conteudo-item.prova {
-  background-color: #FEEFB3;
-  color: #9F6000;
-}
-
-.ensino-disciplina-conteudo.tabela .ensino-disciplina-conteudo-item.prova:hover {
-  background-color: #fde481;
 }

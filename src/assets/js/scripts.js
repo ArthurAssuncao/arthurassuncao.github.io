@@ -37,7 +37,7 @@ function hide_habilidades_itens(){
 }
 
 function add_habilidades_more_event(){
-    $("#btn-skill-more").on('click', show_habilidades_itens);
+    $("#btn-skill-more").one('click', show_habilidades_itens);
 }
 
 function iniciar_wow(){
