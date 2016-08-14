@@ -64,7 +64,7 @@ app.controller('PapersController', function($scope) {
             url: "http://cba2016.org.br/",
             title: "Análise de Sensores para um Ambiente de Testes Automotivos",
             authors: "Fábio O. de Paula, Arthur N. Assuncao, Ricardo A. R. Oliveira",
-            confjournal: "XXI congresso Brasileiro de Automática (CBA)",
+            confjournal: "XXI Congresso Brasileiro de Automática (CBA)",
             year: "2016",
             local: "Vitória, Brasil",
             qualis: "Qualis-CC B4",
