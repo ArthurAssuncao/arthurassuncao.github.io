@@ -476,6 +476,7 @@ ul.card-modal-specs li {
 
 .menu_left_side {
   float: left;
+  left: 2px;
   height: 130px;
   vertical-align: middle;
   position: fixed;
