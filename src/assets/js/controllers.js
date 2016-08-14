@@ -44,7 +44,7 @@ app.controller('SkillsController', function($scope) {
         { name: 'Grunt (automatizador)', value: 60, msg: 'Utilizo neste site e em um app que está em desenvolvimento.' },
         { name: 'Android', value: 70, msg: 'Trabalhei por 1,25 ano e fiz um curso de Android, além de alguns projetos.' },
         { name: 'Python/Django', value: 50, msg: 'Trabalhei por 1,25 ano, fiz um site e também um curso de Python, além de vários projetos, inclusive no mestrado.' },
-        { name: 'R', value: 60, msg: 'Utilizo em projetos do mestrado.' },
+        { name: 'R', value: 60, msg: 'Utilizei em projetos do mestrado.' },
         // { name: 'Java/Java Web', value: 50, msg: 'Trabalhei por alguns meses com Java Web e desenvolvi alguns projetos em Java.' },
         // { name: 'C++', value: 50, msg: 'Participei de projetos utilizando C++ e utilizei no mestrado.' },
         { name: 'SQL', value: 60, msg: 'Trabalhei por 1,5 ano utilizando SQL, com o MySQL(1,25 ano) e Postgree(0,25 ano).' },
@@ -61,9 +61,19 @@ app.controller('PapersController', function($scope) {
     $scope.papers = {};
     $scope.papers.data = [
         {
+            url: "http://cba2016.org.br/",
+            title: "Análise de Sensores para um Ambiente de Testes Automotivos",
+            authors: "Fábio O. de Paula, Arthur N. Assuncao, Ricardo A. R. Oliveira",
+            confjournal: "XXI congresso Brasileiro de Automática (CBA)",
+            year: "2016",
+            local: "Vitória, Brasil",
+            qualis: "Qualis-CC B4",
+            authormain: 2
+        },
+        {
             url: "http://dx.doi.org/10.1145/2810362.2810378",
             title: "Methodology to Events Identification in Vehicles Using Statistical Process Control on Steering Wheel Data",
-            authors: "Arthur N. Assuncao, Fabio O. de Paula, Ricardo A. R. Oliveira",
+            authors: "Arthur N. Assuncao, Fábio O. de Paula, Ricardo A. R. Oliveira",
             confjournal: "The 13th ACM International Symposium on Mobility Management and Wireless Access (MobiWac)",
             year: "2015",
             local: "Cancun, México",
@@ -106,7 +116,7 @@ app.controller('CoursesController', function($scope) {
             name : "Mestrado em Ciência da Computação",
             institution : "Universidade Federal de Ouro Preto (UFOP)",
             date_start : "2014",
-            date_end : "Até o momento",
+            date_end : "2016",
         },
         {
             name : "Superior de Tecnologia em Sistemas para Internet",
