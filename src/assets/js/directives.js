@@ -271,7 +271,9 @@ app.directive('teachingMoreInfo', function() {
 });
 
 app.controller('TeachingMoreInfoController', function($scope) {
-
+  $scope.isUndefined = function (thing) {
+    return (typeof thing === "undefined");
+  }
 });
 
 //directiva para ensino
