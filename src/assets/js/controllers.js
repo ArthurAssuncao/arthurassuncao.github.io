@@ -71,6 +71,16 @@ app.controller('PapersController', function($scope) {
             authormain: 2
         },
         {
+            url: "http://www.repositorio.ufop.br/handle/123456789/6983",
+            title: "Monitoramento de Condutores de Veículos Automotores por meio do Controle Estatístico de Processos",
+            authors: "Arthur N. Assuncao, Ricardo A. R. Oliveira",
+            confjournal: "Mestrado em Ciência da Computação",
+            year: "2016",
+            local: "UFOP, Ouro Preto, Brasil",
+            qualis: "Dissertação",
+            authormain: 1
+        },
+        {
             url: "http://dx.doi.org/10.1145/2810362.2810378",
             title: "Methodology to Events Identification in Vehicles Using Statistical Process Control on Steering Wheel Data",
             authors: "Arthur N. Assuncao, Fábio O. de Paula, Ricardo A. R. Oliveira",
