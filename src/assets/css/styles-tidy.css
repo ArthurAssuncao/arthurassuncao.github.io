@@ -420,7 +420,6 @@ li.cv-item {
   position: relative;
   background: #d4d4d4;
   height: 7px;
-  -webkit-border-radius: 5px;
   border-radius: 5px;
   border-left: 1px solid #e0e0e0;
   border-top: 1px solid #e0e0e0;
@@ -526,7 +525,6 @@ ul.card-modal-specs li {
 .circular {
   width: 150px;
   height: 150px;
-  -webkit-border-radius: 50%;
   border-radius: 50%;
   background: url(../img/me256x256.png) no-repeat;
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
@@ -890,6 +888,5 @@ md-list-item.ensino-disciplinas-item:hover {
 
 .ensino-disciplina-conteudo.tabela {
   border: 1px solid lightgray;
-  -webkit-border-radius: 10px;
   border-radius: 10px;
 }

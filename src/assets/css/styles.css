@@ -444,8 +444,7 @@ nav a.button-collapse {
 .card-avatar img {
   height: 150px;
   width: 150px;
-  -webkit-border-radius: 75px;
-          border-radius: 75px;
+  border-radius: 75px;
 }
 .card-avatar .card-content {
   text-align: center;
@@ -593,7 +592,6 @@ footer.footer {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
   }
@@ -776,8 +774,7 @@ li .skill-bar {
   position: relative;
   background: #d4d4d4;
   height: 7px;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   border-left: 1px solid #e0e0e0;
   border-top: 1px solid #e0e0e0;
   border-right: 2px solid #fff;
@@ -981,8 +978,7 @@ ul.card-modal-specs li:nth-child(n+2):before {
 .circular {
   width: 150px;
   height: 150px;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   background: url(../img/me256x256.png) no-repeat;
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
           box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
@@ -1370,8 +1366,7 @@ md-list-item.ensino-disciplinas-item:hover {
 }
 .ensino-disciplina-conteudo.tabela {
   border: 1px solid lightgray;
-  -webkit-border-radius: 10px;
-          border-radius: 10px;
+  border-radius: 10px;
 }
 .ensino-disciplina-conteudo.tabela .ensino-disciplina-conteudo-item {
   border-top: 1px solid lightgray;

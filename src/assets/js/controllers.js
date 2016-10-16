@@ -32,7 +32,7 @@ app.controller('SkillsController', function($scope) {
     // cria a lista
     $scope.skills = {};
     $scope.skills.data = [
-        { name: 'AngularJS', value: 65, msg: 'Utilizei em um projeto vencedor do hackathon GDG, neste site pessoal e em um app que está em desenvolvimento, além de um curso de front-end.' },
+        { name: 'AngularJS', value: 75, msg: 'Utilizei em um projeto vencedor do hackathon GDG, neste site pessoal e em um app que está em desenvolvimento, além de um curso de front-end.' },
         { name: 'NodeJS', value: 55, msg: 'Utilizei em um projeto vencedor de hackathon, no projeto JUMP! e em um app que está em desenvolvimento, além de um curso de MEAN.' },
         { name: 'MongoDB', value: 45, msg: 'Utilizei em um projeto vencedor de hackathon e em um app que está em desenvolvimento, além de um curso de MEAN.' },
         { name: 'JavaScript/jQuery', value: 70, msg: 'Trabalhei em alguns sites, extensões para o Chrome e projetos.' },
@@ -61,7 +61,7 @@ app.controller('PapersController', function($scope) {
     $scope.papers = {};
     $scope.papers.data = [
         {
-            url: "http://cba2016.org.br/",
+            url: "http://www.swge.inf.br/PDF/CBA2016-0575_048243.PDF",
             title: "Análise de Sensores para um Ambiente de Testes Automotivos",
             authors: "Fábio O. de Paula, Arthur N. Assuncao, Ricardo A. R. Oliveira",
             confjournal: "XXI Congresso Brasileiro de Automática (CBA)",
@@ -163,11 +163,11 @@ app.controller('ProjectsController', function($scope) {
         {
             name: "GloboHistorias",
             imgurl: "assets/img/portfolio/globohistorias/thumbnail.jpg",
-            imgs: "
-                assets/img/portfolio/globohistorias/0.jpg,
-                assets/img/portfolio/globohistorias/1.jpg,
-                assets/img/portfolio/globohistorias/2.jpg,
-                assets/img/portfolio/globohistorias/3.jpg
+            imgs: "\
+                assets/img/portfolio/globohistorias/0.jpg,\
+                assets/img/portfolio/globohistorias/1.jpg,\
+                assets/img/portfolio/globohistorias/2.jpg,\
+                assets/img/portfolio/globohistorias/3.jpg\
             ",
             url: "https://github.com/ArthurAssuncao/globo-historias",
             urlname: "Visite o projeto",
@@ -175,18 +175,18 @@ app.controller('ProjectsController', function($scope) {
             type: "Protótipo de Hackathon",
             datestart: "2016",
             dateend: "2016",
-            description: "Protótipo de Hackathon participante do Hackathon da Globo 2016.</p>
+            description: "Protótipo de Hackathon participante do Hackathon da Globo 2016.</p>\
               O app permite que pessoas de qualquer lugar, em qualquer momento, possam contar suas experiências, histórias para a Globo e a Globo, após moderação, pode incluir essas histórias em notícias relacionadas. Melhorando a experiência de que lê notícia em seus portais, além de aumentar a divulgação das notícias ao permitir que as pessoas que contaram suas histórias compartilhem links de notícias onde, ao final do texto, sua história está contada em vídeo.</p>",
         },
         {
             name: "EntregaRápida",
             imgurl: "assets/img/portfolio/entregarapida/thumbnail.jpeg",
-            imgs: "
-                assets/img/portfolio/entregarapida/0.jpeg,
-                assets/img/portfolio/entregarapida/1.jpeg,
-                assets/img/portfolio/entregarapida/2.jpeg,
-                assets/img/portfolio/entregarapida/3.jpeg,
-                assets/img/portfolio/entregarapida/4.jpeg,
+            imgs: "\
+                assets/img/portfolio/entregarapida/0.jpeg,\
+                assets/img/portfolio/entregarapida/1.jpeg,\
+                assets/img/portfolio/entregarapida/2.jpeg,\
+                assets/img/portfolio/entregarapida/3.jpeg,\
+                assets/img/portfolio/entregarapida/4.jpeg,\
                 assets/img/portfolio/entregarapida/5.jpeg",
             url: "http://github.com/ArthurAssuncao/EntregaRapida",
             urlname: "Visite o projeto",
@@ -194,19 +194,19 @@ app.controller('ProjectsController', function($scope) {
             type: "Protótipo de Hackathon",
             datestart: "2015",
             dateend: "2015",
-            description: "Sistema colaborativo que permite o transporte de objetos dentro da região por meio de entregadores cadastrados. Desta forma diminuindo o custo e tempo no transporte desses objetos e, até, possibilitando entregas no mesmo dia.</p>
-                O EntregaRápida também permite o envio por meio do EcoPacote, um pacote que utiliza as ciclovias para a entrega. Essas ciclovias têm sido implementadas em diversas cidades do Brasil, como na cidade de Belo Horizonte.</p>
-                A partir das características do app é possível trazer uma série de melhorias para a sociedade, gerando novas oportunidades de négocio e, ao mesmo tempo, oferecer maior comodidade no envio e recebimento de objetos dentro da cidade, tornando-a mais morderna.</p>
+            description: "Sistema colaborativo que permite o transporte de objetos dentro da região por meio de entregadores cadastrados. Desta forma diminuindo o custo e tempo no transporte desses objetos e, até, possibilitando entregas no mesmo dia.</p>\
+                O EntregaRápida também permite o envio por meio do EcoPacote, um pacote que utiliza as ciclovias para a entrega. Essas ciclovias têm sido implementadas em diversas cidades do Brasil, como na cidade de Belo Horizonte.</p>\
+                A partir das características do app é possível trazer uma série de melhorias para a sociedade, gerando novas oportunidades de négocio e, ao mesmo tempo, oferecer maior comodidade no envio e recebimento de objetos dentro da cidade, tornando-a mais morderna.</p>\
                 O EntregaRápida foi vencedor do hackathon da Google Developer Group DevFest Sudeste.</p>",
         },
         {
             name: "ArthurAssuncao.com",
             imgurl: "assets/img/portfolio/arthurassuncao-com/thumbnail-0.jpg",
-            imgs: "
-                assets/img/portfolio/arthurassuncao-com/0.jpg,
-                assets/img/portfolio/arthurassuncao-com/1.jpg,
-                assets/img/portfolio/arthurassuncao-com/3.jpg,
-                assets/img/portfolio/arthurassuncao-com/2.jpg,
+            imgs: "\
+                assets/img/portfolio/arthurassuncao-com/0.jpg,\
+                assets/img/portfolio/arthurassuncao-com/1.jpg,\
+                assets/img/portfolio/arthurassuncao-com/3.jpg,\
+                assets/img/portfolio/arthurassuncao-com/2.jpg,\
                 assets/img/portfolio/arthurassuncao-com/4.jpg",
             url: "http://ArthurAssuncao.com/",
             urlname: "Visite ArthurAssuncao.com",
@@ -214,21 +214,21 @@ app.controller('ProjectsController', function($scope) {
             type: "Projeto Pessoal",
             datestart: "2012",
             dateend: "Atualmente",
-            description: "Meu site pessoal onde divulgo meu currículo, meus projetos, etc e o mantenho atualizado com o que há de mais interessante e recente em termos de tecnologias web.</p>
-                História</p>
-                Em 2012, o site não tinha o código fonte aberto, utilizava PHP e Bootstrap 2.x.</p>
-                Em 2013, o site teve seu código fonte aberto e hospedado no Github.</p>
-                Em 2014, o site teve o Bootstrap atualizado para a versão 3.x.</p>
-                Em 2015, o site passou por várias reformulações, primeiro foi a interface material design com o MaterializeCSS, em seguida foi removido o PHP e deixado apenas estático. Uma versão em Material Design Lite foi iniciada, porém descontinuada devido a falta de recursos desse framework da Google. Nesta versão mais recente de 2015, o site é feito utilizando AngularJS e AngularJS Material, que oferecem muitos recursos com grande produtividade, além de um bom desempenho, mesmo neste último quesito sendo inferior ao ReactJS e AngularJS 2.0.</p>
-                Além de todas estas mudanças, em 2015, comecei a utilizar o SASS para melhorar a códificação CSS, Jade pra modularizar os HTML e, o mais interessante de todos, o Grunt como automatizador. O ganho em desempenho e produtividade que um automatizador gera é gigantesco.
+            description: "Meu site pessoal onde divulgo meu currículo, meus projetos, etc e o mantenho atualizado com o que há de mais interessante e recente em termos de tecnologias web.</p>\
+                História</p>\
+                Em 2012, o site não tinha o código fonte aberto, utilizava PHP e Bootstrap 2.x.</p>\
+                Em 2013, o site teve seu código fonte aberto e hospedado no Github.</p>\
+                Em 2014, o site teve o Bootstrap atualizado para a versão 3.x.</p>\
+                Em 2015, o site passou por várias reformulações, primeiro foi a interface material design com o MaterializeCSS, em seguida foi removido o PHP e deixado apenas estático. Uma versão em Material Design Lite foi iniciada, porém descontinuada devido a falta de recursos desse framework da Google. Nesta versão mais recente de 2015, o site é feito utilizando AngularJS e AngularJS Material, que oferecem muitos recursos com grande produtividade, além de um bom desempenho, mesmo neste último quesito sendo inferior ao ReactJS e AngularJS 2.0.</p>\
+                Além de todas estas mudanças, em 2015, comecei a utilizar o SASS para melhorar a códificação CSS, Jade pra modularizar os HTML e, o mais interessante de todos, o Grunt como automatizador. O ganho em desempenho e produtividade que um automatizador gera é gigantesco.\
                 Em 2016, estou analisando, a principio, a possibilidade de substituir as directivas do AngularJS por componentes ReactJS, o que aumentaria muito o desempenho do site.</p>",
         },
         {
             name: "JUMP!",
             imgurl: "assets/img/portfolio/jump/thumbnail.jpg",
-            imgs: "
-                assets/img/portfolio/jump/0.jpg,
-                assets/img/portfolio/jump/1.jpg,
+            imgs: "\
+                assets/img/portfolio/jump/0.jpg,\
+                assets/img/portfolio/jump/1.jpg,\
                 assets/img/portfolio/jump/2.jpg",
             url: "https://github.com/arthurassuncao/jump",
             urlname: "Visite o projeto",
@@ -236,9 +236,9 @@ app.controller('ProjectsController', function($scope) {
             type: "Projeto Acadêmico",
             datestart: "2013",
             dateend: "2013",
-            description: "Participei da equipe de desenvolvimento do jogo JUMP (Jogo Unificado para Movimentação Projetada).</p>
-                    O jogo permite que o jogador, em frente a uma webcam, controle, por meio de seus pulos, o personagem do jogo.</p>
-                    Foram utilizados: linguagem Python com a biblioteca OpenCV e Node.js.</p>
+            description: "Participei da equipe de desenvolvimento do jogo JUMP (Jogo Unificado para Movimentação Projetada).</p>\
+                    O jogo permite que o jogador, em frente a uma webcam, controle, por meio de seus pulos, o personagem do jogo.</p>\
+                    Foram utilizados: linguagem Python com a biblioteca OpenCV e Node.js.</p>\
                     Projeto foi apresentado na Semana Nacional de Ciência e Tecnologia (SNCT) de 2013 no IFSEMG - Campus Barbacena.</p>",
         },
         {
@@ -251,9 +251,9 @@ app.controller('ProjectsController', function($scope) {
             type: "Projeto Acadêmico",
             datestart: "2014",
             dateend: "2014",
-            description: "Participei da equipe de desenvolvimento da aplicação.</p>
-                    O projeto consistiu de um software informativo e interativo para acompanhamento de eventos e notícias do Festival de Inverno de Ouro Preto e Mariana de 2014 com interação com os usuários por meio do sensor Kinect.</p>
-                    O uGuide Desk ficou em exposição na Casa dos Contos, em Ouro Preto, oferecendo maior interatividade para os visitantes.</p>
+            description: "Participei da equipe de desenvolvimento da aplicação.</p>\
+                    O projeto consistiu de um software informativo e interativo para acompanhamento de eventos e notícias do Festival de Inverno de Ouro Preto e Mariana de 2014 com interação com os usuários por meio do sensor Kinect.</p>\
+                    O uGuide Desk ficou em exposição na Casa dos Contos, em Ouro Preto, oferecendo maior interatividade para os visitantes.</p>\
                     Foram utilizadas linguagem C++ e interface gráfica Qt com comunicação com o Web Service via JSON.</p>",
         },
         {
@@ -267,8 +267,8 @@ app.controller('ProjectsController', function($scope) {
             type: "Desenvolvedor Mobile e Web",
             datestart: "2013",
             dateend: "2014",
-            description: "Participei da programação do app móvel e do Web Service MaisVendas da empresa AddMob.</p>
-                    Foi feito o desenolvimento do app Android e Web Service em Django com banco de dados MySQL, uso de notação JSON para comunicação entre os sistemas e utilização de controle de versão Git para uma melhor manutenção do código e colaboração entre os membros da equipe.</p>
+            description: "Participei da programação do app móvel e do Web Service MaisVendas da empresa AddMob.</p>\
+                    Foi feito o desenolvimento do app Android e Web Service em Django com banco de dados MySQL, uso de notação JSON para comunicação entre os sistemas e utilização de controle de versão Git para uma melhor manutenção do código e colaboração entre os membros da equipe.</p>\
                     O MaisVendas é um sistema para quem deseja ter seu catálogo de produtos e sua lista de clientes disponíveis ao toque da tela de seu tablet ou smartphone. É possível realizar vendas, consultar pedidos realizados, verificar o histórico de vendas através do gráfico iterativo e muito mais.</p>",
         },
         {
@@ -281,10 +281,10 @@ app.controller('ProjectsController', function($scope) {
             type: "Projeto Pessoal",
             datestart: "2013",
             dateend: "Atualmente",
-            description: "Desenvolvimento de extensões para o navegador Google Chrome:</p>
-                Hide Contact From Facebook Chat List</p>
-                Esconde contatos da lista do chat do Facebook sem bloquear o contato. O contato continua te vendo na lista do chat dele como online, porém voce não o vê mais.</p> </p>
-                Wpp Web Customizador</p>
+            description: "Desenvolvimento de extensões para o navegador Google Chrome:</p>\
+                Hide Contact From Facebook Chat List</p>\
+                Esconde contatos da lista do chat do Facebook sem bloquear o contato. O contato continua te vendo na lista do chat dele como online, porém voce não o vê mais.</p> </p>\
+                Wpp Web Customizador</p>\
                 Modifica o fundo (background) do chat do Whatsapp™ Web.</p>",
         },
         {
@@ -297,7 +297,7 @@ app.controller('ProjectsController', function($scope) {
             type: "Desenvolvedor Web",
             datestart: "2014",
             dateend: "2014",
-            description: "Participei do desenvolvimento do Website da empresa AddMob Integradora de Soluções Ltda.</p>
+            description: "Participei do desenvolvimento do Website da empresa AddMob Integradora de Soluções Ltda.</p>\
                     Website desenvolvido em HTML5/CSS3 e Django, utilizando o framework Bootstrap 2.x e jQuery, com layout responsivo e captura de gestos (Hammer.js) para otimizar a experiência em dispositivos móveis.</p>",
         },
         // {

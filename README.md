@@ -54,6 +54,11 @@ Instale as dependências para o bower.
 $ bower install
 ```
 
+Instale o sass.
+```
+# gem install sass
+```
+
 Gere a versão de desenvolvimento.
 ```
 $ grunt dev
