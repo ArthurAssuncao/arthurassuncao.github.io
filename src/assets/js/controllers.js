@@ -91,25 +91,25 @@ app.controller('PapersController', function($scope) {
             authormain: 1
         },
         {
-            // url: "http://sbesc.lisha.ufsc.br/sbesc2015/proceedings/146713.pdf",
-            url: "assets/files/papers/KITT_Sistema_de_Carro_Inteligente_com_Apoio_a_Seguranca_do_Motorista.pdf",
+            url: "http://sbesc.lisha.ufsc.br/sbesc2015/proceedings/146713.pdf",
+            // url: "assets/files/papers/KITT_Sistema_de_Carro_Inteligente_com_Apoio_a_Seguranca_do_Motorista.pdf",
             title: "KITT - Sistema de Carro Inteligente com Apoio à Segurança do Motorista",
             authors: "Arthur N. Assuncao, Ricardo Camara, Luiz Janeiro, Rafael Vitor, Fabio O. de Paula, Ricardo A. R. Oliveira",
             confjournal: "V Brazilian Symposium on Computing Systems Engineering (SBESC)",
             year: "2015",
             local: "Foz do Iguaçu, Brasil",
-            qualis: "Qualis-CC B4",
+            qualis: "Qualis-CC B4 (login: sbesc, senha: sbesc2015)",
             authormain: 1
         },
         {
-            // url: "http://sbesc.lisha.ufsc.br/sbesc2015/proceedings/146842.pdf",
-            url: "assets/files/papers/Metodologia_para_Deteccao_de_Saida_de_Faixa_Utilizando_EWMA_Aplicado_a_Sensores_Inerciais_no_Volante.pdf",
+            url: "http://sbesc.lisha.ufsc.br/sbesc2015/proceedings/146842.pdf",
+            // url: "assets/files/papers/Metodologia_para_Deteccao_de_Saida_de_Faixa_Utilizando_EWMA_Aplicado_a_Sensores_Inerciais_no_Volante.pdf",
             title: "Metodologia para Detecção de Saída de Faixa Utilizando EWMA Aplicado a Sensores Inerciais no Volante",
             authors: "Arthur N. Assuncao, Fabio O. de Paula, Ricardo A. R. Oliveira",
             confjournal: "V Brazilian Symposium on Computing Systems Engineering (SBESC)",
             year: "2015",
             local: "Foz do Iguaçu, Brasil",
-            qualis: "Qualis-CC B4",
+            qualis: "Qualis-CC B4 (login: sbesc, senha: sbesc2015)",
             authormain: 1
         },
     ];
