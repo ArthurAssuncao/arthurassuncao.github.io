@@ -61,7 +61,7 @@ app.controller('PapersController', function($scope) {
     $scope.papers = {};
     $scope.papers.data = [
         {
-            url: "http://www.swge.inf.br/PDF/CBA2016-0575_048243.PDF",
+            url: "https://ssl4799.websiteseguro.com/swge5/PROCEEDINGS/PDF/CBA2016-0575.pdf",
             title: "Análise de Sensores para um Ambiente de Testes Automotivos",
             authors: "Fábio O. de Paula, Arthur N. Assuncao, Ricardo A. R. Oliveira",
             confjournal: "XXI Congresso Brasileiro de Automática (CBA)",
@@ -150,6 +150,18 @@ app.controller('AwardsController', function($scope) {
             place : "1º lugar",
             url : "https://github.com/ArthurAssuncao/EntregaRapida",
         },
+        {
+            name : "Globo Hackahton",
+            year : "2016",
+            place : "Convocado e Participante",
+            url : "https://github.com/ArthurAssuncao/globo-historias",
+        },
+        {
+            name : "Homenagem da Camara Municipal de Barbacena - MG",
+            year : "2016",
+            place : "Moção de Aplausos",
+            url : "http://www.barbacena.ifsudestemg.edu.br/destaques/ex-aluno-campus-barbacena-recebe-mocao-aplausos-camara-municipal-barbacena",
+        },
     ];
 });
 
@@ -198,6 +210,48 @@ app.controller('ProjectsController', function($scope) {
                 O EntregaRápida também permite o envio por meio do EcoPacote, um pacote que utiliza as ciclovias para a entrega. Essas ciclovias têm sido implementadas em diversas cidades do Brasil, como na cidade de Belo Horizonte.</p>\
                 A partir das características do app é possível trazer uma série de melhorias para a sociedade, gerando novas oportunidades de négocio e, ao mesmo tempo, oferecer maior comodidade no envio e recebimento de objetos dentro da cidade, tornando-a mais morderna.</p>\
                 O EntregaRápida foi vencedor do hackathon da Google Developer Group DevFest Sudeste.</p>",
+        },
+        {
+            name: "Biblioteka App",
+            imgurl: "http://armandoassuncao.github.io/static/img/portfolio/biblioteka/thumbnail.jpeg",
+            imgs: "http://armandoassuncao.github.io/static/img/portfolio/biblioteka/screenshot-002.jpeg,\
+              http://armandoassuncao.github.io/static/img/portfolio/biblioteka/screenshot-005.jpeg,\
+              http://armandoassuncao.github.io/static/img/portfolio/biblioteka/thumbnail.jpeg",
+            url: "https://play.google.com/store/apps/details?id=io.biblioteka.app",
+            urlname: "Google Play",
+            technologies: "Java/Android, PHP/SlimFramework, Git",
+            type: "Projeto Pessoal",
+            datestart: "2016",
+            dateend: "Atualmente",
+            description: "Aplicativo criado com o objetivo de melhorar a utilização da biblioteca do IF Sudeste MG - Campus Barbacena.</p>\
+                Fui colaborador do projeto de autoria do Armando Assunção.</p>\
+                  Tem as funcionalidades:</p>\
+                  Buscar Livros</p>\
+                  Reservar Livros</p>\
+                  Renovar Livros</p>\
+                  Exibir Extrato</p>\
+                  Notificação</p>\
+                  Renovação Autómatica</p>\
+                Utilizado Java para o desenvolvimento do aplicativo e PHP/SlimFramework com arquitetura API rest no servidor.</p>",
+        },
+        {
+            name: "Entensões na Chrome Store",
+            imgurl: "assets/img/portfolio/chrome-web-store/thumbnail.png",
+            imgs: "http://armandoassuncao.github.io/static/img/portfolio/wpp_web_customizer/screenshot-001.jpeg,\
+                  http://armandoassuncao.github.io/static/img/portfolio/wpp_web_customizer/screenshot-002.jpeg,\
+                  http://armandoassuncao.github.io/static/img/portfolio/wpp_web_customizer/screenshot-003.jpeg,\
+                  http://armandoassuncao.github.io/static/img/portfolio/wpp_web_customizer/screenshot-005.jpeg",
+            url: "https://chrome.google.com/webstore/search/adev?hl=pt-BR",
+            urlname: "Chrome Extensions",
+            technologies: "HTML/CSS3, JavaScript/jQuery, Git",
+            type: "Projeto Pessoal",
+            datestart: "2013",
+            dateend: "Atualmente",
+            description: "Desenvolvimento de extensões para o navegador Google Chrome:</p>\
+                Hide Contact From Facebook Chat List</p>\
+                Esconde contatos da lista do chat do Facebook sem bloquear o contato. O contato continua te vendo na lista do chat dele como online, porém voce não o vê mais.</p> </p>\
+                Wpp Web Customizador</p>\
+                Personaliza o chat do Whatsapp™ Web.</p>",
         },
         {
             name: "ArthurAssuncao.com",
@@ -251,7 +305,7 @@ app.controller('ProjectsController', function($scope) {
             type: "Projeto Acadêmico",
             datestart: "2014",
             dateend: "2014",
-            description: "Participei da equipe de desenvolvimento da aplicação.</p>\
+            description: "Participei da equipe de desenvolvimento da aplicação desse projeto de pesquisa.</p>\
                     O projeto consistiu de um software informativo e interativo para acompanhamento de eventos e notícias do Festival de Inverno de Ouro Preto e Mariana de 2014 com interação com os usuários por meio do sensor Kinect.</p>\
                     O uGuide Desk ficou em exposição na Casa dos Contos, em Ouro Preto, oferecendo maior interatividade para os visitantes.</p>\
                     Foram utilizadas linguagem C++ e interface gráfica Qt com comunicação com o Web Service via JSON.</p>",
@@ -270,22 +324,6 @@ app.controller('ProjectsController', function($scope) {
             description: "Participei da programação do app móvel e do Web Service MaisVendas da empresa AddMob.</p>\
                     Foi feito o desenolvimento do app Android e Web Service em Django com banco de dados MySQL, uso de notação JSON para comunicação entre os sistemas e utilização de controle de versão Git para uma melhor manutenção do código e colaboração entre os membros da equipe.</p>\
                     O MaisVendas é um sistema para quem deseja ter seu catálogo de produtos e sua lista de clientes disponíveis ao toque da tela de seu tablet ou smartphone. É possível realizar vendas, consultar pedidos realizados, verificar o histórico de vendas através do gráfico iterativo e muito mais.</p>",
-        },
-        {
-            name: "Entensões na Chrome Store",
-            imgurl: "assets/img/portfolio/chrome-web-store/thumbnail.png",
-            imgs: "assets/img/portfolio/chrome-web-store/0.png",
-            url: "https://chrome.google.com/webstore/search/adev?hl=pt-BR",
-            urlname: "Chrome Extensions",
-            technologies: "HTML/CSS3, JavaScript/jQuery, Git",
-            type: "Projeto Pessoal",
-            datestart: "2013",
-            dateend: "Atualmente",
-            description: "Desenvolvimento de extensões para o navegador Google Chrome:</p>\
-                Hide Contact From Facebook Chat List</p>\
-                Esconde contatos da lista do chat do Facebook sem bloquear o contato. O contato continua te vendo na lista do chat dele como online, porém voce não o vê mais.</p> </p>\
-                Wpp Web Customizador</p>\
-                Modifica o fundo (background) do chat do Whatsapp™ Web.</p>",
         },
         {
             name: "Addmob.com.br",
@@ -310,8 +348,8 @@ app.controller('ProjectsController', function($scope) {
         //     type: "Projeto Acadêmico",
         //     datestart: "2012",
         //     dateend: "2013",
-        //     description: "<p>Aplicativo de código aberto para dispositivos móveis e Desktop, desenvolvido com o objetivo de estimular o processo de coleta seletivas na minha faculdade.</p>
-        //         <p>Usando geolocalização do HTML5 para pegar a posição atual do usuário o App indicará qual é ponto de coleta seletiva mais próximo de acordo com o material selecionado para ser descartado (Papel/Plástico/Metal&Vidro/ Orgânico/Não-reciclável). Todos os dados serão armazenados no servidor, onde serão analisadas no futuro.</p>
+        //     description: "<p>Aplicativo de código aberto para dispositivos móveis e Desktop, desenvolvido com o objetivo de estimular o processo de coleta seletivas na minha faculdade.</p>\
+        //         <p>Usando geolocalização do HTML5 para pegar a posição atual do usuário o App indicará qual é ponto de coleta seletiva mais próximo de acordo com o material selecionado para ser descartado (Papel/Plástico/Metal&Vidro/ Orgânico/Não-reciclável). Todos os dados serão armazenados no servidor, onde serão analisadas no futuro.</p>\
         //         <p>Com os dados fornecidos pelo App é possível criar relatórios sobre o uso de cada ponto de coleta com base em sua localização ou materiais disponíveis, ajudando o campus a realocar-los, se necessário.</p>",
         // },
 

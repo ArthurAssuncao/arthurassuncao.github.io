@@ -182,19 +182,7 @@
               </ul>
             </div>
             <div class="divider"></div>
-            <div id="cv-awards">
-              <h5 class="cv-section-title">Premiações</h5>
-              <ul id="lista_experiencia" class="list-unstyled" ng-controller="AwardsController">
-                <li ng-repeat="award in awards.data" class="cv-item">
-                  <award name="{{ award.name }}"
-                    place="{{ award.place }}"
-                    url="{{ award.url }}"
-                    year="{{ award.year }}" >
-                  </award>
-                </li>
-              </ul>
-            </div>
-            <div class="divider"></div>
+
             <div id="cv-producao">
               <h5 class="cv-section-title">Produções Científicas</h5>
               <ul id="lista_experiencia" class="list-unstyled" ng-controller="PapersController">
@@ -211,11 +199,24 @@
                 </li>
               </ul>
             </div>
-            <div class="divider hide-on-med-and-up"></div>
           </div>
           <div hide-xs hide-sm flex-md="5" flex-gt-md="5"></div>
           <div class="wow-nonmobile fadeInRight" flex-xs="100" flex-sm="100" flex-md flex-gt-md>
+            <div id="cv-awards">
+              <h5 class="cv-section-title">Premiações</h5>
+              <ul id="lista_experiencia" class="list-unstyled" ng-controller="AwardsController">
+                <li ng-repeat="award in awards.data" class="cv-item">
+                  <award name="{{ award.name }}"
+                    place="{{ award.place }}"
+                    url="{{ award.url }}"
+                    year="{{ award.year }}" >
+                  </award>
+                </li>
+              </ul>
+            </div>
+            <div class="divider"></div>
             <div id="cv-habilidades" ng-controller="SkillsController">
+              <h5 class="cv-section-title">Skills</h5>
               <ul class="list-unstyled skills">
                 <li ng-repeat="skill in skills.data" id="skill_{{ skill.name }}">
                   <skill

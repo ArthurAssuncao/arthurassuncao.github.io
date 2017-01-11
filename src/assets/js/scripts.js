@@ -8,32 +8,42 @@ function fill_skills(){
 }
 
 function hide_skills_itens(){
-    $("#cv-habilidades ul > li:gt(11)").hide();
+    $("#cv-habilidades ul > li:gt(9)").hide();
 }
 
 function show_skills_itens(){
-    $("#cv-habilidades ul > li:gt(11)").show(1000);
+    $("#cv-habilidades ul > li:gt(9)").show(1000);
     // $("#btn_skills_more").hide(900);
 }
 
 function hide_prod_cientifica_itens(){
-    $("#cv-producao ul > li:gt(0)").hide();
+    $("#cv-producao ul > li:gt(2)").hide();
 }
 
 function show_prod_cientifica_itens(){
-    $("#cv-producao ul > li:gt(0)").show(1000);
+    $("#cv-producao ul > li:gt(2)").show(1000);
     // $("#btn_prod_cientifica_more").hide(900);
+}
+
+function hide_premios_itens(){
+    $("#cv-awards ul > li:gt(0)").hide();
+}
+
+function show_premios_itens(){
+    $("#cv-awards ul > li:gt(0)").show(1000);
 }
 
 function show_habilidades_itens(){
     show_skills_itens();
     show_prod_cientifica_itens();
+    show_premios_itens();
     $("#btn-skill-more").hide(900);
 }
 
 function hide_habilidades_itens(){
     hide_skills_itens();
     hide_prod_cientifica_itens();
+    hide_premios_itens();
 }
 
 function add_habilidades_more_event(){
