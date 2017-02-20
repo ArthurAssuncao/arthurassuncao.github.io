@@ -38,7 +38,7 @@
   <!-- build:css /assets/css/plugins-tidy.min.css -->
   <link rel="stylesheet" type="text/css" href="/assets/css/plugins.css"/>
   <!-- /build -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.9/angular-material.min.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.3/angular-material.min.css"/>
   <!-- build:css /assets/css/styles.min.css -->
   <link rel="stylesheet" type="text/css" href="/assets/css/styles.css"/>
   <!-- /build -->
@@ -112,6 +112,51 @@
     </div>
   </div>
   <div flex class="section scrollspy ensino">
+    <div class="container ensino-2017">
+      <md-toolbar class="md-primary">
+        <div class="md-toolbar-tools">
+          <h2 class="md-flex">Disciplinas de 2017</h2>
+        </div>
+      </md-toolbar>
+      <md-content flex class="ensino-disciplinas">
+        <md-list-item class="md-3-line ensino-disciplinas-item">
+          <img ng-src="/assets/img/logos/if_64.png" class="md-avatar" alt="IF Sudeste MG" />
+            <div class="md-list-item-text">
+              <h3><a href="/ensino/2017/1/tec/sub/tc/inf-ii">Informática II</a></h3><span class="ensino-disciplinas-semestre-text grey-text">1° Semestre</span>
+              <p>Técnico em Transporte de Cargas</p>
+              <p class="gray-text">Quarta 18:30 às 20:00</p>
+            </div>
+          <md-divider inset></md-divider>
+        </md-list-item>
+        <md-list-item class="md-3-line ensino-disciplinas-item">
+          <img ng-src="/assets/img/logos/if_64.png" class="md-avatar" alt="IF Sudeste MG" />
+            <div class="md-list-item-text">
+              <h3><a href="/ensino/2017/0/tec/int/msm/inf-basica">Informática Básica</a></h3>
+              <p>Técnico em Manutenção de Sistemas Metroferroviários - Turmas A e B</p>
+              <p class="gray-text">Segunda e Terça</p>
+            </div>
+          <md-divider inset></md-divider>
+        </md-list-item>
+        <md-list-item class="md-3-line ensino-disciplinas-item">
+          <img ng-src="/assets/img/logos/if_64.png" class="md-avatar" alt="IF Sudeste MG" />
+            <div class="md-list-item-text">
+              <h3><a href="/ensino/2017/0/tec/int/mec/inf-basica">Informática Básica</a></h3>
+              <p>Técnico em Mecânica - Turmas A e B</p>
+              <p class="gray-text">Segunda e Terça</p>
+            </div>
+          <md-divider inset></md-divider>
+        </md-list-item>
+        <md-list-item class="md-3-line ensino-disciplinas-item">
+          <img ng-src="/assets/img/logos/if_64.png" class="md-avatar" alt="IF Sudeste MG" />
+            <div class="md-list-item-text">
+              <h3><a href="/ensino/2017/0/tec/int/mec3/inf-basica">Informática Básica</a></h3>
+              <p>Técnico em Mecânica/Manutenção de Sistemas Metroferroviários - Turma 3 (Mista)</p>
+              <p class="gray-text">Segunda e Terça</p>
+            </div>
+          <md-divider inset></md-divider>
+        </md-list-item>
+      </md-content>
+    </div>
     <div class="container ensino-2016">
       <md-toolbar class="md-primary">
         <div class="md-toolbar-tools">
@@ -119,7 +164,7 @@
         </div>
       </md-toolbar>
       <md-content flex class="ensino-disciplinas">
-          <md-list-item class="md-3-line ensino-disciplinas-item">
+          <md-list-item class="md-3-line ensino-disciplinas-item ensino-disciplinas-item-concluido">
             <img ng-src="/assets/img/logos/if_64.png" class="md-avatar" alt="IF Sudeste MG" />
               <div class="md-list-item-text">
                 <h3><a href="/ensino/2016/2/tec/sub/tc/inf-ii">Informática II</a></h3><span class="ensino-disciplinas-semestre-text grey-text">2° Semestre</span>
@@ -128,7 +173,7 @@
               </div>
             <md-divider inset></md-divider>
           </md-list-item>
-          <md-list-item class="md-3-line ensino-disciplinas-item">
+          <md-list-item class="md-3-line ensino-disciplinas-item ensino-disciplinas-item-concluido">
             <img ng-src="/assets/img/logos/if_64.png" class="md-avatar" alt="IF Sudeste MG" />
               <div class="md-list-item-text">
                 <h3><a href="/ensino/2016/2/tec/sub/mec/inf-bas">Informática Básica</a></h3><span class="ensino-disciplinas-semestre-text grey-text">2° Semestre</span>
@@ -146,7 +191,7 @@
               </div>
             <md-divider inset></md-divider>
           </md-list-item>
-          <md-list-item class="md-3-line ensino-disciplinas-item">
+          <md-list-item class="md-3-line ensino-disciplinas-item ensino-disciplinas-item-concluido">
             <img ng-src="/assets/img/logos/if_64.png" class="md-avatar" alt="IF Sudeste MG" />
               <div class="md-list-item-text">
                 <h3><a href="/ensino/2016/0/tec/int/msm/inf-basica">Informática Básica</a></h3>
@@ -155,7 +200,7 @@
               </div>
             <md-divider inset></md-divider>
           </md-list-item>
-          <md-list-item class="md-3-line ensino-disciplinas-item">
+          <md-list-item class="md-3-line ensino-disciplinas-item ensino-disciplinas-item-concluido">
             <img ng-src="/assets/img/logos/if_64.png" class="md-avatar" alt="IF Sudeste MG" />
               <div class="md-list-item-text">
                 <h3><a href="/ensino/2016/0/tec/int/mec/inf-basica">Informática Básica</a></h3>
@@ -164,7 +209,7 @@
               </div>
             <md-divider inset></md-divider>
           </md-list-item>
-          <md-list-item class="md-3-line ensino-disciplinas-item">
+          <md-list-item class="md-3-line ensino-disciplinas-item ensino-disciplinas-item-concluido">
             <img ng-src="/assets/img/logos/if_64.png" class="md-avatar" alt="IF Sudeste MG" />
               <div class="md-list-item-text">
                 <h3><a href="/ensino/2016/0/tec/int/mec3/inf-basica">Informática Básica</a></h3>
