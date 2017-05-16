@@ -1389,3 +1389,10 @@ md-list-item.ensino-disciplinas-item:hover {
 .ensino-disciplina-conteudo.tabela .ensino-disciplina-conteudo-item.prova:hover {
   background-color: #fde481;
 }
+.ensino-disciplina-conteudo.tabela .ensino-disciplina-conteudo-item.trabalho {
+  background-color: #FEEFB3;
+  color: #9F6000;
+}
+.ensino-disciplina-conteudo.tabela .ensino-disciplina-conteudo-item.trabalho:hover {
+  background-color: #fde481;
+}

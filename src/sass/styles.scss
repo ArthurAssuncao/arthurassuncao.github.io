@@ -1295,6 +1295,13 @@ md-list-item.ensino-disciplinas-item{
           background-color: darken($my-warn-color, 10%);
         }
       }
+      &.trabalho{
+        background-color: $my-warn-color;
+        color: $my-warn-color-text;
+        &:hover{
+          background-color: darken($my-warn-color, 10%);
+        }
+      }
     }
   }
 }
